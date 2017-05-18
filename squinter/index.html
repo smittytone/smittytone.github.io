@@ -1,29 +1,109 @@
 <html>
 <head>
-    <title>Squinter</title>
+    <title>Squinter 1.0</title>
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <style>
+        .center { margin-left: auto;
+                  margin-right: auto;
+                  margin-bottom: auto;
+                  margin-top: auto; }
+        body { background-color: #eeeeee; }
+        p {color: black; font-family: Abel; font-size: 16px}
+        h2 {color: black; font-family: Abel; font-weight:bold; font-size: 36px}
+        h3 {color: #aaaaaa; font-family: Abel; font-size: 22px}
+        h4 {color: #aaaaaa; font-family: Abel; font-size: 18px}
+        hr {border-color: #ffcc00}
+        td {color: black; font-family: Abel; font-size: 16px}
+    </style>
 </head>
 <body>
-    <h2>Download Squinter</h2>
-    <h4>Latest Release: 1.0.0119</h4>
-    <p>Please verify the integrity of the download with the SHA-1 or SHA-256 checksums.</p>
-    <table style="width:50%;border:none;">
-        <tr>
-            <td valign="middle" width="20%"><b>File</b></td>
-            <td valign="middle"><a href="/files/Squinter_1_0_119.zip">Squinter_1_0_119.zip</a></td>
-        </tr>
-        <tr>
-            <td valign="middle" width="20%"><b>File Size</b></td>
-            <td valign="middle">13MB</td>
-        </tr>
-        <tr>
-            <td valign="middle" width="20%"><b>SHA</b></td>
-            <td valign="middle">acf18bd6ea8e9ae0b6241b307937ae240c3f107e</td>
-        </tr>
-        <tr>
-            <td valign="middle" width="20%"><b>SHA 256</b></td>
-            <td valign="middle">7208c45f60cb129631a286abfe37c90024d8df606d014c47641581860b558d3b</td>
-        </tr>
-    </table>
-    <p>&nbsp;<br>Copyright &copy; Tony Smith, 2014-2017</p>
+    <div class="container" style="padding: 20px">
+        <div style="border: 2px solid #aaaaaa">
+            <table style="width:100%;border:none;">
+            <tr>
+                <td width="10%">&nbsp;</td>
+                <td width="80%" valign="top">
+                <h2 class="text-center">Squinter 1.0</h2>
+                <h4 class="text-center">Latest Release: 1.0.0119</h4>
+                <p>&nbsp;</p>
+                <div style="background-color:#dddddd;padding: 5px 15px 10px 15px">
+                    <h2>Download Squinter</h2>
+                    <p>Please verify the integrity of the download with the SHA-1 or SHA-256 checksums.</p>
+                    <table style="width:80%;border:none;">
+                        <tr>
+                            <td valign="middle" width="15%"><b>File</b></td>
+                            <td valign="middle"><a href="/files/Squinter_1_0_119.zip">Squinter_1_0_119.zip</a></td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" width="15%"><b>File Size</b></td>
+                            <td valign="middle">5.8MB</td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" width="15%"><b>SHA</b></td>
+                            <td valign="middle">acf18bd6ea8e9ae0b6241b307937ae240c3f107e</td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" width="15%"><b>SHA 256</b></td>
+                            <td valign="middle">7208c45f60cb129631a286abfe37c90024d8df606d014c47641581860b558d3b</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>&nbsp;</p>
+                <h2>About Squinter</h2>
+                <h3>Introduction</h3>
+                <p>Squinter is a utility to help you work on Electric Imp software development projects using your own editor and code files you keep in a local folder &mdash; which may also be sync&#8217;d with a cloud service like Dropbox or a version control system like GitHub.</p>
+                <p>With Squinter and the impCentral API you can:</p>
+                <ul><li>Work on your Electric Imp project code in your favourite text editor</li>
+                <li>&#8216;Compile&#8217; in local library files before uploading the complete code to the Electric Imp impCloud&trade;</li>
+                <li>You can take charge of your devices:<br>
+                    <ul><li>Assign them to application firmware</li>
+                    <li>Update their code</li>
+                    <li>Reboot devices to run newly uploaded code</li>
+                    <li>View device logs</li></ul></li>
+                <li>And much more...</li></ul>
+
+                <h3>Incorporating Libraries Into Your Code</h3>
+                <p>Squinter lets you incorporate multiple files into your project. Electric Imp applications &mdash; called &#8216;Models&#8217; &mdash; comprise two files: one for device code, the other for cloud-based agent code, but Squinter lets you embed into them links to other files, such as libraries.
+                <p>For example, you might want to use the same library in multiple models &mdash; they all use the same sensor, say. Sharing a single library file allows you to update that file without having to edit every model that uses it. You just recompile each project to incorporate the changes you’ve made.
+                <p>Squinter expects your model files to be named in the standard Electric Imp schema: <code>*.agent.nut</code> and <code>*.device.nut</code> for, respectively, your agent and device code. The two identifiers (represented here by the wildcard <code>*</code>) need not be identical, but when creating a new project from source code files, Squinter will use the agent code filename as the basis for the project’s name.
+                <p>Local library files should be entered into your agent and device source code using the following syntax:
+                <p><code>#import "library_filepath\library_filename"</code></p>
+                <p>or</p>
+                <p><code>#include "library_filepath\library_filename"</code></p>
+                <p>This is to distinguish these libraries from Electric Imp online libraries, which use the <code>#require</code> directive.</p>
+                <p>The name of the library file is arbitrary, but <code>*.class.nut</code> and <code>*.library.nut</code> are the recommended forms. You may include a full Unix filepath; if you only provide a filename, Squinter expects the file to reside in the same folder as the project file (see &#8216;Working with Projects&#8217;).</p>
+
+                <h3>Working With Projects</h3>
+                <p>Squinter works primarily through project files. These record which agent and device code files comprise a given model, and which libraries they use. Project files are identified by the <code>.squirrelproj</code> extension. Squinter lets you create new projects, either from scratch or from existing agent and device code files. You can also create projects from your existing models stored in the Electric Imp impCloud.</p>
+                <p>Projects are listed in the &#8216;Currently Open Projects&#8217; submenu in the &#8216;Project&#8217; menu, which also presents actions you can perform with the currently selected project. You can also select a project from the &#8216;Current Project&#8217; popup menu in Squinter&#8217;s main window.</p>
+                <p>New projects are saved in Squinter&#8217;s working directory, which you can set in the Preferences.</p>
+
+                <h3>Working With Models</h3>
+                <p>Squinter lists all of the models registered to your Electric Imp account, and you can bind these to existing projects or use them as the basis for new ones. You can delete or rename your models, or by creating a new project, create a new model too. You&#8217;ll find these options in the &#8216;Models&#8217; menu.</p>
+                <p>Selecting a project will automatically select the model it has been bound to, if it has such a link. You can connect a model to the currently selected project using actions in the &#8216;Project&#8217; and &#8216;Models&#8217; menus.</p>
+                <p>You can assign or re-assign a device to any model at any time using a &#8216;Models&#8217; menu option.</p>
+
+                <h3>Working With Devices</h3>
+                <p>Squinter also keeps track of your development devices. It lists these in the &#8216;Models&#8217; menu&#8217;s &#8216;Current Models&#8217; submenu, alongside the models they are assigned to. Unassigned devices are listed in their own section. Specific devices can also be selected from the &#8216;Current Device&#8217; popup menu in Squinter&#8217;s main window.</p>
+                <p>In each of these lists, devices that are currently online have a bullet point after their name.</p>
+                <p>The &#8216;Device&#8217; menu presents actions you can perform on the currently selected device, including getting information about it, renaming it, removing it from your account and removing its association with a model (unassign it).</p>
+
+                <h3>Debugging Code</h3>
+                <p>You can retrieve the most recent log entries for the device in one go (up to a maximum of 200, all the Electric Imp impCloud retains), or you can stream logs from the device: entries will appear in Squinter&#8217;s main window in real time. You can currently only stream from one device at a time.</p>
+               <p>If the log window becomes too crowded, you can clear it using the &#8216;Clear&#8217; button in the toolbar, which is also home to a number of shortcuts to various functions provided by Squinter&#8217;s menus. You can also print the current contents of the log window if you have a printer.</p>
+                <p>When you upload code &mdash; using the &#8216;Upload&#8217; button or the &#8216;Project&#8217; menu option &mdash; the Electric Imp impCloud will perform a syntax check. Any errors it spots will be reported in Squinter&#8217;s log window. Line numbers refer to the compiled code, so you can use two actions in the &#8216;View&#8217; menu to list the compiled fully to help you track down the errors.</p>
+
+                <h3>Configuring Squinter</h3>
+                <p>To take full advantage of Squinter&#8217;s features, you will need not only an Electric Imp account but also a Build API key. You can obtain a Build API key by logging in to the Electric Imp IDE via a web browser and selecting &#8216;Build API Keys&#8217; from the username menu. Paste your API key into the field provided in Squinter&#8217;s Preferences panel, accessed through the &#8216;Squinter&#8217; menu.</p>
+                <p>The Preferences panel also allows you to select the log window&#8217;s font, text size and the colour, and the colour of the background. It provides a number of other useful settings too. You can also choose your main Electric Imp projects folder.</p>
+                <p>&nbsp;</p>
+                <p align="center"><small>Copyright &copy; Tony Smith, 2014-2017</small></p>
+                </td>
+                <td width="10%">&nbsp;</td>
+            </tr></table>
+        </div>
+    </div>
 </body>
 </html>
