@@ -19,7 +19,6 @@
     </style>
 </head>
 <body>
-
         <div style="border: 2px solid #6E9B3D">
             <table style="width:100%;border:none;">
             <tr>
@@ -55,7 +54,7 @@
                 <h2>About Squinter</h2>
                 <h3>Introduction</h3>
                 <p>Squinter is a utility to help you work on Electric Imp software development projects using your own editor and code files you keep in a local folder &mdash; which may also be sync&#8217;d with a cloud service like Dropbox or a version control system like GitHub.</p>
-                <p><img src="/images/squinter/squinter.png" width="800"></p>
+                <p align="center"><img src="/images/squinter/squinter.png" width="800"></p>
                 <p>With Squinter and the impCentral API you can:</p>
                 <ul><li>Work on your Electric Imp project code in your favourite text editor</li>
                 <li>&#8216;Compile&#8217; in local library files before uploading the complete code to the Electric Imp impCloud&trade;</li>
@@ -69,7 +68,7 @@
                 <h3>Incorporating Libraries Into Your Code</h3>
                 <p>Squinter lets you incorporate multiple files into your project. Electric Imp applications &mdash; called &#8216;Models&#8217; &mdash; comprise two files: one for device code, the other for cloud-based agent code, but Squinter lets you embed into them links to other files, such as libraries.</p>
                 <p>For example, you might want to use the same library in multiple models &mdash; they all use the same sensor, say. Sharing a single library file allows you to update that file without having to edit every model that uses it. You just recompile each project to incorporate the changes you’ve made.</p>
-                <p><img src="/images/squinter/libs.png" width="800"></p>
+                <p align="center"><img src="/images/squinter/libs.png" width="800"></p>
                 <p>Squinter expects your model files to be named in the standard Electric Imp schema: <code>*.agent.nut</code> and <code>*.device.nut</code> for, respectively, your agent and device code. The two identifiers (represented here by the wildcard <code>*</code>) need not be identical, but when creating a new project from source code files, Squinter will use the agent code filename as the basis for the project’s name.</p>
                 <p>Local library files should be entered into your agent and device source code using the following syntax:</p>
                 <p><code>#import "library_filepath\library_filename"</code></p>
@@ -80,9 +79,9 @@
 
                 <h3>Working With Projects</h3>
                 <p>Squinter works primarily through project files. These record which agent and device code files comprise a given model, and which libraries they use. Project files are identified by the <code>.squirrelproj</code> extension. Squinter lets you create new projects, either from scratch or from existing agent and device code files. You can also create projects from your existing models stored in the Electric Imp impCloud.</p>
-                <p><img src="/images/squinter/new.png" width="800"></p>
+                <p align="center"><img src="/images/squinter/new.png" width="800"></p>
                 <p>Projects are listed in the &#8216;Currently Open Projects&#8217; submenu in the &#8216;Project&#8217; menu, which also presents actions you can perform with the currently selected project. You can also select a project from the &#8216;Current Project&#8217; popup menu in Squinter&#8217;s main window.</p>
-                <p><img src="/images/squinter/projects.png" width="800"></p>
+                <p align="center"><img src="/images/squinter/projects.png" width="800"></p>
                 <p>New projects are saved in Squinter&#8217;s working directory, which you can set in the Preferences.</p>
 
                 <h3>Working With Models</h3>
@@ -90,11 +89,11 @@
                 <p><img src="/images/squinter/models.png" width="800"></p>
                 <p>Selecting a project will automatically select the model it has been bound to, if it has such a link. You can connect a model to the currently selected project using actions in the &#8216;Project&#8217; and &#8216;Models&#8217; menus.</p>
                 <p>You can assign or re-assign a device to any model at any time using a &#8216;Models&#8217; menu option.</p>
-                <p><img src="/images/squinter/assign.png" width="800"></p>
+                <p align="center"><img src="/images/squinter/assign.png" width="800"></p>
 
                 <h3>Working With Devices</h3>
                 <p>Squinter also keeps track of your development devices. It lists these in the &#8216;Models&#8217; menu&#8217;s &#8216;Current Models&#8217; submenu, alongside the models they are assigned to. Unassigned devices are listed in their own section. Specific devices can also be selected from the &#8216;Current Device&#8217; popup menu in Squinter&#8217;s main window.</p>
-                <p><img src="/images/squinter/dlist.png" width="800"></p>
+                <p align="center"><img src="/images/squinter/dlist.png" width="800"></p>
                 <p>In each of these lists, devices that are currently online have a bullet point after their name.</p>
                 <p>The &#8216;Device&#8217; menu presents actions you can perform on the currently selected device, including getting information about it, renaming it, removing it from your account and removing its association with a model (unassign it).</p>
                 <p><img src="/images/squinter/devices.png" width="800"></p>
@@ -102,13 +101,13 @@
 
                 <h3>Debugging Code</h3>
                 <p>You can retrieve the most recent log entries for the device in one go (up to a maximum of 200, all the Electric Imp impCloud retains), or you can stream logs from the device: entries will appear in Squinter&#8217;s main window in real time. You can currently only stream from one device at a time.</p>
-                <p><img src="/images/squinter/log.png" width="800"></p>
+                <p align="center"><img src="/images/squinter/log.png" width="800"></p>
                <p>If the log window becomes too crowded, you can clear it using the &#8216;Clear&#8217; button in the toolbar, which is also home to a number of shortcuts to various functions provided by Squinter&#8217;s menus. You can also print the current contents of the log window if you have a printer.</p>
                 <p>When you upload code &mdash; using the &#8216;Upload&#8217; button or the &#8216;Project&#8217; menu option &mdash; the Electric Imp impCloud will perform a syntax check. Any errors it spots will be reported in Squinter&#8217;s log window. Line numbers refer to the compiled code, so you can use two actions in the &#8216;View&#8217; menu to list the compiled fully to help you track down the errors.</p>
 
                 <h3>Configuring Squinter</h3>
                 <p>To take full advantage of Squinter&#8217;s features, you will need not only an Electric Imp account but also a Build API key. You can obtain a Build API key by logging in to the Electric Imp IDE via a web browser and selecting &#8216;Build API Keys&#8217; from the username menu. Paste your API key into the field provided in Squinter&#8217;s Preferences panel, accessed through the &#8216;Squinter&#8217; menu.</p>
-                <p><img src="/images/squinter/prefs.png" width="632"></p>
+                <p align="center"><img src="/images/squinter/prefs.png" width="632"></p>
                 <p>The Preferences panel also allows you to select the log window&#8217;s font, text size and the colour, and the colour of the background. It provides a number of other useful settings too. You can also choose your main Electric Imp projects folder.</p>
                 <p>&nbsp;</p>
                 <p align="center"><small>Copyright &copy; Tony Smith, 2014-2017</small></p>
@@ -116,6 +115,5 @@
                 <td width="10%">&nbsp;</td>
             </tr></table>
         </div>
-
 </body>
 </html>
