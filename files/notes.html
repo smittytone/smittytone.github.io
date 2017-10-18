@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>Squinter Release Notes</title>
+</head>
+<body>
+
+<h3>Squinter 1.0.119 (07 February 2017)</h3>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Correctly enable the Upload icon after linking a project to a model</li>
+</ul>
+
+<h3>Squinter 1.0.118 (03 February 2017)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>Manage Build API changes</li>
+</ul>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Correctly open new device code files on the creation of a new Project</li>
+</ul>
+
+<h3>Squinter 1.0.117 (11 November 2016)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>Update Squinter projects file type to 2.1:<br>
+<ul><li>Projects will now store paths to files relative to the project file location</li>
+<li>Squinter will offer to update old projects to file type 2.1 (this is optional)</li>
+<li>Preference for file path display added: absolute path, relative to project, and relative to user's home directory</li>
+<li>When searching for mis-referenced libraries, Squinter now looks relative to the project file rather than agent or device code files</li>
+</ul></li>
+<li>Improved file handling:<br>
+<ul><li>The 'add file(s) to project' code has been rewritten</li>
+<li>The 'open project' code has been rewritten</li>
+<li>Better handling of multiple projects with the same name</li>
+</ul></li>
+<li>Better handling and checking of Electric Imp libraries</li>
+<li>The display of device, model and project information has been improved</li>
+<li>The display of bulk-loaded log messages has been improved</li>
+<li>Preferences panel now tabbed to improve clarity</li>
+
+</ul>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Correctly process import statements referencing sub-directories</li>
+<li>Correctly allow the retrieval of logs from currently unassigned devices</li>
+<li>Fix some issues encountered when opening very old project files</li>
+</ul>
+
+<h3>Squinter 1.0.116 (30 September 2016)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>Squinter now checks that your Electric Imp library #requires are up to date</li>
+<li>When creating a project from source files, you can now opt to save the project automatically, in either your main projects directory or the same directory as the source files (uncheck auto-save if you want to save the project elsewhere)</li>
+<li>Better handling of relative paths to #import/#include files and libraries</li>
+
+</ul>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Correctly display Compile button when creating a new project</li>
+<li>Display Upload button only when a project is linked to a model</li>
+<li>Minor code fixes</li>
+</ul>
+
+<h3>Squinter 1.0.115 (24 August 2016)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>Better information when uploading code to an unexpectedly selected model</li>
+</ul>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Retain model and/or device selection after re-loading lists from the server</li>
+<li>Fix message-string typos</li>
+</ul>
+
+<h3>Squinter 1.0.114 (29 July 2016)</h3>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Fixed a crash caused when listing new unassigned devices in the Models menu's submenus</li>
+<li>Fixed an infinite loop caused when a source code-listed library or file could not be located in the file system</li>
+</ul>
+
+<h3>Squinter 1.0.113 (22 July 2016)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>Colouring of multiple device log streams to aid readability</li>
+<li>Agent URLs in the log (from 'Get Device Info') are clickable links</li>
+<li>#imported files (ie. non-libraries) now saved in project</li>
+<li>User is notified when local files and libraries are removed from source code</li>
+</ul>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Displaying long code listings in the log doesn't invoke the beach ball</li>
+<li>Fixed an issue in which #imported files were not being correctly listed</li>
+<li>Fixed an issue in which a project was closed with unsaved changes, the user asked to save the changes first, but they were not being saved</li>
+<li>Fixed an issue in which a project was closed with unsaved changes, but was not actually closing</li>
+</ul>
+
+<h3>Squinter 1.0.112 (30 June 2016)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>You can now stream logs from multiple devices simultaneously</li>
+<li>Logging devices are indicated in the 'Current Device' pop up and the device lists under each model in the 'Models -> Current Models' menu</li>
+<li>The 'Devices' menu now has an 'Open Agent URL' command to call up the agent URL in your browser</li>
+<li>Tooltips added to the toolbar items</li>
+<li>Added 'Refresh model list' toolbar item</li>
+<li>Updated BuildAPIAccess to 2.0.0-Beta</li>
+</ul>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Fixed an incorrect 'Project Info' toolbar icon</li>
+</ul>
+
+<h3>Squinter 1.0.111 (06 June 2016)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>Project local libraries and files are correctly monitored for changes</li>
+<li>Improved code syntax error reporting with a local code listing with error line indication</li>
+<li>Migrated to published version of BuildAPIAccess</li>
+<li>Better 'bad data' detection</li>
+</ul>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Fixed an issue with new project/model creation not updating project lists correctly</li>
+<li>Fixed an issue causing a library #imported into both agent and device code not to be compiled into the device code</li>
+</ul>
+
+<h3>Squinter 1.0.110 (31 May 2016)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>Add preferences option for automatically checking for updates</li>
+</ul>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Fixed crash caused if a device's online status is misreported by Build</li>
+</ul>
+
+<h3>Squinter 1.0.109 (27 May 2016)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>Further Sparkle support<br>
+<ul><li>Update Acknowledgements menu</li>
+<li>Update About Squinter window</li>
+<li>Manually manage auto update checking</li></ul></li>
+</ul>
+
+<h3>Squinter 1.0.108 (27 May 2016)</h3>
+<p><b>Improvements/Additions</b></p>
+<ul>
+<li>Added Find... bar to log window</li>
+<li>Add preliminary Sparkle support for app updates</li>
+<li>Add copy agent/device code to clipboard menu items</li>
+<li>Changed status indicator in device lists</li>
+</ul>
+<p><b>Bug Fixes</b></p>
+<ul>
+<li>Fixed crash caused locating #import directives that have been commented out</li>
+</ul>
+</body>
+</html>

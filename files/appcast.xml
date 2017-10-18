@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Squinter Changes</title>
+        <link>https://electricimp.com/docs/attachments/squinter/appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+
+        <item>
+            <title>Version 1.0 (build 119)</title>
+            <sparkle:releaseNotesLink>https://electricimp.com/docs/attachments/squinter/notes.html</sparkle:releaseNotesLink>
+            <pubDate>Tue, 07 February 2017 21:30:00 +0000</pubDate>
+            <enclosure url="https://electricimp.com/docs/attachments/squinter/Squinter_1_0_119.zip" sparkle:version="119" sparkle:shortVersionString="1.0.119" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MC0CFAFPToDYc4X+ajiBEwbqZWxdOs3lAhUA6Z9vYv2aJ8vCS7vLESA0U9HRBzQ=" />
+            <sparkle:minimumSystemVersion>10.9</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 1.0 (build 118)</title>
+            <sparkle:releaseNotesLink>https://electricimp.com/docs/attachments/squinter/notes.html</sparkle:releaseNotesLink>
+            <pubDate>Fri, 03 February 2017 11:10:00 +0000</pubDate>
+            <enclosure url="https://electricimp.com/docs/attachments/squinter/Squinter_1_0_118.zip" sparkle:version="118" sparkle:shortVersionString="1.0.118" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCjF0eDAhSu2oYuqypFzPyUBUUlRwIUJ/2R6npm2KtaGlmTldz3GPFaVRk=" />
+            <sparkle:minimumSystemVersion>10.9</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 1.0 (build 117)</title>
+            <sparkle:releaseNotesLink>https://electricimp.com/docs/attachments/squinter/notes.html</sparkle:releaseNotesLink>
+            <pubDate>Fri, 11 November 2016 17:00:00 +0000</pubDate>
+            <enclosure url="https://electricimp.com/docs/attachments/squinter/Squinter_1_0_117.zip" sparkle:version="117" sparkle:shortVersionString="1.0.117" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MCwCFBOhLV6zeki9tX+MyrCq73+qenqBAhRz+F0CAYo9c/kH4aa+6PFiSnhycg==" />
+            <sparkle:minimumSystemVersion>10.9</sparkle:minimumSystemVersion>
+        </item>
+
+    </channel>
+</rss>
+
