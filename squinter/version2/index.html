@@ -53,13 +53,13 @@
                         <p>&nbsp;</p>
                         <h2>About Squinter</h2>
                         <p>Squinter is a utility to help you work on Electric Imp software development projects using your own editor and code
-                        files you keep in a local folder &mdash; which may also be sync’d with a cloud service like Dropbox or a version control
+                        files you keep in a local folder &mdash; which may also be sync'd with a cloud service like Dropbox or a version control
                         system like GitHub.</p>
                         <p align="center"><img src="../../images/gfx/squinter.png" width="600" style="border: 1px solid #DDDDDD" /></p>
-                        <p>With Squinter and Electric Imp’s impCentral&trade; API you can:</p>
+                        <p>With Squinter and Electric Imp's impCentral&trade; API you can:</p>
                         <ul>
                             <li>Work on your Electric Imp project code in your favourite text editor</li>
-                            <li>‘Compile’ in local library files before uploading the complete code to the Electric Imp impCloud&trade;</li>
+                            <li>'Compile' in local library files before uploading the complete code to the Electric Imp impCloud&trade;</li>
                             <li>You can take charge of your devices:
                             <ul>
                                 <li>Assign them to application firmware (via device groups)</li>
@@ -70,28 +70,35 @@
                             <li>And much more...</li>
                         </ul>
                         <h3>Important</h3>
-                        <p>Squinter 2.0 is being made available in a pre-release ‘Beta’ version which is not feeature-complete and may
+                        <p>Squinter 2.0 is being made available in a pre-release 'Beta' version which is not feeature-complete and may
                         contain code errors that may impact your own code. You should not use Squinter with commercially sensitive
-                        projects and related code.<br>&nbsp;</p>
+                        projects and related code.</p>
+                        <h3>Known Issues with the Beta</h3>
+                        <ul>
+                            <li>Offline changes made to projects and/or device groups cannot by sync's with the impCloud</li>
+                            <li>Opening multiple recent projects will fail if one project file has been moved</li>
+                            <li>Production functionality not yet included</li>
+                            <li>Collaboration functionality not yet included</li>
+                        </ul>
                         <h2>Working With Projects and Products</h2>
-                        <p>Squinter works with ‘projects’, each of which is stored as a project file on disk. Each Project links to an
-                        impCentral ‘product’ and references the ‘device groups’ <i>(see below)</i> that that product contains. For each device
+                        <p>Squinter works with 'projects', each of which is stored as a project file on disk. Each Project links to an
+                        impCentral 'product' and references the 'device groups' <i>(see below)</i> that that product contains. For each device
                         group in the product, the project records which local files contain the source code that will be deployed to that device
                         group. Project files are identified by the <code>.squirrelproj</code> file extension. Squinter lets you
                         create new projects, either from scratch or by downloading products that already exist in the impCloud.</p>
                         <p align="center"><img src="../../images/gfx/new.png" width="612" style="border: 1px solid #DDDDDD" /></p>
-                        <p>Projects are listed in the ‘Open Projects’ submenu in the ‘Projects’ menu, which also presents actions you can
-                        perform on the currently selected project. You can also select a project from the ‘Current Project’ popup in
-                        Squinter’s main window.</p>
-                        <p>New projects are saved by default to Squinter’s working directory, which you can set in the app’s Preferences.
+                        <p>Projects are listed in the 'Open Projects' submenu in the 'Projects' menu, which also presents actions you can
+                        perform on the currently selected project. You can also select a project from the 'Current Project' popup in
+                        Squinter's main window.</p>
+                        <p>New projects are saved by default to Squinter's working directory, which you can set in the app's Preferences.
                         However, you can also navigate to an alternative location when you save the project. To create
-                        a new Project, click on appropriate toolbar button or select the relevant option from the ‘Files’ menu. This menu also
-                        lists recently opened projects &mdash; as does Squinter’s dock icon. You can also save your current project to a new
+                        a new Project, click on appropriate toolbar button or select the relevant option from the 'Files' menu. This menu also
+                        lists recently opened projects &mdash; as does Squinter's dock icon. You can also save your current project to a new
                         file if you wish.</p>
                         <p align="center"><img src="../../images/gfx/projects.png" width="526" style="border: 1px solid #DDDDDD" /></p>
-                        <p>You can create projects when you are not signed in to your Electric Imp account &mdash; perhaps because you’re
+                        <p>You can create projects when you are not signed in to your Electric Imp account &mdash; perhaps because you're
                         out of WiFi range &mdash; and you can upload these at a later time, when you have logged in.</p>
-                        <p>The ‘Projects’ menu also presents a list of products associated with your Electric Imp account.
+                        <p>The 'Projects' menu also presents a list of products associated with your Electric Imp account.
                         Each project maintains a one-to-one mapping with a uniquely named product. New projects are uploaded to the
                         impCloud as products, and existing products can be downloaded as projects, complete with any device groups
                         they contain and the code deployed to those device groups.</p>
@@ -100,55 +107,55 @@
                         or deleting it from the impCloud. Only products that contain device groups with no assigned devices (or no device
                         groups at all) can be deleted.</p>
                         <p>When you change a project or one of its device groups, Squinter will indicate to you that the project file needs
-                        to be saved. It does so using the green circle next to the ‘Current Project’ popup in the main Squinter window:
-                        an empty circle tells you the currently selected project has changed and may need to be saved. If you don’t wish to
+                        to be saved. It does so using the green circle next to the 'Current Project' popup in the main Squinter window:
+                        an empty circle tells you the currently selected project has changed and may need to be saved. If you don't wish to
                         save the changes, you can choose to ignore them when you quit Squinter or close the project.<br>&nbsp;</p>
                         <h2>Working With Device Groups</h2>
                         <p>Squinter lists all of the device groups that belong to a given project. When you select a Project,
-                        its device groups, if any, are listed in the ‘Project’s Device Groups’ submenu in the ‘Device Groups’
+                        its device groups, if any, are listed in the 'Project's Device Groups' submenu in the 'Device Groups'
                         menu. Initially the first device group, listed alphabetically, is selected when you open or select a project.
                         Only the device groups that belong to the currently selected project are listed, so to view a device
                         group from another project, just select or open that project.</p>
                         <p align="center"><img src="../../images/gfx/models.png" width="632" style="border: 1px solid #DDDDDD" /></p>
                         <p>If any devices have been assigned to a device group, they are listed as submenus to each device group
-                        listed in the ‘Project’s Device Groups’ submenu.</p>
-                        <p>When you select a project or one of its device groups, the ‘Device Groups’ menu enables a number of actions which
+                        listed in the 'Project's Device Groups' submenu.</p>
+                        <p>When you select a project or one of its device groups, the 'Device Groups' menu enables a number of actions which
                         can be performed on the selected device group. This includes editing its name and/or description, getting information
                         about the code deployed to it, and even deleting the device group from your project and the impCloud.
-                        However, you can’t delete a device group that has devices assigned to it. You can restart simultaneously
+                        However, you can't delete a device group that has devices assigned to it. You can restart simultaneously
                         all of the devices assigned to the selected device group here too.</p>
                         <p>Do not delete device groups if you are working offline as they will not be removed from the impCloud. There is
                         currently no way to delete a device group locally and have it removed from the impCloud when you connect later.</p>
                         <p>Because the code you work on will be uploaded to a given device group rather than to a project
-                        (as was the case with Squinter 1.0), you will find the commands that allow you to access a device group’s
+                        (as was the case with Squinter 1.0), you will find the commands that allow you to access a device group's
                         source code files (and any libraries or other Squirrel files they import) from submenus included
-                        in the ‘Device Groups’ menu.</p>
+                        in the 'Device Groups' menu.</p>
                         <p align="center"><img src="../../images/gfx/assign.png" width="612" style="border: 1px solid #DDDDDD" /></p>
-                        <p>You can add a new device group to a project either by selecting the option from the ‘Project’s Device Groups’
-                        submenu, or by choosing ‘Add source files to Project’ from the ‘Files’ menu. This can be used to add agent and/or
+                        <p>You can add a new device group to a project either by selecting the option from the 'Project's Device Groups'
+                        submenu, or by choosing 'Add source files to Project' from the 'Files' menu. This can be used to add agent and/or
                         device code files to an existing device group, or to add them to a new nevice group created there and
                         then.<br>&nbsp;</p>
                         <h2>Working With Devices</h2>
-                        <p>Squinter keeps track of your development devices. It lists these in the ‘Device Groups’ menu’s ‘Project’s
-                        Device Groups’ submenu, alongside the device group each device is assigned to. Unassigned devices are listed
-                        in their own submenu under the ‘Device’ menu. Specific devices can also be selected from the ‘Current Device’
-                        popup menu in Squinter’s main window.</p>
+                        <p>Squinter keeps track of your development devices. It lists these in the 'Device Groups' menu's 'Project's
+                        Device Groups' submenu, alongside the device group each device is assigned to. Unassigned devices are listed
+                        in their own submenu under the 'Device' menu. Specific devices can also be selected from the 'Current Device'
+                        popup menu in Squinter's main window.</p>
                         <p align="center"><img src="../../images/gfx/devices.png" width="600" style="border: 1px solid #DDDDDD" /></p>
-                        <p>In each of these lists, each device’s status &mdash; online or offline; logging or not &mdash; is listed
+                        <p>In each of these lists, each device's status &mdash; online or offline; logging or not &mdash; is listed
                         alongside their names.</p>
-                        <p>The ‘Device’ menu presents actions you can perform on the currently selected device, including getting information
+                        <p>The 'Device' menu presents actions you can perform on the currently selected device, including getting information
                         about it, renaming it, removing it from your account, and removing its association with a device group (unassign
                         it).</p>
                         <p>You can also force the device to restart. If you want to force all of the devices assigned to a given device group to
-                        restart, not just the selected one, there’s an option for that in the ‘Device Groups’ menu.</p>
-                        <p>To update the information Squinter holds about all of of your development devices, select the ‘Update Devices’
-                        Status’ command in the ‘Devices’ menu. This can be selected at any time, and there is an option in Squinter’s
+                        restart, not just the selected one, there's an option for that in the 'Device Groups' menu.</p>
+                        <p>To update the information Squinter holds about all of of your development devices, select the 'Update Devices'
+                        Status' command in the 'Devices' menu. This can be selected at any time, and there is an option in Squinter's
                         Preferences to have this information retrieved automatically whenever the app starts up.</p>
                         <p align="center"><img src="../../images/gfx/dlist.png" width="402" style="border: 1px solid #DDDDDD" /></p>
-                        <p>The ‘Devices’ menu also maintains a submenu of unassigned devices &mdash; those which have not yet been assigned to a
+                        <p>The 'Devices' menu also maintains a submenu of unassigned devices &mdash; those which have not yet been assigned to a
                         device group or have been removed from one. When you add a new development device to your account, it will first appear
-                        in this list, though you may need to update the menu (use the ‘Update Devices’ Status’ command) to see it. Selecting a
-                        device from this list will affect the ‘Devices’ menu but not the currently selected device group.<br>&nbsp;</p>
+                        in this list, though you may need to update the menu (use the 'Update Devices' Status' command) to see it. Selecting a
+                        device from this list will affect the 'Devices' menu but not the currently selected device group.<br>&nbsp;</p>
                         <h2>Incorporating Libraries Into Your Code</h2>
                         <p>Squinter lets you incorporate multiple files into the source code that is deployed to a given device group.
                         Electric Imp applications comprise two files: one for device code, the other for cloud-based agent code. Squinter lets
@@ -156,9 +163,9 @@
                         <p>For example, you might want to use the same library in multiple device groups &mdash; they all use the same sensor,
                         say &mdash; even between device groups that belong to different projects. Sharing a single library file allows you to
                         update that file without having to edit every listing of device or agent code that uses it. You just recompile
-                        each device group’s source code to incorporate the changes you’ve made to the single library file.</p>
+                        each device group's source code to incorporate the changes you've made to the single library file.</p>
                         <p align="center"><img src="../../images/gfx/libs.png" width="620" height="392" style="border: 1px solid #DDDDDD" /></p>
-                        <p>Squinter expects your primary source code files &mdash; a device group’s base device and agent code &mdash; to be
+                        <p>Squinter expects your primary source code files &mdash; a device group's base device and agent code &mdash; to be
                         named in the standard Electric Imp schema: <code>*.agent.nut</code> and <code>*.device.nut</code> for, respectively,
                         your agent and device code. The two identifiers (represented here by the wildcard *) need not be identical.</p>
                         <p>Local library files should be entered into your agent and device source code using the following syntax:<p>
@@ -168,52 +175,52 @@
                         directive.</p>
                         <p>The name of the library file is arbitrary, but <code>*.class.nut</code> and <code>*.library.nut</code> are the
                         recommended forms. You may include a full Unix filepath; if you only provide a filename, Squinter expects the file to
-                        reside in the same directory as the <code>*.squirrelproj</code> project file <i>(see ‘Working with Projects and
-                        Products’, above)</i>. You can specify files that need to be reached by moving up through
-                        your folder hierarchy by including <code>..</code> to mean ‘go up one level’. For example:</p>
+                        reside in the same directory as the <code>*.squirrelproj</code> project file <i>(see 'Working with Projects and
+                        Products', above)</i>. You can specify files that need to be reached by moving up through
+                        your folder hierarchy by including <code>..</code> to mean 'go up one level'. For example:</p>
                         <pre><code>#import "../../../generic/bootmessage.nut"</code></pre>
                         <p>This means go up three folders then down to the folder <i>generic</i> and thus to the file
                         <i>bootmessage.nut</i>.</p>
                         <p align="center"><img src="../../images/gfx/files.png" width="625" style="border: 1px solid #DDDDDD" /></p>
                         <p>Internally, Squinter stores all file locations as paths relative to the project file, though you can choose how file
-                        paths are displayed by changing the app’s Preferences. When Squinter compiles code, it re-checks the links it has
+                        paths are displayed by changing the app's Preferences. When Squinter compiles code, it re-checks the links it has
                         against those included in the <code>#include</code> statement, updating its internal record as required. Squinter will
                         warn you if you move a file while is running.</p>
                         <p>Squinter lets you store both library files and blocks of Squirrel or other data in <code>*.nut</code> and
                         <code>*.txt</code> files. At compilation, all of these sources are inserted into a master copy of the source code, and
-                        it is this ‘compiled’ Squirrel which will be uploaded to the selected device group.<br>&nbsp;</p>
+                        it is this 'compiled' Squirrel which will be uploaded to the selected device group.<br>&nbsp;</p>
                         <h2>Debugging Code</h2>
                         <p>You can retrieve the most recent log entries for the selected device in one go (up to a maximum of 200),
-                        or you can stream logs from the device: entries will appear in Squinter’s main window in real time. You can currently
+                        or you can stream logs from the device: entries will appear in Squinter's main window in real time. You can currently
                         only stream from up to five devices at a time. This is a limitation of the impCentral API.</p>
                         <p align="center"><img src="../../images/gfx/log.png" width="800" style="border: 1px solid #DDDDDD" /></p>
-                        <p>When you upload code &mdash; using the ‘Upload’ button or the ‘Device Groups’ menu option &mdash; the Electric Imp
-                        impCloud will perform a syntax check. Any errors it spots will be reported in Squinter’s log window. Line numbers refer
-                        to the compiled code, so you can use two actions in the ‘View Compile Source’ submenu under ‘Device Groups’ to list the
+                        <p>When you upload code &mdash; using the 'Upload' button or the 'Device Groups' menu option &mdash; the Electric Imp
+                        impCloud will perform a syntax check. Any errors it spots will be reported in Squinter's log window. Line numbers refer
+                        to the compiled code, so you can use two actions in the 'View Compile Source' submenu under 'Device Groups' to list the
                         current compiled code to help you track down the errors. These two options &mdash; one for device code, the other for
                         agent code &mdash; will list the compiled source for the currently selected device group.</p>
-                        <p>If the log window becomes too crowded, you can clear it using the ‘Clear’ button in the toolbar, which is also home
-                        to a number of shortcuts to various functions provided by Squinter’s menus. You can also print the current contents of
+                        <p>If the log window becomes too crowded, you can clear it using the 'Clear' button in the toolbar, which is also home
+                        to a number of shortcuts to various functions provided by Squinter's menus. You can also print the current contents of
                         the log window if you have a printer.<br>&nbsp;</p>
                         <h2>Configuring Squinter</h2>
-                        <p>To take full advantage of Squinter’s features, you will need an Electric Imp account. With Squinter 2.0 you no
+                        <p>To take full advantage of Squinter's features, you will need an Electric Imp account. With Squinter 2.0 you no
                         longer require a Build API key. Instead you must sign into your account using your Electric Imp username and password
                         before Squinter can access the impCloud on your behalf. When you first run Squinter 2.0, it will ask you for these
-                        credentials and give you the option to store them securely in your keychain to automate login in future. The ‘Account’
+                        credentials and give you the option to store them securely in your keychain to automate login in future. The 'Account'
                         menu provides a means to log into your account later if you choose not to do so at the start, or to subsequently sign
                         out.</p>
                         <p align="center"><img src="../../images/gfx/prefs.png" width="612" style="border: 1px solid #DDDDDD" /></p>
-                        <p>Squinter’s Preferences panel includes a setting to log in when Squinter starts up. Other options include compiling
-                        the code linked to all of a project’s device groups when a project is opened, and automatically retrieving the latest
+                        <p>Squinter's Preferences panel includes a setting to log in when Squinter starts up. Other options include compiling
+                        the code linked to all of a project's device groups when a project is opened, and automatically retrieving the latest
                         device and product information at log-in.</p>
-                        <p>In addition, Preferences contains settings for the colour of Squinter’s log pane, which mono-spaced font is used, and
+                        <p>In addition, Preferences contains settings for the colour of Squinter's log pane, which mono-spaced font is used, and
                         how file paths should be displayed.</p>
                         <p align="center"><img src="../../images/gfx/prefs2.png" width="612" style="border: 1px solid #DDDDDD" /></p>
                         <p>Squinter would not be possible without open source software contributions from a number of developers. They are
-                        listed in the ‘Acknowledgements’ section of the ‘Help’ menu, along with links to the source code Squinter
+                        listed in the 'Acknowledgements' section of the 'Help' menu, along with links to the source code Squinter
                         uses.<br>&nbsp;</p>
                         <h2>Updating Squinter</h2>
-                        <p>You can check for Squinter updates by using the appropriate command in the ‘Squinter’ menu. You can also tell
+                        <p>You can check for Squinter updates by using the appropriate command in the 'Squinter' menu. You can also tell
                         Squinter to check for updates on your behalf: just check the relevant box in the Preferences.</p>
                         <p align="right"><a href="#top">Back to the Top</a></p>
                         <p>&nbsp;</p>
