@@ -189,6 +189,20 @@
                         <p>Squinter lets you store both library files and blocks of Squirrel or other data in <code>*.nut</code> and
                         <code>*.txt</code> files. At compilation, all of these sources are inserted into a master copy of the source code, and
                         it is this 'compiled' Squirrel which will be uploaded to the selected device group.<br>&nbsp;</p>
+                        <h2>Deploying Code</h2>
+                        <p>Squinter 2.0 allows you to upload compiled code direct to the selected device group: select the 'Upload' option in the
+                        'Device Groups' menu. Alternatively, holding down the Option key makes this option 'Upload with Extra Information'; when
+                        selected, it pops up a panel into which you can enter an optional commit message, an optional source URL and an optional set
+                        of one or more tags for the deployment. Click on the 'Upload' button to include any extra information you add to the upload, or
+                        click 'Skip Extras' to upload just the code.</p>
+                        <p align="center"><img src="../../images/gfx/extra.png" style="border: 1px solid #DDDDDD" /></p>
+                        <p>Both of these options are available as separate toolbar items. The 'upload extra information' item is not part of the standard
+                        Squinter toolbar layout, so you will need to click on 'Customize Toolbar...' in the 'View' menu to add it. You may also wish to
+                        add the 'Show Commits' button, which will call up a list of all the commits/deployments made to the currently selected device
+                        group.</p>
+                        <p align="center"><img src="../../images/gfx/commits.png" /></p>
+                        <p>Having uploaded code, you can restart the currently selected device by selecting 'Restart' from the 'Device' menu, or restart
+                        all of the devices assigned to the current device group by selecting 'Restart' from the 'Device Groups' menu.<br>&nbsp;</p>
                         <h2>Debugging Code</h2>
                         <p>You can retrieve the most recent log entries for the selected device in one go (up to a maximum of 200),
                         or you can stream logs from the device: entries will appear in Squinter's main window in real time. You can currently
@@ -216,6 +230,10 @@
                         <p>In addition, Preferences contains settings for the colour of Squinter's log pane, which mono-spaced font is used, and
                         how file paths should be displayed.</p>
                         <p align="center"><img src="../../images/gfx/prefs2.png" width="612" style="border: 1px solid #DDDDDD" /></p>
+                        <p>Squinter's toolbar is customisable: select the appropriate option from the 'View' menu to make changes to the initial,
+                        standard layout. You can also choose to hide the toolbar. Squinter supports full-screen mode: click on the green traffic
+                        light at the top left of the window.</p>
+                        <p align="center"><img src="../../images/gfx/toolbar.png" style="border: 1px solid #DDDDDD" /></p>
                         <p>Squinter would not be possible without open source software contributions from a number of developers. They are
                         listed in the 'Acknowledgements' section of the 'Help' menu, along with links to the source code Squinter
                         uses.<br>&nbsp;</p>
