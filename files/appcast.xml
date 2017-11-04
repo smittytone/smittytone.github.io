@@ -7,12 +7,21 @@
         <language>en</language>
 
         <item>
+            <title>Version 2.0 (build 121b10)</title>
+            <sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
+            <pubDate>Fri, 03 November 2017 18:00:00 +0000</pubDate>
+            <enclosure url="https://smittytone.github.io/files/Squinter_2_0_121b10.dmg" sparkle:version="121b10" sparkle:shortVersionString="2.0.121b10" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MEUCIQCI6RN+pB4Qfg0nb5MyCrXz4o6+GwEgyntMd6ck2grcRQIgJI+itBA7b0WU
+XHyS11rYbmWQujyclfj1TMgS+a2Tlf8=" />
+            <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
             <title>Version 2.0 (build 121b9)</title>
             <sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
             <pubDate>Thur, 02 November 2017 11:00:00 +0000</pubDate>
             <enclosure url="https://smittytone.github.io/files/Squinter_2_0_121b9.dmg" sparkle:version="121b9" sparkle:shortVersionString="2.0.121b9" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MEQCICAA4wQvVJQ82qkwXSLUzlH0d6Z0RyTzNupOQCu1U9CuAiBTC2qu9uK8osTP
 f1zqxIMZ4C7tE93Sojbet8nebgR6dg==" />
-            <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+            <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
         </item>
 
     </channel>
