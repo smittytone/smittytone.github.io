@@ -26,7 +26,7 @@
           <td width="40%" valign="top">
             <h2 class="text-center">Squinter 2.0 Beta</h2>
             <h3 class="text-center">&#8216;A Squirrel Integrator&#8217;
-            <h4 class="text-center">Latest Release: <a href="#rn">2.0.121b11 (November 23, 2017)</a></h4>
+            <h4 class="text-center">Latest Release: <a href="#rn">2.0.121b12 (December 08, 2017)</a></h4>
             <p>&nbsp;</p>
             <div style="background-color:#dddddd;padding: 5px 15px 10px 15px">
               <h2>Download Squinter</h2>
@@ -34,19 +34,19 @@
               <table style="width:80%;border:none;">
                 <tr>
                   <td valign="middle" width="15%"><b>File</b></td>
-                  <td valign="middle"><a href="/files/Squinter_2_0_121b11.dmg">Squinter_2_0_121b11.dmg</a></td>
+                  <td valign="middle"><a href="/files/Squinter_2_0_121b12.dmg">Squinter_2_0_121b12.dmg</a></td>
                 </tr>
                 <tr>
                   <td valign="middle" width="15%"><b>File Size</b></td>
-                  <td valign="middle">6MB</td>
+                  <td valign="middle">6.1MB</td>
                 </tr>
                 <tr>
                   <td valign="middle" width="15%"><b>SHA</b></td>
-                  <td valign="middle">37a77bab0e103ea879da2e864387eca858cedca2</td>
+                  <td valign="middle">a11aa6be0e5c326dd9e69bfc94a99e4d561dd3d6</td>
                 </tr>
                 <tr>
                   <td valign="middle" width="15%"><b>SHA 256</b></td>
-                  <td valign="middle">fd50de48b7c21f34165b48c9bcf455aa33285d1c5034446742560678910b77cf</td>
+                  <td valign="middle">baf9eaa01c0839025f310748cde2242ba11aadb21d1fb55c0f4e2fd2808db157</td>
                 </tr>
               </table>
             </div>
@@ -83,12 +83,25 @@
               <li>Re-written and improved library and file compilation.</li>
               <li>Updated UI will new toolbar buttons, and visual device status icons (online/offline, logging).</li>
               <li>Highlighted error and warning messages to make them easier to spot</li>
-              <li>Many bugs squashed</li>
             </ul>
             <h3 id="rn">Release Notes</h3>
+            <h4>2.0.121b12</h4>
+            <ul>
+              <li>New project, device Inspector.</li>
+              <li>Open source code, libraries and other files from the Inspector.</li>
+              <li>Access agent URLs from the Inspector.</li>
+              <li>Create production, pre-production, factory and factory test groups.</li>
+              <li>Assign production groups as factory group targets.</li>
+              <li>Assign pre-production groups as factory test group targets.</li>
+              <li>Preliminary support for listing test blessed devices.</li>
+              <li>Improved Assign Devices sheet.</li>
+              <li>Fix Open All Recents issue with lost files.</li>
+              <li>Fixed an issue in which adding files to a new project did not correctly create a new device group.</li>
+              <li>Fixed an issue in which files in sub-folders relative to the project file were not found.</li>
+            </ul>
             <h4>2.0.121b11</h4>
             <ul>
-              <li>Add support for polte deployment: minimum supported deployments, conditional restarts.</li>
+              <li>Add support for polite deployment: minimum supported deployments, conditional restarts.</li>
               <li>Add user-definable colours for logging devices' log posts.</li>
               <li>Re-arrange other preferences.</li>
               <li>List a project's Device Groups by type</li>
@@ -120,14 +133,19 @@
               model migration, you will need to delete the model <b>before</b> you create the product, which you can do opening
               the old project file in Squinter 2.0. Squinter will report an API error if you attempt to create a product (or
               open an old project file, which automatically creates a product) without deleting the model first.</li>
-              <li>Streamed log items occasionally not diplayed (but are present in historical log)</li>
+              <li>Streamed log items occasionally not displayed (but are present in historical log)</li>
               <li>Offline changes made to projects and/or device groups cannot yet be sync'd with the impCloud. Avoid working with
               Squinter 2.0 offline.</li>
-              <li>Production functionality has not yet been included.</li>
               <li>Collaboration functionality has not yet been included.</li>
               <li>Online help is available but not yet complete</li>
               <li>Squinter 1.0 will not see Squinter 2.0 as an available update. At this time, you must install Squinter 2.0 manually.</li>
             </ul>
+            <p id="accounts">&nbsp;</p>
+            <h2>Electric Imp Accounts</h2>
+            <p>Squinter requires an Electric Imp account. Sign up is free at
+            <a href="https://impcentral.electricimp.com">impcentral.electricimp.com</a>. Production functionality requires an
+            Enterprise account, for which you must be an Electric Imp customer. Log in using the ‘Account’ menu:</p>
+            <p align="center"><img src="../../images/gfx/account.png" style="border: 1px solid #DDDDDD" /><br>&nbsp;</p>
             <h2>Working With Projects and Products</h2>
             <p>Squinter works with 'projects', each of which is stored as a project file on disk. Each Project links to an
             impCentral 'product' and references the 'device groups' <i>(see below)</i> that that product contains. For each device
@@ -204,7 +222,11 @@
             <p>The 'Devices' menu also maintains a submenu of unassigned devices &mdash; those which have not yet been assigned to a
             device group or have been removed from one. When you add a new development device to your account, it will first appear
             in this list, though you may need to update the menu (use the 'Update Devices' Status' command) to see it. Selecting a
-            device from this list will affect the 'Devices' menu but not the currently selected device group.<br>&nbsp;</p>
+            device from this list will affect the 'Devices' menu but not the currently selected device group.</p>
+            <p>In addition, Squinter’s Inspector panel can be called up (Cmd-Alt-I) to provide persistent device, and project,
+            information:</p>
+            <p align="center"><img src="../../images/gfx/inspector.png" /></p>
+            <p>This panel will update as you select devices and/or load or select different projects.<br>&nbsp;</p>
             <h2>Incorporating Libraries Into Your Code</h2>
             <p>Squinter lets you incorporate multiple files into the source code that is deployed to a given device group.
             Electric Imp applications comprise two files: one for device code, the other for cloud-based agent code. Squinter lets
@@ -267,9 +289,9 @@
             to the compiled code, so you can use two actions in the 'View Compile Source' submenu under 'Device Groups' to list the
             current compiled code to help you track down the errors. These two options &mdash; one for device code, the other for
             agent code &mdash; will list the compiled source for the currently selected device group.</p>
-            <p>If the log window becomes too crowded, you can clear it using the 'Clear' button in the toolbar, which is also home
-            to a number of shortcuts to various functions provided by Squinter's menus. You can also print the current contents of
-            the log window if you have a printer.<br>&nbsp;</p>
+            <p id="Configuring">If the log window becomes too crowded, you can clear it using the 'Clear' button in the toolbar,
+            which is also home to a number of shortcuts to various functions provided by Squinter's menus. You can also print the
+            current contents of the log window if you have a printer.<br>&nbsp;</p>
             <h2>Configuring Squinter</h2>
             <p>To take full advantage of Squinter's features, you will need an Electric Imp account. With Squinter 2.0 you no
             longer require a Build API key. Instead you must sign into your account using your Electric Imp username and password
