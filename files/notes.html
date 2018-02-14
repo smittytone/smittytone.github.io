@@ -9,34 +9,23 @@
   </style>
 </head>
 <body>
-  <h3>Squinter 2.0.121b12 BETA (08 December 2017)</h3>
+  <h3>Squinter 2.0.121b13 BETA (14 February 2018)</h3>
   <p><b>New Features</b></p>
   <ul>
-    <li>New Inspector panel:
-        <ul>
-            <li>View full project and device group information.</li>
-            <li>View full device information.</li>
-            <li>Open source code, libraries and other files from the Inspector.</li>
-            <li>Access agent URLs from the Inspector.</li>
-        </ul>
-    </li>
-    <li>Add production-centric device groups to a project:
-        <ul>
-            <li>Create production, pre-production, factory and factory test groups.</li>
-            <li>Assign production groups as factory group targets.</li>
-            <li>Assign pre-production groups as factory test group targets.</li>
-        </ul>
-    </li>
+    <li>MacBook Pro TouchBar support</li>
   </ul>
   <p><b>Improvements</b></p>
   <ul>
-    <li>Improved Assign Devices sheet.</li>
+  	<li>Provide periodic updates of devices' connection status (checks every five minutes)</li>
   </ul>
   <p><b>Bug Fixes</b></p>
   <ul>
-    <li>Fix Open All Recents issue with lost files.</li>
-    <li>Fixed an issue in which adding files to a new project did not correctly create a new device group.</li>
-    <li>Fixed an issue in which files in sub-folders relative to the project file were not found.</li>
+    <li>Fix regression that prevented Products being downloaded to Projects.</li>
+    <li>Inspector correctly updated when a <code>.squirrelproj</code> file is double-clicked.</li>
+    <li>Annoying 'moving buttons' bug fixed on Inspector.</li>
+    <li>Fix unwanted change of font colour after viewing preferences.</li>
+    <li>Fix double-posting of Electric Imp library check readout.</li>
+    <li>Handle impCentral API access tokens that could expire en route to server.</li>
   </ul>
   </body>
 </html>
