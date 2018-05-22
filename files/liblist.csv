@@ -3,7 +3,9 @@ APDS9007.class.nut,3.0.0
 Button.class.nut,1.2.0
 CFAx33KL.class.nut,1.1.0
 FramStore.class.nut,1.0.0
-GPS.device.lib.nut,0.1.0
+GPS.device.lib.nut,dep
+GPSParser.device.lib.nut,1.0.0
+GPSUARTDriver.device.lib.nut,1.0.0
 HT16K33Matrix.class.nut,1.2.0
 HT16K33Segment.class.nut,1.2.0
 HT16K33SegmentBig.class.nut,1.1.0
@@ -33,6 +35,7 @@ QL720NW.device.lib.nut,1.0.0
 RN2xxx.device.lib.nut,1.0.0
 Si114x.class.nut,1.0.0
 Si702x.class.nut,1.0.0
+SoftwareSPI.device.lib.nut,0.1.0
 SPIFlash.class.nut,1.0.1
 SPIFlashFileSystem.class.nut,1.2.0
 SPIFlashLogger.class.nut,2.2.0
@@ -112,4 +115,5 @@ PrettyPrinter.class.nut,1.0.1
 Promise.class.nut,3.0.1
 Rocky.class.nut,2.0.1
 Serializer.class.nut,1.0.0
-utilities.nut,1.0.0
+utilities.nut,dep
+
