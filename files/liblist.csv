@@ -79,7 +79,7 @@ mLab.class.nut,1.0.0
 MongoDBStitch.agent.lib.nut,1.0.0
 MongoLab.class.nut,dep,MongoDBStitch.agent.lib.nut
 NewRelicInsights.class.nut,1.0.0
-Parse.class.nut,dep,no replacement
+Parse.class.nut,dep,none
 Phant.class.nut,1.0.0
 Plotly.class.nut,1.0.1
 Predix.agent.nut,1.0.0
@@ -100,7 +100,7 @@ Wunderground.class.nut,1.0.0
 Xively.class.nut,1.0.1
 AES.lib.nut,1.0.0
 AgentStorage.class.nut,1.0.0
-BuildAPIAgent.class.nut,dep,no replacement
+BuildAPIAgent.class.nut,dep,none
 Bullwinkle.class.nut,2.3.2
 ConnectionManager.class.nut,dep,ConnectionManager.lib.nut
 ConnectionManager.lib.nut,3.0.0
