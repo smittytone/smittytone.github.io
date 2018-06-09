@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <title>FightingFantasy Game Manager</title>
+  <style>
+    .center {margin-left:auto;margin-right:auto;margin-bottom:auto;margin-top:auto;}
+    .container{padding-bottom:10px;}
+    .nav-item{font-family:Abel,sans-serif;}
+    .navbar-brand{font-family:Abel,sans-serif;}
+    body{background-color:#EEEEEE;}
+    p{color:black;font-family:Abel,sans-serif;font-size:16px;}
+    .smalllink{font-size:12px;}
+    h2{color:black;font-family:Abel,sans-serif;font-weight:bold;font-size:36px;padding-bottom:10px;padding-top:10px;}
+    h3{color:black;font-family:Abel,sans-serif;font-size:22px;}
+    h4{color:black;font-family:Abel,sans-serif;font-size:18px;}
+    hr{border-color:#FFD709;}
+    td{color:black;font-family:Abel,sans-serif;font-size:16px;}
+    th{color:#FFD709;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
+    li{color:black;font-family:Abel,sans-serif;font-size:16px;list-style:none;}
+    li::before {border-radius:50%;content:"";display:inline-block;margin-right:6px;margin-bottom:1px;
+                height:8px;width:8px;background-color:#FFD709;}
+  </style>
+</head>
+<body>
+  <div class="container" id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#FFD709;">
+      <a class="navbar-brand" style="color:black" href="../index.html">
+        <img src="../images/ff.png" width="32" height="32" class="d-inline-block align-top" alt="">
+        FightingFantasy
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" style="color:black" href="#how">How to Use Fighting Fantasy GM</a>
+          <a class="nav-item nav-link" style="color:black" href="#rsns">Release Notes</a>
+          <a class="nav-item nav-link" style="color:black" href="../index.html">Home</a>
+        </div>
+      </div>
+    </nav>
+    <div class="frame" style="border: 4px solid #FFD709">
+      <div class="row">
+        <div class="col-1 col-lg-2">&nbsp;</div>
+        <div class="col-10 col-lg-8">
+          <h2 class="text-center">FightingFantasy Game Manager 3.0</h2>
+          <h3 class="text-center"></h3>
+          <h4 class="text-center">Latest Release: <a href="#rsns">3.0.15</a></h4>
+          <p id="about">&nbsp;</p>
+          <h3>About Fighting Fantasy Game Manager</h3>
+          <p>This is a Swift 4 port (for macOS) of a much older Objective-C version written circa 2003 following the 20th
+          anniversary of the publication of Penguin Books' Fighting Fantasy gamebook series and the revival of the books by Icon Books.
+          The concept of a program to help players with their games &mdash; setting up characters, handling combat, managing their backpack
+          contents, testing for Luck, etc. &mdash; goes back to a mid- to late 1990s Real Basic classic Mac OS version which, in turn, was a
+          redevelopment of an original implementation for the
+          <a href="https://smittytone.wordpress.com/2013/04/21/rip-dragon-32-1982-2013-my-first-8-bit-colour-microcomputer/">Dragon 32</a>
+          written around 1985, while the gamebooks were still being published by Penguin's Puffin imprint.</p>
+          <div class="row">
+            <div class="col-6" align="left">
+              <img class="img-fluid" src="../images/gfx/stats.png" width="340" style="border: 1px solid #999999"><br>&nbsp;
+            </div>
+            <div class="col-6" align="right">
+              <img class="img-fluid" src="../images/gfx/combat.png" width="340" style="border: 1px solid #999999"><br>&nbsp;
+            </div>
+          </div>
+          <p>Coding up the Swift version was solely about me learning Swift, and the recent, third revival of the gamebooks &mdash;
+          this time by Scholastic &mdash; is entirely coincidental, but certainly not unwelcome. There's even some new ones out,
+          <i>Port of Peril</i> and <i>Gates of Death</i>. I'll support it in the game manager if it makes use of new rules or features.</p>
+          <p>Incidentally, not all of the gamebooks are supported, I'm afraid, only those I have played or plan to.
+          So if you have a favourite that's not included, consider it a tutorial exercise: an opportunity to expand on the
+          code included in this repo.</p>
+          <p>Fighting Fantasy the property of Steve Jackson and Ian Livingstone, and reference to it here and in the code is on
+          a notionally fair-use basis. Although my version includes imagery from the books, it is not included in the GitHub archive.
+          Quite apart from any legal reasons, I owe it to Jackson, Livingstone and all the artists whose work gave me so much
+          pleasure in the mid-1980s and again in the 2000s and 2010s, not to treat their work as a commodity to be downloaded.
+          And as a published Fighting Fantasy writer...</p>
+          <div class="row">
+            <div class="col-6" align="left">
+              <img class="img-fluid" src="../images/gfx/tests.png" width="340" style="border: 1px solid #999999"><br>&nbsp;
+            </div>
+            <div class="col-6" align="right">
+              <img class="img-fluid" src="../images/gfx/pack.png" width="340" style="border: 1px solid #999999"><br>&nbsp;
+            </div>
+          </div>
+          <p>You can find out more about the gamebooks at <a href="https://fightingfantast.com">FightingFantasy.com</a>.</p>
+          <p id="how">For the application code, please visit the <a href="https://github.com/smittytone/FightingFantasy">GitHub repo
+          page</a>.<br>&nbsp;</p>
+          <h3>How to Use Fighting Fantasy Game Manager</h3>
+          <p>Using the Game Manager should be intuitive: it replicates the Character and Monster Encounter Sheets found in the
+          gamebooks, and provides game mechanics, including testing your Luck and Skill, and engaging in combat. There is a
+          section for recording the items you have in your pack, and another for making notes. You can save your character for
+          future sessions, and set a digital bookmark to record your current place in the gamebook.</p>
+          <h3>Rolling a New Character</h3>
+          <p>Select <b>New Character</b> from the <b>File</b> menu or <b>New Game</b> from the intro screen. Stats will be rolled for you,
+          but you can always roll again! Select the gamebook you will be playing and, on that basis, which, if any, potions, provisions and
+          Gold Pieces you start out with.</p>
+          <p align="center"><img class="img-fluid" src="../images/gfx/newc.png" width="340" style="border: 1px solid #999999"></p>
+          <p>Click <b>OK</b> to continue.</p>
+          <p>Choosing a gamebook sets up the Game Manager accordingly: some games have different features &mdash; magic in <i>Citadel of
+          Chaos</i>, Fear and madness in <i>House of Hell</i> &mdash; and the Game Manager will present these as required. Look out too for
+          the <b>Game</b> menu, which will contain game-specific actions that a given gamebook will offer on certain pages. Game Manager
+          will tell you when the <b>Game</b> menu is enabled.</p>
+          <h3>Playing the Game</h3>
+          <p>The <b>Stats</b> tab provides a readout of your Skill, Stamina and Luck (and their initial values) and allows you to
+          change these as required. It also lets you add and eat Provisions, add and spend Gold Pieces, and drink your Magic Potion, if you
+          have one (and you have drinks left).</p>
+          <p align="center"><img class="img-fluid" src="../images/gfx/stats.png" width="340" style="border: 1px solid #999999"></p>
+          <p>Click the blue dot in the top right corner to set the bookmark to the current gamebook entry. When
+          you put your mouse point on the dot and no bookmark is set, the dot will show a plus sign. Click to set the bookmark:</p>
+          <p align="center"><img class="img-fluid" src="../images/gfx/book1.png" width="340" style="border: 1px solid #999999"></p>
+          <p>When you set a bookmark, a tag appears &mdash; click this to change the bookmark. Click the blue dot again to clear the
+          bookmark.</p>
+          <p align="center"><img class="img-fluid" src="../images/gfx/book2.png" width="340" style="border: 1px solid #999999"></p>
+          <p>The <b>Tests</b> tab is where you <b>Test Your Luck</b>. If the gamebook asks you to roll two dice and compare the result to
+          your Skill score, you can do that here too, using <b>Test Your Skill</b>. Apply modifiers to the rolls as indicated by the
+          gamebook, eg. reduce your Skill roll by two. A pair of dice are included for more general one- or two-dice rolls.</p>
+          <p align="center"><img class="img-fluid" src="../images/gfx/tests.png" width="340" style="border: 1px solid #999999"></p>
+          <h3>Fighting Monsters</h3>
+          <p>The <b>Combat</b> tab is where you fight monsters &mdash; up to three at once. Enter each beast’s Skill and Stamina into the
+          spaces provided and then select which ones will fight in the next combat round. This will be one monster for one-at-a-time battles
+          or multiple monsters if you are fighting them all at once. Which monster you intend to try and hit is selected by clicking the
+          <b>Target</b> box.
+          <p align="center"><img class="img-fluid" src="../images/gfx/combat.png" width="340" style="border: 1px solid #999999"></p>
+          <p>Finally, select any modifiers you should make to your Attack Score or the monster’s attack roll, eg. +1 for a magic sword,
+          or -2 because you have no weapon in hand, as directed by the gamebook or the weapon you are carrying.</p>
+          <p>Click <b>Strike Now!</b> to launch your attack. After the combat round has been played out, you can click <b>Use Your Luck</b>
+          if you wish to try and reduce damage done to you or increase the damage you have done to your target.</p>
+          <h3>Your Possessions</h3>
+          <p>The <b>Pack</b> tab allows you to track the items you have collected during your game. Click <b>Add Item</b> to add an item to
+          your pack and then double-click on the text <b<New pack item</b> to enter the name of the
+          item you have added. You may not find the exact item; just pick the one you prefer.</p>
+          <p align="center"><img class="img-fluid" src="../images/gfx/pack.png" width="340" style="border: 1px solid #999999"></p>
+          <p>You can click on the <img src="../images/gfx/q.png" width="16"> icon to change the item’s image &mdash; now or at any time.</p>
+          <p align="center"><img class="img-fluid" src="../images/gfx/items.png" width="340" style="border: 1px solid #999999"></p>
+          <h3>Taking Notes</h3>
+          <p>The <b>Notes</b> tab provides a simple jotter for you to record names, places and clues during the game. Just click and type.</p>
+          <p align="center"><img class="img-fluid" src="../images/gfx/notes.png" width="340" style="border: 1px solid #999999"></p>
+          <p id="rsns">&nbsp;</p>
+          <h3>Release Notes</h3>
+          <h4>3.0.15</h4>
+          <ul>
+              <li>Add <b>Yaztromo’s Aid</b> option to <b>Game</b> menu (<i>Port of Peril</i>).</li>
+          </ul>
+          <h4>3.0.14</h4>
+          <ul>
+              <li>Fix Luck Test’s Luck score decrement.</li>
+              <li>Correctly select the icon (in the pack item popover) of the pack item clicked upon.</li>
+          </ul>
+          <h4>3.0.13</h4>
+          <ul>
+              <li>Add the <b>Notes</b> tab.</li>
+              <li>Add control-click to bump stats to max.</li>
+              <li>Stop sheets blocking further sheets.</li>
+              <li>Fix character save bug.</li>
+          </ul>
+          <h4>3.0.12</h4>
+          <ul>
+              <li>Re-set New Character game popup Sorcery! entries.</li>
+              <li>Add <i>Temple of Terror.</i></li>
+              <li>Refactor Stats tab image code.</li>
+          </ul>
+          <h4>3.0.11</h4>
+          <ul>
+              <li>Add start menu.</li>
+              <li>Update graphics.</li>
+              <li>Improve About and Help sheet dismissals.</li>
+          </ul>
+          <h4>3.0.10</h4>
+          <ul>
+              <li>Add splash screen at startup.</li>
+              <li>Better sheet handling.</li>
+          </ul>
+          <p class="smalllink" align="right"><a href="#top">Back to the Top</a></p>
+          <hr>
+          <p><i>Fighting Fantasy is copyright &copy; 2016-18, Steve Jackson and Ian Livingstone.<br>Software only copyright &copy; 2017-18,
+          Tony Smith</i></p>
+        </div>
+        <div class="col-1 col-lg-2">&nbsp;</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="text-center"><a href=""https://smittytone.github.io"><img src="../images/rassilonblack.png" width="32" height="32"></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../scripts/retina.min.js"></script>
+  <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+  <script>
+    $('a[href*="#"]')
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 500, function() {
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) {
+              return false;
+            } else {
+              $target.attr('tabindex','-1');
+              $target.focus();
+            };
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
