@@ -13,7 +13,7 @@ HTS221.class.nut,dep,HTS221.device.lib.nut
 HTS221.device.lib.nut,2.0.1
 LatchingRelay.class.nut,1.0.0
 LIS3DH.class.nut,dep,LIS3DH.device.lib.nut
-LIS3DH.device.lib.nut,2.0.0
+LIS3DH.device.lib.nut,2.0.1
 LIS3MDL.class.nut,2.0.0
 LPS22HB.class.nut,dep,LPS22HB.device.lib.nut
 LPS22HB.device.lib.nut,2.0.0
