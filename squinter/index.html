@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
-  <title>Squinter 2.0 Beta</title>
+  <title>Squinter 2.0</title>
   <style>
     .center {margin-left:auto;margin-right:auto;margin-bottom:auto;margin-top:auto;}
     .container {padding-bottom:10px;}
@@ -28,7 +28,7 @@
 <body>
   <div class="container" id="top">
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6E9B3D;">
-      <a class="navbar-brand" style="color:white">
+      <a class="navbar-brand" style="color:white" href="../index.html">
         <img src="../images/sq.png" width="32" height="32" class="d-inline-block align-top" alt="">
         Squinter
       </a>
@@ -37,9 +37,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="../index.html#macos-applications">macOS Apps</a>
-          <a class="nav-item nav-link" href="../index.html#ios-applications">iOS Apps</a>
-          <a class="nav-item nav-link" href="../index.html#electric-imp-project-source-code-repos">imp Apps</a>
+          <a class="nav-item nav-link" href="#account">How to Use Squinter</a>
+          <a class="nav-item nav-link" href="#rn">Release Notes</a>
+          <a class="nav-item nav-link" href="#ki">Known Issues</a>
+          <a class="nav-item nav-link" href="../index.html">Home</a>
         </div>
       </div>
     </nav>
@@ -49,9 +50,9 @@
           <div class="row">
             <div class="col-1 col-lg-2">&nbsp;</div>
             <div class="col-10 col-lg-8">
-              <h2 class="text-center">Squinter 2.0 Beta</h2>
+              <h2 class="text-center">Squinter 2.0</h2>
               <h3 class="text-center">&#8216;A Squirrel Integrator&#8217;
-              <h4 class="text-center">Latest Release: <a href="#rn">2.0.121b13 (February 14, 2018)</a></h4>
+              <h4 class="text-center">Latest Release: <a href="#rn">2.0.121b14 (June 15, 2018)</a></h4>
               <p>&nbsp;</p>
               <div style="background-color:#DDDDDD;padding: 10px 10px 10px 10px">
                 <h2>Download Squinter</h2>
@@ -60,7 +61,7 @@
                   <tbody>
                     <tr>
                       <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
-                      <td scope="col-9 col-lg-10"><a href="/files/Squinter_2_0_121b13.dmg">Squinter_2_0_121b13.dmg</a></td>
+                      <td scope="col-9 col-lg-10"><a href="/files/Squinter_2_0_121b14.dmg">Squinter_2_0_121b14.dmg</a></td>
                     </tr>
                     <tr>
                       <th scope="row"><b>File Size</b>&nbsp;</th>
@@ -68,11 +69,11 @@
                     </tr>
                     <tr>
                       <th scope="row"><b>SHA</b>&nbsp;</th>
-                      <td>3ef21746d77e3e9a4a1173ce34b0507c26de8534</td>
+                      <td>2922e8094e3fc1a22d2e37e1b5c2271e8468adb7</td>
                     </tr>
                     <tr>
                       <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                      <td>cf6827e190257c79280d27e0bcc04c876e50f0d3aad9e18d032c742d8e476a1d</td>
+                      <td>70587af8a11c3524899c90a9b183ece3a2aa2dee6e63dbc985c97987f44d7b8b</td>
                     </tr>
                   <tbody>
                 </table>
@@ -96,11 +97,12 @@
                 </ul></li>
                 <li>And much more...</li>
               </ul>
+              <p>&nbsp;</p>
               <h3>Important</h3>
               <p>Squinter 2.0 is being made available in a pre-release Beta version which is not feeature-complete and may
               contain code errors that may impact your own code. You should not use Squinter with commercially sensitive
               projects and related code.</p>
-              <h3>What's New</h3>
+              <p>&nbsp;</p><h3>What's New</h3>
               <ul>
                 <li>Work with impCentral API entities: products, device groups, devices and deployments.</li>
                 <li>Add commit messages to code uploads, and view them later</li>
@@ -111,10 +113,36 @@
                 <li>Updated UI will new toolbar buttons, and visual device status icons (online/offline, logging).</li>
                 <li>Highlighted error and warning messages to make them easier to spot</li>
               </ul>
+              <p>&nbsp;</p>
               <h3 id="rn">Release Notes</h3>
+              <h4>2.0.121b14</h4>
+              <ul>
+                <li>Present Squinter's own log message tags: Device, Agent, Server.</li>
+                <li>Significantly speed up writing text to the log.</li>
+                <li>Break out list of products on which you are collaborating.<ul>
+                  <li>Shared products are listed by owner account.</li>
+                </ul></li>
+                <li>Add sign-in support for multiple impClouds, ie. AWS and Azure.</li>
+                <li>Improve account switching messaging and account labelling.</li>
+                <li>Improve EI library checking and reporting.</li>
+                <li>Add clearer warnings when libraries and/or files have been removed prior to compilation.</li>
+                <li>Support file versioning.<ul>
+                  <li>Use <code>#version "x.y.z"</code> to indicate a file’s version.</li>
+                  <li>As before class versions should entered as <code>static version = "x.y.z"</code> or<br>
+                    <code>const version = "x.y.z"</code> within the class definition.</li>
+                </ul></li>
+                <li>Add support for eight simultaneous logging devices (from five).</li>
+                <li>Add preference to keep devices' status updated.</li>
+                <li>Improve commit list display.</li>
+                <li>Kill all connections when the Mac is about to sleep.</li>
+                <li>Fix Preferences panel's bold text checkbox operation.</li>
+                <li>Fix placement of Open and Save panels' accessory views.</li>
+                <li>Fix appearance of new Device Groups in the Project Inspector.</li>
+                <li>Final beta release!</li>
+              </ul>
               <h4>2.0.121b13</h4>
               <ul>
-                <li>MacBook Pro TouchBar support.</li>
+                <li>Initial MacBook Pro TouchBar support.</li>
                 <li>Provide optional periodic updates of devices' connection status (checks every five minutes).</li>
                 <li>Fix regression that prevented Products being downloaded to Projects.</li>
                 <li>Inspector correctly updated when a <code>.squirrelproj</code> file is double-clicked.</li>
@@ -159,6 +187,7 @@
               <ul>
                 <li>Initial public beta release.</li>
               </ul>
+              <p id="ki">&nbsp;</p>
               <h3>Known Issues</h3>
               <ul>
                 <li>Squinter 2.0 will open and convert project files from older versions of Squinter to an updated file format

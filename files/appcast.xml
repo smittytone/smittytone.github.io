@@ -7,11 +7,14 @@
         <language>en</language>
 
         <item>
-            <title>Version 2.0 (build 121b13)</title>
+            <title>Version 2.0 (build 121b14)</title>
             <sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
-            <pubDate>Wed, 14 Februrary 2018 09:00:00 +0000</pubDate>
-            <enclosure url="https://smittytone.github.io/files/Squinter_2_0_121b13.dmg" sparkle:version="121b13" sparkle:shortVersionString="2.0.121b13" length="1623481" type="application/octet-stream" sparkle:dsaSignature="MEYCIQCS3YifTKS8mu0sPjZ1ORoGRm213YF7g5Z+U3j40q5UMgIhAJMelNQqeuQH
-TtcOY2v6KLEZVWdFSqHoH/ybSMjdX+nv" />
+            <pubDate>Friday, 15 June 2018 09:00:00 +0000</pubDate>
+            <enclosure url="https://smittytone.github.io/files/Squinter_2_0_121b14.dmg"
+              sparkle:version="121b14" sparkle:shortVersionString="2.0.121b14" length="1623481"
+              type="application/octet-stream"
+              sparkle:dsaSignature="MEQCIAygi51zy7/hTVv8JDyytDZTpKMxzqDJ7TX1bx6UhisMAiA8vDLN/Z01KDdu
+wdwYWw5uHZTsgsc2CTysxKTz7KqjRw==" />
             <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
         </item>
 

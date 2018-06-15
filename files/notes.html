@@ -9,23 +9,33 @@
   </style>
 </head>
 <body>
-  <h3>Squinter 2.0.121b13 BETA (14 February 2018)</h3>
-  <p><b>New Features</b></p>
-  <ul>
-    <li>MacBook Pro TouchBar support</li>
-  </ul>
+  <h3>Squinter 2.0.121 Beta 14 (15 June 2018)</h3>
   <p><b>Improvements</b></p>
   <ul>
-  	<li>Provide periodic updates of devices' connection status (checks every five minutes)</li>
+  	<li>Break out list of products on which you are collaborating.<ul>
+      <li>Shared products are listed by owner account.</li>
+    </ul></li>
+    <li>Support file versioning.<ul>
+    <li>Use <code>#version "x.y.z"</code> to indicate a file’s version.</li>
+    <li>As before class versions should entered as <code>static version = "x.y.z"</code> or<br>
+      <code>const version = "x.y.z"</code> within the class definition.</li>
+    </ul></li>
+    <li>Add sign-in support for multiple impClouds, ie. AWS and Azure.</li>
+    <li>Improve account switching messaging and account labelling.</li>
+    <li>Significantly speed up writing text to the log.</li>
+  	<li>Present Squinter's own log message tags: Device, Agent, Server.</li>
+  	<li>Improve EI library checking and reporting.</li>
+    <li>Add clearer warnings when libraries and/or files have been removed prior to compilation.</li>
+    <li>Add support for eight simultaneous logging devices (from five).</li>
+    <li>Add preference to keep devices' status updated.</li>
+    <li>Improve commit list display.</li>
+    <li>Kill all connections when the Mac is about to sleep.</li>
   </ul>
   <p><b>Bug Fixes</b></p>
   <ul>
-    <li>Fix regression that prevented Products being downloaded to Projects.</li>
-    <li>Inspector correctly updated when a <code>.squirrelproj</code> file is double-clicked.</li>
-    <li>Annoying 'moving buttons' bug fixed on Inspector.</li>
-    <li>Fix unwanted change of font colour after viewing preferences.</li>
-    <li>Fix double-posting of Electric Imp library check readout.</li>
-    <li>Handle impCentral API access tokens that could expire en route to server.</li>
+    <li>Fix Preferences panel's bold text checkbox operation.</li>
+    <li>Fix placement of Open and Save panels' accessory views.</li>
+    <li>Fix appearance of new Device Groups in the Project Inspector.</li>
   </ul>
   </body>
 </html>
