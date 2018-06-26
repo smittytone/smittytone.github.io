@@ -111,6 +111,7 @@ JSONParser.class.nut,1.0.0
 mbstring.class.nut,1.0.0
 MessageManager.class.nut,dep,MessageManager.lib.nut
 MessageManager.lib.nut,2.1.0
+OAuth2.agent.lib.nut,2.0.0
 PrettyPrinter.class.nut,1.0.1
 Promise.class.nut,3.0.1
 Rocky.class.nut,2.0.1
