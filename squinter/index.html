@@ -190,6 +190,9 @@
               <p id="ki">&nbsp;</p>
               <h3>Known Issues</h3>
               <ul>
+                <li>Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during
+                development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>. You
+                may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li>
                 <li>Squinter 2.0 will open and convert project files from older versions of Squinter to an updated file format
                 that is not compatible with older versions of Squinter. Make sure you do a 'Save As...' to keep a copy of the
                 updated project file. Take care not to overwrite the original if you wish to preserve it. Switching or overwriting
