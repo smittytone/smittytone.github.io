@@ -5,7 +5,7 @@ CFAx33KL.class.nut,1.1.0
 FramStore.class.nut,1.0.0
 GPS.device.lib.nut,dep,GPSParser.device.lib.nut and GPSUARTDriver.device.lib
 GPSParser.device.lib.nut,1.0.0
-GPSUARTDriver.device.lib.nut,1.0.0
+GPSUARTDriver.device.lib.nut,1.1.0
 HT16K33Matrix.class.nut,1.2.0
 HT16K33Segment.class.nut,1.2.0
 HT16K33SegmentBig.class.nut,1.1.0
@@ -52,7 +52,9 @@ xbee.class.nut,1.0.0
 AlexaSmartHomeSkill.class.nut,1.0.0
 AutodeskFusionConnect.class.nut,dep,AutodeskFusionConnect.agent.lib.nut
 AutodeskFusionConnect.agent.lib.nut,3.0.0
-AWSKinesisFirehose.class.nut,1.0.2
+AWSDynamoDB.agent.lib.nut,1.0.0
+AWSCloudWatchLogs.lib.nut,1.0.0
+WSKinesisFirehose.class.nut,1.0.2
 AWSKinesisStreams.agent.lib.nut,1.0.0
 AWSLambda.agent.lib.nut,1.0.0
 AWSRequestV4.class.nut,1.0.2
