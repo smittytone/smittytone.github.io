@@ -137,7 +137,7 @@
                 <li>Add clearer warnings when libraries and/or files have been removed prior to compilation.</li>
                 <li>Support file versioning.<ul>
                   <li>Use <code>#version "x.y.z"</code> to indicate a file’s version.</li>
-                  <li>As before class versions should entered as <code>static version = "x.y.z"</code> or<br>
+                  <li>As before class versions should entered as <code>static version = "x.y.z"</code> or<br />
                     <code>const version = "x.y.z"</code> within the class definition.</li>
                 </ul></li>
                 <li>Add support for eight simultaneous logging devices (from five).</li>
@@ -199,32 +199,33 @@
               <p id="ki">&nbsp;</p>
               <h3>Known Issues</h3>
               <ul>
-                <li>Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during
-                development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>. You
-                may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li>
-                <li>Squinter 2.0 will open and convert project files from older versions of Squinter to an updated file format
-                that is not compatible with older versions of Squinter. Make sure you do a 'Save As...' to keep a copy of the
-                updated project file. Take care not to overwrite the original if you wish to preserve it. Switching or overwriting
-                project files will <b>not</b> affect your source code.</li>
                 <li>Squinter 2.0 works with impCentral API entities not Build API / Electric Imp IDE entities, so you may wish
                 to keep your copy of Squinter 1.0 for work with older projects until you migrate them to impCentral.</li>
                 <li>The impCentral API will not allow you to create products with the same names as existing models, so for manual
                 model migration, you will need to delete the model <b>before</b> you create the product, which you can do opening
                 the old project file in Squinter 2.0. Squinter will report an API error if you attempt to create a product (or
                 open an old project file, which automatically creates a product) without deleting the model first.</li>
-                <li>Streamed log items occasionally not displayed (but are present in historical log)</li>
                 <li>Offline changes made to projects and/or device groups cannot yet be sync'd with the impCloud. Avoid working with
                 Squinter 2.0 offline.</li>
-                <li>Collaboration functionality has not yet been included.</li>
-                <li>Online help is available but not yet complete</li>
-                <li>Squinter 1.0 will not see Squinter 2.0 as an available update. At this time, you must install Squinter 2.0 manually.</li>
+                <li>Squinter 1.0 will not see Squinter 2.0 as an available update. You must install Squinter 2.0 manually.</li>
+                <li>Squinter 2.0 will open and convert project files from older versions of Squinter to an updated file format
+                that is not compatible with older versions of Squinter. Make sure you do a 'Save As...' to keep a copy of the
+                updated project file. Take care not to overwrite the original if you wish to preserve it. Switching or overwriting
+                project files will <b>not</b> affect your source code.</li>
+                <li>Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during
+                development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>. You
+                may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li> 
+                <li>Online help is available but not yet complete</li> 
               </ul>
               <p id="account">&nbsp;</p>
               <h2>Electric Imp Accounts</h2>
               <p>Squinter requires an Electric Imp account. Sign up is free at
               <a href="https://impcentral.electricimp.com">impcentral.electricimp.com</a>. Production functionality requires an
               Enterprise account, for which you must be an Electric Imp customer. Log in using the <b>Account</b> menu:</p>
-              <p align="center"><img class="img-fluid"  src="../images/gfx/account.png" width="612" style="border: 1px solid #DDDDDD" /><br>&nbsp;</p>
+              <p align="center"><img class="img-fluid"  src="../images/gfx/account.png" width="612" style="border: 1px solid #DDDDDD" /><br />
+              <p><b>Note</b> Hold down <b>Option</b> and then click the <b>Account</b> menu to sign temporarily into another account. This will not
+              overwrite your stored credentials (unless you check the box on the login sheet), but will sign you out of your current, main account.
+              <br />&nbsp;</p>
               <h2>Working With Projects and Products</h2>
               <p>Squinter works with 'projects', each of which is stored as a project file on disk. Each Project links to an
               impCentral 'product' and references the 'device groups' <i>(see below)</i> that that product contains. For each device
@@ -255,7 +256,7 @@
               <p>When you change a project or one of its device groups, Squinter will indicate to you that the project file needs
               to be saved. It does so using the green circle next to the <b>Current Project</b> popup in the main Squinter window:
               an empty circle tells you the currently selected project has changed and may need to be saved. If you don't wish to
-              save the changes, you can choose to ignore them when you quit Squinter or close the project.<br>&nbsp;</p>
+              save the changes, you can choose to ignore them when you quit Squinter or close the project.<br />&nbsp;</p>
               <h2>Working With Device Groups</h2>
               <p>Squinter lists all of the device groups that belong to a given project. When you select a Project,
               its device groups, if any, are listed in the <b>Project's Device Groups</b> submenu in the <b>Device Groups</b>
@@ -280,7 +281,7 @@
               <p>You can add a new device group to a project either by selecting the option from the <b>Project's Device Groups</b>
               submenu, or by choosing <b>Add source files to Project</b> from the <b>Files</b> menu. This can be used to add agent and/or
               device code files to an existing device group, or to add them to a new nevice group created there and
-              then.<br>&nbsp;</p>
+              then.<br />&nbsp;</p>
               <h2>Working With Devices</h2>
               <p>Squinter keeps track of your development devices. It lists these in the <b>Device Groups</b> menu's <b>Project's
               Device Groups</b> submenu, alongside the device group each device is assigned to. Unassigned devices are listed
@@ -307,7 +308,7 @@
               <p>In addition, Squinter’s <b>Inspector</b> panel can be called up (<kbd>Cmd-Alt-I</kbd>) to provide persistent device,
               and project information:</p>
               <p align="center"><img class="img-fluid" src="../images/gfx/inspector.png" width="690" /></p>
-              <p>This panel will update as you select devices and/or load or select different projects.<br>&nbsp;</p>
+              <p>This panel will update as you select devices and/or load or select different projects.<br />&nbsp;</p>
               <h2>Incorporating Libraries Into Your Code</h2>
               <p>Squinter lets you incorporate multiple files into the source code that is deployed to a given device group.
               Electric Imp applications comprise two files: one for device code, the other for cloud-based agent code. Squinter lets
@@ -340,7 +341,7 @@
               warn you if you move a file while is running.</p>
               <p>Squinter lets you store both library files and blocks of Squirrel or other data in <code>*.nut</code> and
               <code>*.txt</code> files. At compilation, all of these sources are inserted into a master copy of the source code, and
-              it is this 'compiled' Squirrel which will be uploaded to the selected device group.<br>&nbsp;</p>
+              it is this 'compiled' Squirrel which will be uploaded to the selected device group.<br />&nbsp;</p>
               <h2>Deploying Code</h2>
               <p>Squinter 2.0 allows you to upload compiled code direct to the selected device group: select the <b>Upload</b> option in the
               <b>Device Groups</b> menu. Alternatively, holding down the Option key makes this option <b>Upload with Extra Information</b>; when
@@ -350,18 +351,18 @@
               <p align="center"><img class="img-fluid" src="../images/gfx/extra.png" width="612" style="border: 1px solid #DDDDDD" /></p>
               <p>Both of these options are available as separate toolbar items:</p>
               <p align="center"><img class="img-fluid" src="../images/gfx/upload2.png" width="32" />&nbsp;&nbsp;&nbsp;&nbsp;
-              <img class="img-fluid" src="../images/gfx/uploadplus.png" width="32" /><br>
-              <small><i>The <b>Upload</b> and <b>Upload Extra</b> toolbar buttons</i></small><br>&nbsp;</p>
+              <img class="img-fluid" src="../images/gfx/uploadplus.png" width="32" /><br />
+              <small><i>The <b>Upload</b> and <b>Upload Extra</b> toolbar buttons</i></small><br />&nbsp;</p>
               <p>The <b>Upload Extra Information</b> item is not part of the standard Squinter toolbar layout, so you will need to click
               on <b>Customize Toolbar...</b> in the 'View' menu to add it. You may also wish to
               add the <b>Show Commits</b> button:</p>
-              <p align="center"><img class="img-fluid" src="../images/gfx/commits2.png" width="32" /><br>
-              <small><i>The <b>Show Commits</b> toolbar button</i></small><br>&nbsp;</p>
+              <p align="center"><img class="img-fluid" src="../images/gfx/commits2.png" width="32" /><br />
+              <small><i>The <b>Show Commits</b> toolbar button</i></small><br />&nbsp;</p>
               <p>This will call up a list of all the commits/deployments made to the currently selected device group:</p>
               <p align="center"><img class="img-fluid" src="../images/gfx/commits.png" width="552" /></p>
               <p>Having uploaded code, you can restart the currently selected device by selecting <b>Restart</b> from the <b>Device</b> menu,
               or restart all of the devices assigned to the current device group by selecting <b>Restart</b> from the <b>Device Groups</b>
-              menu.<br>&nbsp;</p>
+              menu.<br />&nbsp;</p>
               <h2>Debugging Code</h2>
               <p>You can retrieve the most recent log entries for the selected device in one go (up to a maximum of 200),
               or you can stream logs from the device: entries will appear in Squinter's main window in real time. You can currently
@@ -374,7 +375,7 @@
               agent code &mdash; will list the compiled source for the currently selected device group.</p>
               <p id="configuring">If the log window becomes too crowded, you can clear it using the <b>Clear</b> button in the toolbar,
               which is also home to a number of shortcuts to various functions provided by Squinter's menus. You can also print the
-              current contents of the log window if you have a printer.<br>&nbsp;</p>
+              current contents of the log window if you have a printer.<br />&nbsp;</p>
               <h2>Configuring Squinter</h2>
               <p>To take full advantage of Squinter's features, you will need an Electric Imp account. With Squinter 2.0 you <b>no
               longer require a Build API key</b>. Instead you must sign into your account using your Electric Imp username and password
@@ -397,7 +398,7 @@
               <p align="center"><img class="img-fluid" src="../images/gfx/toolbar.png" width="710" style="border: 1px solid #DDDDDD" /></p>
               <p>Squinter would not be possible without open source software contributions from a number of developers. They are
               listed in the <b>Acknowledgements</b> section of the <b>Help</b> menu, along with links to the source code Squinter
-              uses.<br>&nbsp;</p>
+              uses.<br />&nbsp;</p>
               <h2>Updating Squinter</h2>
               <p>You can check for Squinter updates by using the appropriate command in the <b>Squinter</b> menu. You can also tell
               Squinter to check for updates on your behalf: just check the relevant box in the <b>Preferences</b> panel.</p>
@@ -407,7 +408,7 @@
           </div>
           <div class="row" align="center">
             <div class="col">
-              <p><small>Copyright &copy; Tony Smith, 2014-2018</small><br>
+              <p><small>Copyright &copy; Tony Smith, 2014-2018</small><br />
               <a href="https://smittytone.github.io"><img src="../images/rassilonblack.png" width="32" height="32"></a></p>
            </div>
           </div>
