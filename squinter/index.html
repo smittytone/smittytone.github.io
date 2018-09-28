@@ -98,11 +98,6 @@
                 </ul></li>
                 <li>And much more...</li>
               </ul>
-              <p>&nbsp;</p>
-              <h3>Important</h3>
-              <p>Squinter 2.0 is being made available in a pre-release Beta version which is not feeature-complete and may
-              contain code errors that may impact your own code. You should not use Squinter with commercially sensitive
-              projects and related code.</p>
               <p>&nbsp;</p><h3>What's New</h3>
               <ul>
                 <li>Work with impCentral API entities: products, device groups, devices and deployments.</li>
@@ -122,7 +117,7 @@
                 <li>Add Command-click action to expand or collapse all Inspector items.</li>
                 <li>Clearer notification when login credentials are rejected.</li>
                 <li>Better logout handling.</li>
-                <li>Support eight user-definable colours for device logs.<br /><b>Warning</b> This will reset any colour preferences you already have.</li>
+                <li>Support eight user-definable colours for device logs.<ul><li><b>Warning</b> This will reset any colour preferences you already have.</li></ul></li>
                 <li>Make sure updated device info (eg. on auto-refresh) is reflected by the Inspector.</li>
                 <li>Remove redundant code.</li>
               </ul>
@@ -135,98 +130,32 @@
                 <li>New Projects now appear correctly in the Project Inspector.</li>
                 <li>Show correct log font when double-clicking a file or loading from the Dock Tile's menu.</li>
               </ul>
-              <h4>2.0.121b14</h4>
+              <h4>2.0.121 (beta)</h4>
               <ul>
-                <li>Present Squinter's own log message tags: Device, Agent, Server.</li>
-                <li>Significantly speed up writing text to the log.</li>
                 <li>Break out list of products on which you are collaborating.<ul>
                   <li>Shared products are listed by owner account.</li>
                 </ul></li>
-                <li>Add sign-in support for multiple impClouds, ie. AWS and Azure.</li>
-                <li>Improve account switching messaging and account labelling.</li>
-                <li>Improve EI library checking and reporting.</li>
-                <li>Add clearer warnings when libraries and/or files have been removed prior to compilation.</li>
+                <li>Add sign-in support for multiple impClouds:<ul>
+                  <li>AWS</li><li>Azure.</li></ul></li>
                 <li>Support file versioning.<ul>
                   <li>Use <code>#version "x.y.z"</code> to indicate a file’s version.</li>
                   <li>As before class versions should entered as <code>static version = "x.y.z"</code> or<br />
                     <code>const version = "x.y.z"</code> within the class definition.</li>
                 </ul></li>
-                <li>Add support for eight simultaneous logging devices (from five).</li>
-                <li>Add preference to keep devices' status updated.</li>
-                <li>Improve commit list display.</li>
-                <li>Kill all connections when the Mac is about to sleep.</li>
-                <li>Fix Preferences panel's bold text checkbox operation.</li>
-                <li>Fix placement of Open and Save panels' accessory views.</li>
-                <li>Fix appearance of new Device Groups in the Project Inspector.</li>
-                <li>Final beta release!</li>
-              </ul>
-              <h4>2.0.121b13</h4>
-              <ul>
-                <li>Initial MacBook Pro TouchBar support.</li>
-                <li>Provide optional periodic updates of devices' connection status (checks every five minutes).</li>
-                <li>Fix regression that prevented Products being downloaded to Projects.</li>
-                <li>Inspector correctly updated when a <code>.squirrelproj</code> file is double-clicked.</li>
-                <li>Annoying 'moving buttons' bug fixed on Inspector.</li>
-                <li>Fix unwanted change of font colour after viewing preferences.</li>
-                <li>Fix double-posting of Electric Imp library check readout.</li>
-                <li>Handle impCentral API access tokens that could expire en route to server.</li>
-              </ul>
-              <h4>2.0.121b12</h4>
-              <ul>
+                <li>MacBook Pro TouchBar support.</li>
+                <li>Optional periodic updates of devices' connection status (checks every five minutes).</li>
                 <li>New project, device Inspector.</li>
-                <li>Open source code, libraries and other files from the Inspector.</li>
-                <li>Access agent URLs from the Inspector.</li>
-                <li>Create production, pre-production, factory and factory test groups.</li>
-                <li>Assign production groups as factory group targets.</li>
-                <li>Assign pre-production groups as factory test group targets.</li>
-                <li>Preliminary support for listing test blessed devices.</li>
-                <li>Improved Assign Devices sheet.</li>
-                <li>Fix Open All Recents issue with lost files.</li>
-                <li>Fixed an issue in which adding files to a new project did not correctly create a new device group.</li>
-                <li>Fixed an issue in which files in sub-folders relative to the project file were not found.</li>
-              </ul>
-              <h4>2.0.121b11</h4>
-              <ul>
+                <li>Add Production functionality.</li>
                 <li>Add support for polite deployment: minimum supported deployments, conditional restarts.</li>
-                <li>Add user-definable colours for logging devices' log posts.</li>
-                <li>Re-arrange other preferences.</li>
-                <li>List a project's Device Groups by type</li>
-                <li>Improve log streaming code.</li>
-                <li>Improve error and issue reporting.</li>
-                <li>Improve timestamp formatting.</li>
-                <li>New clear log window icon.</li>
-                <li>Fix mis-coloured Log Stream toolbar icon when logstream fails to connect.</li>
-                <li>Minor bug fixes.</li>
-              </ul>
-              <h4>2.0.121b10</h4>
-              <ul>
-                <li>Fixed an issue cause the app to crash upon launch for new users.</li>
-                <li>Corrected the timestamp display for certain log types.</li>
-              </ul>
-              <h4>2.0.121b9</h4>
-              <ul>
-                <li>Initial public beta release.</li>
               </ul>
               <p id="ki">&nbsp;</p>
               <h3>Known Issues</h3>
               <ul>
-                <li>Squinter 2.0 works with impCentral API entities not Build API / Electric Imp IDE entities, so you may wish
-                to keep your copy of Squinter 1.0 for work with older projects until you migrate them to impCentral.</li>
-                <li>The impCentral API will not allow you to create products with the same names as existing models, so for manual
-                model migration, you will need to delete the model <b>before</b> you create the product, which you can do opening
-                the old project file in Squinter 2.0. Squinter will report an API error if you attempt to create a product (or
-                open an old project file, which automatically creates a product) without deleting the model first.</li>
-                <li>Offline changes made to projects and/or device groups cannot yet be sync'd with the impCloud. Avoid working with
-                Squinter 2.0 offline.</li>
-                <li>Squinter 1.0 will not see Squinter 2.0 as an available update. You must install Squinter 2.0 manually.</li>
-                <li>Squinter 2.0 will open and convert project files from older versions of Squinter to an updated file format
-                that is not compatible with older versions of Squinter. Make sure you do a 'Save As...' to keep a copy of the
-                updated project file. Take care not to overwrite the original if you wish to preserve it. Switching or overwriting
-                project files will <b>not</b> affect your source code.</li>
                 <li>Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during
                 development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>. You
                 may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li> 
-                <li>Online help is available but not yet complete</li> 
+                <li>Online help is available but not yet complete</li>
+                <li>Squinter 1.0 will not see Squinter 2.0 as an available update. You must install Squinter 2.0 manually.</li>
               </ul>
               <p id="account">&nbsp;</p>
               <h2>Electric Imp Accounts</h2>
