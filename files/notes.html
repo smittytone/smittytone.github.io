@@ -9,20 +9,21 @@
   </style>
 </head>
 <body>
-  <h3>Squinter 2.1.124 (29 September 2018)</h3>
+  <h3>Squinter 2.1.125 (26 October 2018)</h3>
   <p><b>Improvements</b></p>
   <ul>
-    <li>Support for macOS Mojave's Dark Mode.</li>
-    <li>Add a means for users to provide feedback and report issues.</li>
-    <li>Better notification of which device will be selected when a Device Group is opened or selected.</li>
-    <li>Don't log the fact that devices' statuses are being updated automatically when it happens.</li>
-    <li>Easier login to alternative accounts (ie. accounts other than the saved, 'primary' account).</li>
-    <li>Improved commit list readout.</li>
+    <li>Begin using Electric Imp as the source of Electric Imp library version numbers.</li>
+    <li>Better logging of updated included libraries and files in source code.</li>
+    <li>When a shared Product is selected, the Shared Products menu item is marked to aid visual navigation.</li>
+    <li>Make Inspector link button graphics work better with Mojave Dark Mode.</li>
   </ul>
   <p><b>Bug Fixes</b></p>
   <ul>
-    <li>Fix Device Group device selection.</li>
-    <li>Correct display of device log colours.</li>
+    <li>A shared Product won’t be selected at login if there is an owned Product available to be selected.</li>
+    <li>Halting a device’s log stream no longer causes other devices’ streams to change colour.</li>
+    <li>Switching accounts no longer causes the Products of the account you’ve just logged into to be displayed as shared Products.</li>
+    <li>Squinter will now correctly begin watching a Device Group’s new source code file(s) when the existing one(s) are replaced (and stop watching the old files).</li>
+    <li>Correctly mark projects with updated imported libraries and files as in need of saving.</li>
   </ul>
   </body>
 </html>
