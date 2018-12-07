@@ -3,6 +3,22 @@
 <title>Squinter Release Notes</title>
 </head>
 <body>
+  <h3>Squinter 2.1.125 (26 October 2018)</h3>
+  <p><b>Improvements</b></p>
+  <ul>
+    <li>Begin using Electric Imp as the source of Electric Imp library version numbers.</li>
+    <li>Better logging of updated included libraries and files in source code.</li>
+    <li>When a shared Product is selected, the Shared Products menu item is marked to aid visual navigation.</li>
+    <li>Make Inspector link button graphics work better with Mojave Dark Mode.</li>
+  </ul>
+  <p><b>Bug Fixes</b></p>
+  <ul>
+    <li>A shared Product won’t be selected at login if there is an owned Product available to be selected.</li>
+    <li>Halting a device’s log stream no longer causes other devices’ streams to change colour.</li>
+    <li>Switching accounts no longer causes the Products of the account you’ve just logged into to be displayed as shared Products.</li>
+    <li>Squinter will now correctly begin watching a Device Group’s new source code file(s) when the existing one(s) are replaced (and stop watching the old files).</li>
+    <li>Correctly mark projects with updated imported libraries and files as in need of saving.</li>
+  </ul>
   <h3>Squinter 2.1.124 (29 September 2018)</h3>
   <p><b>Improvements</b></p>
   <ul>
