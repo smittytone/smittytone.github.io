@@ -1,29 +1,30 @@
 <html>
 <head>
-  <title>Squinter Release Notes</title>
-  <style>
-    body {
-      font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
-      font-size: 12px;
-    }
-  </style>
+    <title>Squinter Release Notes</title>
+    <style>
+        body {
+            font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-  <h3>Squinter 2.1.125 (26 October 2018)</h3>
-  <p><b>Improvements</b></p>
-  <ul>
-    <li>Begin using Electric Imp as the source of Electric Imp library version numbers.</li>
-    <li>Better logging of updated included libraries and files in source code.</li>
-    <li>When a shared Product is selected, the Shared Products menu item is marked to aid visual navigation.</li>
-    <li>Make Inspector link button graphics work better with Mojave Dark Mode.</li>
-  </ul>
-  <p><b>Bug Fixes</b></p>
-  <ul>
-    <li>A shared Product won’t be selected at login if there is an owned Product available to be selected.</li>
-    <li>Halting a device’s log stream no longer causes other devices’ streams to change colour.</li>
-    <li>Switching accounts no longer causes the Products of the account you’ve just logged into to be displayed as shared Products.</li>
-    <li>Squinter will now correctly begin watching a Device Group’s new source code file(s) when the existing one(s) are replaced (and stop watching the old files).</li>
-    <li>Correctly mark projects with updated imported libraries and files as in need of saving.</li>
-  </ul>
-  </body>
+    <h3>Squinter 2.2.126 (7 December 2018)</h3>
+    <p><b>Important</b><br />Squinter 2.2 requires macOS 10.12 or above (versions 2.0. and 2.1 required macOS 10.11 or above).</p>
+    <p><b>Improvements</b></p>
+    <ul>
+        <li>The Inspector panel is now integrated into the main window for a more modern look.</li>
+        <li>Add logging information to the Inspector.</li>
+        <li>When a shared Product is selected, the Shared Products menu item is marked to aid visual navigation.</li>
+        <li>Make Inspector link button graphics work better with Mojave Dark Mode.</li>
+    </ul>
+    <p><b>Bug Fixes</b></p>
+    <ul>
+        <li>Fixed a crash experienced when downloading a shared product.</li>
+        <li>Fixed an issue in which devices were incorrectly added to the current device group.</li>
+        <li>Fixed an issue in which creating a new project failed to update the Device Groups menu.</li>
+        <li>Fixed the incorrect selection of a device after changing projects.</li>
+        <li>Ensure the Inspector Project view is cleared when the last open project is closed.</li>
+    </ul>
+    </body>
 </html>
