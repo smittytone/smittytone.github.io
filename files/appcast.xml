@@ -5,19 +5,17 @@
         <link>https://smittytone.github.io/files/appcast.xml</link>
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
-
         <item>
-            <title>Version 2.1 (build 125)</title>
+            <title>Version 2.2 (build 126)</title>
             <sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
-            <pubDate>Friday, 26 Octobber 2018 12:00</pubDate>
-            <enclosure url="https://smittytone.github.io/files/Squinter_2_1_125.dmg"
-              sparkle:version="125" sparkle:shortVersionString="2.1.125" length="1623481"
-              type="application/octet-stream"
-              sparkle:dsaSignature="MEQCIBf5yNATNdAVdpAks9KJc0t612MTTLU1zGJaV/yv/5LFAiAvA8OCELKSL05m
-LctvgG6FSRlFz86itJVbqrS7Cynumg==" />
-            <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
+            <pubDate>Friday, 7 December 2018 08:30</pubDate>
+            <enclosure url="https://smittytone.github.io/files/Squinter_2_2_126.dmg"
+                sparkle:version="126" sparkle:shortVersionString="2.2.126" length="1623481"
+                type="application/octet-stream"
+                sparkle:dsaSignature="MEUCIQCJcYheEmAuk7VG/Fr13o3Sn2O/Aaef8Yq1YdPLv9LZTgIgMSlfXiBgBvce
+70RGGx/7ObymYZRhqv3YPXotipn4ECU=" />
+            <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
         </item>
-
     </channel>
 </rss>
 
