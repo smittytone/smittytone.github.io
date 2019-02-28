@@ -54,8 +54,8 @@
             <div class="col-10 col-lg-8">
               <h1 class="text-center">Squinter 2.2</h1>
               <h3 class="text-center">&#8216;A Squirrel Integrator&#8217;
-              <h4 class="text-center"><a href="#rn">Latest Release: 2.2.126 (7 December 2018)</a></h4>
-              <p  class="text-center"><b>&nbsp;<br />Squinter 1.0 is non-operational &mdash; Electric Imp has withdrawn the Build API.<br />Please upgrade
+              <h4 class="text-center"><a href="#rn">Latest Release: 2.2.127 (x March 2019)</a></h4>
+              <p  class="text-center"><b>&nbsp;<br />Squinter 1.0 is non-operational &mdash; Electric Imp has withdrawn the Build API. Please upgrade
               to version 2.0 or above to continue using Squinter<br />&nbsp;</b></p>
               <div style="background-color:#DDDDDD;padding: 10px 10px 10px 10px">
                 <h2>Download Squinter</h2>
@@ -64,7 +64,7 @@
                   <tbody>
                     <tr>
                       <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
-                      <td scope="col-9 col-lg-10"><a href="/files/Squinter_2_2_126.dmg">Squinter_2_2_126.dmg</a></td>
+                      <td scope="col-9 col-lg-10"><a href="/files/Squinter_2_2_126.dmg">Squinter_2_2_127.dmg</a></td>
                     </tr>
                     <tr>
                       <th scope="row"><b>File Size</b>&nbsp;</th>
@@ -222,8 +222,17 @@
               device from this list will affect the <b>Devices</b> menu but not the currently selected device group.</p>
               <p>In addition, Squinter’s <b>Inspector</b> panel can be called up (<kbd>Cmd-Alt-I</kbd>) to provide persistent device,
               and project information:</p>
-              <p align="center"><img class="img-fluid" src="../images/gfx/inspector.png" width="690" /></p>
-              <p>This panel will update as you select devices and/or load or select different projects.</p>
+              <p align="center"><img class="img-fluid" src="../images/gfx/inspector_project.png" width="340" style="border: 1px solid #DDDDDD"/>&nbsp;&nbsp;
+              <img class="img-fluid" src="../images/gfx/inspector_device.png" width="340" style="border: 1px solid #DDDDDD"/></p>
+              <p id="lookup">This panel will update as you select devices and/or load or select different projects.</p>
+              <p>Squinter lists devices by their names, though their IDs and MAC addresses also appear in the Inspector (as shown above) or 
+              in the log when you het <kbd>Cmd-I</kbd>. Sometimes, however, you may only have a device’s ID or MAC address. In 
+              this case, select <b>Look up a Device by ID/MAC...</b> from the <b>Device</b> menu, of hit <kbd>Cmd-Shit-F</kbd>. This will call 
+              up a panel in which you can enter a device ID or a MAC address, and Squinter will locate which of your named devices matches the 
+              entered information. As you enter the ID or MAC, Squinter narrows down the list of possible devices. Select the device you want 
+              by clicking on its name in the presented list and then click the <b>Switch to Selected Device</b> button to select it as the 
+              current device:</p>
+              <p align="center"><img class="img-fluid" src="../images/gfx/device_lookup.png" width="612" style="border: 1px solid #DDDDDD" /></p>
               <p class="smalllink" align="right"><a href="#account">Back to Contents</a></p>
               <h2 id="incorporating-libraries-into-your-code">Incorporating Libraries Into Your Code</h2>
               <p>Squinter lets you incorporate multiple files into the source code that is deployed to a given device group.
@@ -302,7 +311,7 @@
               credentials and give you the option to store them securely in your keychain to automate login in future. The <b>Account</b>
               menu provides a means to log into your account later if you choose not to do so at the start, or to subsequently sign
               out.</p>
-              <p align="center"><img class="img-fluid" src="../images/gfx/prefs.png" width="612" style="border: 1px solid #DDDDDD" /></p>
+              <p align="center"><img class="img-fluid" src="../images/gfx/prefs1.png" width="612" style="border: 1px solid #DDDDDD" /></p>
               <p>Squinter's <b>Preferences</b> panel includes a setting to log in when Squinter starts up. Other options include compiling
               the code linked to all of a project's device groups when a project is opened, and automatically retrieving the latest
               device and product information at log-in.</p>
@@ -325,6 +334,17 @@
               <p class="smalllink" align="right"><a href="#account">Back to Contents</a></p>
               <p>&nbsp;</p>
               <h1 id="rn">Release Notes</h1>
+              <h4>2.2.127 (x March 2019)</h4>
+              <ul>
+                <li>New <a href="#lookup">device look-up facility</a>: locate named devices by entering their device ID or MAC address.</li>
+                <li>Stop Inspector showing link icons for devices with no agents.</li>
+                <li>The Minimum Deployment dialog now shows commit date, time and SHA.</li>
+                <li>Selecting <b>Show Help</b> now takes you to the Squinter web site.</li>
+                <li>Now using a better feedback/report a problem system.</li>
+                <li>Stop Inspector showing link icons for devices with no agents.</li>
+                <li>Fix minor layout issues.</li>
+                <li>Fixed a crash when displaying devices with sleeping agents in the Inspector.</li>
+              </ul>
               <h4>2.2.126 (7 December 2018)</h4>
               <ul>
                 <li>Squinter 2.2 requires macOS 10.12 or above (versions 2.0. and 2.1 required macOS 10.11 or above).</li>
