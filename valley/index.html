@@ -1,181 +1,164 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="Description" content="Tony Smith's software library: The Valley, a macOS recreation of a pioneering British 8-bit micro adventure game">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
-  <title>The Valley 1.0</title>
-  <style>
-    .container{padding-bottom:10px;}
-    .nav-item{font-family:Abel,sans-serif;}
-    .navbar-brand{font-family:Abel,sans-serif;}
-    body{background-color:#EEEEEE;}
-    p{color:black;font-family:Abel,sans-serif;font-size:16px;}
-    .smalllink{font-size:12px;}
-    h2{color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
-    h3{color:#B01C17;font-family:Abel,sans-serif;font-size:22px;}
-    h4{color:#B01C17;font-family:Abel,sans-serif;font-size:18px;}
-    hr{border-color:#B01C17;}
-    td{color:black;font-family:Abel,sans-serif;font-size:16px;}
-    th{color:#B01C17;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
-    li{color:black;font-family:Abel,sans-serif;font-size:16px;list-style:none;}
-    li::before {border-radius:50%;content:"";display:inline-block;margin-right:6px;margin-bottom:1px;
-                height:8px;width:8px;background-color:#B01C17;}
-  </style>
+    <meta name="Description" content="Tony Smith's software library: The Valley, a macOS recreation of a pioneering British 8-bit micro adventure game">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <title>The Valley 1.0</title>
+    <style>
+        body{background-color:#EEEEEE;}
+        p{color:black;font-family:Abel,sans-serif;font-size:16px;}
+        h2{color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
+        h3{color:#B01C17;font-family:Abel,sans-serif;font-size:22px;}
+        h4{color:#B01C17;font-family:Abel,sans-serif;font-size:18px;}
+        hr{border-color:#B01C17;}
+        td{color:black;font-family:Abel,sans-serif;font-size:16px;}
+        th{color:#B01C17;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
+        li{color:black;font-family:Abel,sans-serif;font-size:16px;list-style:none;}
+        li::before {border-radius:50%;content:"";display:inline-block;margin-right:6px;margin-bottom:1px;
+                    height:8px;width:8px;background-color:#B01C17;}
+        .container{padding-bottom:10px;}
+        .nav-item{font-family:Abel,sans-serif;}
+        .navbar-brand{font-family:Abel,sans-serif;}
+        .smalllink{font-size:12px;}
+    </style>
 </head>
 <body>
-  <div class="container" id="top">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #B01C17;">
-      <a class="navbar-brand" style="color:white" href="../index.html">
-        <img src="../images/vlw.png" width="32" height="32" class="d-inline-block align-top" alt="The Valley logo" />
-        The Valley
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#htp">How To Play</a>
-          <a class="nav-item nav-link" href="#rn">Release Notes</a>
-          <a class="nav-item nav-link" href="../index.html">Home</a>
+    <div class="container" id="ctop">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #B01C17;">
+            <a class="navbar-brand" style="color:white" href="../index.html">
+                <img src="../images/vlw.png" width="32" height="32" class="d-inline-block align-top" alt="The Valley logo" />The Valley
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#how-to-play">How To Play</a>
+                    <a class="nav-item nav-link" href="#release-notes">Release Notes</a>
+                    <a class="nav-item nav-link" href="../index.html">Home</a>
+                </div>
+            </div>
+        </nav>
+        <div class="frame" style="border: 4px solid #B01C17">
+            <div class="row">
+                <div class="col-1 col-lg-2">&nbsp;</div>
+                <div class="col-10 col-lg-8">
+                    <h2 class="text-center">The Valley 1.0</h2>
+                    <h3 class="text-center">A macOS port of a 1982 real-time RPG</h3>
+                    <h4 class="text-center">Latest Release: <a href="#release-notes">1.0.7</a></h4>
+                    <p>&nbsp;</p>
+                    <div style="background-color:#DDDDDD;padding: 10px 10px 10px 10px">
+                        <h2>Download The Valley</h2>
+                        <p>Please verify the integrity of the download with the SHA-1 or SHA-256 checksums.</p>
+                        <table class="table table-borderless table-responsive table-sm">
+                            <tbody>
+                                <tr>
+                                    <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
+                                    <td scope="col-9 col-lg-10"><a href="/files/The_Valley_1_0_7.dmg">The_Valley_1_0_7.dmg</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><b>File Size</b>&nbsp;</th>
+                                    <td>17MB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><b>SHA</b>&nbsp;</th>
+                                    <td>18ba8a9ae9de1feb68548621490058b3f2c8f9c6</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><b>SHA 256</b>&nbsp;</th>
+                                    <td>9fec6e9a3964afd03430625372491b67c89763d00d846b5f17019acb68d58124</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p >&nbsp;</p>
+                    <h3 id="how-to-play">How to Play</h3>
+                    <p>The object of the game is to save the Valley from the forces of evil: find the legendary Helm of Evanna and
+                    this will be achieved. The Helm is hidden in one of Vounim’s Lairs, each on an island within a forest. To have a
+                    chance of finding the Helm, you will need to reach the experience level of a Warlord, which you do by travelling
+                    through the Valley, its swamps and forests, and the Dark Tower of Zaexon battling monsters.</p>
+                    <p>Hit <kbd>Cmd-N</kbd> to start a new game: enter your character’s name and pick a profession: Wizard, Thinker,
+                    Barbarian, Warrior or Cleric &mdash; click on the named button to select that character. Each has strengths and
+                    weaknesses: some will be more successful at performing magic; others are better fighters.</p>
+                    <p>You move using the number keys <kbd>1-9</kbd>; each takes you in the direction shown on the number pad in the game UI.
+                    For example, <kbd>9</kbd> takes you North-East, <kbd>1</kbd> South-West, <kbd>6</kbd> East, and so on.</p>
+                    <p align="center"><img class="img-fluid" src="../images/valleyss.png" style="border: 1px solid #999999" /></p>
+                    <p>Combat is performed using the <kbd>H</kbd>, <kbd>B</kbd> and <kbd>L</kbd> keys to attempt to strike, respectively,
+                    the head, body or legs of your opponent. You can also press <kbd>S</kbd> to cast a magic spell: hit keys <kbd>1-3</kbd>
+                    to choose the spell (<i>Sleep, Psi Lance</i> and <i> Crispit</i>). Sleep is available to you from the start; the others
+                    as you gain experience. Some monsters are ethereal and can only be fought with magic.</p>
+                    <p>In some combat encounters you will have the initiative: hit <kbd>A</kbd> or <kbd>R</kbd> to attack or retreat.
+                    Attacking gives you the first chance to lay a blow on the monster. Retreating gets you out of the fight but at a cost
+                    to your stamina as your opponent lashes out at your fleeing body.</p>
+                    <p>The Valley is a real-time game: you only have a few seconds to use your initiative, cast a spell or attempt
+                    to strike an opponent. The readout will tell you when you can act.</p>
+                    <p>The goal of the game is the recovery of the Helm, but you must also seek out the Amulet of Alarian. This is
+                    hidden in one of the Temples of Y’Nagioth, which lie on islands in the Valley’s swamps. Six Amulet Stones lie
+                    Within the Dark Tower and when found and added to the Amulet give you the power of to survive death &mdash; once.
+                    Unlike the Lairs and Temples, the Dark Tower has multiple storeys: look for the stairs that will take you up or
+                    down. You will also find treasure as you explore; this boosts your experience too.</p>
+                    <p>You can save your game by entering one of the Safe Castles at either end of the Valley itself. Between them is
+                    a path on which no monster dares tread &mdash; you will be safe from threat there. But those who stay safe will
+                    never gain the experience they need to succeed...</p>
+                    <p>For more information, please the <a href="https://github.com/smittytone/Valley">GitHub repo page</a>.</p>
+                    <p class="smalllink" align="right"><a href="#ctop">Back to the Top</a></p>
+                    <hr />
+                    <h3 id="release-notes">Release Notes</h3>
+                    <h4>1.0.7</h4>
+                    <ul>
+                        <li>Fix window display issue in full screen.</li>
+                    </ul>
+                    <h4>1.0.6</h4>
+                    <ul>
+                        <li>Fix splash graphic colouring glitch.</li>
+                    </ul>
+                    <h4>1.0.5</h4>
+                    <ul>
+                        <li>Revamp new-character sheet graphics and UI.</li>
+                        <li>Add preference to start game in full screen.</li>
+                        <li>Improved full screen handling.</li>
+                        <li>Improved handling of loaded player's arrival in the current scenario.</li>
+                    </ul>
+                    <h4>1.0.4</h4>
+                    <ul>
+                        <li>Fix an issue with key-presses being ignored after reincarnation.</li>
+                        <li>Add version number to About... sheet.</li>
+                    </ul>
+                    <h4>1.0.3</h4>
+                    <ul>
+                        <li>Fix an issue with game failing to respond to key-presses in full-screen mode.</li>
+                        <li>Minor changes and fixes.</li>
+                    </ul>
+                    <h4>1.0.2</h4>
+                    <ul>
+                        <li>Initial public release.</li>
+                    </ul>
+                    <p class="smalllink" align="right"><a href="#ctop">Back to the Top</a></p>
+                    <hr />
+                </div>
+                <div class="col-1 col-lg-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="text-center"><a href="https://smittytone.github.io"><img src="../images/rassilonblack.png" width="32" height="32" alt="The Seal of Rassilon" /></a></p>
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
-    <div class="frame" style="border: 4px solid #B01C17">
-      <div class="row">
-        <div class="col-1 col-lg-2">&nbsp;</div>
-        <div class="col-10 col-lg-8">
-          <h2 class="text-center">The Valley 1.0</h2>
-          <h3 class="text-center">A macOS port of a 1982 real-time RPG</h3>
-          <h4 class="text-center">Latest Release: <a href="#rsns">1.0.7</a></h4>
-          <p>&nbsp;</p>
-          <div style="background-color:#DDDDDD;padding: 10px 10px 10px 10px">
-            <h2>Download The Valley</h2>
-            <p>Please verify the integrity of the download with the SHA-1 or SHA-256 checksums.</p>
-            <table class="table table-borderless table-responsive table-sm">
-              <tbody>
-                <tr>
-                  <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
-                  <td scope="col-9 col-lg-10"><a href="/files/The_Valley_1_0_7.dmg">The_Valley_1_0_7.dmg</a></td>
-                </tr>
-                <tr>
-                  <th scope="row"><b>File Size</b>&nbsp;</th>
-                  <td>17MB</td>
-                </tr>
-                <tr>
-                  <th scope="row"><b>SHA</b>&nbsp;</th>
-                  <td>18ba8a9ae9de1feb68548621490058b3f2c8f9c6</td>
-                </tr>
-                <tr>
-                  <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                  <td>9fec6e9a3964afd03430625372491b67c89763d00d846b5f17019acb68d58124</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p id="htp">&nbsp;</p>
-          <h3>How to Play</h3>
-          <p>The object of the game is to save the Valley from the forces of evil: find the legendary Helm of Evanna and
-          this will be achieved. The Helm is hidden in one of Vounim’s Lairs, each on an island within a forest. To have a
-          chance of finding the Helm, you will need to reach the experience level of a Warlord, which you do by travelling
-          through the Valley, its swamps and forests, and the Dark Tower of Zaexon battling monsters.</p>
-          <p>Hit <kbd>Cmd-N</kbd> to start a new game: enter your character’s name and pick a profession: Wizard, Thinker,
-          Barbarian, Warrior or Cleric &mdash; click on the named button to select that character. Each has strengths and
-          weaknesses: some will be more successful at performing magic; others are better fighters.</p>
-          <p>You move using the number keys <kbd>1-9</kbd>; each takes you in the direction shown on the number pad in the game UI.
-          For example, <kbd>9</kbd> takes you North-East, <kbd>1</kbd> South-West, <kbd>6</kbd> East, and so on.</p>
-          <p align="center"><img class="img-fluid" src="../images/valleyss.png"></p>
-          <p>Combat is performed using the <kbd>H</kbd>, <kbd>B</kbd> and <kbd>L</kbd> keys to attempt to strike, respectively,
-          the head, body or legs of your opponent. You can also press <kbd>S</kbd> to cast a magic spell: hit keys <kbd>1-3</kbd>
-          to choose the spell (<i>Sleep, Psi Lance</i> and <i> Crispit</i>). Sleep is available to you from the start; the others
-          as you gain experience. Some monsters are ethereal and can only be fought with magic.</p>
-          <p>In some combat encounters you will have the initiative: hit <kbd>A</kbd> or <kbd>R</kbd> to attack or retreat.
-          Attacking gives you the first chance to lay a blow on the monster. Retreating gets you out of the fight but at a cost
-          to your stamina as your opponent lashes out at your fleeing body.</p>
-          <p>The Valley is a real-time game: you only have a few seconds to use your initiative, cast a spell or attempt
-          to strike an opponent. The readout will tell you when you can act.</p>
-          <p>The goal of the game is the recovery of the Helm, but you must also seek out the Amulet of Alarian. This is
-          hidden in one of the Temples of Y’Nagioth, which lie on islands in the Valley’s swamps. Six Amulet Stones lie
-          Within the Dark Tower and when found and added to the Amulet give you the power of to survive death &mdash; once.
-          Unlike the Lairs and Temples, the Dark Tower has multiple storeys: look for the stairs that will take you up or
-          down. You will also find treasure as you explore; this boosts your experience too.</p>
-          <p>You can save your game by entering one of the Safe Castles at either end of the Valley itself. Between them is
-          a path on which no monster dares tread &mdash; you will be safe from threat there. But those who stay safe will
-          never gain the experience they need to succeed...</p>
-          <p id="rsns">For more information, please the <a href="https://github.com/smittytone/Valley">GitHub repo page</a>.</p>
-          <p id="rn">&nbsp;</p>
-          <h3>Release Notes</h3>
-          <h4>1.0.7</h4>
-          <ul>
-              <li>Fix window display issue in full screen.</li>
-          </ul>
-          <h4>1.0.6</h4>
-          <ul>
-              <li>Fix splash graphic colouring glitch.</li>
-          </ul>
-          <h4>1.0.5</h4>
-          <ul>
-              <li>Revamp new-character sheet graphics and UI.</li>
-              <li>Add preference to start game in full screen.</li>
-              <li>Improved full screen handling.</li>
-              <li>Improved handling of loaded player's arrival in the current scenario.</li>
-          </ul>
-          <h4>1.0.4</h4>
-          <ul>
-              <li>Fix an issue with key-presses being ignored after reincarnation.</li>
-              <li>Add version number to About... sheet.</li>
-          </ul>
-          <h4>1.0.3</h4>
-          <ul>
-              <li>Fix an issue with game failing to respond to key-presses in full-screen mode.</li>
-              <li>Minor changes and fixes.</li>
-          </ul>
-          <h4>1.0.2</h4>
-          <ul>
-              <li>Initial public release.</li>
-          </ul>
-          <p class="smalllink" align="right"><a href="#top">Back to the Top</a></p>
-          <hr>
-        </div>
-        <div class="col-1 col-lg-2">&nbsp;</div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <p class="text-center"><a href=""https://smittytone.github.io"><img src="../images/rassilonblack.png" width="32" height="32" alt="The Seal of Rassilon" /></a></p>
-        </div>
-      </div>
     </div>
-  </div>
-  <script type="text/javascript" src="../scripts/retina.min.js"></script>
-  <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
-  <script>
-    $('a[href*="#"]')
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 500, function() {
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(":focus")) {
-              return false;
-            } else {
-              $target.attr('tabindex','-1');
-              $target.focus();
-            };
-          });
-        }
-      }
-    });
-  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../scripts/retina.min.js"></script>
+    <script>
+        $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
+            }
+        });
+    </script>
 </body>
 </html>
