@@ -1,21 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
     <channel>
-        <title>Squinter Changes</title>
+        <title>Squinter 2.2.127</title>
         <link>https://smittytone.github.io/files/appcast.xml</link>
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
+        <sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
         <item>
-            <title>Version 2.2 (build 126)</title>
-            <sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
-            <pubDate>Friday, 7 December 2018 08:30</pubDate>
-            <enclosure url="https://smittytone.github.io/files/Squinter_2_2_126.dmg"
-                sparkle:version="126" sparkle:shortVersionString="2.2.126" length="1623481"
-                type="application/octet-stream"
-                sparkle:dsaSignature="MEUCIQCJcYheEmAuk7VG/Fr13o3Sn2O/Aaef8Yq1YdPLv9LZTgIgMSlfXiBgBvce
-70RGGx/7ObymYZRhqv3YPXotipn4ECU=" />
+            <title>Version 2.2 (build 127)</title>
+            <pubDate>Friday, 8 March 2019 09:00</pubDate>
+            <enclosure url="https://smittytone.github.io/files/Squinter_2_2_127.dmg" sparkle:version="127" sparkle:shortVersionString="2.2" length="10548292" type="application/octet-stream" sparkle:edSignature="xOrDWJriLqBiHrCbOTeK6T4manIozPjqyTNyTBjNAi+dzt8dvPTye+vLsc49O/hOJ/b8f/prTn1ALlFkBhvVCg=="/>
             <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
         </item>
     </channel>
 </rss>
-
