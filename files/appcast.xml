@@ -10,7 +10,9 @@
             <sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
             <pubDate>Friday, 8 March 2019 09:00</pubDate>
             <enclosure url="https://smittytone.github.io/files/Squinter_2_2_127.dmg" 
-                sparkle:version="127" sparkle:shortVersionString="2.2" length="10548292" type="application/octet-stream" sparkle:edSignature="xOrDWJriLqBiHrCbOTeK6T4manIozPjqyTNyTBjNAi+dzt8dvPTye+vLsc49O/hOJ/b8f/prTn1ALlFkBhvVCg=="/>
+                sparkle:version="127" sparkle:shortVersionString="2.2" length="10548292" type="application/octet-stream" sparkle:edSignature="xOrDWJriLqBiHrCbOTeK6T4manIozPjqyTNyTBjNAi+dzt8dvPTye+vLsc49O/hOJ/b8f/prTn1ALlFkBhvVCg==" 
+                sparkle:dsaSignature="MEQCIE6oCq2RqWo+jJxJObeYCMksowsTdOJiD3rJVyysog6fAiAaMqK3qPb2uZHJ
+3arViU1uekBv1q4j6Xd6U4ws/Cduig==" />
             <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
         </item>
     </channel>
