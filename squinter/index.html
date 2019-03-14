@@ -194,6 +194,12 @@
               an empty circle tells you the currently selected project has changed and may need to be saved. If you don't wish to
               save the changes, you can choose to ignore them when you quit Squinter or close the project.</p>
 
+              <p><b>Note</b> Squinter does not guarantee any operation is atomic. It is always possible that the first change it makes succeeds but the 
+              next one fails &mdash; for example, if the connection is lost, or because the first changes an assumption on which the second is based. 
+              In such cases, the overall operation is partially completed, but Squinter does not restore the original state of already changed entities 
+              and reports a failure. You can update a Project with the <b>Projects > Sync Project...</b> option, which will tell you which Device 
+              Groups are present on the server but not recorded locally.</p>
+
               <p class="smalllink" align="right"><a href="#account">Back to Contents</a></p>
 
               <h2 id="working-with-device-groups">Working With Device Groups</h2>
@@ -444,11 +450,14 @@
               <p class="smalllink" align="right"><a href="#account">Back to Contents</a></p>
               <hr />
 
-              <h1 id="ki">Troubleshooting</h1>
+              <h1 id="ki">Troubleshooting and Known Issues</h1>
               <ul>
                 <li>Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during
                 development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>. You
-                may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li> 
+                may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li>
+                <li>Squinter supports the creation of Projects and Device Groups when you are not logged into an Electric Imp account, or
+                are working offline. However, this is not recommended as there is not yet a facility to upload such offline creations to 
+                the impCloud.</p>
                 <li>Online help is available but not yet complete &mdash; this page is better.</li>
                 <li>Squinter 1.0 will not see Squinter 2.0 as an available update. You must install Squinter 2.0 manually.</li>
               </ul>
