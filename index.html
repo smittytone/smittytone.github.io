@@ -18,7 +18,7 @@
         .bio {font-size:17px;text-align:justify;}
         .bio a:hover {color:white;background-color:#4E65AE;text-decoration:none;padding:2px;border-radius:5px;}
         .bodypara a:hover {color:white;background-color:#4E65AE;text-decoration:none;padding:3px;border-radius:4px;}
-        .container {padding-bottom:10px;}
+        .container-fluid {max-width:84%;}
         .nav-item {font-family:Abel,sans-serif;}
         .navbar-brand {font-family:Abel,sans-serif;}
         .linktext {font-size:13px;}
@@ -27,7 +27,6 @@
         .bodypara {}
         .coloimg {content:url("images/rassilonblack.png");}
         .frame {border:4px solid#4E65AE;}
-        .container-fluid {max-width:82%;}
         .navbar-toggler {border:none;outline:none;}
         
         @media only screen and (max-width:991px) {
@@ -35,8 +34,12 @@
             .gsmall {display:none};
         }
         
-        @media only screen and (max-width: 640px) {
-            .container-fluid {padding:0px;max-width: 100%;}
+        @media only screen and (max-width: 1026px) {
+            .container-fluid {padding:0px;max-width:90%;}
+        }
+
+        @media only screen and (max-width: 780px) {
+            .container-fluid {padding:0px;max-width:100%;}
         }
         
         @media (prefers-color-scheme: dark) {
