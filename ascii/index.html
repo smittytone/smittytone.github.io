@@ -20,8 +20,7 @@
         a  {color:#B01C17;padding:2px;}
         .link:hover {color:white;background-color:#B01C17;text-decoration:none;padding:2px;border-radius:5px;}
         .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
-        .container {padding-bottom:10px;}
-        .container-fluid {max-width:82%;}
+        .container-fluid {max-width:84%;}
         .nav-item {font-family:Abel,sans-serif;}
         .navbar-brand {font-family:Abel,sans-serif;}
         .navbar-toggler {border:none;outline:none;}
@@ -29,9 +28,12 @@
         .coloimg {content:url("../images/rassilonblack.png");}
         .dloadpanel {background-color:#DDDDDD;padding:10px 10px 10px 10px;border:2px solid #222222;}
         
+        @media only screen and (max-width: 1026px) {
+            .container-fluid {padding:0px;max-width:90%;}
+        }
 
-        @media only screen and (max-width: 640px) {
-            .container-fluid {padding:0px;max-width: 100%;}
+        @media only screen and (max-width: 780px) {
+            .container-fluid {padding:0px;max-width:100%;}
         }
         
         @media (prefers-color-scheme: dark) {
