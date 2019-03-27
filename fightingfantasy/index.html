@@ -1,54 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="Description" content="Tony Smith's software library: Fighting Fantasy Game Manager, a macOS program to help you play Fighting Fantasy Gamebooks by Steve Jackson and Ian Livingstone">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta name="Description" content="Tony Smith's software library: Fighting Fantasy Game Manager, a macOS program to help you play Fighting Fantasy Gamebooks by Steve Jackson and Ian Livingstone" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
     <title>FightingFantasy Game Manager</title>
     <style>
-        body{background-color:#EEEEEE;}
-        p{color:black;font-family:Abel,sans-serif;font-size:16px;}
-        h2{color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
-        h3{color:black;font-family:Abel,sans-serif;font-size:22px;}
-        h4{color:black;font-family:Abel,sans-serif;font-size:18px;}
-        hr{border-color:#FFD709;}
-        li{color:black;font-family:Abel,sans-serif;font-size:16px;list-style:none;}
-        li::before {border-radius:50%;content:"";display:inline-block;margin-right:6px;margin-bottom:1px;
-                    height:8px;width:8px;background-color:#FFD709;}
-        .container{padding-bottom:10px;}
-        .nav-item{font-family:Abel,sans-serif;}
-        .navbar-brand{font-family:Abel,sans-serif;}
-        .smalllink{font-size:12px;}
+        body {color:black;background-color:#EEEEEE;}
+        p  {font-family:Abel,sans-serif;font-size:16px;}
+        h2 {color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
+        h3 {color:black;font-family:Abel,sans-serif;font-size:22px;}
+        h4 {color:black;font-family:Abel,sans-serif;font-size:18px;}
+        hr {border-color:#FFD709;}
+        li {color:black;font-family:Abel,sans-serif;font-size:16px;list-style:link-style-type;}
+        a  {color:#6d0439;padding:2px;}
+        .link:hover {color:black;background-color:#FFD709;text-decoration:none;padding:2px;border-radius:5px;}
+        .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
+        .coloimg {content:url("../images/rassilonblack.png");}
+        .linktext{font-size:12px;}
+        .container {padding-bottom:10px;}
+        .nav-item {font-family:Abel,sans-serif;}
+        .navbar-brand {font-family:Abel,sans-serif;}
+        .navbar-toggler {border:none;outline:none;}
+
+        @media (prefers-color-scheme: dark) {
+            body {color:white;background:#222222;}
+            h2 {color:#FFD709;}
+            h3 {color:white;}
+            h4 {color:white;}
+            hr {border-color:#FFFFFF;}
+            a  {color:#FFD709;}
+            li {color:white;}
+            .colo:hover {background-color:#222222;}
+            .coloimg {content:url("../images/rassilon.png");}
+            .linktext {color: white;}
+        }
     </style>
 </head>
 <body>
     <div class="container" id="ctop">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#FFD709;">
-            <a class="navbar-brand" style="color:black" href="../index.html">
-                <img src="../images/ffw.png" width="32" height="32" class="d-inline-block align-top" alt="">FightingFantasy
-            </a>
+            <div class="navbar-header">
+                <a class="navbar-brand" style="color:black" href="../index.html">
+                    <img src="../images/ffw.png" width="32" height="32" class="d-inline-block align-top" alt="The Fighting Fantasy Logo"> FightingFantasy
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" style="color:black" href="#how-to-play">How to Use Fighting Fantasy GM</a>
-                    <a class="nav-item nav-link" style="color:black" href="#release-notes">Release Notes</a>
-                </div>
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" style="color:black" href="../index.html">Home</a>
-                </div>
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" style="color:black" href="#how-to-play">How to Use Fighting Fantasy GM</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color:black" href="#release-notes">Release Notes</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" style="color:black" href="../index.html">Home</a></li>
+                </ul>
             </div>
         </nav>
-        <div class="frame" style="border: 4px solid #FFD709">
+        <div class="frame" style="border:4px solid #FFD709">
             <div class="row">
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
                     <h2 class="text-center">FightingFantasy Game Manager 3.0</h2>
                     <h3 class="text-center"></h3>
-                    <h4 class="text-center">Latest Release: <a href="#release-notes">3.0.15</a></h4>
+                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">3.0.15</a></h4>
                     <p>&nbsp;</p>
                     <h3 id="about">About Fighting Fantasy Game Manager</h3>
                     <p>This is a Swift 4 port (for macOS) of a much older Objective-C version written circa 2003 following the 20th
@@ -56,7 +74,7 @@
                     The concept of a program to help players with their games &mdash; setting up characters, handling combat, managing their backpack
                     contents, testing for Luck, etc. &mdash; goes back to a mid- to late 1990s Real Basic classic Mac OS version which, in turn, was a
                     redevelopment of an original implementation for the
-                    <a href="https://smittytone.wordpress.com/2013/04/21/rip-dragon-32-1982-2013-my-first-8-bit-colour-microcomputer/">Dragon 32</a>
+                    <a class="link" href="https://smittytone.wordpress.com/2013/04/21/rip-dragon-32-1982-2013-my-first-8-bit-colour-microcomputer/">Dragon 32</a>
                     written around 1985, while the gamebooks were still being published by Penguin's Puffin imprint.</p>
                     <div class="row">
                         <div class="col-6" align="left">
@@ -85,8 +103,8 @@
                             <img class="img-fluid" src="../images/gfx/pack.png" width="340" style="border: 1px solid #999999" /><br />&nbsp;
                         </div>
                     </div>
-                    <p>You can find out more about the gamebooks at <a href="https://fightingfantast.com">FightingFantasy.com</a>.</p>
-                    <p>For the application code, please visit the <a href="https://github.com/smittytone/FightingFantasy">GitHub repo
+                    <p>You can find out more about the gamebooks at <a class="link" href="https://fightingfantast.com">FightingFantasy.com</a>.</p>
+                    <p>For the application code, please visit the <a class="link" href="https://github.com/smittytone/FightingFantasy">GitHub repo
                     page</a>.<br />&nbsp;</p>
                     <h3 id="how-to-play">How to Use Fighting Fantasy Game Manager</h3>
                     <p>Using the Game Manager should be intuitive: it replicates the Character and Monster Encounter Sheets found in the
@@ -138,7 +156,7 @@
                     <h3>Taking Notes</h3>
                     <p>The <b>Notes</b> tab provides a simple jotter for you to record names, places and clues during the game. Just click and type.</p>
                     <p align="center"><img class="img-fluid" src="../images/gfx/notes.png" width="340" style="border: 1px solid #999999" /></p>
-                    <p class="smalllink" align="right"><a href="#ctop">Back to the Top</a></p>
+                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
                     <h3 id="release-notes">Release Notes</h3>
                     <h4>3.0.15</h4>
@@ -174,16 +192,14 @@
                         <li>Add splash screen at startup.</li>
                         <li>Better sheet handling.</li>
                     </ul>
-                    <p class="smalllink" align="right"><a href="#ctop">Back to the Top</a></p>
+                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
-                    <p><i>Fighting Fantasy is copyright &copy; 2016-18, Steve Jackson and Ian Livingstone.<br />Software only copyright &copy; 2017-18,
-                    Tony Smith</i></p>
                 </div>
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="row">
                 <div class="col">
-                    <p class="text-center"><a href="https://smittytone.github.io"><img src="../images/rassilonblack.png" width="32" height="32" alt="The Seal of Rassilon" /></a></p>
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="coloimg" width="32" height="32" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; Tony Smith, 2014-19<br />Fighting Fantasy is copyright &copy; 2016-19, Steve Jackson and Ian Livingstone/small></p>
                 </div>
             </div>
         </div>

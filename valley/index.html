@@ -1,65 +1,110 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="Description" content="Tony Smith's software library: The Valley, a macOS recreation of a pioneering British 8-bit micro adventure game">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <meta name="Description" content="Tony Smith's software library: The Valley, a macOS recreation of a pioneering British 8-bit micro adventure game" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
     <title>The Valley 1.0</title>
     <style>
-        body{background-color:#EEEEEE;}
-        p{color:black;font-family:Abel,sans-serif;font-size:16px;}
-        h2{color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
-        h3{color:#B01C17;font-family:Abel,sans-serif;font-size:22px;}
-        h4{color:#B01C17;font-family:Abel,sans-serif;font-size:18px;}
-        hr{border-color:#B01C17;}
-        td{color:black;font-family:Abel,sans-serif;font-size:16px;}
-        th{color:#B01C17;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
-        li{color:black;font-family:Abel,sans-serif;font-size:16px;list-style:none;}
-        li::before {border-radius:50%;content:"";display:inline-block;margin-right:6px;margin-bottom:1px;
-                    height:8px;width:8px;background-color:#B01C17;}
-        .container{padding-bottom:10px;}
-        .nav-item{font-family:Abel,sans-serif;}
-        .navbar-brand{font-family:Abel,sans-serif;}
-        .smalllink{font-size:12px;}
+        body {color:black;background-color:#EEEEEE;}
+        p {font-family:Abel,sans-serif;font-size:16px;}
+        h2 {color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
+        h3 {color:#B01C17;font-family:Abel,sans-serif;font-size:22px;}
+        h4 {color:#B01C17;font-family:Abel,sans-serif;font-size:18px;}
+        hr {border-color:#B01C17;}
+        a  {color:#B01C17;padding:2px;}
+        th {color:#B01C17;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
+        td {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        li {color:black;font-family:Abel,sans-serif;font-size:16px;list-style:list-style-type;}
+        .container {padding-bottom:10px;}
+        .nav-item {font-family:Abel,sans-serif;}
+        .navbar-brand {font-family:Abel,sans-serif;}
+        .navbar-brand-light-color {color:blue;}
+        .frame {border:4px solid #B01C17;}
+        .navcol {background-color:#B01C17;}
+        .link:hover {color:white;background-color:#B01C17;text-decoration:none;padding:2px;border-radius:5px;}
+        .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
+        .linktext {font-size:12px;}
+        .coloimg {content:url("../images/rassilonblack.png");}
+        .navimg {content:url("../images/vlw.png");}
+        .dloadpanel {background-color:#DDDDDD;padding: 10px 10px 10px 10px;border: 2px solid #222222;}
+
+        .navbar-custom {background-color:#B01C17;}
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {color:white;}
+        .navbar-custom .navbar-nav .nav-link {color: rgba(255,255,255,.5);}
+        .navbar-custom .nav-item.active .nav-link,
+        .navbar-custom .nav-item:hover .nav-link {color:white;}
+        .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+
+        @media (prefers-color-scheme: dark) {
+            body {color:white;background:#222222;}
+            h2 {color:#00FF00;}
+            h3 {color:white;}
+            h4 {color:white;}
+            hr {border-color:#FFFFFF;}
+            a  {color:#00FF00;}
+            td {color:white;}
+            th {color:#00FF00;}
+            li {color:white;}
+            kbd {background-color:#00FF00;}
+            .frame {border:4px solid #00FF00;}
+            .navcol {color:#black;background-color:#00FF00;}
+            .link:hover {color:black;background-color:#00FF00;}
+            .colo:hover {background-color:#222222;}
+            .linktext {color:white;}
+            .coloimg {content:url("../images/rassilon.png");}
+            .navimg {content:url("../images/vlwb.png");}
+            .dloadpanel {background-color:#222222;border:2px solid #00FF00;}
+            .navbar-custom {background-color:#00FF00;}
+            .navbar-custom .navbar-brand,
+            .navbar-custom .navbar-text {color:black;}
+            .navbar-custom .navbar-nav .nav-link {color:#333333;}
+            .navbar-custom .nav-item.active .nav-link,
+            .navbar-custom .nav-item:hover .nav-link {color:black;}
+            .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+        }
     </style>
 </head>
 <body>
     <div class="container" id="ctop">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #B01C17;">
-            <a class="navbar-brand" style="color:white" href="../index.html">
-                <img src="../images/vlw.png" width="32" height="32" class="d-inline-block align-top" alt="The Valley logo" />The Valley
-            </a>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html">
+                    <img class="navimg" width="32" height="32" class="d-inline-block align-top" alt="The Valley logo" /> The Valley
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="#how-to-play">How To Play</a>
-                    <a class="nav-item nav-link" href="#release-notes">Release Notes</a>
-                </div>
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="../index.html">Home</a>
-                </div>
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#how-to-play">How To Play</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#release-notes">Release Notes</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                </ul>
             </div>
         </nav>
-        <div class="frame" style="border: 4px solid #B01C17">
+        <div class="frame">
             <div class="row">
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
                     <h2 class="text-center">The Valley 1.0</h2>
                     <h3 class="text-center">A macOS port of a 1982 real-time RPG</h3>
-                    <h4 class="text-center">Latest Release: <a href="#release-notes">1.0.7</a></h4>
+                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.0.7</a></h4>
                     <p>&nbsp;</p>
-                    <div style="background-color:#DDDDDD;padding: 10px 10px 10px 10px">
-                        <h2>Download The Valley</h2>
-                        <p>Please verify the integrity of the download with the SHA-1 or SHA-256 checksums.</p>
+                    <div class="dloadpanel">
+                        <h2 align="center">Download The Valley</h2>
+                        <p align="center">Please verify the integrity of the download with the SHA-1 or SHA-256 checksums.</p>
                         <table class="table table-borderless table-responsive table-sm">
                             <tbody>
                                 <tr>
                                     <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
-                                    <td scope="col-9 col-lg-10"><a href="/files/The_Valley_1_0_7.dmg">The_Valley_1_0_7.dmg</a></td>
+                                    <td scope="col-9 col-lg-10"><a class="link" href="../files/The_Valley_1_0_7.dmg">The_Valley_1_0_7.dmg</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><b>File Size</b>&nbsp;</th>
@@ -105,8 +150,8 @@
                     <p>You can save your game by entering one of the Safe Castles at either end of the Valley itself. Between them is
                     a path on which no monster dares tread &mdash; you will be safe from threat there. But those who stay safe will
                     never gain the experience they need to succeed...</p>
-                    <p>For more information, please the <a href="https://github.com/smittytone/Valley">GitHub repo page</a>.</p>
-                    <p class="smalllink" align="right"><a href="#ctop">Back to the Top</a></p>
+                    <p>For more information, please the <a class="link" href="https://github.com/smittytone/Valley">GitHub repo page</a>.</p>
+                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
                     <h3 id="release-notes">Release Notes</h3>
                     <h4>1.0.7</h4>
@@ -138,14 +183,14 @@
                     <ul>
                         <li>Initial public release.</li>
                     </ul>
-                    <p class="smalllink" align="right"><a href="#ctop">Back to the Top</a></p>
+                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
                 </div>
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="row">
                 <div class="col">
-                    <p class="text-center"><a href="https://smittytone.github.io"><img src="../images/rassilonblack.png" width="32" height="32" alt="The Seal of Rassilon" /></a></p>
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="coloimg" width="32" height="32" alt="The Seal of Rassilon" /></a><br /><small>Site copyright &copy; Tony Smith, 2014-19</small></p>
                 </div>
             </div>
         </div>
