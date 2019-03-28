@@ -73,7 +73,7 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About Squinter</a></li>
                     <li class="nav-item"><a class="nav-link" href="#account">How to Use Squinter</a>
                     <li class="nav-item"><a class="nav-link" href="#ki">Troubleshooting</a>
-                    <li class="nav-item"><a class="nav-link" href="#rn">Release Notes</a>
+                    <li class="nav-item"><a class="nav-link" href="releases.html">Release Notes</a>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
@@ -86,9 +86,8 @@
                 <div class="col-10 col-lg-8">
                     <h1 class="text-center">Squinter 2.3</h1>
                     <h3 class="text-center">&#8216;A Squirrel Integrator&#8217;
-                    <h4 class="text-center">Latest Release: <a class="link" href="#rn">2.3.128 (x April 2019)</a></h4>
-                    <p class="text-center"><b>&nbsp;<br />Squinter 1.0 is non-operational &mdash; Electric Imp has withdrawn the Build API. Please upgrade
-                    to version 2.0 or above to continue using Squinter<br />&nbsp;</b></p>
+                    <h3 class="text-center">Latest Release: <a class="link" href="releases.html">2.3.128 (x April 2019)</a></h3>
+                    <p>&nbsp;</p>
                     <div class="dloadpanel">
                         <h2 align="center">Download Squinter</h2>
                         <p align="center">Please verify the integrity of the download with the SHA-1 or SHA-256 checksums.</p>
@@ -474,104 +473,18 @@
 
                     <h1 id="ki">Troubleshooting and Known Issues</h1>
                     <ul>
+                        <li>Squinter 1.0 is non-operational because Electric Imp has withdrawn the Build API. Please upgrade
+                            to version 2.0 or above to continue using Squinter. Squinter 1.0 will not see Squinter 
+                            2.0 as an available update. You must install Squinter 2.0 manually.</li>
                         <li>Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during 
                             development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>. 
                             You may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li>
-                        <li>Squinter supports the creation of Projects and Device Groups when you are not logged into an Electric Imp account, or
-                            are working offline. However, this is not recommended as there is not yet a facility to upload such offline creations to 
-                            the impCloud.</li>
-                        <li>Online help is available but not yet complete &mdash; this page is better.</li>
-                        <li>Squinter 1.0 will not see Squinter 2.0 as an available update. You must install Squinter 2.0 manually.</li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
                     
                     <h1 id="rn">Release Notes</h1>
-                    <h4>2.3.128 (x April 2019)</h4>
-                    <ul>
-                        <li>Support for the impCentral’s new DUT and Test DUT device groups:<ul>
-                            <li>(Test) DUT device group creation.</li>
-                            <li>Set as (Test) Fixture device group targets &mdash; required for (Test) Fixture device group creation.</li></ul>
-                        </li>
-                        <li>Sync local Projects with impCloud Products:<ul>
-                            <li>Identify and download online-only device groups to a Project.</li>
-                            <li>Quickly add auto-created (Test) DUT device groups to your Project.</li>
-                            <li>Identify and upload orphaned Project device groups.</li></ul>
-                        </li>
-                        <li>Downloading a Product as a Project no longer saves the files immediately, but you will be warned before 
-                            closing/quitting if you have not done so.</li>
-                    </ul>
-                    <h4>2.2.127 (8 March 2019)</h4>
-                    <ul>
-                        <li>New <a class="link" href="#lookup">device look-up facility</a>: 
-                            locate named devices in your account by entering their device ID or MAC address.</li>
-                        <li>Stop Inspector showing link icons for devices with no agents.</li>
-                        <li>The Minimum Deployment dialog now shows commit date, time and SHA.</li>
-                        <li>Update to Sparkle’s EdDSA encryption.</li>
-                        <li>Selecting <b>Show Help</b> now takes you to the Squinter web site.</li>
-                        <li>Now using a better feedback/report a problem system.</li>
-                        <li>Stop Inspector showing link icons for devices with no agents.</li>
-                        <li>Fix minor layout issues.</li>
-                        <li>Fixed a crash when displaying devices with sleeping agents in the Inspector.</li>
-                    </ul>
-                    <h4>2.2.126 (7 December 2018)</h4>
-                    <ul>
-                        <li>Squinter 2.2 requires macOS 10.12 or above (versions 2.0. and 2.1 required macOS 10.11 or above).</li>
-                        <li>The Inspector panel is now integrated into the main window for a more modern look.</li>
-                        <li>Add logging information to the Inspector.</li>
-                        <li>When a shared Product is selected, the Shared Products menu item is marked to aid visual navigation.</li>
-                        <li>Make Inspector link button graphics work better with Mojave Dark Mode.</li>
-                        <li>Fixed a crash experienced when downloading a shared product.</li>
-                        <li>Fixed an issue in which devices were incorrectly added to the current device group.</li>
-                        <li>Fixed an issue in which creating a new project failed to update the Device Groups menu.</li>
-                        <li>Fixed the incorrect selection of a device after changing projects.</li>
-                        <li>Ensure the Inspector Project view is cleared when the last open project is closed.</li>
-                    </ul>
-                    <h4>2.1.125 (26 October 2018)</h4>
-                    <ul>
-                        <li>Begin using Electric Imp as the source of Electric Imp library version numbers.</li>
-                        <li>Better logging of updated included libraries and files in source code.</li>
-                        <li>When a shared Product is selected, the Shared Products menu item is marked to aid visual navigation.</li>
-                        <li>Make Inspector link button graphics work better with Mojave Dark Mode.</li>
-                        <li>A shared Product won’t be selected at login if there is an owned Product available to be selected.</li>
-                        <li>Halting a device’s log stream no longer causes other devices’ streams to change colour.</li>
-                        <li>Switching accounts no longer causes the Products of the account you’ve just logged into to be displayed 
-                            as shared Products.</li>
-                        <li>Squinter will now correctly begin watching a Device Group’s new source code file(s) when the existing one(s) 
-                            are replaced (and stop watching the old files).</li>
-                        <li>Correctly mark projects with updated imported libraries and files as in need of saving.</li>
-                    </ul>
-                    <h4>2.1.124 (29 September 2018)</h4>
-                    <ul>
-                        <li>Support for macOS Mojave's Dark Mode.</li>
-                        <li>Add a means for users to provide feedback and report issues.</li>
-                        <li>Better notification of which device will be selected when a Device Group is opened or selected.</li>
-                        <li>Don't log the fact that devices' statuses are being updated automatically when it happens.</li>
-                        <li>Easier login to alternative accounts (ie. accounts other than the saved, 'primary' account).</li>
-                        <li>Improved commit list readout.</li>
-                        <li>Fix Device Group device selection.</li>
-                        <li>Correct display of device log colours.</li>
-                    </ul>
-                    <h4>2.0.123 (29 August 2018)</h4>
-                    <ul>
-                        <li>Support for impCentral MFA.</li>
-                        <li>Add Command-click action to expand or collapse all Inspector items.</li>
-                        <li>Clearer notification when login credentials are rejected.</li>
-                        <li>Better logout handling.</li>
-                        <li>Support eight user-definable colours for device logs.<ul><li><b>Warning</b> This will reset any colour 
-                            preferences you already have.</li></ul></li>
-                        <li>Make sure updated device info (eg. on auto-refresh) is reflected by the Inspector.</li>
-                        <li>Remove redundant code.</li>
-                    </ul>
-                    <h4>2.0.122 (17 July 2018)</h4>
-                    <ul>
-                        <li>Project Inspector now displays as an outline, allowing you to close or expand sections for clarity.</li>
-                        <li>Add RSSI readout to Device Inspector.</li>
-                        <li>Refactor some key code components.</li>
-                        <li>Edits to Device Groups other than Development Device Groups are no longer rejected by the server.</li>
-                        <li>New Projects now appear correctly in the Project Inspector.</li>
-                        <li>Show correct log font when double-clicking a file or loading from the Dock Tile's menu.</li>
-                    </ul>
+                    <p>The release notes section has now moved to <a class="link" href="releases.html">its own page</a>.</p>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
                 </div>
