@@ -19,7 +19,7 @@
         a  {color:#6E9B3D;padding:2px;}
         .link:hover {color:#EEEEEE;background-color:#6E9B3D;text-decoration:none;padding:2px;border-radius:5px;}
         .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
-        .container-fluid {max-width:82%;}
+        .container-fluid {max-width:84%;}
         .nav-item {font-family:Abel,sans-serif;}
         .navbar-brand{font-family:Abel,sans-serif;}
         .navbar-toggler {border:none;outline:none;}
@@ -27,17 +27,21 @@
         .coloimg {content:url("../images/rassilonblack.png");}
         .navcol {background-color:#6E9B3D;}
         .frame {border:4px solid #6E9B3D;}
-        .change-badge {background-color:#0366d6;display:d-inline-block;
+        .change-badge {color:white;background-color:#0366d6;display:d-inline-block;
         flex:0 0 68px;font-size:13px;border-radius:5px;margin-right:12px;padding:2px;text-transform:uppercase;text-align:center;}
         .change-badge-new {background-color:#6E9B3D;}
         .change-badge-improved {background-color:#4E65AE;}
         .change-badge-fixed {background-color:#B01C17;}
         .flex-items-start {align-items:flex-start !important}
 
-        @media only screen and (max-width: 640px) {
-            .container-fluid {padding:0px;max-width: 100%;}
+        @media only screen and (max-width: 1026px) {
+            .container-fluid {padding:0px;max-width:90%;}
         }
-        
+
+        @media only screen and (max-width: 780px) {
+            .container-fluid {padding:0px;max-width:100%;}
+        }
+
         @media (prefers-color-scheme: dark) {
             body {color:white;background:#222222;}
             h1 {color:rgb(124, 189, 54);}
@@ -53,7 +57,8 @@
             .coloimg {content:url("../images/rassilon.png");}
             .navcol {background-color:rgb(124, 189, 54);}
             .frame {border:4px solid rgb(124, 189, 54);}
-        }        
+            .change-badge {color:white;}
+        }
     </style>
 </head>
 <body>
@@ -116,12 +121,12 @@
                         </li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />     
+                    <hr />
                     <h3 class="h3under">2.2.127 (8 March 2019)</h3>
                     <ul class="list-style-none change-log">
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-new">new</div>
-                            <div class="change-description">New <a href="" class="link">device look-up facility</a>: locate named devices in your account by entering their device ID or MAC address. New device look-up facility: locate named devices in your account by entering their device ID or MAC address.</div>
+                            <div class="change-description">New <a href="index.html#lookup" class="link">device look-up facility</a>: locate named devices in your account by entering their device ID or MAC address. New device look-up facility: locate named devices in your account by entering their device ID or MAC address.</div>
                         </li>
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-improved">improved</div>
@@ -142,7 +147,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Stop Inspector showing link icons for devices with no agents.</div>
-                        </li>    
+                        </li>
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Fix minor layout issues.</div>
@@ -150,7 +155,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Fixed a crash when displaying devices with sleeping agents in the Inspector.</div>
-                        </li>    
+                        </li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
@@ -179,7 +184,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Fixed a crash experienced when downloading a shared product.</div>
-                        </li>    
+                        </li>
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Fixed an issue in which devices were incorrectly added to the current device group.</div>
@@ -195,8 +200,8 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Ensure the Inspector Project view is cleared when the last open project is closed.</div>
-                        </li>   
-                    </ul>                    
+                        </li>
+                    </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
                     <h3 class="h3under">2.1.125 (26 October 2018)</h3>
@@ -216,7 +221,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">A shared Product won’t be selected at login if there is an owned Product available to be selected.</div>
-                        </li>    
+                        </li>
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Halting a device’s log stream no longer causes other devices’ streams to change colour.</div>
@@ -232,7 +237,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Correctly mark projects with updated imported libraries and files as in need of saving.</div>
-                        </li>   
+                        </li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
@@ -253,7 +258,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-improved">Improved</div>
                             <div class="change-description">Don't log the fact that devices' statuses are being updated automatically when it happens.</div>
-                        </li>    
+                        </li>
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-improved">Improved</div>
                             <div class="change-description">Make it easier login to alternative accounts (ie. accounts other than the saved, 'primary' account).</div>
@@ -269,7 +274,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Correct display of device log colours.</div>
-                        </li>   
+                        </li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
@@ -290,7 +295,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-improved">Improved</div>
                             <div class="change-description">Better logout handling.</div>
-                        </li>    
+                        </li>
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-improved">Improved</div>
                             <div class="change-description">Support eight user-definable colours for device logs. <b>Warning</b> This will reset any colour preferences you already have.</div>
@@ -298,7 +303,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Make sure updated device info (eg. on auto-refresh) is reflected by the Inspector.</div>
-                        </li>   
+                        </li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
@@ -327,7 +332,7 @@
                         <li class="d-flex flex-items-start mb-2">
                             <div class="change-badge change-badge-fixed">Fixed</div>
                             <div class="change-description">Show correct log font when double-clicking a file or loading from the Dock Tile's menu.</div>
-                        </li>  
+                        </li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
