@@ -14,16 +14,17 @@
         h3 {color:black;font-family:Abel,sans-serif;font-size:22px;}
         h4 {color:black;font-family:Abel,sans-serif;font-size:18px;}
         hr {border-color:#FFD709;}
-        li {color:black;font-family:Abel,sans-serif;font-size:16px;list-style:link-style-type;}
+        li {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        .rnli {list-style:disc;}
         a  {color:#6d0439;padding:2px;}
         .link:hover {color:black;background-color:#FFD709;text-decoration:none;padding:2px;border-radius:5px;}
         .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
-        .coloimg {content:url("../images/rassilonblack.png");}
         .linktext{font-size:12px;}
         .container-fluid {max-width:84%;}
         .nav-item {font-family:Abel,sans-serif;}
         .navbar-brand {font-family:Abel,sans-serif;}
         .navbar-toggler {border:none;outline:none;}
+        .imgw {display:none;}
 
         @media only screen and (max-width: 1026px) {
             .container-fluid {padding:0px;max-width:90%;}
@@ -42,8 +43,9 @@
             a  {color:#FFD709;}
             li {color:white;}
             .colo:hover {background-color:#222222;}
-            .coloimg {content:url("../images/rassilon.png");}
             .linktext {color: white;}
+            .imgw {display:inline-block;}
+            .imgb {display:none;}
         }
     </style>
 </head>
@@ -169,36 +171,36 @@
                     <h3 id="release-notes">Release Notes</h3>
                     <h4>3.0.15</h4>
                     <ul>
-                        <li>Add <b>Yaztromo’s Aid</b> option to <b>Game</b> menu (<i>Port of Peril</i>).</li>
+                        <li class="rnli">Add <b>Yaztromo’s Aid</b> option to <b>Game</b> menu (<i>Port of Peril</i>).</li>
                     </ul>
                     <h4>3.0.14</h4>
                     <ul>
-                        <li>Fix Luck Test’s Luck score decrement.</li>
-                        <li>Correctly select the icon (in the pack item popover) of the pack item clicked upon.</li>
+                        <li class="rnli">Fix Luck Test’s Luck score decrement.</li>
+                        <li class="rnli">Correctly select the icon (in the pack item popover) of the pack item clicked upon.</li>
                     </ul>
                     <h4>3.0.13</h4>
                     <ul>
-                        <li>Add the <b>Notes</b> tab.</li>
-                        <li>Add control-click to bump stats to max.</li>
-                        <li>Stop sheets blocking further sheets.</li>
-                        <li>Fix character save bug.</li>
+                        <li class="rnli">Add the <b>Notes</b> tab.</li>
+                        <li class="rnli">Add control-click to bump stats to max.</li>
+                        <li class="rnli">Stop sheets blocking further sheets.</li>
+                        <li class="rnli">Fix character save bug.</li>
                     </ul>
                     <h4>3.0.12</h4>
                     <ul>
-                        <li>Re-set New Character game popup Sorcery! entries.</li>
-                        <li>Add <i>Temple of Terror.</i></li>
-                        <li>Refactor Stats tab image code.</li>
+                        <li class="rnli">Re-set New Character game popup Sorcery! entries.</li>
+                        <li class="rnli">Add <i>Temple of Terror.</i></li>
+                        <li class="rnli">Refactor Stats tab image code.</li>
                     </ul>
                     <h4>3.0.11</h4>
                     <ul>
-                        <li>Add start menu.</li>
-                        <li>Update graphics.</li>
-                        <li>Improve About and Help sheet dismissals.</li>
+                        <li class="rnli">Add start menu.</li>
+                        <li class="rnli">Update graphics.</li>
+                        <li class="rnli">Improve About and Help sheet dismissals.</li>
                     </ul>
                     <h4>3.0.10</h4>
                     <ul>
-                        <li>Add splash screen at startup.</li>
-                        <li>Better sheet handling.</li>
+                        <li class="rnli">Add splash screen at startup.</li>
+                        <li class="rnli">Better sheet handling.</li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
@@ -207,7 +209,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="coloimg" width="32" height="32" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; Tony Smith, 2014-19<br />Fighting Fantasy is copyright &copy; 2016-19, Steve Jackson and Ian Livingstone/small></p>
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; Tony Smith, 2014-19<br />Fighting Fantasy is copyright &copy; 2016-19, Steve Jackson and Ian Livingstone/small></p>
                 </div>
             </div>
         </div>

@@ -17,7 +17,8 @@
         a  {color:#B01C17;padding:2px;}
         th {color:#B01C17;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
         td {color:black;font-family:Abel,sans-serif;font-size:16px;}
-        li {color:black;font-family:Abel,sans-serif;font-size:16px;list-style:list-style-type;}
+        li {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        .rnli {list-style:disc;}
         .container {padding-bottom:10px;}
         .container-fluid {max-width:84%;}
         .nav-item {font-family:Abel,sans-serif;}
@@ -28,10 +29,9 @@
         .link:hover {color:white;background-color:#B01C17;text-decoration:none;padding:2px;border-radius:5px;}
         .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
         .linktext {font-size:12px;}
-        .coloimg {content:url("../images/rassilonblack.png");}
         .navimg {content:url("../images/vlw.png");}
         .dloadpanel {background-color:#DDDDDD;padding: 10px 10px 10px 10px;border: 2px solid #222222;}
-
+        .imgw {display:none;}
         .navbar-custom {background-color:#B01C17;}
         .navbar-custom .navbar-brand,
         .navbar-custom .navbar-text {color:white;}
@@ -64,8 +64,9 @@
             .link:hover {color:black;background-color:#00FF00;}
             .colo:hover {background-color:#222222;}
             .linktext {color:white;}
-            .coloimg {content:url("../images/rassilon.png");}
             .navimg {content:url("../images/vlwb.png");}
+            .imgw {display:inline-block;}
+            .imgb {display:none;}
             .dloadpanel {background-color:#222222;border:2px solid #00FF00;}
             .navbar-custom {background-color:#00FF00;}
             .navbar-custom .navbar-brand,
@@ -165,32 +166,32 @@
                     <h3 id="release-notes">Release Notes</h3>
                     <h4>1.0.7</h4>
                     <ul>
-                        <li>Fix window display issue in full screen.</li>
+                        <li class="rnli">Fix window display issue in full screen.</li>
                     </ul>
                     <h4>1.0.6</h4>
                     <ul>
-                        <li>Fix splash graphic colouring glitch.</li>
+                        <li class="rnli">Fix splash graphic colouring glitch.</li>
                     </ul>
                     <h4>1.0.5</h4>
                     <ul>
-                        <li>Revamp new-character sheet graphics and UI.</li>
-                        <li>Add preference to start game in full screen.</li>
-                        <li>Improved full screen handling.</li>
-                        <li>Improved handling of loaded player's arrival in the current scenario.</li>
+                        <li class="rnli">Revamp new-character sheet graphics and UI.</li>
+                        <li class="rnli">Add preference to start game in full screen.</li>
+                        <li class="rnli">Improved full screen handling.</li>
+                        <li class="rnli">Improved handling of loaded player's arrival in the current scenario.</li>
                     </ul>
                     <h4>1.0.4</h4>
                     <ul>
-                        <li>Fix an issue with key-presses being ignored after reincarnation.</li>
-                        <li>Add version number to About... sheet.</li>
+                        <li class="rnli">Fix an issue with key-presses being ignored after reincarnation.</li>
+                        <li class="rnli">Add version number to About... sheet.</li>
                     </ul>
                     <h4>1.0.3</h4>
                     <ul>
-                        <li>Fix an issue with game failing to respond to key-presses in full-screen mode.</li>
-                        <li>Minor changes and fixes.</li>
+                        <li class="rnli">Fix an issue with game failing to respond to key-presses in full-screen mode.</li>
+                        <li class="rnli">Minor changes and fixes.</li>
                     </ul>
                     <h4>1.0.2</h4>
                     <ul>
-                        <li>Initial public release.</li>
+                        <li class="rnli">Initial public release.</li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
@@ -199,7 +200,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="coloimg" width="32" height="32" alt="The Seal of Rassilon" /></a><br /><small>Site copyright &copy; Tony Smith, 2014-19</small></p>
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site copyright &copy; Tony Smith, 2014-19</small></p>
                 </div>
             </div>
         </div>
