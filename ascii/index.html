@@ -25,9 +25,9 @@
         .navbar-brand {font-family:Abel,sans-serif;}
         .navbar-toggler {border:none;outline:none;}
         .linktext {font-size:12px;}
-        .coloimg {content:url("../images/rassilonblack.png");}
         .dloadpanel {background-color:#DDDDDD;padding:10px 10px 10px 10px;border:2px solid #222222;}
-        
+        .imgw {display:none;}
+
         @media only screen and (max-width: 1026px) {
             .container-fluid {padding:0px;max-width:90%;}
         }
@@ -49,8 +49,9 @@
             .link:hover {color:#B01C17;background-color:white;}
             .colo:hover {background-color:#222222;}
             .linktext {color:white;}
-            .coloimg {content:url("../images/rassilon.png");}
             .dloadpanel {background-color:#222222;border: 2px solid #B01C17;}
+            .imgw {display:inline-block;}
+            .imgb {display:none;}
         }
     </style>
 </head>
@@ -144,7 +145,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="coloimg" width="32" height="32" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; Tony Smith, 2014-19</small></p>
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; Tony Smith, 2014-19</small></p>
                 </div>
             </div>
         </div>
