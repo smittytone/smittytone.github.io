@@ -24,7 +24,6 @@
         .navbar-brand{font-family:Abel,sans-serif;}
         .navbar-toggler {border:none;outline:none;}
         .linktext {font-size:12px;}
-        .coloimg {content:url("../images/rassilonblack.png");}
         .navcol {background-color:#6E9B3D;}
         .frame {border:4px solid #6E9B3D;}
         .change-badge {color:white;background-color:#0366d6;display:d-inline-block;
@@ -33,6 +32,7 @@
         .change-badge-improved {background-color:#4E65AE;}
         .change-badge-fixed {background-color:#B01C17;}
         .flex-items-start {align-items:flex-start !important}
+        .imgw {display:none;}
 
         @media only screen and (max-width: 1026px) {
             .container-fluid {padding:0px;max-width:90%;}
@@ -54,10 +54,11 @@
             .link:hover {color:black;background-color:rgb(124, 189, 54);}
             .colo:hover {background-color:#222222;}
             .linktext {color:rgb(124, 189, 54);}
-            .coloimg {content:url("../images/rassilon.png");}
             .navcol {background-color:rgb(124, 189, 54);}
             .frame {border:4px solid rgb(124, 189, 54);}
             .change-badge {color:white;}
+            .imgw {display:inline-block;}
+            .imgb {display:none;}
         }
     </style>
 </head>
@@ -306,9 +307,9 @@
                 </div>
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
-            <div class="row" align="center">
+            <div class="row">
                 <div class="col">
-                    <p><a class="colo" href="https://smittytone.github.io"><img class="coloimg" width="32" height="32" alt="The Seal of Rassilon" /></a><br /><small>Copyright &copy; Tony Smith, 2014-2019</small></p>
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; Tony Smith, 2014-19</small></p>
                 </div>
             </div>
         </div>
