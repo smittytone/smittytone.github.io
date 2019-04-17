@@ -319,12 +319,12 @@
                     <p id="lookup">This panel will update as you select devices and/or load or select different projects.</p>
 
                     <p>Squinter lists devices by their names, though their IDs and MAC addresses also appear in the Inspector (as shown above) or
-                        in the log when you het <kbd>Cmd-I</kbd>. Sometimes, however, you may only have a device’s ID or MAC address. In
-                        this case, select <b>Look up a Device by ID/MAC...</b> from the <b>Device</b> menu, of hit <kbd>Cmd-Shit-F</kbd>. This will call
-                        up a panel in which you can enter a device ID or a MAC address, and Squinter will locate which of your named devices matches the
-                        entered information. As you enter the ID or MAC, Squinter narrows down the list of possible devices. Select the device you want
-                        by clicking on its name in the presented list and then click the <b>Switch to Selected Device</b> button to select it as the
-                        current device:</p>
+                        in the log when you het <kbd>Cmd-I</kbd>. Sometimes, however, you may only have a device’s ID or MAC address, or its agent ID. In
+                        this case, select <b>Find a Device...</b> from the <b>Device</b> menu, of hit <kbd>Cmd-Shit-F</kbd>. This will call
+                        up a panel in which you can enter a device’s ID or MAC address, or an agent ID, and Squinter will locate which of your named devices
+                        matches the entered information. As you enter the ID or MAC, Squinter narrows down the list of possible devices. Select the device
+                        you want by clicking on its name in the presented list and then click the <b>Switch to Selected Device</b> button to select it as
+                        the current device:</p>
 
                     <p align="center"><img class="img-fluid" src="../images/squinter/device_lookup.png" width="612" style="border: 1px solid #DDDDDD" /></p>
 
@@ -481,7 +481,8 @@
                             2.0 as an available update. You must install Squinter 2.0 manually.</li>
                         <li>Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during
                             development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>.
-                            You may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li>
+                            You may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>. Check the
+                            <a class="link" href="releases.html">release notes</a> for guidance on whether preferences have changed.</li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
