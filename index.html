@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Abel|Oswald" rel="stylesheet" />
+    <link href="images/favicons/196.png" rel="shortcut icon" />
+    <link href="images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
     <title>smittytone's Software Library</title>
     <style>
         body {color:black;background-color:#EEEEEE;}
@@ -25,15 +27,15 @@
         .tsmall {display:none;}
         .gsmall {display:block;}
         .bodypara {}
-        .coloimg {content:url("images/rassilonblack.png");}
+        .imgw {display:none;}
         .frame {border:4px solid#4E65AE;}
         .navbar-toggler {border:none;outline:none;}
-        
+
         @media only screen and (max-width:991px) {
             .tsmall {display:inline;}
             .gsmall {display:none};
         }
-        
+
         @media only screen and (max-width: 1026px) {
             .container-fluid {padding:0px;max-width:90%;}
         }
@@ -41,20 +43,21 @@
         @media only screen and (max-width: 780px) {
             .container-fluid {padding:0px;max-width:100%;}
         }
-        
+
         @media (prefers-color-scheme: dark) {
             body {color:white;background:#222222;}
             p {color:white;}
             h3 {color:white;}
             h4 {color:rgb(125, 146, 216);}
             a {color:rgb(125, 146, 216);}
+            hr {border-color:white;}
             .bio {color:white;}
             .bodypara {color:white;}
             .linktext {color:white;}
             .bodypara a:hover {color:black;background-color:white;}
             .bio a:hover {color:black;background-color:white;}
-            .coloimg{content:url("images/rassilon.png");}
-            hr {border-color:white;}
+            .imgw {display:inline-block;}
+            .imgb {display:none;}
         }
     </style>
 </head>
@@ -63,7 +66,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4E65AE;">
             <div class="navbar-header">
                 <a class="navbar-brand" style="color:white">
-                    <img src="images/rassilon.png" width="32" height="32" class="d-inline-block align-center" 
+                    <img src="images/rassilon.png" width="32" height="32" class="d-inline-block align-center"
                         alt="The Seal of Rassilon"> smittytone
                 </a>
             </div>
@@ -90,15 +93,15 @@
                     </li>
                 </ul>
             </div>
-        </nav> 
+        </nav>
         <div class="frame">
             <div class="row">
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
                     <p align="center"><img class="img-fluid" src="images/gfx/banner.png"></p>
-                    <p class="bio">I’m the Senior Tech Writer at Internet of Things platform-as-a-service company 
+                    <p class="bio">I’m the Senior Tech Writer at Internet of Things platform-as-a-service company
                     <a href="https://developer.electricimp.com"><span style="font-family:Oswald;font-weight:500;">Electric Imp</span></a>.</p>
-                    <p class="bio">Before that, I was a technology journalist, 13 out of 25 years spent in senior roles on the website 
+                    <p class="bio">Before that, I was a technology journalist, 13 out of 25 years spent in senior roles on the website
                     <a href="https://theregister.co.uk"><span style="font-family:Oswald;font-weight:500;">The Register</span></a>.</p>
                     <p class="bio">This site is dedicated to assorted programming projects I’ve worked on over the past five years.</p>
                     <hr id="macos-applications" />
@@ -109,7 +112,7 @@
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">Squinter 2.2</h4>
                                 <p class="bodypara"><a href="squinter/index.html">Latest Release: 2.2.127</a><br />
-                                Squirrel Integrator for Electric Imp development projects</p>
+                                A development tool that helps programmers manage application code and library files for projects based on the <a href="https://developer.electricimp.com" target="_blank">Electric Imp Platform</a></p>
                             </div>
                         </li>
                         <li class="media">
@@ -117,7 +120,7 @@
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">FightingFantasy 3.0</h4>
                                 <p class="bodypara"><a href="fightingfantasy/index.html">Latest Release: 3.0.15</a><br />
-                                A Fighting Fantasy game book play manager written in Swift</p>
+                                A <a href="https://www.fightingfantasy.com" target="_blank">Fighting Fantasy gamebook</a> character and play manager written in Swift</p>
                             </div>
                         </li>
                         <li class="media">
@@ -125,7 +128,7 @@
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">The Valley 1.0</h4>
                                 <p class="bodypara"><a href="valley/index.html">Latest Release: 1.0.7</a><br />
-                                A macOS port of a 1982 real-time RPG</p>
+                                A macOS port of a 1982 real-time RPG in true Commodore PET style</p>
                             </div>
                         </li>
                         <li class="media">
@@ -133,7 +136,7 @@
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">ASCII 1.1</h4>
                                 <p class="bodypara"><a href="ascii/index.html">Latest Release: 1.1.3</a><br />
-                                Matrix LED glyph generator</p>
+                                Character glyph design tool for 8x8 matrix LED-based electronics projects</p>
                             </div>
                         </li>
                     </ul>
@@ -142,11 +145,21 @@
                     <h3>iOS Applications</h3>
                     <ul class="list-unstyled">
                         <li class="media">
-                            <img class="mr-3 rounded" src="images/oclock.png" width="64" height="64" alt="oClock" />
+                            <img class="mr-3" src="images/oclock.png" width="64" height="64" alt="oClock" />
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">oClock</h4>
                                 <p class="bodypara"><a href="https://github.com/smittytone/oClock">Latest Release: 2.0.121</a><br />
-                                Swift app to manage digital clocks</p>
+                                A Swift app used to operate digital clock electronics projects such as <a href="#electric-imp-project-source-code-repos">Cløck</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="media">
+                            <img class="mr-3" src="images/controller.png" width="64" height="64" alt="Controller" />
+                            <div class="media-body">
+                                <h4 class="mt-0 mb-1">Controller</h4>
+                                <p class="bodypara"><a href="https://github.com/smittytone/Controller">Latest Release: 1.0.1</a><br />
+                                Swift code that provides an iOS management app and watchOS control apps for electronics projects</p>
                             </div>
                         </li>
                     </ul>
@@ -159,7 +172,7 @@
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">BuildAPIAccess</h4>
                                 <p class="bodypara"><a href="https://github.com/smittytone/BuildAPIAccess">Latest Release: 3.1.1</a><br />
-                                Objective-C class wrapper for Electric Imp’s impCentral™ API</p>
+                                An Objective-C class wrapper for Electric Imp’s <a href="https://developer.electricimp.com/tools/impcentralapi" target="_blank">impCentral™ API</a></p>
                             </div>
                         </li>
                     </ul>
@@ -172,7 +185,17 @@
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">XBeeParser</h4>
                                 <p class="bodypara"><a href="https://github.com/smittytone/XBeeParser">Latest Release: 1.0.4</a><br />
-                                Decode packets sent or received by Digi XBee modules</p>
+                                Decode data packets sent to or received by Zigbee-compatible <a href="https://www.digi.com/xbee" target="_blank">Digi XBee modules</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="media">
+                            <img class="mr-3" src="images/spasm.png" width="64" height="64" alt="XBeeParser" />
+                            <div class="media-body">
+                                <h4 class="mt-0 mb-1">SPASM</h4>
+                                <p class="bodypara"><a href="https://github.com/smittytone/spasm">Latest Release: 1.0.0</a><br />
+                                    A simple assembler/disassembler for the <a href="https://en.m.wikipedia.org/wiki/Motorola_6809" target="_blank">Motorola 6809</a> 8-bit microprocessor</p>
                             </div>
                         </li>
                     </ul>
@@ -182,7 +205,7 @@
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">Ski</h4>
                                 <p class="bodypara"><a href="https://github.com/smittytone/Ski">Latest Release: 1.0.0</a><br />
-                                Python silliness: retro ‘arcade’ action via ncurses...</p>
+                                A little bit of Python silliness: 8-bit retro ‘arcade’ action via ncurses...</p>
                             </div>
                         </li>
                     </ul>
@@ -204,7 +227,7 @@
                             <img class="mr-3" src="images/ati-clock.png" width="64" height="64" alt="Clock" />
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">Cløck</h4>
-                                <p class="bodypara"><a href="https://github.com/smittytone/Clock">Latest Release: 2.0.0</a><br />
+                                <p class="bodypara"><a href="https://github.com/smittytone/Clock">Latest Release: 2.1.0</a><br />
                                 Electric Imp Platform-based digital clock project</p>
                             </div>
                         </li>
@@ -212,7 +235,7 @@
                             <img class="mr-3" src="images/ati-weather.png" width="64" height="64" alt="Weather" />
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">Weather</h4>
-                                <p class="bodypara"><a href="https://github.com/smittytone/Weather">Latest Release: 3.11.3</a><br />
+                                <p class="bodypara"><a href="https://github.com/smittytone/Weather">Latest Release: 3.11.4</a><br />
                                 Simple weather forecast readout based on the Electric Imp Platform</p>
                             </div>
                         </li>
@@ -220,7 +243,7 @@
                             <img class="mr-3" src="images/ati-thermal.png" width="64" height="64" alt="ThermalForecastWorld" />
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">ThermalForecastWorld</h4>
-                                <p class="bodypara"><a href="https://github.com/smittytone/ThermalForecastWorld">Latest Release: 1.7.1</a><br />
+                                <p class="bodypara"><a href="https://github.com/smittytone/ThermalForecastWorld">Latest Release: 1.8.2</a><br />
                                 A very simple Electric Imp Platform-based temperature readout device</p>
                             </div>
                         </li>
@@ -228,7 +251,7 @@
                             <img class="mr-3" src="images/ati-wstation.png" width="64" height="64" alt="HomeWeather" />
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">HomeWeather</h4>
-                                <p class="bodypara"><a href="https://github.com/smittytone/HomeWeather">Latest Release: 2.6.1</a><br />
+                                <p class="bodypara"><a href="https://github.com/smittytone/HomeWeather">Latest Release: 2.7.1</a><br />
                                 Wall-mounted home weather station (forecast, temperature/time, rain gauge)</p>
                             </div>
                         </li>
@@ -244,7 +267,7 @@
                             <img class="mr-3" src="images/ati-matrix.png" width="64" height="64" alt="MatrixClock" />
                             <div class="media-body">
                                 <h4 class="mt-0 mb-1">MatrixClock</h4>
-                                <p class="bodypara"><a href="https://github.com/smittytone/MatrixClock">Latest Release: 2.2.2</a><br />
+                                <p class="bodypara"><a href="https://github.com/smittytone/MatrixClock">Latest Release: 2.2.3</a><br />
                                 Retro style matrix LED clock based on the Electric Imp Platform</p>
                             </div>
                         </li>
@@ -292,7 +315,7 @@
                                 <p class="bodypara"><a href="https://github.com/smittytone/HT16K33SegmentBig">Latest Release: 2.0.0</a><br />
                                 Electric Imp Platform hardware driver for the Adafruit 1.2in 7-segment LED w. I&sup2;C Backpack</p>
                             </div>
-                        </li>              
+                        </li>
                         <li class="media">
                             <img class="mr-3" src="images/generic.png" width="64" height="64" alt="Generic" />
                             <div class="media-body">
@@ -316,7 +339,7 @@
                     </ul>
                     <p class="linktext bodypara" align="right"><a href="#ctop">Back to the Top</a></p>
                     <hr />
-                    <p class="text-center"><img class="coloimg" width="32" height="32" alt="The Seal of Rassilon" /><br /><small>Copyright &copy; Tony Smith, 2014-19</small></p>
+                    <p class="text-center"><img class="imgw" src="images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><br /><small>Copyright &copy; Tony Smith, 2014-19</small></p>
                     <p class="text-center bodypara"><small><a class="link" href="privacy.html">Site Privacy Policy (GDPR)</a></small></p>
                 </div>
                 <div class="col-1 col-lg-2">&nbsp;</div>

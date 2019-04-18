@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
-    <title>Squinter 2.3</title>
+    <link href="../images/favicons/196.png" rel="shortcut icon" />
+    <link href="../images/favicons/squinter/apple-touch-icon.png" rel="apple-touch-icon" />
+    <title>Squinter 2.2</title>
     <style>
         body {color:black;background-color:#EEEEEE;}
         p  {font-family:Abel,sans-serif;font-size:16px;}
@@ -17,7 +19,8 @@
         hr {border-color:#6E9B3D;}
         th {color:#6E9B3D;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
         td {color:black;font-family:Abel,sans-serif;font-size:16px;}
-        li {color:black;font-family:Abel,sans-serif;font-size:16px;list-style:list-style-type;}
+        li {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        .rnli {list-style:disc;}
         a  {color:#6E9B3D;padding:2px;}
         .link:hover {color:#EEEEEE;background-color:#6E9B3D;text-decoration:none;padding:2px;border-radius:5px;}
         .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
@@ -26,10 +29,10 @@
         .navbar-brand{font-family:Abel,sans-serif;}
         .navbar-toggler {border:none;outline:none;}
         .linktext {font-size:12px;}
-        .coloimg {content:url("../images/rassilonblack.png");}
         .dloadpanel {background-color:#DDDDDD;padding:10px 10px 10px 10px;border:2px solid #222222;}
         .navcol {background-color:#6E9B3D;}
         .frame {border:4px solid #6E9B3D;}
+        .imgw {display:none;}
 
         @media only screen and (max-width: 1026px) {
             .container-fluid {padding:0px;max-width:90%;}
@@ -53,10 +56,11 @@
             .link:hover {color:black;background-color:rgb(124, 189, 54);}
             .colo:hover {background-color:#222222;}
             .linktext {color:rgb(124, 189, 54);}
-            .coloimg {content:url("../images/rassilon.png");}
             .dloadpanel {background-color:#222222;border:2px solid #6E9B3D;}
             .navcol {background-color:rgb(124, 189, 54);}
             .frame {border:4px solid rgb(124, 189, 54);}
+            .imgw {display:inline-block;}
+            .imgb {display:none;}
         }
     </style>
 </head>
@@ -89,8 +93,9 @@
                 <div class="col-10 col-lg-8">
                     <h1 class="text-center">Squinter 2.3</h1>
                     <h3 class="text-center">&#8216;A Squirrel Integrator&#8217;
-                    <h3 class="text-center">Latest Release: <a class="link" href="releases.html">2.3.128 (x April 2019)</a></h3>
-                    <p>&nbsp;</p>
+                    <h4 class="text-center">Latest Release: <a class="link" href="releases.html">2.2.127 (8 March 2019)</a></h4>
+                    <p class="text-center">&nbsp;<br /><b>11 April 2019</b> Due to unexpected changes made to the impCentral API, Squinter may not be able to
+                        fully download Products to Projects. We are aware of this issue and are working on a fix.<br />&nbsp;<b>16 April 2019</b> The above issue is now fixed, and does not require a Squinter update.<br />&nbsp;</p>
                     <div class="dloadpanel">
                         <h2 align="center">Download Squinter</h2>
                         <p align="center">Please verify the integrity of the download with the SHA-1 or SHA-256 checksums.</p>
@@ -127,16 +132,16 @@
                     <p>With Squinter and Electric Imp's impCentral&trade; API you can:</p>
 
                     <ul>
-                        <li>Work on your Electric Imp project code in your favourite text editor</li>
-                        <li>‘Compile’ in local library and other files before uploading the complete code to the Electric Imp impCloud&trade;</li>
-                        <li>You can take charge of your devices:<ul>
-                            <li>Assign them to application firmware (via device groups)</li>
-                            <li>Update their code</li>
-                            <li>Reboot devices to run newly uploaded code</li>
-                            <li>View device logs</li></ul>
+                        <li class="rnli">Work on your Electric Imp project code in your favourite text editor</li>
+                        <li class="rnli">‘Compile’ in local library and other files before uploading the complete code to the Electric Imp impCloud&trade;</li>
+                        <li class="rnli">You can take charge of your devices:<ul>
+                            <li class="rnli">Assign them to application firmware (via device groups)</li>
+                            <li class="rnli">Update their code</li>
+                            <li class="rnli">Reboot devices to run newly uploaded code</li>
+                            <li class="rnli">View device logs</li></ul>
                         </li>
-                        <li>Work with code in a source control system</li>
-                        <li>And much more...</li>
+                        <li class="rnli">Work with code in a source control system</li>
+                        <li class="rnli">And much more...</li>
                     </ul>
                     <hr />
                     <br />
@@ -144,16 +149,16 @@
                     <h1 class="text-center">How To Use Squinter</h1>
                     <h2 id="contents">Contents</h2>
                     <ul>
-                        <li><a href="#electric-imp-accounts">Electric Imp Accounts</a></li>
-                        <li><a href="#working-with-source-code-files">Working With Source Code Files</a></li>
-                        <li><a href="#working-with-projects-and-products">Working With Projects and Products</a></li>
-                        <li><a href="#working-with-device-groups">Working With Device Groups</a></li>
-                        <li><a href="#working-with-devices">Working With Devices</a></li>
-                        <li><a href="#incorporating-libraries-and-files-in-your-code">Incorporating Libraries And Files In Your Code</a></li>
-                        <li><a href="#deploying-code">Deploying Code</a></li>
-                        <li><a href="#debugging-code">Debugging Code</a></li>
-                        <li><a href="#configuring-squinter">Configuring Squinter</a></li>
-                        <li><a href="#updating-squinter">Updating Squinter</a></li>
+                        <li class="rnli"><a href="#electric-imp-accounts">Electric Imp Accounts</a></li>
+                        <li class="rnli"><a href="#working-with-source-code-files">Working With Source Code Files</a></li>
+                        <li class="rnli"><a href="#working-with-projects-and-products">Working With Projects and Products</a></li>
+                        <li class="rnli"><a href="#working-with-device-groups">Working With Device Groups</a></li>
+                        <li class="rnli"><a href="#working-with-devices">Working With Devices</a></li>
+                        <li class="rnli"><a href="#incorporating-libraries-and-files-in-your-code">Incorporating Libraries And Files In Your Code</a></li>
+                        <li class="rnli"><a href="#deploying-code">Deploying Code</a></li>
+                        <li class="rnli"><a href="#debugging-code">Debugging Code</a></li>
+                        <li class="rnli"><a href="#configuring-squinter">Configuring Squinter</a></li>
+                        <li class="rnli"><a href="#updating-squinter">Updating Squinter</a></li>
                     </ul>
                     <p class="linktext">&nbsp;</p>
                     <h2 id="electric-imp-accounts">Electric Imp Accounts</h2>
@@ -476,13 +481,13 @@
 
                     <h1 id="ki">Troubleshooting and Known Issues</h1>
                     <ul>
-                        <li>Squinter 1.0 is non-operational because Electric Imp has withdrawn the Build API. Please upgrade
-                            to version 2.0 or above to continue using Squinter. Squinter 1.0 will not see Squinter
-                            2.0 as an available update. You must install Squinter 2.0 manually.</li>
-                        <li>Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during
+                        <li class="rnli">Squinter 1.0 is non-operational because Electric Imp has withdrawn the Build API. Please upgrade
+                            to version 2.0 or above to continue using Squinter. Squinter 1.0 will not see Squinter 2.0 as an
+                            available update. You must install Squinter 2.0 manually.</li>
+                        <li class="rnli">Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during
                             development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>.
-                            You may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>. Check the
-                            <a class="link" href="releases.html">release notes</a> for guidance on whether preferences have changed.</li>
+                            You may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li>
+                        <li class="rnli">Online help is available but not yet complete &mdash; this page is better.</li>
                     </ul>
                     <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
                     <hr />
@@ -494,9 +499,9 @@
                 </div>
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
-            <div class="row" align="center">
+            <div class="row">
                 <div class="col">
-                    <p><a class="colo" href="https://smittytone.github.io"><img class="coloimg" width="32" height="32" alt="The Seal of Rassilon" /></a><br /><small>Copyright &copy; Tony Smith, 2014-2019</small></p>
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; Tony Smith, 2014-19</small></p>
                 </div>
             </div>
         </div>
