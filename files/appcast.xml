@@ -3,15 +3,16 @@
 <title>Squinter</title>
 <item>
 <title>2.3</title>
+<sparkle:releaseNotesLink>https://smittytone.github.io/files/squinter/notes.html</sparkle:releaseNotesLink>
 <pubDate>Wed, 01 May 2019 17:24:07 +0100</pubDate>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://smittytone.github.io/files/Squinter_2_3_128.dmg" sparkle:version="128" sparkle:shortVersionString="2.3" length="13540881" type="application/octet-stream" sparkle:edSignature="fegU0V/XKfYACo5G5/2GiiKluGfS/FhL8Y//TKZO8ObZpA767p8m54QCdvShR9/Afr9j/vQA1XYSdcUS2o3yAg=="/>
+<enclosure url="https://smittytone.github.io/files/squinter/Squinter_2_3_128.dmg" sparkle:version="128" sparkle:shortVersionString="2.3" length="13540881" type="application/octet-stream" sparkle:edSignature="fegU0V/XKfYACo5G5/2GiiKluGfS/FhL8Y//TKZO8ObZpA767p8m54QCdvShR9/Afr9j/vQA1XYSdcUS2o3yAg=="/>
 </item>
 
 <item>
 <title>2.2</title>
 <pubDate>Wed, 01 May 2019 17:14:40 +0100</pubDate>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://smittytone.github.io/files/Squinter_2_2_127.dmg" sparkle:version="127" sparkle:shortVersionString="2.2" length="10548292" type="application/octet-stream" sparkle:edSignature="xOrDWJriLqBiHrCbOTeK6T4manIozPjqyTNyTBjNAi+dzt8dvPTye+vLsc49O/hOJ/b8f/prTn1ALlFkBhvVCg=="/>
+<enclosure url="https://smittytone.github.io/files/squinter/Squinter_2_2_127.dmg" sparkle:version="127" sparkle:shortVersionString="2.2" length="10548292" type="application/octet-stream" sparkle:edSignature="xOrDWJriLqBiHrCbOTeK6T4manIozPjqyTNyTBjNAi+dzt8dvPTye+vLsc49O/hOJ/b8f/prTn1ALlFkBhvVCg=="/>
 </item>
 </channel></rss>
