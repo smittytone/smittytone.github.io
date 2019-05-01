@@ -4,8 +4,9 @@
 <item>
 <title>2.3</title>
 <pubDate>Wed, 01 May 2019 17:47:56 +0100</pubDate>
+<sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<sparkle:releaseNotesLink>https://smittytone.github.io/files/squinter/notes.html</sparkle:releaseNotesLink>
-<enclosure url="https://smittytone.github.io/files/squinter/squinter_2_3_128.dmg" sparkle:version="128" sparkle:shortVersionString="2.3" length="10587256" type="application/octet-stream" sparkle:edSignature="QewpQFLyLs7tjBHB69NopWgZIVHcTB4WcKt+y/c9EyLzzNcF0VohLNE6RepoRn0Ty09eIiWA3DOg7dodN7BaDQ=="/>
+<enclosure url="https://smittytone.github.io/files/squinter_2_3_128.dmg" sparkle:version="128" sparkle:shortVersionString="2.3" length="10591042" type="application/octet-stream" sparkle:edSignature="6jZQ/hKxZQ6HOXLKwkpci9MqOo8CCrcANs+auqIx7vs1+R9De4pnohaGzkGnK2V8taehOfqCOea1u5McrmhLCw=="/>
 </item>
-</channel></rss>
+</channel>
+</rss>
