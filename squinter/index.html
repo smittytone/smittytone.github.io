@@ -93,7 +93,7 @@
                 <div class="col-10 col-lg-8">
                     <h1 class="text-center">Squinter 2.3</h1>
                     <h3 class="text-center">&#8216;A Squirrel Integrator&#8217;
-                    <h4 class="text-center">Latest Release: <a class="link" href="releases.html">2.2.128 (x April 2019)</a></h4>
+                    <h4 class="text-center">Latest Release: <a class="link" href="releases.html">2.2.128 (1 May 2019)</a></h4>
                     <p class="text-center">&nbsp;</p>
                     <div class="dloadpanel">
                         <h2 align="center">Download Squinter</h2>
@@ -102,7 +102,7 @@
                             <tbody>
                                 <tr>
                                     <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
-                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/Squinter_2_3_128.dmg">Squinter_2_3_128.dmg</a></td>
+                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/squinter_2_3_128.dmg">Squinter_2_3_128.dmg</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><b>File Size</b>&nbsp;</th>
@@ -110,11 +110,11 @@
                                 </tr>
                                 <tr>
                                     <th scope="row"><b>SHA</b>&nbsp;</th>
-                                    <td id="sha">f995b0b24cc7f0c7e04b0b8d40b1122ad04db919</td>
+                                    <td id="sha">6bcbade33a36b4f19a7a34b25e1fa58014f9ab4b</td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                                    <td id="sha256">e357f7d1d5fb24687f41d08a28c8968bcf260195027bdda816f476d23d3bf2e6</td>
+                                    <td id="sha256">8c7d60812adf3a4e0826fefa4702a20de9ad4ff067c12e60ba0d1efb18cdfb78</td>
                                 </tr>
                             <tbody>
                         </table>
@@ -148,16 +148,16 @@
                     <h1 class="text-center">How To Use Squinter</h1>
                     <h2 id="contents">Contents</h2>
                     <ul>
-                        <li class="rnli"><a href="#electric-imp-accounts">Electric Imp Accounts</a></li>
-                        <li class="rnli"><a href="#working-with-source-code-files">Working With Source Code Files</a></li>
-                        <li class="rnli"><a href="#working-with-projects-and-products">Working With Projects and Products</a></li>
-                        <li class="rnli"><a href="#working-with-device-groups">Working With Device Groups</a></li>
-                        <li class="rnli"><a href="#working-with-devices">Working With Devices</a></li>
-                        <li class="rnli"><a href="#incorporating-libraries-and-files-in-your-code">Incorporating Libraries And Files In Your Code</a></li>
-                        <li class="rnli"><a href="#deploying-code">Deploying Code</a></li>
-                        <li class="rnli"><a href="#debugging-code">Debugging Code</a></li>
-                        <li class="rnli"><a href="#configuring-squinter">Configuring Squinter</a></li>
-                        <li class="rnli"><a href="#updating-squinter">Updating Squinter</a></li>
+                        <li class="rnli"><a class="link" href="#electric-imp-accounts">Electric Imp Accounts</a></li>
+                        <li class="rnli"><a class="link" href="#working-with-source-code-files">Working With Source Code Files</a></li>
+                        <li class="rnli"><a class="link" href="#working-with-projects-and-products">Working With Projects and Products</a></li>
+                        <li class="rnli"><a class="link" href="#working-with-device-groups">Working With Device Groups</a></li>
+                        <li class="rnli"><a class="link" href="#working-with-devices">Working With Devices</a></li>
+                        <li class="rnli"><a class="link" href="#incorporating-libraries-and-files-in-your-code">Incorporating Libraries And Files In Your Code</a></li>
+                        <li class="rnli"><a class="link" href="#deploying-code">Deploying Code</a></li>
+                        <li class="rnli"><a class="link" href="#debugging-code">Debugging Code</a></li>
+                        <li class="rnli"><a class="link" href="#configuring-squinter">Configuring Squinter</a></li>
+                        <li class="rnli"><a class="link" href="#updating-squinter">Updating Squinter</a></li>
                     </ul>
                     <p class="linktext">&nbsp;</p>
                     <h2 id="electric-imp-accounts">Electric Imp Accounts</h2>
@@ -278,6 +278,13 @@
                     <p>Squinter supports all of the available device group types, but you may not be able to work with production groups if
                         your accounts lacks suitable permissions.</p>
 
+                    <p id="targets">Test Fixture and Fixture device groups both require the presence of other types of device groups. When you attempt to
+                        create either Test Fixture or Fixture device groups, you will be asked to select a (Test) DUT device group and a (Test) Production
+                        device group as the new group’s targets. Until your project contains these two types, you will not be able to create a (Test)
+                        Fixture and Fixture device group. You can change either or both of a (Test) Fixture and Fixture device group’s targets by selecting
+                        the <b>Set Target Production Device Group</b> and the <b>Set Target DUT Device Group</b> options in the <b>Device Group</b> menu.
+                        These options remain disabled until you select a a (Test) Fixture device group.</p>
+
                     <p class="linktext" align="right"><a class="link" href="#account">Back to Contents</a></p>
 
                     <h2 id="working-with-devices">Working With Devices</h2>
@@ -320,10 +327,10 @@
                     <p align="center"><img class="img-fluid" src="../images/squinter/inspector_project.png" width="340" style="border: 1px solid #DDDDDD"/>&nbsp;&nbsp;
                     <img class="img-fluid" src="../images/squinter/inspector_device.png" width="340" style="border: 1px solid #DDDDDD"/></p>
 
-                    <p id="lookup">This panel will update as you select devices and/or load or select different projects.</p>
+                    <p>This panel will update as you select devices and/or load or select different projects.</p>
 
-                    <p>Squinter lists devices by their names, though their IDs and MAC addresses also appear in the Inspector (as shown above) or
-                        in the log when you het <kbd>Cmd-I</kbd>. Sometimes, however, you may only have a device’s ID or MAC address, or its agent ID. In
+                    <p id="lookup">Squinter lists devices by their names, though their IDs and MAC addresses also appear in the Inspector (as shown above) or
+                        in the log when you hit <kbd>Cmd-I</kbd>. Sometimes, however, you may only have a device’s ID or MAC address, or its agent ID. In
                         this case, select <b>Find a Device...</b> from the <b>Device</b> menu, of hit <kbd>Cmd-Shit-F</kbd>. This will call
                         up a panel in which you can enter a device’s ID or MAC address, or an agent ID, and Squinter will locate which of your named devices
                         matches the entered information. As you enter the ID or MAC, Squinter narrows down the list of possible devices. Select the device
@@ -388,7 +395,7 @@
                     <p class="linktext" align="right"><a class="link" href="#account">Back to Contents</a></p>
 
                     <h2 id="deploying-code">Deploying Code</h2>
-                    <p>Squinter 2.0 allows you to upload compiled code direct to the selected device group: select the <b>Upload</b> option in the
+                    <p>Squinter 2 allows you to upload compiled code direct to the selected device group: select the <b>Upload</b> option in the
                         <b>Device Groups</b> menu. Alternatively, holding down the Option key makes this option <b>Upload with Extra Information</b>;
                         when selected, it pops up a panel into which you can enter an optional commit message, an optional source URL and an optional set
                         of one or more tags for the deployment. Click on the <b>Upload</b> button to include any extra information you add to the upload,
@@ -415,8 +422,13 @@
                     <p>Having uploaded code, you can restart the currently selected device by selecting <b>Restart</b> from the <b>Device</b> menu,
                         or restart all of the devices assigned to the current device group by selecting <b>Restart</b> from the <b>Device Groups</b> menu.</p>
 
-                    <p>Squinter supports polite Squirrel deployment: it allows you to set a device group’s minimum supported deployment, and to make
-                        conditional restarts of the devices assigned to the group.</p>
+                    <p id="polite">Squinter supports <a href="https://developer.electricimp.com/resources/polite-squirrel-deployment" class="link">polite Squirrel
+                        deployment</a>: it allows you to set a device group’s minimum supported deployment, and to make conditional restarts of the devices assigned
+                        to the group. You will not be able to select a minimum deployment that is older than the current one; selecting a new minimum deployment will
+                        block all earlier deployments from being selected, whether they were available before you made the change or not.</p>
+
+                    <p>To conditionally restart a device group’s devices, hold down the <keyb>Opt</keyb> key and select <b>Conditional Restart Devices</b> from
+                        the <b>Device Groups</b> menu.</b></p>
 
                     <p class="linktext" align="right"><a class="link" href="#account">Back to Contents</a></p>
 
@@ -440,9 +452,9 @@
                     <p class="linktext" align="right"><a class="link" href="#account">Back to Contents</a></p>
 
                     <h2 id="configuring-squinter">Configuring Squinter</h2>
-                    <p>To take full advantage of Squinter's features, you will need an Electric Imp account. With Squinter 2.0 you <b>no
+                    <p>To take full advantage of Squinter's features, you will need an Electric Imp account. With Squinter 2 you <b>no
                         longer require a Build API key</b>. Instead you must sign into your account using your Electric Imp username and password
-                        before Squinter can access the impCloud on your behalf. When you first run Squinter 2.0, it will ask you for these
+                        before Squinter can access the impCloud on your behalf. When you first run Squinter 2, it will ask you for these
                         credentials and give you the option to store them securely in your keychain to automate login in future. The <b>Account</b>
                         menu provides a means to log into your account later if you choose not to do so at the start, or to subsequently sign out.</p>
 
@@ -481,8 +493,8 @@
                     <h1 id="ki">Troubleshooting and Known Issues</h1>
                     <ul>
                         <li class="rnli">Squinter 1.0 is non-operational because Electric Imp has withdrawn the Build API. Please upgrade
-                            to version 2.0 or above to continue using Squinter. Squinter 1.0 will not see Squinter 2.0 as an
-                            available update. You must install Squinter 2.0 manually.</li>
+                            to version 2 or above to continue using Squinter. Squinter 1.0 will not see Squinter 2 as an
+                            available update. You must install Squinter 2 manually.</li>
                         <li class="rnli">Crashes occurring when Squinter starts are typically the result of changes made to the app's preferences during
                             development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>.
                             You may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</li>
