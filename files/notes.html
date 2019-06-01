@@ -7,7 +7,7 @@
     </style>
 </head>
 <body>
-    <h3>Squinter 2.3.128 (1 May 2019)</h3>
+    <h3>Squinter 2.3.129 (1 June 2019)</h3>
     <p><b>Important</b><br />Squinter 2.3 requires macOS 10.12 or above (versions 2.0. and 2.1 required macOS 10.11 or above).</p>
     <p><b>New Features</b></p>
     <ul>
@@ -16,21 +16,19 @@
     </ul>
     <p><b>Improvements</b></p>
     <ul>
-        <li>Squinter now prevents you from attempting to create Device Groups that you may lack account-level permission to create, rather than just logging an error as before.</li>
-        <li>You can now search for devices using agent ID (previously just device ID and MAC).</li>
-        <li>You are now warned when trying to perform certain actions on an unsaved project.</li>
-        <li>Downloading a Product as a Project no longer saves the files immediately, but you will be warned before closing/quitting if you have not done so.</li>
-        <li>The Inspector now remembers which device groups are expanded or collapsed during a session.</li>
+        <li>The impCentral API now allows you to assign unassigned or development devices directly to
+            a Test Production device group, thus simulating the factory blessing flow, so Squinter now supports this too.</li>
+        <li>Support Apple app notarisation.</li>
+        <li>New <b>Sync Project</b> toolbar item.</li>
+        <li>New <b>New Device Group</b>, <b>List Commits</b>, <b>Refresh Device List</b>, <b>Print</b> toolbar item icons.</li>
     </ul>
     <p><b>Bug Fixes</b></p>
     <ul>
-        <li>Do not list production devices among development devices.</li>
-        <li>Fix a crash caused when the API returns a device record with no <code>device_online</code> key.</li>
-        <li>The Inspector now respects your file path display preference.</li>
-        <li>Creating a project with a new product correctly updates the Inspector.</li>
-        <li>Newly downloaded products appear correctly in the Inspector.</li>
-        <li>Deleting a product now clears its deleted device groups' IDs from project device groups records.</li>
-        <li>A device group's files will no longer continue to be watched for changes if the device group is deleted.</li>
+        <li>Correctly clear a recorded device ID when the user clears the Device Find dialog table selection.</li>
+        <li>Fixed a bug causing the recent files list sometimes to have more items than the number chosen by the user.</li>
+        <li>Correct reporting when attempting to check Electric Imp library versions when the user is not logged in.</li>
+        <li>Don't display the same network error multiple times.</li>
+        <li>Fixed a number of UI typos.</li>
     </ul>
 </body>
 </html>
