@@ -244,7 +244,7 @@
                     <p class="linktext" align="right"><a class="link" href="#account">Back to Contents</a></p>
 
                     <h2 id="working-with-device-groups">Working With Device Groups</h2>
-                    <p>Squinter lists all of the device groups that belong to a given project. When you select a Project, its device groups,
+                    <p>Squinter lists all of the device groups that belong to a given project. When you select a project, its device groups,
                         if any, are listed in the <b>Project's Device Groups</b> sub-menu in the <b>Device Groups</b> menu. Initially, the
                         first device group, listed alphabetically, is selected when you open or select a project. Only the device groups that
                         belong to the currently selected project are listed, so to view a device group from another project, just select or
@@ -253,7 +253,13 @@
                     <p align="center"><img class="img-fluid" src="../images/squinter/models.png" width="662" style="border: 1px solid #DDDDDD" /></p>
 
                     <p>If any devices have been assigned to a device group, they are listed as sub-menus to each device group listed in the
-                    <b>Project's Device Groups</b> sub-menu.</p>
+                    <b>Project's Device Groups</b> sub-menu. Selecting a device automatically selects its parent device group.</p>
+
+                    <p>The <b>Device Groups</b> menu is sensitive to the device group that you have selected. The currently selected device group is also
+                        shown in the <b>Project/Device Group</b> popup menu at the bottom of the main window, though this is for informational purposes only
+                        &mdash; you can’t select a different device group here. To do so, you can select one of the entries in the <b>Project's Device Groups</b>
+                        sub-menu in the <b>Device Groups</b> menu. You can also use the <kbd>Cmd-[</kbd> and <kbd>Cmd-]</kbd> to move quickly to, respectively,
+                        the next or previous device group in the list of the current project’s device groups, if there are any.</p>
 
                     <p>When you select a project or one of its device groups, the <b>Device Groups</b> menu enables a number of actions which
                         can be performed on the selected device group. This includes editing its name and/or description, getting information
