@@ -121,7 +121,7 @@
                         <li>A switch to enable or disable macOS’s Dark Mode (Mojave and up)</li>
                         <li>A switch to show or hide files on the Desktop</li>
                         <li>A switch to show or hide hidden files</li>
-                        <li>A trigger to update your Git repos (requires <a href="https://github.com/earwig/git-repo-updater" target="_blank">gitup</a>)</li>
+                        <li>A trigger to update your Git repos (requires <a href="https://github.com/earwig/git-repo-updater" class="link"  target="_blank">gitup</a>)</li>
                         <li>A trigger to update your Homebrew installation (<code>brew update</code>)</li>
                         <li>A trigger to upgrade your Homebrew installation (<code>brew upgrade</code>)</li>
                     </ul>
@@ -130,7 +130,7 @@
                     <h3 id="running-privacy">How to Use MNU</h3>
                     <p>The first time you run MNU, it will ask you whether you want it to start automatically the next time you log into your Mac.
                     We recommend that you click <b>Yes</b>, but you can always start MNU manually by double-clicking on its icon. If you click
-                    <b>No</b> and subsequently change your mind, you can tell MNU to start automatically by <a href="#prefs">setting the appropriate preference</a>.</p>
+                    <b>No</b> and subsequently change your mind, you can tell MNU to start automatically by <a class="link" href="#prefs">setting the appropriate preference</a>.</p>
                     <p>If you click <b>Yes</b> when you see the start automatically request or when you first use one of MNU’s items, macOS will
                     request permission to grant MNU the right to access System Events. Please OK this request. macOS will also also you to grant
                     MNU permission to access Terminal. Again, please OK this request.</p>
@@ -147,13 +147,14 @@
                     <p>The <b>Menu Items</b> tab lists the menu items currently set up for MNU in the order in which they appear in MNU.
                     You can reorder the items just by grabbing one item and dragging it to the location you prefer. When you’re
                     done, click <b>Apply</b> to update MNU, or close the window to ignore any changes you have made.</p>
-                    <p>The pre-installed menu items all feature a button which allows you to hide any such items that you don’t need. If you
-                    later decide you’d like to see a hidden item after, just click the button (now marked <b>Show</b>) to bring it back to
-                    MNU.</p>
+                    <p>All of the menu items feature a button which allow you to hide any such items that you don’t need. The button is green is its item
+                    is shown in the menu, or red if it is not. Just click to hide any shown item. If you later decide you’d like to see a hidden item
+                    after all, just click the button (now coloured red) to bring its item back to MNU.</p>
+                    <p>The other buttons, which are disabled for pre-installed items, allow you to edit or delete items <a class="link" href="#add-edit">you have added yourself</a>:
+                    <p align="center"><img class="img-fluid" src="../images/mnu/add_controls.png"><br />&nbsp;<br /><i>MNU’s item controls (left to right): Show/hide, Edit and Delete</i></p>
                     <h3 id="add-edit">How to Add and Edit Your Own Menu Items</h3>
-                    <p>Initially, MNU contains only the built-in items, but you can add further ones by clicking <b>Add Item</b>. This presents
-                    a sheet in which you can enter a Terminal command that can then be invoked from MNU’s main menu. The command can be a simple
-                    request to change directory (for example, <code>cd $HOME</code>), or can be a complex command line sequence that invokes
+                    <p>Initially, MNU contains only the built-in items, but you can add further ones by clicking <b>Add Item</b> in the <b>Configure MNU</b> window. This presents a sheet in which you can enter a Terminal command that can then be invoked from MNU’s main menu. The command can
+                    be a simple request to change directory (for example, <code>cd $HOME</code>), or can be a complex command line sequence that invokes
                     a script or command and passes in fixed arguments (such as, <code>~/scripts/myimageresizescript.py -size 640 480</code>):</p>
                     <p align="center"><img class="img-fluid" src="../images/mnu/add_new_item.png"></p>
                     <p>You will also need to give the command a name by which it will be listed in the MNU menu. This should not match the name
@@ -161,19 +162,34 @@
                     <p>The new item will now be listed in the <b>Configure MNU</b> window’s <b>Menu Items</b> tab, but it won’t be added to MNU
                     until you click <b>Apply</b>; closing the window will cause the new item to be discarded.</p>
                     <p>Items you have added can be deleted from the list, or they can be edited if you need to make a change: just click on
-                    the <b>Delete</b> or <b>Edit</b>, respectively:</p>
-                    <p align="center"><img class="img-fluid" src="../images/mnu/edit_item.png"></p>
+                    the delete or edit buttons, respectively:</p>
+                    <p align="center"><img class="img-fluid" src=""></p>
                     <p>When MNU quits &mdash; you have restarted or shutdown your Mac, or you have clicked the quit icon at the bottom of the menu
                     &mdash; it saves the current state of the menu so it’s ready for next time.</p>
                     <h3 id="prefs">MNU Preferences</h3>
                     <p>The second tab in the <b>Configure MNU</b> window shows MNU’s preferences.</p>
                     <p align="center"><img class="img-fluid" src="../images/mnu/configure_2.png"></p>
-                    <p>Currently there is just one: the option to start MNU automatically when you log into your Mac. This will initially
-                    be set only if you asked MNU to start automatically when MNU gave you this choice on its first run. Checking on unchecking
-                    this preference will, respectively, cause MNU to be added to or removed from System Preferences’
+                    <p>Currently there is just three:</p>
+                    <ul>
+                        <li>The option to <a class="link" href="#launch">start MNU automatically when you log into your Mac</a>.</li>
+                        <li>The option to <a class="link" href="#new-tab">run Terminal commands in a new tab</a>.</li>
+                        <li>The option to <a class="link" href="#show-images">show item images in MNU’s menu</a>.</li>
+                    </ul>
+                    <p id="launch">The first of these will initially be set only if you asked MNU to start automatically when MNU gave you this choice on
+                    its first run. Checking or un-checking this preference will, respectively, cause MNU to be added to or removed from System Preferences’
                     <b>Users & Groups > Login Items</b> readout:
                     <p align="center"><img class="img-fluid" src="../images/mnu/login_items.png"></p>
                     <p>We recommend you enable this option so that MNU is always present in your mac’s menu bar when you need it.</p>
+                    <p id="new-tab">Running Terminal commands in a new tab will always ensure MNU doesn’t affect any Terminal tabs you already have open
+                    and in which you may be already running a command. If this option is not checked, MNU will always run commands in Terminal’s first
+                    tab, whether it is already running a command or not.</p>
+                    <p id="show-images">MNU presents images to help you identify menu items quickly, including a generic icon for items you have
+                    added yourself. If you don’t want MNU to include these images, un-check this option.</p>
+                    <p id="feedback">The <b>Configure MNU</b> window’s last tab provides some information about MNU:</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/configure_3.png"></p>
+                    <p>Please click the <b>Send Feedback</b> button to report any problems you encounter with MNU, or to make suggestions for future
+                    functionality. We can’t respond to every feedback message we receive, but we will make a note of all bugs reported and any comments
+                    that you have to make about the app.</p>
                     <p>For more information, please the <a class="link" href="https://github.com/smittytone/mnu">GitHub repo page</a>.</p>
                     <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
