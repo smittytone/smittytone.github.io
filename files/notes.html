@@ -7,23 +7,23 @@
     </style>
 </head>
 <body>
-    <h3>Squinter 2.3.129 (1 June 2019)</h3>
+    <h3>Squinter 2.3.130 (14 August 2019)</h3>
     <p><b>Important</b><br />Squinter 2.3 requires macOS 10.12 or above (versions 2.0. and 2.1 required macOS 10.11 or above).</p>
     <p><b>Improvements</b></p>
     <ul>
-        <li>The impCentral API now allows you to assign unassigned or development devices directly to
-            a Test Production device group, thus simulating the factory blessing flow, so Squinter now supports this too.</li>
-        <li>Support Apple app notarisation.</li>
-        <li>New <b>Sync Project</b> toolbar item.</li>
-        <li>New <b>New Device Group</b>, <b>List Commits</b>, <b>Refresh Device List</b>, <b>Print</b> toolbar item icons.</li>
+        <li>You can now select <b>Log All Devices</b> from the <b>Device Groups</b> menu to start logging from
+            all of the devices assigned to that group, if there are any and they're not logging already.</li>
+        <li>The <b>Device</b> has a new option, <b>Close All Log Streams</b>, which halts logging from all devices whose logs
+            are currently being streamed.</li>
+        <li>The Inspector panel now presents folder icons alongside code filenames &mdash; click on it
+            to reveal the file in Finder.</li>
+        <li>Squinter now has offline help, missing since version 2.0.0. Hold down <kbd>Opt</kbd> and click on the <b>Help</b> menu
+            to access the offline help view.</li>
     </ul>
     <p><b>Bug Fixes</b></p>
     <ul>
-        <li>Correctly clear a recorded device ID when the user clears the Device Find dialog table selection.</li>
-        <li>Fixed a bug causing the recent files list sometimes to have more items than the number chosen by the user.</li>
-        <li>Correct reporting when attempting to check Electric Imp library versions when the user is not logged in.</li>
-        <li>Don't display the same network error multiple times.</li>
-        <li>Fixed a number of UI typos.</li>
+        <li>Correctly show and hide the <b>Previous Device Group</b> and <b>Next Device Group</b> <b>Device Groups</b> menu
+            items when there are more than one device groups in the current project.</li>
     </ul>
 </body>
 </html>
