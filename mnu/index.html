@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="Description" content="Tony Smith's software library: MNU, a macOS menu bar utility" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
+    <link href="../images/favicons/196.png" rel="shortcut icon" />
+    <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
+    <title>MNU 1.0.0</title>
+    <style>
+        body {color:black;background-color:#EEEEEE;}
+        p {font-family:Abel,sans-serif;font-size:16px;}
+        h2 {color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
+        h3 {color:#4E65AE;font-family:Abel,sans-serif;font-size:22px;}
+        h4 {color:#4E65AE;font-family:Abel,sans-serif;font-size:18px;}
+        hr {border-color:#4E65AE;}
+        a  {color:#4E65AE;padding:2px;}
+        th {color:#4E65AE;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
+        td {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        li {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        .rnli {list-style:disc;}
+        .container {padding-bottom:10px;}
+        .container-fluid {max-width:84%;}
+        .nav-item {font-family:Abel,sans-serif;}
+        .navbar-brand {font-family:Abel,sans-serif;}
+        .navbar-brand-light-color {color:blue;}
+        .frame {border:4px solid #4E65AE;}
+        .navcol {background-color:#4E65AE;}
+        .link:hover {color:white;background-color:#4E65AE;text-decoration:none;padding:2px;border-radius:5px;}
+        .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
+        .linktext {font-size:12px;}
+        .navimgb {display:none;}
+        .dloadpanel {background-color:#DDDDDD;padding: 10px 10px 10px 10px;border: 2px solid #222222;}
+        .imgw {display:none;}
+        .navbar-custom {background-color:#4E65AE;}
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {color:white;}
+        .navbar-custom .navbar-nav .nav-link {color: rgba(255,255,255,.5);}
+        .navbar-custom .nav-item.active .nav-link,
+        .navbar-custom .nav-item:hover .nav-link {color:white;}
+        .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+
+        @media only screen and (max-width: 1026px) {
+            .container-fluid {padding:0px;max-width:90%;}
+        }
+
+        @media only screen and (max-width: 780px) {
+            .container-fluid {padding:0px;max-width:100%;}
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {color:white;background:#222222;}
+            h2 {color:#4E65AE;}
+            h3 {color:white;}
+            h4 {color:white;}
+            hr {border-color:#FFFFFF;}
+            a  {color:#4E65AE;}
+            td {color:white;}
+            th {color:#4E65AE;}
+            li {color:white;}
+            kbd {background-color:#4E65AE;}
+            .frame {border:4px solid #4E65AE;}
+            .navcol {color:black;background-color:rgb(121, 153, 121);}
+            .link:hover {color:black;background-color:#4E65AE;}
+            .colo:hover {background-color:#222222;}
+            .linktext {color:white;}
+            .navimgb {display:inline-block;}
+            .navimgw {display:none;}
+            .imgw {display:inline-block;}
+            .imgb {display:none;}
+            .dloadpanel {background-color:#222222;border:2px solid #4E65AE;}
+            .navbar-custom {background-color:#4E65AE;}
+            .navbar-custom .navbar-brand,
+            .navbar-custom .navbar-text {color:black;}
+            .navbar-custom .navbar-nav .nav-link {color:#333333;}
+            .navbar-custom .nav-item.active .nav-link,
+            .navbar-custom .nav-item:hover .nav-link {color:black;}
+            .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" id="ctop">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/mnuw.png"  style="width:32px;height:32px;" class="navimgw align-top" alt="MNU logo" />
+                    <img src="../images/mnub.png" style="width:32px;height:32px;" class="navimgb align-top" alt="MNU logo" /> MNU
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#running-privacy">Using MNU</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-to-configure">Configuring MNU</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#release-notes">Release Notes</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="frame">
+            <div class="row">
+                <div class="col-1 col-lg-2">&nbsp;</div>
+                <div class="col-10 col-lg-8">
+                    <h2 class="text-center">MNU</h2>
+                    <h3 class="text-center">A macOS menu bar utility</h3>
+                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.0.0</a></h4>
+                    <p >&nbsp;</p>
+                    <h3 id="about-mnu">About MNU</h3>
+                    <p>MNU is a macOS main menu bar utility which provides not only a number of handy controls for system settings you may change
+                    frequently, but also allows you to invoke shell scripts that you use often.</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/mnu.png"></p>
+                    <p>MNU comes pre-configured with these useful items:</p>
+                    <ul>
+                        <li>A switch to enable or disable macOS’s Dark Mode (Mojave and up)</li>
+                        <li>A switch to show or hide files on the Desktop</li>
+                        <li>A switch to show or hide hidden files</li>
+                        <li>A trigger to update your Git repos (requires <a href="https://github.com/earwig/git-repo-updater" class="link"  target="_blank">gitup</a>)</li>
+                        <li>A trigger to update your Homebrew installation (<code>brew update</code>)</li>
+                        <li>A trigger to upgrade your Homebrew installation (<code>brew upgrade</code>)</li>
+                    </ul>
+                    <p>Any or all of these stock items can be hidden from view if you don’t need them; you can add your own items; and you
+                    can re-order the items.</p>
+                    <h3 id="running-privacy">How to Use MNU</h3>
+                    <p>The first time you run MNU, it will ask you whether you want it to start automatically the next time you log into your Mac.
+                    We recommend that you click <b>Yes</b>, but you can always start MNU manually by double-clicking on its icon. If you click
+                    <b>No</b> and subsequently change your mind, you can tell MNU to start automatically by <a class="link" href="#prefs">setting the appropriate preference</a>.</p>
+                    <p>If you click <b>Yes</b> when you see the start automatically request or when you first use one of MNU’s items, macOS will
+                    request permission to grant MNU the right to access System Events. Please OK this request. macOS will also also you to grant
+                    MNU permission to access Terminal. Again, please OK this request.</p>
+                    <p><b>Important</b> MNU will not fully function without these permissions:</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/request.png"></p>
+                    <p>You can always check the permissions granted to MNU by opening <b>System Preferences > Security & Privacy > Privacy > Automation</b>:</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/privacy.png"></p>
+                    <h3 id="how-to-configure">How To Configure MNU</h3>
+                    <p>To configure MNU, click on the gearwheel icon in the last item on the menu:</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/controls.png"><br />&nbsp;<br /><i>MNU’s controls (left to right): Quit,
+                    Configure and Help</i></p>
+                    <p>This pops up the <b>Configure MNU</b> window: make sure the <b>Menu Items</b> tab is showing:</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/configure_1.png"></p>
+                    <p>The <b>Menu Items</b> tab lists the menu items currently set up for MNU in the order in which they appear in MNU.
+                    You can reorder the items just by grabbing one item and dragging it to the location you prefer. When you’re
+                    done, click <b>Apply</b> to update MNU, or close the window to ignore any changes you have made.</p>
+                    <p>All of the menu items feature a button which allow you to hide any such items that you don’t need. The button is green is its item
+                    is shown in the menu, or red if it is not. Just click to hide any shown item. If you later decide you’d like to see a hidden item
+                    after all, just click the button (now coloured red) to bring its item back to MNU.</p>
+                    <p>The other buttons, which are disabled for pre-installed items, allow you to edit or delete items <a class="link" href="#add-edit">you have added yourself</a>:
+                    <p align="center"><img class="img-fluid" src="../images/mnu/add_controls.png"><br />&nbsp;<br /><i>MNU’s item controls (left to right): Show/hide, Edit and Delete</i></p>
+                    <h3 id="add-edit">How to Add and Edit Your Own Menu Items</h3>
+                    <p>Initially, MNU contains only the built-in items, but you can add further ones by clicking <b>Add Item</b> in the <b>Configure MNU</b> window. This presents a sheet in which you can enter a Terminal command that can then be invoked from MNU’s main menu. The command can
+                    be a simple request to change directory (for example, <code>cd $HOME</code>), or can be a complex command line sequence that invokes
+                    a script or command and passes in fixed arguments (such as, <code>~/scripts/myimageresizescript.py -size 640 480</code>):</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/add_new_item.png"></p>
+                    <p>You will also need to give the command a name by which it will be listed in the MNU menu. This should not match the name
+                    of an existing item. When you are done, click <b>Add</b>, or <b>Cancel</b> to discard your changes.</p>
+                    <p>The new item will now be listed in the <b>Configure MNU</b> window’s <b>Menu Items</b> tab, but it won’t be added to MNU
+                    until you click <b>Apply</b>; closing the window will cause the new item to be discarded.</p>
+                    <p>Items you have added can be deleted from the list, or they can be edited if you need to make a change: just click on
+                    the delete or edit buttons, respectively:</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/edit_item.png"></p>
+                    <p>When MNU quits &mdash; you have restarted or shutdown your Mac, or you have clicked the quit icon at the bottom of the menu
+                    &mdash; it saves the current state of the menu so it’s ready for next time.</p>
+                    <h3 id="prefs">MNU Preferences</h3>
+                    <p>The second tab in the <b>Configure MNU</b> window shows MNU’s preferences.</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/configure_2.png"></p>
+                    <p>Currently there is just three:</p>
+                    <ul>
+                        <li>The option to <a class="link" href="#launch">start MNU automatically when you log into your Mac</a>.</li>
+                        <li>The option to <a class="link" href="#new-tab">run Terminal commands in a new tab</a>.</li>
+                        <li>The option to <a class="link" href="#show-images">show item images in MNU’s menu</a>.</li>
+                    </ul>
+                    <p id="launch">The first of these will initially be set only if you asked MNU to start automatically when MNU gave you this choice on
+                    its first run. Checking or un-checking this preference will, respectively, cause MNU to be added to or removed from System Preferences’
+                    <b>Users & Groups > Login Items</b> readout:
+                    <p align="center"><img class="img-fluid" src="../images/mnu/login_items.png"></p>
+                    <p>We recommend you enable this option so that MNU is always present in your mac’s menu bar when you need it.</p>
+                    <p id="new-tab">Running Terminal commands in a new tab will always ensure MNU doesn’t affect any Terminal tabs you already have open
+                    and in which you may be already running a command. If this option is not checked, MNU will always run commands in Terminal’s first
+                    tab, whether it is already running a command or not.</p>
+                    <p id="show-images">MNU presents images to help you identify menu items quickly, including a generic icon for items you have
+                    added yourself. If you don’t want MNU to include these images, un-check this option.</p>
+                    <p id="feedback">The <b>Configure MNU</b> window’s last tab provides some information about MNU:</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/configure_3.png"></p>
+                    <p>Please click the <b>Send Feedback</b> button to report any problems you encounter with MNU, or to make suggestions for future
+                    functionality. We can’t respond to every feedback message we receive, but we will make a note of all bugs reported and any comments
+                    that you have to make about the app.</p>
+                    <p>For more information, please the <a class="link" href="https://github.com/smittytone/mnu">GitHub repo page</a>.</p>
+                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+                    <hr />
+                    <h3 id="release-notes">Release Notes</h3>
+                    <h4>1.0.0</h4>
+                    <ul>
+                        <li class="rnli">Initial public release.</li>
+                    </ul>
+                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+                    <hr />
+                </div>
+                <div class="col-1 col-lg-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io">
+                    <img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" />
+                    <img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br />
+                    <small>Site copyright &copy; Tony Smith, 2014-19</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../scripts/retina.min.js"></script>
+    <script>
+        $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
+            }
+        });
+    </script>
+</body>
+</html>
