@@ -92,8 +92,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
                     <h1 class="text-center">Squinter 2.3</h1>
-                    <h3 class="text-center">&#8216;A Squirrel Integrator&#8217;
-                    <h4 class="text-center">Latest Release: <a class="link" href="releases.html">2.3.130 (14 August 2019)</a></h4>
+                    <h3 class="text-center">&#8216;A Squirrel Integrator&#8217;<br />Latest Release: <a class="link" href="releases.html">2.3.130 (14 August 2019)</a></h3>
                     <p class="text-center">&nbsp;</p>
                     <div class="dloadpanel">
                         <h2 align="center">Download Squinter</h2>
@@ -286,6 +285,28 @@
                         Fixture and Fixture device group. You can change either or both of a (Test) Fixture and Fixture device group’s targets by selecting
                         the <b>Set Target Production Device Group</b> and the <b>Set Target DUT Device Group</b> options in the <b>Device Group</b> menu.
                         These options remain disabled until you select a a (Test) Fixture device group.</p>
+
+                    <p id="env-vars">From Squinter 2.3.131, you can access a device group’s user-defined environment variables. With a project open and one
+                        of its device group’s selected, click on <b>Update Device Group’s Environment Variables...</b> in the <b>Device Groups</b> menu. By default, device groups have no variables set, so Squinter will show you an empty list:</p>
+
+                    <p align="center"><img class="img-fluid" src="../images/squinter/env_vars_1.png" width="612" style="border: 1px solid #DDDDDD" /></p>
+
+                    <p>Click on the <img class="img-fluid" src="../images/squinter/env_vars_plus.png" width="14" /> button to add a key-value pair.
+                        impCentral records user-defined variables as key-value pairs: the name of the variables and its value. Keys can by up to 100
+                        characters in length and include only alphanumeric characters and underscores. Values can be strings or numbers (either floats or
+                        integers), and when you enter a value, Squinter indicates its type with an ‘s’ or an ‘n’ symbol, respectively:</p>
+
+                    <p align="center"><img class="img-fluid" src="../images/squinter/env_vars_2.png" width="612" style="border: 1px solid #DDDDDD" /></p>
+
+                    <p>Click <b>Upload</b> to send the variables to the impCloud, or <b>Cancel</b> to make no changes. impCentral imposes an approximately
+                        16KB limit on the size your key-value pairs (including the keys’ names), so Squinter will warn you if you exceed this total. The
+                        sheet has a size readout which updates as you add and amend the device group’s variables. You can read more about how impCentral
+                        user-defined variables work in the <a href="https://developer.electricimp.com/tools/impcentral/environmentvariables#user-defined-environment-variables">Electric Imp Dev Center.</a></p>
+
+                    <p>You can remove any of the listed variables by selecting one or more of them and then clicking the <img class="img-fluid"
+                        src="../images/squinter/env_vars_minus.png" width="14" /> button. You will be asked if you are sure that you want to remove the
+                        selected variable(s). If you click <b>OK</b>, you can still click the sheet’s <b>Cancel</b> button to undo the deletion, but this
+                        will also ignore any other changes you may have made.</p>
 
                     <p class="linktext" align="right"><a class="link" href="#account">Back to Contents</a></p>
 
