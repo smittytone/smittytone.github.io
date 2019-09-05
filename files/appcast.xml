@@ -1,13 +1,11 @@
-<?xml version="1.0" standalone="yes"?>
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
-    <channel>
-        <title>Squinter</title>
-        <item>
-            <title>2.3</title>
-            <pubDate>Wednesday, 14 Aug 2019 18:00:01 +0100</pubDate>
-            <sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
-            <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-            <enclosure url="https://smittytone.github.io/files/Squinter_2_3_130.dmg" sparkle:version="130" sparkle:shortVersionString="2.3" length="10003089" type="application/octet-stream" sparkle:edSignature="wEEhzptNo5tMeP8nAb5hbz8PKQo0ymWKqXBDF4ICvM7V5BcETiXXyRLfcUj8LCc6WEniB7LuyG4i7rJFxWJsBA=="/>
-        </item>
-    </channel>
-</rss>
+<?xml version="1.0" standalone="yes"?><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+<channel>
+<title>Squinter</title>
+<item>
+<title>2.3</title>
+<pubDate>Thursday, 05 Sep 2019 20:41:06 +0100</pubDate>
+<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
+<sparkle:releaseNotesLink>https://smittytone.github.io/files/notes.html</sparkle:releaseNotesLink>
+<enclosure url="https://smittytone.github.io/files/Squinter_2_3_131.dmg" sparkle:version="131" sparkle:shortVersionString="2.3" length="10290333" type="application/octet-stream" sparkle:edSignature="YC7zCclGgMzEt9xeSGSnaThHVoVHuhRI4u0S1hAu6CoL50le+zkX6m2m27NWG+xczMhCehqMK0sLg8dfTglbCw=="/>
+</item>
+</channel></rss>
