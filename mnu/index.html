@@ -103,7 +103,7 @@
                 <div class="col-10 col-lg-8">
                     <h2 class="text-center">MNU</h2>
                     <h3 class="text-center">A macOS menu bar utility</h3>
-                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.0.1</a></h4>
+                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.1.0</a></h4>
                     <p>&nbsp;<br />&nbsp;</p>
                     <div class="dloadpanel">
                         <h2 align="center">Download And Install MNU</h2>
@@ -112,7 +112,7 @@
                             <tbody>
                                 <tr>
                                     <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
-                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/mnu/mnu_1_0_1.dmg">mnu_1_0_1.dmg</a></td>
+                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/mnu/mnu_1_1_0.dmg">mnu_1_1_0.dmg</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><b>File Size</b>&nbsp;</th>
@@ -120,7 +120,7 @@
                                 </tr>
                                 <tr>
                                     <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                                    <td id="sha256">e7b735a0bd1a6a2757e760fe8a2b5d22e135eb7ae0d7d63985effc226c8435c1 </td>
+                                    <td id="sha256">b39413f44686df4d0595cc976e8666d31c5bf7daa04d6694164e21e797a1583d </td>
                                 </tr>
                             <tbody>
                         </table>
@@ -157,7 +157,7 @@
                     <p align="center"><img class="img-fluid" src="../images/mnu/controls.png"><br />&nbsp;<br /><i>MNU’s controls (left to right): Quit,
                     Configure and Help</i></p>
                     <p>This pops up the <b>Configure MNU</b> window: make sure the <b>Menu Items</b> tab is showing:</p>
-                    <p align="center"><img class="img-fluid" src="../images/mnu/configure_1.png"></p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/configure_1a.png"></p>
                     <p>The <b>Menu Items</b> tab lists the menu items currently set up for MNU in the order in which they appear in MNU.
                     You can reorder the items just by grabbing one item and dragging it to the location you prefer. When you’re
                     done, click <b>Apply</b> to update MNU, or close the window to ignore any changes you have made.</p>
@@ -169,7 +169,7 @@
                     <p>The other buttons, which are disabled for pre-installed items, allow you to edit or delete items <a class="link" href="#add-edit">you have added yourself</a>:
                     <p align="center"><img class="img-fluid" src="../images/mnu/add_controls.png"><br />&nbsp;<br /><i>MNU’s item controls (left to right): Show/hide, Edit and Delete</i></p>
                     <h3 id="add-edit">How to Add and Edit Your Own Menu Items</h3>
-                    <p>Initially, MNU contains only the built-in items, but you can add further ones by clicking <b>Add Item</b> in the <b>Configure MNU</b> window. This presents a sheet in which you can enter a Terminal command that can then be invoked from MNU’s main menu. The command can
+                    <p>Initially, MNU contains only the built-in items, but you can add further ones by clicking <b>+</b> in the <b>Configure MNU</b> window. This presents a sheet in which you can enter a Terminal command that can then be invoked from MNU’s main menu. The command can
                     be a simple request to change directory (for example, <code>cd $HOME</code>), or can be a complex command line sequence that invokes
                     a script or command and passes in fixed arguments (such as, <code>~/scripts/myimageresizescript.py -size 640 480</code>):</p>
                     <p align="center"><img class="img-fluid" src="../images/mnu/add_new_item.png"></p>
@@ -186,6 +186,15 @@
                     <p align="center"><img class="img-fluid" src="../images/mnu/edit_item.png"></p>
                     <p>When MNU quits &mdash; you have restarted or shutdown your Mac, or you have clicked the quit icon at the bottom of the menu
                     &mdash; it saves the current state of the menu so it’s ready for next time.</p>
+                    <h3 id="backup-restore">How to Backup and Restore Your Menu Items</h3>
+                    <p><b>New in Version 1.1.0</b> You can export a record of the items presented by MNU by clicking the gearwheel button <img class="img-fluid" width="20" src="../images/mnu/gear.png" /> then selecting the <b>Backup MNU Items...</b> option. This will present a dialog in which you choose the location of the record.</p>
+                    <p align="center"><img class="img-fluid" src="../images/mnu/configure_1b.png"></p>
+                    <p>Loading in a saved list of items is just a matter of clicking the gearwheel button, selecting the <b>Import Items...</b> option
+                    and locating the record file when prompted. This action will replace all of the items listed in the <b>Menu Items</b> tab,
+                    but the menu itself will not be updated (and the new items saved for next time) until you click <b>Apply</b>. If you just close the
+                    <b>Configure MNU</b> window, the imported items will be ignored (though the backup list can be imported again at another time).</p>
+                    <p>You might use this feature for backup purposes, or to synchronise menu items across multiple Macs. Because menu items can be set
+                    to trigger scripts that may download and run software on your Mac, only import menu item files you trust.</p>
                     <h3 id="prefs">MNU Preferences</h3>
                     <p>The second tab in the <b>Configure MNU</b> window shows MNU’s preferences.</p>
                     <p align="center"><img class="img-fluid" src="../images/mnu/configure_2.png"></p>
@@ -213,6 +222,16 @@
                     <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
                     <h3 id="release-notes">Release Notes</h3>
+                    <h4>1.1.0</h4>
+                    <ul>
+                        <li class="rnli">Add an extra controls button, <img class="img-fluid" width="16" src="../images/mnu/gear.png" />, to the Configure window:
+                            <ul>
+                                <li class="rnli">Export a JSON representation of the current menu item lits for backup and/or sync across Macs.</li>
+                                <li class="rnli">Import JSON backups.</li>
+                            </ul>
+                        </li>
+                        <li class="rnli">Add tooltips to key UI items.</li>
+                    </ul>
                     <h4>1.0.1</h4>
                     <ul>
                         <li class="rnli">Minor improvements.</li>
