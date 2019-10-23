@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="Description" content="Tony Smith's software library: pdfmaker, a macOS command line tool" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
+    <link href="../images/favicons/196.png" rel="shortcut icon" />
+    <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
+    <title>pdfmaker 1.0.0</title>
+    <style>
+        body {color:black;background-color:#EEEEEE;}
+        p {font-family:Abel,sans-serif;font-size:16px;}
+        h2 {color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
+        h3 {color:#8C275D;font-family:Abel,sans-serif;font-size:22px;}
+        h4 {color:#8C275D;font-family:Abel,sans-serif;font-size:18px;}
+        hr {border-color:#8C275D;}
+        a  {color:#8C275D;padding:2px;}
+        th {color:#8C275D;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
+        td {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        li {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        pre {color:#8C275D;background-color:#aaaaaa;padding:8px;}
+        .rnli {list-style:disc;}
+        .container {padding-bottom:10px;}
+        .container-fluid {max-width:84%;}
+        .nav-item {font-family:Abel,sans-serif;}
+        .navbar-brand {font-family:Abel,sans-serif;}
+        .navbar-brand-light-color {color:blue;}
+        .frame {border:4px solid #8C275D;}
+        .navcol {background-color:#8C275D;}
+        .link:hover {color:white;background-color:#8C275D;text-decoration:none;padding:2px;border-radius:5px;}
+        .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
+        .linktext {font-size:12px;}
+        .navimgb {display:none;}
+        .dloadpanel {background-color:#DDDDDD;padding: 10px 10px 10px 10px;border: 2px solid #222222;}
+        .imgw {display:none;}
+        .navbar-custom {background-color:#8C275D;}
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {color:white;}
+        .navbar-custom .navbar-nav .nav-link {color: rgba(255,255,255,.5);}
+        .navbar-custom .nav-item.active .nav-link,
+        .navbar-custom .nav-item:hover .nav-link {color:white;}
+        .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+
+        @media only screen and (max-width: 1026px) {
+            .container-fluid {padding:0px;max-width:90%;}
+        }
+
+        @media only screen and (max-width: 780px) {
+            .container-fluid {padding:0px;max-width:100%;}
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {color:white;background:#222222;}
+            h2 {color:#8C275D;}
+            h3 {color:white;}
+            h4 {color:white;}
+            hr {border-color:#FFFFFF;}
+            a  {color:#8C275D;}
+            td {color:white;}
+            th {color:#8C275D;}
+            li {color:white;}
+            kbd {background-color:#8C275D;}
+            .frame {border:4px solid #8C275D;}
+            .navcol {color:black;background-color:rgb(121, 153, 121);}
+            .link:hover {color:black;background-color:#8C275D;}
+            .colo:hover {background-color:#222222;}
+            .linktext {color:white;}
+            .navimgb {display:inline-block;}
+            .navimgw {display:none;}
+            .imgw {display:inline-block;}
+            .imgb {display:none;}
+            .dloadpanel {background-color:#222222;border:2px solid #8C275D;}
+            .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" id="ctop">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/pdfmaker/pdfmw.png"  style="width:32px;height:32px;" class="align-top" alt="pdfmaker logo" /> MNU
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#using-pdfmaker">Using pdfmaker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#release-notes">Release Notes</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="frame">
+            <div class="row">
+                <div class="col-1 col-lg-2">&nbsp;</div>
+                <div class="col-10 col-lg-8">
+                    <h2 class="text-center">pdfmaker</h2>
+                    <h3 class="text-center">A macOS command line tool</h3>
+                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.0.0</a></h4>
+                    <p>&nbsp;<br />&nbsp;</p>
+                    <div class="dloadpanel">
+                        <h2 align="center">Download And Install pdfmaker</h2>
+                        <p align="center">Please verify the integrity of the download with the SHA-256 checksum.</p>
+                        <table class="table table-borderless table-responsive table-sm">
+                            <tbody>
+                                <tr>
+                                    <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
+                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/pdfmaker/pdfmaker-1.0.0.pkg">pdfmaker-1.0.0.pkg</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><b>File Size</b>&nbsp;</th>
+                                    <td>41KB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><b>SHA 256</b>&nbsp;</th>
+                                    <td id="sha256">43f1bbf46c73e50a8bda4cf6d16df9ddad7700666580bf5f45cff88dde4c9ac7 </td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <p>&nbsp;<br />&nbsp;</p>
+                    <h3 id="using-pdfmaker">How to Use pdfmaker</h3>
+                    <p>pdfmaker is a macOS command line tool which allows you to combine JPEG image files into a single PDF file.</p>
+                    <p>In Terminal, run:</p>
+<pre><code>$ pdfmaker --source &lt;image_source_directory&gt; \
+           --destination &lt;pdf_save_directory&gt; \
+           --name &lt;pdf_filename&gt; \
+           --compress &lt;amount&gt; \
+           --verbose</code></pre>
+                    <p>If you omit any of these switches, their default values will be used:</p>
+                    <ul>
+                        <li>Source: The directory from which you ran the tool.</li>
+                        <li>Destination: The Desktop.</li>
+                        <li>Name: <code>"PDF From Images"</code>.</li>
+                        <li>Compression: The native compression of the JPEG source images.</li>
+                    </ul>
+                    <p>You can use <code>-s</code>, <code>-d</code>, <code>-n</code>, <code>-c</code> and <code>-v</code> as shorthand for the switches
+                    above &mdash; <code>pdfmaker --help</code> has all the details.</p>
+                    <h3 id="examples">Examples</h3>
+<pre><code>$ pdfmaker --source ~/Documents/'Project X'/Images \
+           --destination ~/Documents/PDFs \
+           --name 'Project X'</code></pre>
+                    <p>This will merge all of the images files in <code>~/Documents/Project X/Images</code> into a file called <code>Project X.pdf</code>
+                    which will be located in <code>~/Documents/PDFs</code>.</p>
+<pre><code>$ pdfmaker --source ~/Documents/'Project X'/Images \
+        --destination ~/Documents/PDFs \
+        --name 'Project X' \
+        --compress 0.5</code></pre>
+                    <p>This will merge all of the images files in <code>~/Documents/Project X/Images</code> into a file called <code>Project X.pdf</code>
+                    which will be located in <code>~/Documents/PDFs</code>. The compilation process will compress images to 50% JPEG quality.</p>
+<pre><code>$ pdfmaker --source ~/Documents/'Project X'/Images/cover.jpg \
+        --destination ~/Documents/PDFs \
+        --name 'Project X'</code></pre>
+                    <p>This will convert the image <code>cover.jpg</code> into a file called <code>Project X.pdf</code> which will be located
+                        in <code>~/Documents/PDFs</code>.</p>
+                    <h3 id="compression">Reducing PDF File Sizes</h3>
+                    <p>The compression option will compress images before adding them to the PDF. This allows you to reduce the size of the final PDF,
+                    as required. Specify an amount in the range 0.0 to 1.0, where 0.0 is maximum compression (ie. lowest quality) and 1.0 is no compression
+                    (highest quality).</p>
+                    <p><b>Note</b> Building a PDF from JPEG files means that you are already using compressed images. If those JPEGs are highly compressed, applying a low compression amount to *pdfmaker* will not increase image quality but will make your PDF file larger.</p>
+                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+                    <hr />
+                    <h3 id="release-notes">Release Notes</h3>
+                    <h4>1.0.0</h4>
+                    <ul>
+                        <li class="rnli">Initial public release.</li>
+                    </ul>
+                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+                    <hr />
+                </div>
+                <div class="col-1 col-lg-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io">
+                    <img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" />
+                    <img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br />
+                    <small>Site copyright &copy; Tony Smith, 2014-19</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../scripts/retina.min.js"></script>
+    <script>
+        $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
+            }
+        });
+    </script>
+</body>
+</html>
