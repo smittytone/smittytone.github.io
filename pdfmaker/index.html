@@ -103,7 +103,7 @@
                 <div class="col-10 col-lg-8">
                     <h2 class="text-center">pdfmaker</h2>
                     <h3 class="text-center">A macOS command line tool</h3>
-                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.0.0</a></h4>
+                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.1.0</a></h4>
                     <p>&nbsp;<br />&nbsp;</p>
                     <div class="dloadpanel">
                         <h2 align="center">Download And Install pdfmaker</h2>
@@ -112,7 +112,7 @@
                             <tbody>
                                 <tr>
                                     <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
-                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/pdfmaker/pdfmaker-1.0.0.pkg">pdfmaker-1.0.0.pkg</a></td>
+                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/pdfmaker/pdfmaker-1.1.0.pkg">pdfmaker-1.1.0.pkg</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><b>File Size</b>&nbsp;</th>
@@ -130,44 +130,45 @@
                     <p>pdfmaker is a macOS command line tool which allows you to combine JPEG image files into a single PDF file.</p>
                     <p>In Terminal, run:</p>
 <pre><code>$ pdfmaker --source &lt;image_source_directory&gt; \
-           --destination &lt;pdf_save_directory&gt; \
-           --name &lt;pdf_filename&gt; \
+           --destination &lt;pdf_save_directory/file_name.pdf&gt; \
            --compress &lt;amount&gt; \
            --verbose</code></pre>
                     <p>If you omit any of these switches, their default values will be used:</p>
                     <ul>
                         <li>Source: The directory from which you ran the tool.</li>
-                        <li>Destination: The Desktop.</li>
-                        <li>Name: <code>"PDF From Images"</code>.</li>
+                        <li>Destination: The Desktop/'PDF From Images.pdf'</code>.</li>
                         <li>Compression: The native compression of the JPEG source images.</li>
                     </ul>
-                    <p>You can use <code>-s</code>, <code>-d</code>, <code>-n</code>, <code>-c</code> and <code>-v</code> as shorthand for the switches
+                    <p>You can use <code>-s</code>, <code>-d</code>, <code>-c</code> and <code>-v</code> as shorthand for the switches
                     above &mdash; <code>pdfmaker --help</code> has all the details.</p>
                     <h3 id="examples">Examples</h3>
 <pre><code>$ pdfmaker --source ~/Documents/'Project X'/Images \
-           --destination ~/Documents/PDFs \
-           --name 'Project X'</code></pre>
-                    <p>This will merge all of the images files in <code>~/Documents/Project X/Images</code> into a file called <code>Project X.pdf</code>
-                    which will be located in <code>~/Documents/PDFs</code>.</p>
+           --destination ~/Documents/PDFs/'Project X.pdf'</code></pre>
+                    <p>This will merge all of the images files in <code>~/Documents/Project X/Images</code> into a file called <code>Project X.pdf</code> which will be located in <code>~/Documents/PDFs</code>.</p>
 <pre><code>$ pdfmaker --source ~/Documents/'Project X'/Images \
-        --destination ~/Documents/PDFs \
-        --name 'Project X' \
-        --compress 0.5</code></pre>
-                    <p>This will merge all of the images files in <code>~/Documents/Project X/Images</code> into a file called <code>Project X.pdf</code>
-                    which will be located in <code>~/Documents/PDFs</code>. The compilation process will compress images to 50% JPEG quality.</p>
+           --destination ~/Documents/PDFs/'Project X.pdf' \
+           --compress 0.5</code></pre>
+                    <p>This will merge all of the images files in <code>~/Documents/Project X/Images</code> into a file called <code>Project X.pdf</code> which will be located in <code>~/Documents/PDFs</code>. The compilation process will compress images to 50% JPEG quality.</p>
 <pre><code>$ pdfmaker --source ~/Documents/'Project X'/Images/cover.jpg \
-        --destination ~/Documents/PDFs \
-        --name 'Project X'</code></pre>
+           --destination ~/Documents/PDFs/'Project X.pdf'</code></pre>
                     <p>This will convert the image <code>cover.jpg</code> into a file called <code>Project X.pdf</code> which will be located
                         in <code>~/Documents/PDFs</code>.</p>
                     <h3 id="compression">Reducing PDF File Sizes</h3>
                     <p>The compression option will compress images before adding them to the PDF. This allows you to reduce the size of the final PDF,
                     as required. Specify an amount in the range 0.0 to 1.0, where 0.0 is maximum compression (ie. lowest quality) and 1.0 is no compression
                     (highest quality).</p>
-                    <p><b>Note</b> Building a PDF from JPEG files means that you are already using compressed images. If those JPEGs are highly compressed, applying a low compression amount to *pdfmaker* will not increase image quality but will make your PDF file larger.</p>
+                    <p><b>Note</b> Building a PDF from JPEG files means that you are already using compressed images. If those JPEGs are highly compressed, applying a low compression amount to <i>pdfmaker</i> will not increase image quality but will make your PDF file larger.</p>
                     <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
                     <h3 id="release-notes">Release Notes</h3>
+                    <h4>1.1.0</h4>
+                    <ul>
+                        <li class="rnli">Allow the user to select a single source image, not just source directories.</li>
+                        <li class="rnli">Allow the user to name the target file as part of the target path.
+                            <ul><li class="rnli">Remove the <code>--name</code> switch.</li></ul></li>
+                        <li class="rnli">Ignore dot files in the source image search.</li>
+                        <li class="rnli">Support easier notarization.</li>
+                    </ul>
                     <h4>1.0.0</h4>
                     <ul>
                         <li class="rnli">Initial public release.</li>
