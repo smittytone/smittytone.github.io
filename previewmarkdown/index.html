@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="Description" content="Tony Smith's software library: PreviewMarkdown - Markdown QuickLook previews for macOS Catalina" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
+    <link href="../images/favicons/196.png" rel="shortcut icon" />
+    <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
+    <title>PreviewMarkdown</title>
+    <style>
+        body {color:black;background-color:#EEEEEE;}
+        p {font-family:Abel,sans-serif;font-size:16px;}
+        h2 {color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
+        h3 {color:#882650;font-family:Abel,sans-serif;font-size:22px;}
+        h4 {color:#882650;font-family:Abel,sans-serif;font-size:18px;}
+        hr {border-color:#882650;}
+        a  {color:#882650;padding:2px;}
+        th {color:#882650;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
+        td {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        li {color:black;font-family:Abel,sans-serif;font-size:16px;}
+        pre {color:#882650;background-color:#aaaaaa;padding:8px;}
+        .rnli {list-style:disc;}
+        .container {padding-bottom:10px;}
+        .container-fluid {max-width:84%;}
+        .nav-item {font-family:Abel,sans-serif;}
+        .navbar-brand {font-family:Abel,sans-serif;}
+        .navbar-brand-light-color {color:blue;}
+        .frame {border:4px solid #882650;}
+        .navcol {background-color:#882650;}
+        .link:hover {color:white;background-color:#882650;text-decoration:none;padding:2px;border-radius:5px;}
+        .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
+        .linktext {font-size:12px;}
+        .navimgb {display:none;}
+        .dloadpanel {background-color:#DDDDDD;padding: 10px 10px 10px 10px;border: 2px solid #222222;}
+        .imgw {display:none;}
+        .navbar-custom {background-color:#882650;}
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {color:white;}
+        .navbar-custom .navbar-nav .nav-link {color: rgba(255,255,255,.5);}
+        .navbar-custom .nav-item.active .nav-link,
+        .navbar-custom .nav-item:hover .nav-link {color:white;}
+        .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+
+        @media only screen and (max-width: 1026px) {
+            .container-fluid {padding:0px;max-width:90%;}
+        }
+
+        @media only screen and (max-width: 780px) {
+            .container-fluid {padding:0px;max-width:100%;}
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {color:white;background:#222222;}
+            h2 {color:#882650;}
+            h3 {color:white;}
+            h4 {color:white;}
+            hr {border-color:#FFFFFF;}
+            a  {color:#882650;}
+            td {color:white;}
+            th {color:#882650;}
+            li {color:white;}
+            kbd {background-color:#882650;}
+            .frame {border:4px solid #882650;}
+            .navcol {color:black;background-color:rgb(121, 153, 121);}
+            .link:hover {color:black;background-color:#882650;}
+            .colo:hover {background-color:#222222;}
+            .linktext {color:white;}
+            .navimgb {display:inline-block;}
+            .navimgw {display:none;}
+            .imgw {display:inline-block;}
+            .imgb {display:none;}
+            .dloadpanel {background-color:#222222;border:2px solid #882650;}
+            .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" id="ctop">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/previewmarkdown/pmmw.png"  style="width:32px;height:32px;" class="align-top" alt="PreviewMarkdown logo" /> PreviewMarkdown
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#using-pm">Using PreviewMarkdown</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#release-notes">Release Notes</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="frame">
+            <div class="row">
+                <div class="col-1 col-lg-2">&nbsp;</div>
+                <div class="col-10 col-lg-8">
+                    <h2 class="text-center">PreviewMarkdown</h2>
+                    <h3 class="text-center">Markdown file QuickLook previews for macOS Catalina</h3>
+                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.0.0</a></h4>
+                    <p>&nbsp;<br />&nbsp;</p>
+                    <div class="dloadpanel">
+                        <h2 align="center">Download And Install PreviewMarkdown</h2>
+                        <p align="center">Please verify the integrity of the download with the SHA-256 checksum.</p>
+                        <table class="table table-borderless table-responsive table-sm">
+                            <tbody>
+                                <tr>
+                                    <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
+                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/previewmarkdown/previewmarkdown_1_0_0.dmg">previewmarkdown_1_0_0.dmg</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><b>File Size</b>&nbsp;</th>
+                                    <td>411KB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><b>SHA 256</b>&nbsp;</th>
+                                    <td id="sha256">43947d5490624e540fd9bbe962b1b06bbad663c5c4fc39bcb76fdeb7ef9070a5 </td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                    <p>&nbsp;<br />&nbsp;</p>
+                    <h3 id="using-pm">How to Use PreviewMarkdown</h3>
+                    <p>Install the app and run it. This will register the availability of the app’s QuickLook extensions, Previewer and Thumbnailer.
+                    You can now quit the app: just click <b>OK</b>:</p>
+                    <p align="center"><img class="img-fluid" src="../images/previewmarkdown/ui.png"></p>
+                    <p>You can disable or re-enable Previewer and Thumbnailer in <b>System Preferences > Extensions</b>:</p>
+                    <p align="center"><img class="img-fluid" src="../images/previewmarkdown/extensions.png"></p>
+                    <hr />
+                    <h3 id="release-notes">Release Notes</h3>
+                    <h4>1.0.0</h4>
+                    <ul>
+                        <li class="rnli">Initial public release.</li>
+                    </ul>
+                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+                    <hr />
+                </div>
+                <div class="col-1 col-lg-2">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="text-center"><a class="colo" href="https://smittytone.github.io">
+                    <img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" />
+                    <img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br />
+                    <small>Site copyright &copy; Tony Smith, 2014-19</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../scripts/retina.min.js"></script>
+    <script>
+        $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
+            }
+        });
+    </script>
+</body>
+</html>
