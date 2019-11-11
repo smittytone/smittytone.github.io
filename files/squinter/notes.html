@@ -7,16 +7,18 @@
     </style>
 </head>
 <body>
-    <h3>Squinter 2.3.131 (5 September 2019)</h3>
+    <h3>Squinter 2.3.132 (11 November 2019)</h3>
     <p><b>Important</b><br />Squinter 2.3 requires macOS 10.12 or above (versions 2.0. and 2.1 required macOS 10.11 or above).</p>
     <p><b>Improvements</b></p>
     <ul>
-        <li>Squinter now supports impCentral’s device group user-defined environment variables. Open a project, select one of its device groups and click on <b>Update Device Group’s Environment Variables...</b> in the <b>Device Groups</b> menu to view and amend the group’s variables.</li>
-        <li>The Inspector panel’s tab switch buttons are now... better (ie. more Xcode-like).</li>
+        <li>Squirrel .nut file QuickLook preview under macOS 10.15 Catalina.</li>
+        <li>Squinter now presents agent URLs as they have been delivered by the impCentral API,
+            rather than URLs generated from the agent ID and a fixed string.</li>
     </ul>
     <p><b>Fixes</b></p>
     <ul>
-        <li>Removed Azure impCloud login (no longer supported by Electric Imp).</li>
+        <li>Make sure a device’s renamed Device Group is indicated in the Inspector.</li>
+        <li>Importing an old project will no longer attempt to update device groups that don’t exist.</li>
     </ul>
 </body>
 </html>
