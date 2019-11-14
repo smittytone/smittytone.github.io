@@ -103,7 +103,7 @@
                 <div class="col-10 col-lg-8">
                     <h2 class="text-center">pdfmaker</h2>
                     <h3 class="text-center">A macOS command line tool</h3>
-                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.1.0</a></h4>
+                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">2.0.0</a></h4>
                     <p>&nbsp;<br />&nbsp;</p>
                     <div class="dloadpanel">
                         <h2 align="center">Download And Install pdfmaker</h2>
@@ -112,35 +112,50 @@
                             <tbody>
                                 <tr>
                                     <th scope="col-3 col-lg-2" width="120px"><b>File</b>&nbsp;</th>
-                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/pdfmaker/pdfmaker_1_1_0.pkg">pdfmaker-1.1.0.pkg</a></td>
+                                    <td scope="col-9 col-lg-10"><a class="link" id="url" href="../files/pdfmaker/pdfmaker_2_0_0.dmg">pdfmaker_2_0_0.dmg</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><b>File Size</b>&nbsp;</th>
-                                    <td>42KB</td>
+                                    <td>67KB</td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                                    <td id="sha256">f5a6a47060d1325e52bc36342331e3fec1aadc668848f741e6dcaa2d3034a184 </td>
+                                    <td id="sha256">7f2e5e439a74ca0d6043c61f90a2e1932ba6daa052c445935562c469b1f5d543</td>
                                 </tr>
                             <tbody>
                         </table>
                     </div>
                     <p>&nbsp;<br />&nbsp;</p>
                     <h3 id="using-pdfmaker">How to Use pdfmaker</h3>
-                    <p>pdfmaker is a macOS command line tool which allows you to combine JPEG image files into a single PDF file.</p>
+                    <p><i>pdfmaker</i> is a macOS command line tool which allows you to combine JPEG image files into a single PDF file and to extract
+                    a series of images from an existing PDF file.</p>
                     <p>In Terminal, run:</p>
-<pre><code>$ pdfmaker --source &lt;image_source_directory&gt; \
-           --destination &lt;pdf_save_directory/file_name.pdf&gt; \
-           --compress &lt;amount&gt; \
-           --verbose</code></pre>
+<pre><code>$ pdfmaker --source &lt;image source directory&gt; \
+           --destination &lt;pdf save directory/filename.pdf&gt; \
+           --compress &lt;amount&gt;</code></pre>
                     <p>If you omit any of these switches, their default values will be used:</p>
                     <ul>
                         <li>Source: The directory from which you ran the tool.</li>
                         <li>Destination: The Desktop/'PDF From Images.pdf'</code>.</li>
                         <li>Compression: The native compression of the JPEG source images.</li>
                     </ul>
-                    <p>You can use <code>-s</code>, <code>-d</code>, <code>-c</code> and <code>-v</code> as shorthand for the switches
+                    <p>You can use <code>-s</code>, <code>-d</code> and <code>-c</code> as shorthand for the switches
                     above &mdash; <code>pdfmaker --help</code> has all the details.</p>
+                    <p>You can also apply the <code>--verbose</code> / <code>-v</code> switch to obtain extra information during conversion.</p>
+                    <p>To convert a PDF to a set of images, in Terminal, run:</p>
+<pre><code>$ pdfmaker --break --source &lt;path to pdf&gt; \
+           --destination &lt;path to folder&gt; \
+           --resolution &lt;output dpi value&gt;</code></pre>
+                    <p>You can use <code>-b</code>, and <code>-r</code> as shorthand for the <code>--break</code> and <code>--resolution</code>
+                    switches. The <code>-c</code> switch may also be used to compress the output images.</p>
+                    <p><i>pdfmaker</i> does not delete the source file.</p>
+                    <h3 id="compression">Image Compression</h3>
+                    <p>The compression option will compress images before adding them to the PDF. This allows you to reduce the size of the final PDF, as required. Provide an amount in the range 0.0 to 1.0, where 0.0 is maximum compression (lowest quality) and 1.0 is no compression (highest quality).</p>
+                    <p><b>Note</b> Building a PDF from JPEG files means that you are already using compressed images. If those JPEGs are highly compressed, applying a low compression amount to <i>pdfmaker</i> will not increase image quality but will make your PDF file larger.</p>
+                    <h3 id="resolution">Image Resolution</h3>
+                    <p>The default output resolution is 72dpi (dots per inch). PDFs store page dimensions as points, rather than pixels, enabling device-independent resolution. <i>pdfmaker</i> determines image pixel dimensions based on the output resolution and the PDF point dimensions. To get correctly sized images out of a PDF, you need to specify the resolution of the images used to source the PDF. You do this be specifying an appropriate output resolution.</p>
+                    <p>For example, a PDF contains a page sourced from a 2600 x 1600 pixel, 300dpi image. Output at 72dpi, this will result in an image of 620 x 400 (2600 * 72 / 300). To get the correct pixel size back, add <code>-r 300</code> to the command line. This will yield a 2600 x 1600, 300dpi output image.</p>
+                    <p>If you don’t know the source image dpi resolution, experiment with <code>-r</code> values until you get output of the size you require.</p>
                     <h3 id="examples">Examples</h3>
 <pre><code>$ pdfmaker --source ~/Documents/'Project X'/Images \
            --destination ~/Documents/PDFs/'Project X.pdf'</code></pre>
@@ -152,15 +167,17 @@
 <pre><code>$ pdfmaker --source ~/Documents/'Project X'/Images/cover.jpg \
            --destination ~/Documents/PDFs/'Project X.pdf'</code></pre>
                     <p>This will convert the image <code>cover.jpg</code> into a file called <code>Project X.pdf</code> which will be located
-                        in <code>~/Documents/PDFs</code>.</p>
-                    <h3 id="compression">Reducing PDF File Sizes</h3>
-                    <p>The compression option will compress images before adding them to the PDF. This allows you to reduce the size of the final PDF,
-                    as required. Specify an amount in the range 0.0 to 1.0, where 0.0 is maximum compression (ie. lowest quality) and 1.0 is no compression
-                    (highest quality).</p>
-                    <p><b>Note</b> Building a PDF from JPEG files means that you are already using compressed images. If those JPEGs are highly compressed, applying a low compression amount to <i>pdfmaker</i> will not increase image quality but will make your PDF file larger.</p>
+                    in <code>~/Documents/PDFs</code>.</p>
+<pre><code>$ pdfmaker --break --source ~/Documents/PDFs/'Project X.pdf' \
+           --compress 0.4 --resolution 200</code></pre>
+                    <p>This converts <code>Project X.pdf</code> to a series of images that will be written to the desktop (the default destination). This images will be highly compressed and output at a resolution of 200dpi.</p>
                     <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
                     <hr />
                     <h3 id="release-notes">Release Notes</h3>
+                    <h4>2.0.0</h4>
+                    <ul>
+                        <li class="rnli">Add PDF-to-images functionality.</li>
+                    </ul>
                     <h4>1.1.0</h4>
                     <ul>
                         <li class="rnli">Allow the user to select a single source image, not just source directories.</li>
