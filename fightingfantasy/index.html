@@ -1,221 +1,168 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="Description" content="Tony Smith's software library: Fighting Fantasy Game Manager, a macOS program to help you play Fighting Fantasy Gamebooks by Steve Jackson and Ian Livingstone" />
+    <meta name="Description" content="Tony Smith's software library: Fighting Fantasy Game Manager, a macOS program to help you play Fighting Fantasy Gamebooks" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
     <link href="../images/favicons/196.png" rel="shortcut icon" />
     <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
-    <title>FightingFantasy Game Manager</title>
-    <style>
-        body {color:black;background-color:#EEEEEE;}
-        p  {font-family:Abel,sans-serif;font-size:16px;}
-        h2 {color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
-        h3 {color:black;font-family:Abel,sans-serif;font-size:22px;}
-        h4 {color:black;font-family:Abel,sans-serif;font-size:18px;}
-        hr {border-color:#FFD709;}
-        li {color:black;font-family:Abel,sans-serif;font-size:16px;}
-        .rnli {list-style:disc;}
-        a  {color:#6d0439;padding:2px;}
-        .link:hover {color:black;background-color:#FFD709;text-decoration:none;padding:2px;border-radius:5px;}
-        .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
-        .linktext{font-size:12px;}
-        .container-fluid {max-width:84%;}
-        .nav-item {font-family:Abel,sans-serif;}
-        .navbar-brand {font-family:Abel,sans-serif;}
-        .navbar-toggler {border:none;outline:none;}
-        .imgw {display:none;}
-
-        @media only screen and (max-width: 1026px) {
-            .container-fluid {padding:0px;max-width:90%;}
-        }
-
-        @media only screen and (max-width: 780px) {
-            .container-fluid {padding:0px;max-width:100%;}
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {color:white;background:#222222;}
-            h2 {color:#FFD709;}
-            h3 {color:white;}
-            h4 {color:white;}
-            hr {border-color:#FFFFFF;}
-            a  {color:#FFD709;}
-            li {color:white;}
-            .colo:hover {background-color:#222222;}
-            .linktext {color: white;}
-            .imgw {display:inline-block;}
-            .imgb {display:none;}
-        }
-    </style>
+    <link href="../css/fightingfantasy.css" rel="stylesheet" type="text/css" />
+    <title>Fighting Fantasy Game Manager</title>
 </head>
+
 <body>
     <div class="container-fluid" id="ctop">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#FFD709;">
-            <div class="navbar-header">
-                <a class="navbar-brand" style="color:black" href="../index.html">
-                    <img src="../images/fightingfantasy/ffw.png" width="32" height="32" class="d-inline-block align-top" alt="The Fighting Fantasy Logo"> FightingFantasy
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" style="color:black" href="#how-to-play">How to Use Fighting Fantasy GM</a></li>
-                    <li class="nav-item"><a class="nav-link" style="color:black" href="#release-notes">Release Notes</a></li>
-                    <li class="nav-item"><a class="nav-link" style="color:black" href="#source">Source Code</a>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a class="nav-link" style="color:black" href="../index.html">Home</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="frame" style="border:4px solid #FFD709">
+        
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../images/fightingfantasy/ffw.png" style="width:32px;height:32px;" class="navimgb align-top" />
+            <img src="../images/fightingfantasy/ffw.png" style="width:32px;height:32px;" class="navimgw align-top" />
+            &nbsp;Fighting Fantasy Game Manager
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="nav navbar-nav mr-auto">
+            
+            <li class="nav-item"><a class="nav-link" href="#how-to-use-fighting-fantasy-game-manager">How to Use Fighting Fantasy Game Manager</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="#release-notes">Release Notes</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="#source-code">Source Code</a></li>
+            
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        </ul>
+    </div>
+</nav>
+        <div class="frame">
             <div class="row">
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
-                    <h2 class="text-center">FightingFantasy Game Manager</h2>
-                    <h3 class="text-center"></h3>
-                    <h4 class="text-center">Latest Release: <a class="link" href="#release-notes">3.0.15</a></h4>
-                    <p>&nbsp;</p>
-                    <h3 id="about">About Fighting Fantasy Game Manager</h3>
-                    <p>This is a Swift 4 port (for macOS) of a much older Objective-C version written circa 2003 following the 20th
-                    anniversary of the publication of Penguin Books' Fighting Fantasy gamebook series and the revival of the books by Icon Books.
-                    The concept of a program to help players with their games &mdash; setting up characters, handling combat, managing their backpack
-                    contents, testing for Luck, etc. &mdash; goes back to a mid- to late 1990s Real Basic classic Mac OS version which, in turn, was a
-                    redevelopment of an original implementation for the
-                    <a class="link" href="https://smittytone.wordpress.com/2013/04/21/rip-dragon-32-1982-2013-my-first-8-bit-colour-microcomputer/">Dragon 32</a>
-                    written around 1985, while the gamebooks were still being published by Penguin's Puffin imprint.</p>
-                    <div class="row">
-                        <div class="col-6" align="left">
-                            <img class="img-fluid" src="../images/fightingfantasy/stats.png" width="340" style="border: 1px solid #999999" /><br />&nbsp;
-                        </div>
-                        <div class="col-6" align="right">
-                            <img class="img-fluid" src="../images/fightingfantasy/combat.png" width="340" style="border: 1px solid #999999" /><br />&nbsp;
-                        </div>
-                    </div>
-                    <p>Coding up the Swift version was solely about me learning Swift, and the recent, third revival of the gamebooks &mdash;
-                    this time by Scholastic &mdash; is entirely coincidental, but certainly not unwelcome. There's even some new ones out,
-                    <i>Port of Peril</i> and <i>Gates of Death</i>. I'll support it in the game manager if it makes use of new rules or features.</p>
-                    <p>Incidentally, not all of the gamebooks are supported, I'm afraid, only those I have played or plan to.
-                    So if you have a favourite that's not included, consider it a tutorial exercise: an opportunity to expand on the
-                    code included in this repo.</p>
-                    <p>Fighting Fantasy the property of Steve Jackson and Ian Livingstone, and reference to it here and in the code is on
-                    a notionally fair-use basis. Although my version includes imagery from the books, it is not included in the GitHub archive.
-                    Quite apart from any legal reasons, I owe it to Jackson, Livingstone and all the artists whose work gave me so much
-                    pleasure in the mid-1980s and again in the 2000s and 2010s, not to treat their work as a commodity to be downloaded.
-                    And as a published Fighting Fantasy writer...</p>
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/warlock.jpg" /></p>
-                    <p>You can find out more about the gamebooks at <a class="link" href="https://fightingfantasy.com">FightingFantasy.com</a>.</p>
-                    <p>For the application code, please visit the <a class="link" href="https://github.com/smittytone/FightingFantasy">GitHub repo
-                    page</a>.<br />&nbsp;</p>
-                    <h3 id="how-to-play">How to Use Fighting Fantasy Game Manager</h3>
-                    <p>Using the Game Manager should be intuitive: it replicates the Character and Monster Encounter Sheets found in the
-                    gamebooks, and provides game mechanics, including testing your Luck and Skill, and engaging in combat. There is a
-                    section for recording the items you have in your pack, and another for making notes. You can save your character for
-                    future sessions, and set a digital bookmark to record your current place in the gamebook.</p>
-                    <h3>Rolling a New Character</h3>
-                    <p>Select <b>New Character</b> from the <b>File</b> menu or <b>New Game</b> from the intro screen. Stats will be rolled for you,
-                    but you can always roll again! Select the gamebook you will be playing and, on that basis, which, if any, potions, provisions and
-                    Gold Pieces you start out with.</p>
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/newc.png" width="340" style="border: 1px solid #999999" /></p>
-                    <p>Click <b>OK</b> to continue.</p>
-                    <p>Choosing a gamebook sets up the Game Manager accordingly: some games have different features &mdash; magic in <i>Citadel of
-                    Chaos</i>, Fear and madness in <i>House of Hell</i> &mdash; and the Game Manager will present these as required. Look out too for
-                    the <b>Game</b> menu, which will contain game-specific actions that a given gamebook will offer on certain pages. Game Manager
-                    will tell you when the <b>Game</b> menu is enabled.</p>
-                    <h3>Playing the Game</h3>
-                    <p>The <b>Stats</b> tab provides a readout of your Skill, Stamina and Luck (and their initial values) and allows you to
-                    change these as required. It also lets you add and eat Provisions, add and spend Gold Pieces, and drink your Magic Potion, if you
-                    have one (and you have drinks left).</p>
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/stats.png" width="340" style="border: 1px solid #999999" /></p>
-                    <p>Click the blue dot in the top right corner to set the bookmark to the current gamebook entry. When
-                    you put your mouse point on the dot and no bookmark is set, the dot will show a plus sign. Click to set the bookmark:</p>
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/book1.png" width="340" style="border: 1px solid #999999" /></p>
-                    <p>When you set a bookmark, a tag appears &mdash; click this to change the bookmark. Click the blue dot again to clear the
-                    bookmark.</p>
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/book2.png" width="340" style="border: 1px solid #999999" /></p>
-                    <p>The <b>Tests</b> tab is where you <b>Test Your Luck</b>. If the gamebook asks you to roll two dice and compare the result to
-                    your Skill score, you can do that here too, using <b>Test Your Skill</b>. Apply modifiers to the rolls as indicated by the
-                    gamebook, eg. reduce your Skill roll by two. A pair of dice are included for more general one- or two-dice rolls.</p>
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/tests.png" width="340" style="border: 1px solid #999999" /></p>
-                    <h3>Fighting Monsters</h3>
-                    <p>The <b>Combat</b> tab is where you fight monsters &mdash; up to three at once. Enter each beast’s Skill and Stamina into the
-                    spaces provided and then select which ones will fight in the next combat round. This will be one monster for one-at-a-time battles
-                    or multiple monsters if you are fighting them all at once. Which monster you intend to try and hit is selected by clicking the
-                    <b>Target</b> box.
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/combat.png" width="340" style="border: 1px solid #999999" /></p>
-                    <p>Finally, select any modifiers you should make to your Attack Score or the monster’s attack roll, eg. +1 for a magic sword,
-                    or -2 because you have no weapon in hand, as directed by the gamebook or the weapon you are carrying.</p>
-                    <p>Click <b>Strike Now!</b> to launch your attack. After the combat round has been played out, you can click <b>Use Your Luck</b>
-                    if you wish to try and reduce damage done to you or increase the damage you have done to your target.</p>
-                    <h3>Your Possessions</h3>
-                    <p>The <b>Pack</b> tab allows you to track the items you have collected during your game. Click <b>Add Item</b> to add an item to
-                    your pack and then double-click on the text <code>New pack item</code> to enter the name of the
-                    item you have added. You may not find the exact item; just pick the one you prefer.</p>
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/pack.png" width="340" style="border: 1px solid #999999" /></p>
-                    <p>You can click on the <img src="../images/fightingfantasy/q.png" width="16"> icon to change the item’s image &mdash; now or at any time.</p>
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/items.png" width="340" style="border: 1px solid #999999"></p>
-                    <h3>Taking Notes</h3>
-                    <p>The <b>Notes</b> tab provides a simple jotter for you to record names, places and clues during the game. Just click and type.</p>
-                    <p align="center"><img class="img-fluid" src="../images/fightingfantasy/notes.png" width="340" style="border: 1px solid #999999" /></p>
-                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
-                    <hr />
-                    <h3 id="release-notes">Release Notes</h3>
-                    <h4>3.0.15</h4>
-                    <ul>
-                        <li class="rnli">Add <b>Yaztromo’s Aid</b> option to <b>Game</b> menu (<i>Port of Peril</i>).</li>
-                    </ul>
-                    <h4>3.0.14</h4>
-                    <ul>
-                        <li class="rnli">Fix Luck Test’s Luck score decrement.</li>
-                        <li class="rnli">Correctly select the icon (in the pack item popover) of the pack item clicked upon.</li>
-                    </ul>
-                    <h4>3.0.13</h4>
-                    <ul>
-                        <li class="rnli">Add the <b>Notes</b> tab.</li>
-                        <li class="rnli">Add control-click to bump stats to max.</li>
-                        <li class="rnli">Stop sheets blocking further sheets.</li>
-                        <li class="rnli">Fix character save bug.</li>
-                    </ul>
-                    <h4>3.0.12</h4>
-                    <ul>
-                        <li class="rnli">Re-set New Character game popup Sorcery! entries.</li>
-                        <li class="rnli">Add <i>Temple of Terror.</i></li>
-                        <li class="rnli">Refactor Stats tab image code.</li>
-                    </ul>
-                    <h4>3.0.11</h4>
-                    <ul>
-                        <li class="rnli">Add start menu.</li>
-                        <li class="rnli">Update graphics.</li>
-                        <li class="rnli">Improve About and Help sheet dismissals.</li>
-                    </ul>
-                    <h4>3.0.10</h4>
-                    <ul>
-                        <li class="rnli">Add splash screen at startup.</li>
-                        <li class="rnli">Better sheet handling.</li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
-                    <hr />
-                    <h3 id="source">Source Code</h1>
-                    <p>You can view Fighting Fantasy Game Manager’s source code
-                    <a class="link" href="https://github.com/smittytone/FightingFantasy">at GitHub</a>.</p>
-                    <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
-                    <hr />
-                </div>
-                <div class="col-1 col-lg-2">&nbsp;</div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; Tony Smith, 2014-19<br />Fighting Fantasy is copyright &copy; 2016-19, Steve Jackson and Ian Livingstone</small></p>
+                    <h2 class="text-center">Fighting Fantasy Game Manager</h2>
+                    <h3 class="text-center">A macOS program to help you play Fighting Fantasy Gamebooks</h3>
+                    <h4 class="text-center">Latest Release: <a class="link" href=
+    
+        "#release-notes"
+    
+>3.0.15</a></h4>
+<p>&nbsp;</p>
+                    
+                    <h3 id="about-fighting-fantasy-game-manager">About Fighting Fantasy Game Manager</h3>
+<p>This is a Swift 4 port (for macOS) of a much older Objective-C version written circa 2003 following the 20th anniversary of the publication of Penguin Books&rsquo; Fighting Fantasy gamebook series and the revival of the books by Icon Books. The concept of a program to help players with their games — setting up characters, handling combat, managing their backpack contents, testing for Luck, etc. — goes back to a mid- to late 1990s Real Basic classic Mac OS version which, in turn, was a redevelopment of an original implementation for the <a class="link" href="https://smittytone.wordpress.com/2013/04/21/rip-dragon-32-1982-2013-my-first-8-bit-colour-microcomputer/">Dragon 32</a> micro written around 1985, while the gamebooks were still being published by Penguin's Puffin imprint.</p>
+<div class="row">
+    <div class="col-6" align="left">
+        <img class="img-fluid" src="../images/fightingfantasy/stats.png" width="340" style="border: 1px solid #999999" /><br />&nbsp;
+    </div>
+    <div class="col-6" align="right">
+        <img class="img-fluid" src="../images/fightingfantasy/combat.png" width="340" style="border: 1px solid #999999" /><br />&nbsp;
+    </div>
+</div>
+<p>Coding up the Swift version was solely about me learning Swift, and the recent, third revival of the gamebooks — this time by Scholastic — is entirely coincidental, but certainly not unwelcome. There's even some new ones out, <em>Port of Peril</em> and <em>Gates of Death</em>. I'll support it in the game manager if it makes use of new rules or features.</p>
+<p>Incidentally, not all of the gamebooks are supported, I'm afraid, only those I have played or plan to. So if you have a favourite that's not included, consider it a tutorial exercise: an opportunity to expand on the code included in this repo.</p>
+<p>Fighting Fantasy the property of Steve Jackson and Ian Livingstone, and reference to it here and in the code is on a notionally fair-use basis. Although my version includes imagery from the books, it is not included in the GitHub archive. Quite apart from any legal reasons, I owe it to Jackson, Livingstone and all the artists whose work gave me so much pleasure in the mid-1980s and again in the 2000s and 2010s, not to treat their work as a commodity to be downloaded. And as a published Fighting Fantasy writer&hellip;</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/warlock.jpg" /></p>
+<p>You can find out more about the gamebooks at <a href="https://fightingfantasy.com/">FightingFantasy.com</a>.</p>
+<p>For the application code, please visit <a href="https://github.com/smittytone/FightingFantasy">the GitHub repo page</a>.</p>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+<h3 id="how-to-use-fighting-fantasy-game-manager">How to Use Fighting Fantasy Game Manager</h3>
+<p>Using the Game Manager should be intuitive: it replicates the Character and Monster Encounter Sheets found in the gamebooks, and provides game mechanics, including testing your Luck and Skill, and engaging in combat. There is a section for recording the items you have in your pack, and another for making notes. You can save your character for future sessions, and set a digital bookmark to record your current place in the gamebook.</p>
+<h3 id="rolling-a-new-character">Rolling a New Character</h3>
+<p>Select <strong>New Character</strong> from the <strong>File</strong> menu or <strong>New Game</strong> from the intro screen. Stats will be rolled for you, but you can always roll again! Select the gamebook you will be playing and, on that basis, which, if any, potions, provisions and Gold Pieces you start out with.</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/newc.png" width="340" style="border: 1px solid #999999" /></p>
+<p>Click <strong>OK</strong> to continue.</p>
+<p>Choosing a gamebook sets up the Game Manager accordingly: some games have different features — magic in <em>Citadel of Chaos</em>, Fear and madness in <em>House of Hell</em> — and the Game Manager will present these as required. Look out too for the <strong>Game</strong> menu, which will contain game-specific actions that a given gamebook will offer on certain pages. Game Manager will tell you when the <strong>Game</strong> menu is enabled.</p>
+<h3 id="playing-the-game">Playing the Game</h3>
+<p>The <strong>Stats</strong> tab provides a readout of your Skill, Stamina and Luck (and their initial values) and allows you to change these as required. It also lets you add and eat Provisions, add and spend Gold Pieces, and drink your Magic Potion, if you have one (and you have drinks left).</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/stats.png" width="340" style="border: 1px solid #999999" /></p>
+<p>Click the blue dot in the top right corner to set the bookmark to the current gamebook entry. When you put your mouse point on the dot and no bookmark is set, the dot will show a plus sign. Click to set the bookmark:</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/book1.png" width="340" style="border: 1px solid #999999" /></p>
+<p>When you set a bookmark, a tag appears — click this to change the bookmark. Click the blue dot again to clear the bookmark:</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/book2.png" width="340" style="border: 1px solid #999999" /></p>
+<p>The <strong>Tests</strong> tab is where you <strong>Test Your Luck</strong>. If the gamebook asks you to roll two dice and compare the result to your Skill score, you can do that here too, using <strong>Test Your Skill</strong>. Apply modifiers to the rolls as indicated by the gamebook, eg. reduce your Skill roll by two. A pair of dice are included for more general one- or two-dice rolls.</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/tests.png" width="340" style="border: 1px solid #999999" /></p>
+<h3 id="fighting-monsters">Fighting Monsters</h3>
+<p>The <strong>Combat</strong> tab is where you fight monsters — up to three at once. Enter each beast’s Skill and Stamina into the spaces provided and then select which ones will fight in the next combat round. This will be one monster for one-at-a-time battles or multiple monsters if you are fighting them all at once. Which monster you intend to try and hit is selected by clicking the <strong>Target</strong> box.</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/combat.png" width="340" style="border: 1px solid #999999" /></p>
+<p>Finally, select any modifiers you should make to your Attack Score or the monster’s attack roll, eg. +1 for a magic sword, or -2 because you have no weapon in hand, as directed by the gamebook or the weapon you are carrying.</p>
+<p>Click <strong>Strike Now!</strong> to launch your attack. After the combat round has been played out, you can click <strong>Use Your Luck</strong> if you wish to try and reduce damage done to you or increase the damage you have done to your target.</p>
+<h3 id="your-possessions">Your Possessions</h3>
+<p>The <strong>Pack</strong> tab allows you to track the items you have collected during your game. Click <strong>Add Item</strong> to add an item to your pack and then double-click on the text <code>New pack item</code> to enter the name of the item you have added. You may not find the exact item; just pick the one you prefer.</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/pack.png" width="340" style="border: 1px solid #999999" /></p>
+<p>You can click on the <img src="../images/fightingfantasy/q.png" width="16" /> icon to change the item’s image — now or at any time.</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/items.png" width="340" style="border: 1px solid #999999"></p>
+<h3 id="taking-notes">Taking Notes</h3>
+<p>The <strong>Notes</strong> tab provides a simple jotter for you to record names, places and clues during the game. Just click and type.</p>
+<p align="center"><img class="img-fluid" src="../images/fightingfantasy/notes.png" width="340" style="border: 1px solid #999999" /></p>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+<h3 id="release-notes">Release Notes</h3>
+<ul>
+<li>3.0.15
+<ul>
+<li>Add <strong>Yaztromo’s Aid</strong> option to <strong>Game</strong> menu (<em>Port of Peril</em>).</li>
+</ul>
+</li>
+<li>3.0.14
+<ul>
+<li>Fix Luck Test’s Luck score decrement.</li>
+<li>Correctly select the icon (in the pack item popover) of the pack item clicked upon.</li>
+</ul>
+</li>
+<li>3.0.13
+<ul>
+<li>Add the <strong>Notes</strong> tab.</li>
+<li>Add control-click to bump stats to max.</li>
+<li>Stop sheets blocking further sheets.</li>
+<li>Fix character save bug.</li>
+</ul>
+</li>
+<li>3.0.12
+<ul>
+<li>Re-set New Character game popup <em>Sorcery!</em> entries.</li>
+<li>Add <em>Temple of Terror</em>.</li>
+<li>Refactor Stats tab image code.</li>
+</ul>
+</li>
+<li>3.0.11
+<ul>
+<li>Add start menu.</li>
+<li>Update graphics.</li>
+<li>Improve About and Help sheet dismissals.</li>
+</ul>
+</li>
+<li>3.0.10
+<ul>
+<li>Add splash screen at startup.</li>
+<li>Better sheet handling.</li>
+</ul>
+</li>
+</ul>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+<h3 id="source-code">Source Code</h3>
+<p>You can view Fighting Fantasy Game Manager’s source code <a href="https://github.com/smittytone/FightingFantasy">at GitHub</a>.</p>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+
                 </div>
             </div>
+            <div class="col">
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2014-19, Tony Smith</small></p>
+</div>
+            
+                <p class="text-center"><small>Fighting Fantasy is copyright © 2016-19, Steve Jackson and Ian Livingstone.</small></p>
+            
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../scripts/retina.min.js"></script>
     <script>

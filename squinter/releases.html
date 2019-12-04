@@ -1,498 +1,563 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="Description" content="Tony Smith's software library: Squinter, a macOS-based code development tool for the Electric Imp platform" />
+    <meta name="Description" content="Tony Smith's software library: Squinter Release Notes, a ‘Squirrel Integrator’" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
     <link href="../images/favicons/196.png" rel="shortcut icon" />
-    <link href="../images/favicons/squinter/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="../css/squinter.css" rel="stylesheet" type="text/css" />
     <title>Squinter Release Notes</title>
-    <style>
-        body {color:black;background-color:#EEEEEE;}
-        p  {font-family:Abel,sans-serif;font-size:16px;}
-        h1 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
-        h2 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:33px;}
-        h3 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:22px;}
-        .h3under {margin-bottom:2rem;}
-        hr {border-color:#6E9B3D;}
-        li {color:black;font-family:Abel,sans-serif;font-size:16px;}
-        a  {color:#6E9B3D;padding:2px;}
-        .link:hover {color:#EEEEEE;background-color:#6E9B3D;text-decoration:none;padding:2px;border-radius:5px;}
-        .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
-        .container-fluid {max-width:84%;}
-        .nav-item {font-family:Abel,sans-serif;}
-        .navbar-brand{font-family:Abel,sans-serif;}
-        .navbar-toggler {border:none;outline:none;}
-        .linktext {font-size:12px;}
-        .navcol {background-color:#6E9B3D;}
-        .frame {border:4px solid #6E9B3D;}
-        .change-badge {color:white;background-color:#0366d6;display:d-inline-block;
-        flex:0 0 68px;font-size:13px;border-radius:5px;margin-right:12px;padding:2px;text-transform:uppercase;text-align:center;}
-        .change-badge-new {background-color:#6E9B3D;}
-        .change-badge-improved {background-color:#4E65AE;}
-        .change-badge-fixed {background-color:#B01C17;}
-        .flex-items-start {align-items:flex-start !important}
-        .imgw {display:none;}
-
-        @media only screen and (max-width: 1026px) {
-            .container-fluid {padding:0px;max-width:90%;}
-        }
-
-        @media only screen and (max-width: 780px) {
-            .container-fluid {padding:0px;max-width:100%;}
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {color:white;background:#222222;}
-            h1 {color:rgb(124, 189, 54);}
-            h2 {color:rgb(124, 189, 54);}
-            h3 {color:white;}
-            h4 {color:white;}
-            hr {border-color:rgb(124, 189, 54);}
-            li {color:white;}
-            a  {color:rgb(125, 202, 43);}
-            kbd {background-color:rgb(124, 189, 54);}
-            .link:hover {color:black;background-color:rgb(124, 189, 54);}
-            .colo:hover {background-color:#222222;}
-            .linktext {color:rgb(124, 189, 54);}
-            .navcol {background-color:rgb(124, 189, 54);}
-            .frame {border:4px solid rgb(124, 189, 54);}
-            .change-badge {color:white;}
-            .imgw {display:inline-block;}
-            .imgb {display:none;}
-        }
-    </style>
 </head>
 <body>
-    <div class="container-fluid" id="top">
-        <nav class="navbar navbar-expand-lg navbar-dark navcol">
-            <div class="navbar-header">
-                <a class="navbar-brand" style="color:white" href="index.html">
-                    <img src="../images/sqw.png" width="32" height="32" class="d-inline-block align-center" alt="Squinter logo" /> Squinter
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Back to Main Squinter Page</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                </ul>
-            </div>
-        </nav>
+    <div class="container-fluid" id="ctop">
+        
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">
+            <img src="../images/squinter/sqw.png" style="width:32px;height:32px;" class="navimgb align-top" />
+            <img src="../images/squinter/sqw.png" style="width:32px;height:32px;" class="navimgw align-top" />
+            &nbsp;Squinter
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Back to Main Squinter Page</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        </ul>
+    </div>
+</nav>
         <div class="frame">
-            <div class="row" >
+            <div class="row">
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
-                    <h1 class="text-center">Squinter Release Notes</h1>
-                    <h3 class="text-center">&#8216;A Squirrel Integrator&#8217;<br />Latest Release: 2.3.132 (11 November 2019)</h3>
+                    <h2 class="text-center">Squinter Release Notes</h2>
+                    <h3 class="text-center">A ‘Squirrel Integrator’</h3>
+                    <h3 class="text-center">Latest Release: 2.3.132 (12 November 2019)</h3>
                     <p>&nbsp;</p>
-                    <h3 class="h3under">2.3.132 (11 November 2019)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-new">new</div>
-                            <div class="change-description">Squirrel .nut file QuickLook preview under macOS 10.15 Catalina.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Squinter now presents agent URLs as they have been delivered by the impCentral API,
-                            rather than URLs generated from the agent ID and a fixed string.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Make sure a device’s renamed Device Group is indicated in the Inspector.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Importing an old project will no longer attempt to update device groups that don’t exist.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Correct Squinter version number shown in commit message boilerplate and
-                            removed redundant timestamp.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <h3 class="h3under">2.3.131 (5 September 2019)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-new">new</div>
-                            <div class="change-description">Squinter now supports impCentral’s device group
-                            <a href="https://developer.electricimp.com/tools/impcentral/environmentvariables#user-defined-environment-variables">user-defined environment variables</a>. Open a project, select one of its device groups and click on <b>Update Device Group’s Environment Variables...</b> in the <b>Device Groups</b> menu to view and amend the group’s variables.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">Improved</div>
-                            <div class="change-description">The Inspector panel’s tab switch buttons are now... better (more Xcode-like).</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Removed Azure impCloud login (no longer supported by Electric Imp).</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <h3 class="h3under">2.3.130 (14 August 2019)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-new">new</div>
-                            <div class="change-description">You can now select <b>Log All Devices</b> from the <b>Device Groups</b> menu to start logging from
-                                all of the devices assigned to that group, if there are any and they're not logging already.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-new">new</div>
-                            <div class="change-description">The <b>Device</b> has a new option, <b>Close All Log Streams</b>, which halts logging from all devices whose logs
-                                are currently being streamed.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">The Inspector panel now presents folder icons alongside code filenames &mdash; click on it
-                            to reveal the file in Finder.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Squinter now has offline help, missing since version 2.0.0. Hold down <kbd>Opt</kbd> and click on the <b>Help</b> menu to access the offline help view; otherwise you will be taken to the online help.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Correctly show and hide the <b>Previous Device Group</b> and <b>Next Device Group</b> <b>Device Groups</b> menu
-                                items when there are more than one device groups in the current project.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />
-                    <h3 class="h3under">2.3.129 (1 June 2019)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">The impCentral API now allows you to assign unassigned or development devices directly to
-                            a Test Production device group, thus simulating the factory blessing flow, so Squinter now supports this too.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Support Apple app notarisation.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">New <b>Sync Project</b> toolbar item.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">New <b>New Device Group</b>, <b>List Commits</b>, <b>Refresh Device List</b>, <b>Print</b> toolbar item icons.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Correctly clear a recorded device ID when the user clears the Device Find dialog table selection.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fixed a bug causing the recent files list sometimes to have more items than the number chosen by the user.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Correct reporting when attempting to check Electric Imp library versions when the user is not logged in.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Don't display the same network error multiple times.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fixed a number of UI typos.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />
-                    <h3 class="h3under">2.3.128 (1 May 2019)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-new">new</div>
-                            <div class="change-description">Support for the impCentral’s new DUT and Test DUT device groups:<br />&bull; Create (Test) DUT device groups;<br />&bull; Set (Test) DUT device groups as (Test) Fixture device group targets, as required for (Test) Fixture device group creation.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-new">new</div>
-                            <div class="change-description">Sync local Projects with impCloud Products:<br />&bull; Identify and download online-only device groups to a Project;<br />&bull; Quickly add auto-created (Test) DUT device groups to your Project; <br />&bull; Identify and upload orphaned Project device groups; <br />&bull; Upload local-only projects.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Squinter now prevents you from attempting to create Device Groups that you may lack account-level
-                            permission to create, rather than just logging an error as before.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">You can now search for devices using agent ID (previously just device ID and MAC).</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">You are now warned when trying to perform certain actions on an unsaved project.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Downloading a Product as a Project no longer saves the files immediately, but you will be warned before closing/quitting if you have not done so.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">The Inspector now remembers which device groups are expanded or collapsed during a session.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">No longer lists production devices among development devices.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fix a crash caused when the API returns a device record with no <code>device_online</code> key.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">The Inspector now respects your file path display preference.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Creating a project with a new product correctly updates the Inspector.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Newly downloaded products appear correctly in the Inspector.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Deleting a product now clears its deleted device groups' IDs from project device groups records.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">A device group's files will no longer continue to be watched for changes if the device group is deleted.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />
-                    <h3 class="h3under">2.2.127 (8 March 2019)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-new">new</div>
-                            <div class="change-description">New <a href="index.html#lookup" class="link">device look-up facility</a>: locate named devices in your account by entering their device ID or MAC address. New device look-up facility: locate named devices in your account by entering their device ID or MAC address.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">The Minimum Deployment dialog now shows commit date, time and SHA.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Update to Sparkle’s EdDSA encryption.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Selecting&nbsp;<b>Show Help</b>&nbsp;now takes you to the Squinter web site.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Now using a better feedback/report a problem system.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Stop Inspector showing link icons for devices with no agents.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fix minor layout issues.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fixed a crash when displaying devices with sleeping agents in the Inspector.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />
-                    <h3 class="h3under">2.2.126 (7 December 2018)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Squinter 2.2 requires macOS 10.12 or above (versions 2.0. and 2.1 required macOS 10.11 or above).</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">The Inspector panel is now integrated into the main window for a more modern look.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Add logging information to the Inspector.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">When a shared Product is selected, the Shared Products menu item is marked to aid visual navigation.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Make Inspector link button graphics work better with Mojave Dark Mode.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fixed a crash experienced when downloading a shared product.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fixed an issue in which devices were incorrectly added to the current device group.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fixed an issue in which creating a new project failed to update the Device Groups menu.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fixed the incorrect selection of a device after changing projects.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Ensure the Inspector Project view is cleared when the last open project is closed.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />
-                    <h3 class="h3under">2.1.125 (26 October 2018)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Begin using Electric Imp as the source of Electric Imp library version numbers.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Better logging of updated included libraries and files in source code.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Make Inspector link button graphics work better with Mojave Dark Mode.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">A shared Product won’t be selected at login if there is an owned Product available to be selected.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Halting a device’s log stream no longer causes other devices’ streams to change colour.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Switching accounts no longer causes the Products of the account you’ve just logged into to be displayed as shared Products.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Squinter will now correctly begin watching a Device Group’s new source code file(s) when the existing one(s) are replaced (and stop watching the old files).</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Correctly mark projects with updated imported libraries and files as in need of saving.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />
-                    <h3 class="h3under">2.1.124 (29 September 2018)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Support for macOS Mojave's Dark Mode.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Add a means for users to provide feedback and report issues.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Better notification of which device will be selected when a Device Group is opened or selected.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">Improved</div>
-                            <div class="change-description">Don't log the fact that devices' statuses are being updated automatically when it happens.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">Improved</div>
-                            <div class="change-description">Make it easier login to alternative accounts (ie. accounts other than the saved, 'primary' account).</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">Improved</div>
-                            <div class="change-description">Improved commit list readout.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Fix Device Group device selection.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Correct display of device log colours.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />
-                    <h3 class="h3under">2.0.123 (29 August 2018)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Support for impCentral multi-factor authentication.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Add Command-click action to expand or collapse all Inspector items.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Clearer notification when login credentials are rejected.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">Improved</div>
-                            <div class="change-description">Better logout handling.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">Improved</div>
-                            <div class="change-description">Support eight user-definable colours for device logs. <b>Warning</b> This will reset any colour preferences you already have.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Make sure updated device info (eg. on auto-refresh) is reflected by the Inspector.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />
-                    <h3 class="h3under">2.0.122 (17 July 2018)</h3>
-                    <ul class="list-style-none change-log">
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Project Inspector now displays as an outline, allowing you to close or expand sections for clarity.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Add RSSI readout to Device Inspector.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-improved">improved</div>
-                            <div class="change-description">Refactor some key code components.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Edits to Device Groups other than Development Device Groups are no longer rejected by the server.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">New Projects now appear correctly in the Project Inspector.</div>
-                        </li>
-                        <li class="d-flex flex-items-start mb-2">
-                            <div class="change-badge change-badge-fixed">fixed</div>
-                            <div class="change-description">Show correct log font when double-clicking a file or loading from the Dock Tile's menu.</div>
-                        </li>
-                    </ul>
-                    <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
-                    <hr />
+                    
+                        
+                            <h3 class="h3under">2.3.132 (11 November 2019)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-new">new</div>
+                                        <div class="change-description">Squirrel .nut file QuickLook preview under macOS 10.15 Catalina.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Squinter now presents agent URLs as they have been delivered by the impCentral API, rather than URLs generated from the agent ID and a fixed string.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Make sure a device’s renamed Device Group is indicated in the Inspector.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.3.131 (5 September 2019)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-new">new</div>
+                                        <div class="change-description">Squinter now supports impCentral’s device group user-defined environment variables. Open a project, select one of its device groups and click Update Device Group’s Environment Variables... in the Device Groups menu to view and amend the group’s variables.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">The Inspector panel’s tab switch buttons are now... better (more Xcode-like).</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Removed Azure impCloud login (no longer supported by Electric Imp)</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.3.130 (14 August 2019)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-new">new</div>
+                                        <div class="change-description">You can now select Log All Devices from the Device Groups menu to start logging from all of the devices assigned to that group, if there are any and they’re not logging already.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-new">new</div>
+                                        <div class="change-description">The Device menu has a new option, Close All Log Streams, which halts logging from all devices whose logs are currently being streamed.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">The Inspector panel now presents folder icons alongside code filenames — click on it to reveal the file in Finder.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Squinter now has offline help, missing since version 2.0.0. Hold down Opt and click on the Help menu to access the offline help view; otherwise you will be taken to the online help.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Correctly show and hide the Previous Device Group and Next Device Group Device Groups menu items when there are more than one device groups in the current project.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.3.129 (1 June 2019)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">The impCentral API now allows you to assign unassigned or development devices directly to a Test Production device group, thus simulating the factory blessing flow, so Squinter now supports this too.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Support Apple app notarisation.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Add a new Sync Project toolbar item.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">New New Device Group, List Commits, Refresh Device List, Print toolbar item icons.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Correctly clear a recorded device ID when the user clears the Device Find dialog table selection.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fixed a bug causing the recent files list sometimes to have more items than the number chosen by the user.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Correct reporting when attempting to check Electric Imp library versions when the user is not logged in.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Don’t display the same network error multiple times.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fixed a number of UI typos.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.3.128 (1 May 2019)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-new">new</div>
+                                        <div class="change-description">Support for impCentral’s new DUT and Test DUT device groups.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-new">new</div>
+                                        <div class="change-description">Sync local Projects with impCloud Products: identify and download online-only device groups to a Project; quickly add auto-created (Test) DUT device groups to your Project; identify and upload orphaned Project device groups; upload local-only projects.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Squinter now prevents you from attempting to create Device Groups that you may lack account-level permission to create, rather than just logging an error as before.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">You can now search for devices using agent ID (previously just device ID and MAC).</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">You are now warned when trying to perform certain actions on an unsaved project..</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Downloading a Product as a Project no longer saves the files immediately, but you will be warned before closing/quitting if you have not done so.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">The Inspector now remembers which device groups are expanded or collapsed during a session.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Production devices are no longer listed among development devices.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fix a crash caused when the API returns a device record with no device_online key.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">The Inspector now respects your file path display preference.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Creating a project with a new product correctly updates the Inspector.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Newly downloaded products appear correctly in the Inspector.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Deleting a product now clears its deleted device groups&#39; IDs from project device groups records.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">A device group’s files will no longer continue to be watched for changes if the device group is deleted.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.2.127 (8 March 2019)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-new">new</div>
+                                        <div class="change-description">New device look-up facility: locate named devices in your account by entering their device ID or MAC address.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">The Minimum Deployment dialog now shows extra information: commit date, time and SHA.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Update to make use of Sparkle’s EdDSA encryption.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Selecting Show Help now takes you to the Squinter web site.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Now using a better feedback/report a problem system.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Stop Inspector showing link icons for devices with no agents.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Correct reporting when attempting to check Electric Imp library versions when the user is not logged in.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fixed a crash when displaying devices with sleeping agents in the Inspector.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fix minor layout issues.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.2.126 (7 December 2018)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Squinter 2.2 requires macOS 10.12 or above (versions 2.0. and 2.1 required macOS 10.11 or above).</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">The Inspector panel is now integrated into the main window for a more modern look.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Add logging information to the Inspector.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">When a shared Product is selected, the Shared Products menu item is marked to aid visual navigation.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Inspector link button graphics work better with Mojave Dark Mode.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fixed a crash experienced when downloading a shared product.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fixed an issue in which devices were incorrectly added to the current device group.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fixed an issue in which creating a new project failed to update the Device Groups menu.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fixed the incorrect selection of a device after changing projects.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Ensure the Inspector Project view is cleared when the last open project is closed.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.2.125 (26 October 2018)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Use Electric Imp as the source of Electric Imp library version numbers.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Provide better logging of updated included libraries and files in source code.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Inspector link button graphics now work better with Mojave Dark Mode.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">A shared Product won’t be selected at login if there is an owned Product available to be selected.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Halting a device’s log stream no longer causes other devices’ streams to change colour.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Switching accounts no longer causes the Products of the account you’ve just logged into to be displayed as shared Products.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Squinter will now correctly begin watching a Device Group’s new source code file(s) when the existing one(s) are replaced (and stop watching the old files).</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Correctly mark projects with updated imported libraries and files as in need of saving.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.1.124 (29 September 2018)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Support macOS Mojave&#39;s Dark Mode.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Add a means for users to provide feedback and report issues.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Provide better notification of which device will be selected when a Device Group is opened or selected.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Don&#39;t log the fact that devices&#39; statuses are being updated automatically when it happens.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Make it easier login to alternative accounts (ie. accounts other than the saved, &#39;primary&#39; account).</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Provide a better commit list readout.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Fix Device Group device selection.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Correct display of device log colours.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.0123 (29 August 2018)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Support impCentral multi-factor authentication.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Add Command-click action to expand or collapse all Inspector items.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Issue a clearer notification when login credentials are rejected.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Provide better logout handling.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Support eight user-definable colours for device logs. This will reset any colour preferences you already have.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Make sure updated device info (eg. on auto-refresh) is reflected by the Inspector.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                            <h3 class="h3under">2.0122 (17 July 2018)</h3>
+                            
+                                <ul class="list-style-none change-log">
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Project Inspector now displays as an outline, allowing you to close or expand sections for clarity</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Add RSSI readout to Device Inspector.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-improved">improved</div>
+                                        <div class="change-description">Refactor some key code components.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">Edits to Device Groups other than Development Device Groups are no longer rejected by the server.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">New Projects now appear correctly in the Project Inspector.</div>
+                                    </li>
+                                
+                                    <li class="d-flex flex-items-start mb-2">
+                                        <div class="change-badge change-badge-fixed">fixed</div>
+                                        <div class="change-description">New Projects now appear correctly in the Project Inspector.</div>
+                                    </li>
+                                
+                                </ul>
+                            
+                            <p class="linktext" align="right"><a class="link" href="#top">Back to the Top</a></p>
+                            <hr />
+                        
+                    
+                    
                 </div>
-                <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; Tony Smith, 2014-19</small></p>
-                </div>
-            </div>
+            <div class="col">
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2014-19, Tony Smith</small></p>
+</div>
         </div>
     </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../scripts/retina.min.js"></script>
     <script>
