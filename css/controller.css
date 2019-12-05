@@ -4,8 +4,8 @@ h2 {color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;p
 h3 {color:#B01C17;font-family:Abel,sans-serif;font-size:22px;}
 h4 {color:#B01C17;font-family:Abel,sans-serif;font-size:18px;}
 hr {border-color:#B01C17;}
-th {color:#B01C17;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
-td {color:black;font-family:Abel,sans-serif;font-size:16px;}
+th {color:white;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;padding: 10px;background-color: #B01C17;border: 1px solid black;}
+td {color:black;font-family:Abel,sans-serif;font-size:16px;vertical-align: middle;padding: 10px;background-color: rgb(207, 207, 207);border: 1px solid black;}
 li {color:black;font-family:Abel,sans-serif;font-size:16px;}
 .rnli {list-style:disc;}
 a  {color:#B01C17;padding:2px;}
@@ -43,10 +43,10 @@ a  {color:#B01C17;padding:2px;}
     h4 {color:white;}
     hr {border-color:#FFFFFF;}
     a  {color:red;}
-    td {color:white;}
-    th {color:#B01C17;}
     li {color:white;}
     kbd {background-color:#B01C17;}
+    th {border: 1px solid white;}
+    td {border: 1px solid white;}
     .link:hover {color:#B01C17;background-color:white;}
     .colo:hover {background-color:#222222;}
     .linktext {color:white;}
