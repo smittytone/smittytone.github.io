@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="Description" content="Tony Smith's software library: Controller, an iOS and watchOS combo for controlling Internet of Things projects" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
+    <link href="../images/favicons/196.png" rel="shortcut icon" />
+    <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="../css/controller.css" rel="stylesheet" type="text/css" />
+    <title>Controller</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="ctop">
+        
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../images/controller/cw.png" style="width:32px;height:32px;" class="navimgb align-top" />
+            <img src="../images/controller/cw.png" style="width:32px;height:32px;" class="navimgw align-top" />
+            &nbsp;Controller
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="nav navbar-nav mr-auto">
+            
+            <li class="nav-item"><a class="nav-link" href="#how-to-use-controller">How To Use Controller</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="#release-notes">Release Notes</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="#source-code">Source Code</a></li>
+            
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        </ul>
+    </div>
+</nav>
+        <div class="frame">
+            <div class="row">
+                <div class="col-1 col-lg-2">&nbsp;</div>
+                <div class="col-10 col-lg-8">
+                    <h2 class="text-center">Controller</h2>
+                    <h3 class="text-center">An iOS and watchOS combo for controlling Internet of Things projects</h3>
+                    <h4 class="text-center">Latest Release: <a class="link" href=
+    
+        "#release-notes"
+    
+>1.1.0</a></h4>
+<p>&nbsp;</p>
+                    
+                    <h3 id="about-controller">About Controller</h3>
+<p>Controller is an iOS and watchOS app combo that allows you to control Electric Imp Platform-based Internet of Things devices from your Apple Watch.</p>
+<h3 id="how-to-use-controller">How To Use Controller</h3>
+<p>Controller’s iPhone app provides a means to add devices — enter the device’s agent ID and a name — and sync the list of devices to the Watch app, which will provide an appropriate UI for each type of device. As such it is currently limited to the device types that I use, but the design is modular, so others can create UIs and <em>WKInterfaceController</em> objects of their own to personalise the app for their use.</p>
+<p>Or simply take the code apart and use it as the foundation for a completely different UI — the choice is yours.</p>
+<h3 id="design">Design</h3>
+<h4 id="the-iphone-app">The iPhone App</h4>
+<p>The Watch app’s iPhone-based companion collates your imp-enabled devices and syncs them with the Watch. Tap ‘Edit’ to add a new device and then select it in order to give it a convenient name and to enter its agent ID. Tap ‘Get Device Data’ to check what app the device is running and whether it is supported by Controller. Click ‘Devices’ to go back when you’re done.</p>
+<div class="row">
+    <div class="col-6" align="left">
+        <img class="img-fluid" src="../images/controller/IMG_0634.jpg" width="340" style="border: 1px solid #999999" /><br />&nbsp;
+    </div>
+    <div class="col-6" align="right">
+        <img class="img-fluid" src="../images/controller/IMG_0637.jpg" width="340" style="border: 1px solid #999999" /><br />&nbsp;
+    </div>
+</div>
+<p>Typically, the iOS app will only be used to add devices. An end-user should not need to use it too often.</p>
+<p>Each device is listed with a switch which can be used to sync that device with the Watch app, either to add or remove it.</p>
+<p>You can update the Watch separately by tapping <strong>Actions</strong> and then <strong>Update Watch</strong>. This is also useful if you re-order the list of devices. Re-ordering is activated by tapping <strong>Actions</strong> and then <strong>Re-order Device List</strong>.</p>
+<div class="row">
+    <div class="col-6" align="left">
+        <img class="img-fluid" src="../images/controller/IMG_0635.jpg" width="340" style="border: 1px solid #999999" /><br />&nbsp;
+    </div>
+    <div class="col-6" align="right">
+        <img class="img-fluid" src="../images/controller/IMG_0636.jpg" width="340" style="border: 1px solid #999999" /><br />&nbsp;
+    </div>
+</div>
+<p>The app stores the current list of devices across app restarts and relaunches.</p>
+<p>The list is synchronised with the Watch by sending a string of all the devices to appear on the Watch: device name, agent ID and UUID fields are separated by newlines; device records are separated by two newlines. The string is absolute: it contains all the devices to appear on the Watch from the point it is sent; the Watch app recreates its own list from the string.</p>
+<p>The app contains a file, <code>apps.json</code>, which lists the apps’ UUIDs and human-readable names as an array of objects within the <em>apps</em> object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{ <span style="color:#f92672">&#34;apps&#34;</span>: [
+    { <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;&lt;UUID_1&gt;&#34;</span>,
+      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;APP_NAME_1&#34;</span> },
+    { <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;&lt;UUID_2&gt;&#34;</span>,
+      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;&lt;APP_NAME_2&#34;</span> } ]
+}
+</code></pre></div><p>This file is read at launch and used to determine which icons to display based upon the UUID provided by the app’s Agent code. All local app data look-ups used this file’s contents. As such it provides a single place to update app details, though please note that the app icon’s filename should match the app’s name in lower case, for example:</p>
+<table>
+<thead>
+<tr>
+<th>App Name</th>
+<th>App icon name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>myApp</td>
+<td>myapp(.png/jpg/tif)</td>
+</tr>
+</tbody>
+</table>
+<p>You should embed the same <code>apps.json</code> in both your iOS and Watch app bundles. A sample file is included in this repo.</p>
+<h4 id="the-watch-app">The Watch App</h4>
+<p>The Watch app presents a list of available devices. Selecting any of these presents a standard UI customised for the application the device is running. The device-specific UI presents the name of the device; its application type; a series of controls relevant to the device; and finally a button which takes the user back to the device list (easier than tapping on the tiny title bar).</p>
+<p>The <em>WKInterfaceController</em> instance which manages the device-specific UI is designed to hide the device controls until it has received status information from the the device’s agent — see below. Once this information is received, the UI is unhidden and  is ready for use. The <em>WKInterfaceController</em> instance presents a flashing ‘traffic light’ icon to inform the user that this process is taking place.</p>
+<h4 id="squirrel">Squirrel</h4>
+<p>The Electric Imp application component of the design makes use of the <a href="https://developer.electricimp.com/libraries/utilities/rocky">Rocky library</a> to serve standard application information at <code>/info</code>, and a device status (online or offline) information at <code>/status</code>. These and other application control endpoints can of course be modified as required — just update the appropriate section of the relevant <em>WKInterfaceController</em> instance.</p>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+<h2 id="release-notes">Release Notes</h2>
+<ul>
+<li>1.1.0 <em>4 June 2019</em>
+<ul>
+<li>Add support for multiple Apple Watches.</li>
+<li>Update the iOS app UI:
+<ul>
+<li>Add a new device without editing the table by adding <strong>Add</strong> button to nav bar.</li>
+<li>Add <strong>Edit Device List</strong> option to <strong>Actions</strong> menu.</li>
+<li>Don't indent device list when re-ordering it.</li>
+<li>Hide installation switch during device list re-ordering and editing.</li>
+<li>Disable <strong>Update Watch</strong> action when watchOS app not yet installed.</li>
+</ul>
+</li>
+<li>Device list’s installation switch should now be correctly enabled/disabled at start-up.</li>
+<li>Fix support for some of my imp apps whose APIs recently changed.</li>
+</ul>
+</li>
+<li>1.0.2 <em>8 May 2019</em>
+<ul>
+<li>Show amber icon during connection attempts.</li>
+<li>Fix minor Swift issues identified by compiler.</li>
+<li>Remove images from repository.</li>
+</ul>
+</li>
+<li>1.0.1 <em>14 November 2018</em>
+<ul>
+<li>Enable 3D Touch shortcut to app’s GitHub page.</li>
+<li>Tidy repo and tweak code:
+<ul>
+<li>Remove auto-increment on build number.</li>
+<li>Remove iOS app, watchOS app and imp app icon art.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>1.0.0 <em>3 October 2018</em>
+<ul>
+<li>Initial release.</li>
+</ul>
+</li>
+</ul>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+<h2 id="source-code">Source Code</h2>
+<p>You can view Controller’s source code <a class="link" href="https://github.com/smittytone/Controller">at GitHub</a>.</p>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+
+                </div>
+            </div>
+            <div class="col">
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2014-19, Tony Smith</small></p>
+</div>
+            
+        </div>
+    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../scripts/retina.min.js"></script>
+    <script>
+        $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
+            }
+        });
+    </script>
+</body>
+</html>
