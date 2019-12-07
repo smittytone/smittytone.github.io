@@ -107,6 +107,19 @@ Troubleshooting If it appears that either Previewer or Thumbnailer are not worki
     </item>
     
     <item>
+      <title>Ski</title>
+      <link>https://smittytone.github.io/ski/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.github.io/ski/</guid>
+      <description>About Ski Some Python 3 silliness.
+Press [Space] to play&amp;hellip;
+Back to the Top
+Release Notes  1.0.0 30 March 2019  Initial release.    Back to the Top
+Source Code You can view Ski’s source code at GitHub.</description>
+    </item>
+    
+    <item>
       <title>Squinter</title>
       <link>https://smittytone.github.io/squinter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
