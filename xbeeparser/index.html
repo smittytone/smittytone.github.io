@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="Description" content="Tony Smith's software library: XBeeParser, a utility to decode data packets sent to or received by Digi XBee modules" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
+    <link href="../images/favicons/196.png" rel="shortcut icon" />
+    <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="../css/xbeeparser.css" rel="stylesheet" type="text/css" />
+    <title>XBeeParser</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="ctop">
+        
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../images/xbeeparser/xbpb.png" style="width:32px;height:32px;" class="navimgb align-top" />
+            <img src="../images/xbeeparser/xbpb.png" style="width:32px;height:32px;" class="navimgw align-top" />
+            &nbsp;XBeeParser
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="nav navbar-nav mr-auto">
+            
+            <li class="nav-item"><a class="nav-link" href="#how-to-use-xbeeparser">How To Use XBeeParser</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="#release-notes">Release Notes</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="#source-code">Source Code</a></li>
+            
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        </ul>
+    </div>
+</nav>
+        <div class="frame">
+            <div class="row">
+                <div class="col-1 col-lg-2">&nbsp;</div>
+                <div class="col-10 col-lg-8">
+                    <h2 class="text-center">XBeeParser</h2>
+                    <h3 class="text-center">A utility to decode data packets sent to or received by Digi XBee modules</h3>
+                    
+<h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.0.4</a></h4>
+
+<p>&nbsp;</p>
+                    
+                    <h3 id="about-xbeeparser">About XBeeParser</h3>
+<p>This is an XBee packet decoder written in Python 3.</p>
+<p>It is a work in progress. The current version decodes all the standard XBee packets, and provides further decoding of a limited (but growing) selection of Zigbee Device Object (ZDO) commands (eg. 16-bit network address request) and general (aka ‘global’) Zigbee Cluster Library commands (eg. Read Attribute).</p>
+<h3 id="how-to-use-xbeeparser">How To Use XBeeParser</h3>
+<p>Run XBeeParser at the command line and provide a code XBee packet as a string of hexadecimal octets:</p>
+<pre><code>$ python xbp.py 7e0020950013a20040522baa7d84027d840013a20040522baa2000fffe0101c105101e1b
+</code></pre><p>The XBee packet string need not be a single string; you can also include spaces:</p>
+<pre><code>$ python xbp.py 7e 00 20 95 00 13 a2 00 40 52 2b aa 7d 84 02 7d 84 00 13 a2 00 40 52 2b aa 20 00 ff fe 01 01 c1 05 10 1e 1b
+</code></pre><h4 id="make-xbeeparser-global">Make XBeeParser Global</h4>
+<p>To simplify usage of XBeeParser, run the following commands:</p>
+<ol>
+<li><code>mv xbp.py /usr/local/bin/xbp</code></li>
+<li><code>chmod +x /usr/local/bin/xbp</code></li>
+</ol>
+<p>Then you run XBeeParser from any location in your filesystem:</p>
+<pre><code>$ xbp 7e 00 05 88 05 45 45 00 e8
+</code></pre><h4 id="escaping">Escaping</h4>
+<p>By default, XBeeParser assumes packets have been escaped, but this can be disabled with the <code>-e</code> or <code>--escape</code> switch. Follow this with <code>false</code> to disable escaping (or <code>true</code> to be explicit about enabling escaping.</p>
+<h4 id="options">Options</h4>
+<p>XBeeParser has the following options:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Short</th>
+<th align="center">Long</th>
+<th align="center">Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>-e</code></td>
+<td align="center"><code>--escape</code></td>
+<td align="center"><code>true</code> or <code>false</code></td>
+<td>Use escaping when decoding packets. Default: <code>true</code></td>
+</tr>
+<tr>
+<td align="center"><code>-d</code></td>
+<td align="center"><code>--debug</code></td>
+<td align="center"><code>true</code> or <code>false</code></td>
+<td>Show extra debug information. Default: <code>false</code></td>
+</tr>
+<tr>
+<td align="center"><code>-v</code></td>
+<td align="center"><code>--version</code></td>
+<td align="center">N/A</td>
+<td>Show version information</td>
+</tr>
+<tr>
+<td align="center"><code>-h</code></td>
+<td align="center"><code>--help</code></td>
+<td align="center">N/A</td>
+<td>Show help information</td>
+</tr>
+</tbody>
+</table>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+<h3 id="examples">Examples</h3>
+<h4 id="using-options">Using Options</h4>
+<pre><code>$ python xbp.py -d true -e false 7e0020950013a20040522baa7d84027d840013a20040522baa2000fffe0101c105101e1b
+</code></pre><p>This generates the following output:</p>
+<pre><code>Extra debugging information will be printed during decoding
+Packet decoding will not use escaping
+7E0020950013A20040522BAA7D84027D840013A20040522BAA2000FFFE0101C105101E1B
+XBee frame found
+Frame length                  : 32 bytes
+XBee command ID               : 95 &quot;Node identification indicator response&quot;
+Address (64-bit)              : 0013A20040522BAA
+Address (16-bit)              : 7D84
+Status                        : Packet a Broadcast Packet
+Address (16-bit)              : 7D84
+Address (64-bit)              : 0013A20040522BAA
+NI string                     : Default
+Parent address (16-bit)       : FFFE
+Device type                   : Router
+Source event                  : Pushbutton
+Digi Profile ID               : C105
+Manufacturer ID               : 101E
+Checksum                      : 1B
+</code></pre><h4 id="zigbee">Zigbee</h4>
+<pre><code>$ python xbp.py 7E 002D 91 0013A200 40522BAA 06FC 00 00 8038 0000 01 01 00 00F8FF07 1D00 0000 10 54 5E 69 5B 4B 48 44 48 55 55 57 46 51 41 44 4B 6E
+</code></pre><p>This generates the following output:</p>
+<pre><code>XBee frame found
+Frame length                  : 45 bytes
+XBee command ID               : 91 &quot;Zigbee explicit RX indicator&quot;
+Address (64-bit)              : 0013A20040522BAA
+Address (16-bit)              : 06FC
+Source endpoint               : 00
+Destination endpoint          : 00
+Cluster ID                    : 8038
+Profile ID                    : 0000
+Status                        : Packet acknowledged
+Frame data                    : 010000F8FF071D00000010545E695B4B484448555557465141444B
+  ZDO command                 : Management Network Update Response
+  Transaction seq. number     : 01
+  Response status             : Success
+Checksum                      : 6E
+</code></pre><p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+<h3 id="release-notes">Release Notes</h3>
+<ul>
+<li>1.0.4 <em>9 January 2019</em>
+<ul>
+<li>Add intro text on run</li>
+<li>Some code clean-up</li>
+</ul>
+</li>
+<li>1.0.3 <em>8 November 2019</em>
+<ul>
+<li>Fix ZDO address lookup response type check</li>
+</ul>
+</li>
+<li>1.0.2 <em>6 November 2018</em>
+<ul>
+<li>Add Discover Commands Received, Discover Commands Generated request decoders</li>
+<li>Add Discover Commands Received, Discover Commands Generated response decoders</li>
+<li>Add further XBee command constants</li>
+<li>Add XBee commands:
+<ul>
+<li>0xA4: Register joining device status</li>
+<li>0xA5: Join notification status</li>
+</ul>
+</li>
+<li>Update help, version info</li>
+<li>Fix little endian byte order on ZCL frame decoders</li>
+</ul>
+</li>
+<li>1.0.1 <em>5 November 2018</em>
+<ul>
+<li>Fix incorrect attribute type display</li>
+<li>Fix attribute value display bug</li>
+</ul>
+</li>
+<li>1.0.0 <em>2 November 2018</em>
+<ul>
+<li>Initial release</li>
+</ul>
+</li>
+</ul>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+<h3 id="source-code">Source Code</h3>
+<p>You can view XBeeParser’s source code <a class="link" href="https://github.com/smittytone/XBeeParser">at GitHub</a>.</p>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+
+                    
+
+<h3>Related Software</h3>
+<ul>
+	
+	<li><a class="link" href="/hex/">Hex</a></li>
+	
+	<li><a class="link" href="/unicoder/">Unicoder</a></li>
+	
+	<li><a class="link" href="/ski/">Ski</a></li>
+	
+	<li><a class="link" href="/spasm/">Spasm</a></li>
+	
+	<li><a class="link" href="/ascii/">ASCII</a></li>
+	
+</ul>
+
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
+                </div>
+                <div class="col-1 col-lg-2">&nbsp;</div>
+            </div>
+            <div class="col">
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2014-19, Tony Smith</small></p>
+</div>
+            
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../scripts/retina.min.js"></script>
+<script>
+    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
+        }
+    });
+</script>
+</body>
+</html>

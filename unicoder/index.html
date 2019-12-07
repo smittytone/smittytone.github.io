@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="Description" content="Tony Smith's software library: PreviewMarkdown, a tool to generate Markdown file QuickLook previews for macOS Catalina" />
+    <meta name="Description" content="Tony Smith's software library: Unicoder, a utility for converting UTF-8 character codes to hex strings" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
     <link href="../images/favicons/196.png" rel="shortcut icon" />
     <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
-    <link href="../css/previewmarkdown.css" rel="stylesheet" type="text/css" />
-    <title>PreviewMarkdown</title>
+    <link href="../css/mnu.css" rel="stylesheet" type="text/css" />
+    <title>Unicoder</title>
 </head>
 
 <body>
@@ -18,9 +18,9 @@
 <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="navbar-header">
         <a class="navbar-brand" href="../index.html">
-            <img src="../images/previewmarkdown/pmmw.png" style="width:32px;height:32px;" class="navimgb align-top" />
-            <img src="../images/previewmarkdown/pmmw.png" style="width:32px;height:32px;" class="navimgw align-top" />
-            &nbsp;PreviewMarkdown
+            <img src="../images/unicoder/uniw.png" style="width:32px;height:32px;" class="navimgb align-top" />
+            <img src="../images/unicoder/uniw.png" style="width:32px;height:32px;" class="navimgw align-top" />
+            &nbsp;Unicoder
         </a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav mr-auto">
             
-            <li class="nav-item"><a class="nav-link" href="#how-to-use-previewmarkdown">How to Use PreviewMarkdown</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about-unicoder">About Unicoder</a></li>
             
             <li class="nav-item"><a class="nav-link" href="#release-notes">Release Notes</a></li>
             
@@ -45,65 +45,53 @@
             <div class="row">
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
-                    <h2 class="text-center">PreviewMarkdown</h2>
-                    <h3 class="text-center">A tool to generate Markdown file QuickLook previews for macOS Catalina</h3>
+                    <h2 class="text-center">Unicoder</h2>
+                    <h3 class="text-center">A utility for converting UTF-8 character codes to hex strings</h3>
                     
-<h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.0.2</a></h4>
+<h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.0.0</a></h4>
 
 <p>&nbsp;</p>
-                    <div class="dloadpanel">
-    <h2 align="center">Download And Install PreviewMarkdown</h2>
-    <p align="center">Please verify the integrity of the download with the SHA-256 checksum.</p>
-    <table class="table table-borderless table-responsive-lg table-sm">
-        <tbody>
-            <tr>
-                <th scope="col-3 col-lg-2" width="20%"><b>File</b>&nbsp;</th>
-                <td scope="col-9 col-lg-10" width="80%"><a class="link" id="url" href="../files/previewmarkdown/previewmarkdown_1_0_2.dmg">previewmarkdown_1_0_2.dmg</a></td>
-            </tr>
-            <tr>
-                <th scope="row"><b>File Size</b>&nbsp;</th>
-                <td>412KB</td>
-            </tr>
-            <tr>
-                <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                <td id="sha256">aa275a334ade2e235f26148bc8b1b004744186fcb039297b081e7b71ad4fabb6 </td>
-            </tr>
-        <tbody>
-    </table>
-</div>
-<p>&nbsp;<br />&nbsp;</p>
-                    <h3 id="how-to-use-previewmarkdown">How to Use PreviewMarkdown</h3>
-<p>Install the app and run it. This will register the availability of the app’s QuickLook extensions, Previewer and Thumbnailer. You can now quit the app: just click <strong>OK</strong>:</p>
-<p align="center"><img class="img-fluid" src="../images/previewmarkdown/ui.png" /></p>
-<p>You can disable or re-enable Previewer and Thumbnailer in <strong>System Preferences &gt; Extensions</strong>:</p>
-<p align="center"><img class="img-fluid" src="../images/previewmarkdown/extensions.png" /></p>
-<p>For some background information on how Catalina delivers QuickLook previews, please see <a class="link" href="https://smittytone.wordpress.com/2019/11/07/create_previews_macos_catalina/">this blog post</a>.</p>
-<h3 id="troubleshooting">Troubleshooting</h3>
-<p>If it appears that either Previewer or Thumbnailer are not working after you have run the host app, please log out of your Mac and then log back in. A future release will offer to do this for you.</p>
+                    
+                    <h3 id="about-unicoder">About Unicoder</h3>
+<p>Unicoder is a utility for converting UTF-8 character codes, such as U+0024 ($) or U+20AC (€), into sequences of bytes presented as hexadecimal strings.</p>
+<p>Unicoder’s output is in the form of Squirrel string assignments that are ready to be cut and pasted into Squirrel code. For example:</p>
+<pre><code class="language-squirrel" data-lang="squirrel">$ ./unicoder.py U+20AC U+24 U+0939 U+0025 U+10348
+
+local unicodeString=&quot;\xE2\x82\xAC&quot;;
+local unicodeString=&quot;\x24&quot;;
+local unicodeString=&quot;\xE0\xA4\xB9&quot;;
+local unicodeString=&quot;\x25&quot;;
+local unicodeString=&quot;\xF0\x90\x8D\x88&quot;;
+</code></pre><p>As you can see from the example above, just call the script with one or more UTF-8 codes separated by spaces.</p>
+<p>If you don’t require Squirrel-oriented output, used the <code>-j</code> / <code>--justhex</code> switch:</p>
+<pre><code class="language-squirrel" data-lang="squirrel">/Users/smitty &gt; ./unicoder.py -j U+20AC U+24 U+0939 U+0025 U+10348
+
+E282AC
+24
+E0A4B9
+25
+F0908D88
+</code></pre><p><strong>Note</strong> Unicode contains more than 137,000 characters so at this time there is no way to derive a hex string from a character, only that character’s UTF-8 code.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="release-notes">Release Notes</h3>
 <ul>
-<li>1.0.2
+<li>1.0.1 <em>12 June 2019</em>
 <ul>
-<li>Fix random crash (<code>string index out of range</code> in SwiftyMarkdown).</li>
+<li>Add <code>-j</code> / <code>--justhex</code> option for hex-only output.</li>
+<li>Help text cleaned up.</li>
 </ul>
 </li>
-<li>1.0.1
+<li>1.0.0 <em>5 June 2019</em>
 <ul>
-<li>Correct thumbnail styling.</li>
-</ul>
-</li>
-<li>1.0.0
-<ul>
-<li>Initial public release.</li>
+<li>Initial release.</li>
 </ul>
 </li>
 </ul>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="source-code">Source Code</h3>
-<p>You can view PreviewMarkdown’s source code <a class="link" href="https://github.com/smittytone/PreviewMarkdown">at GitHub</a>.</p>
+<p>You can view Unicoder’s source code <a class="link" href="https://github.com/smittytone/Unicoder">at GitHub</a>.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 
@@ -112,15 +100,15 @@
 <h3>Related Software</h3>
 <ul>
 	
-	<li><a class="link" href="/ascii/">ASCII</a></li>
-	
-	<li><a class="link" href="/mnu/">MNU</a></li>
-	
-	<li><a class="link" href="/pdfmaker/">pdfmaker</a></li>
-	
-	<li><a class="link" href="/bash-scripts/">Bash Scripts</a></li>
-	
 	<li><a class="link" href="/hex/">Hex</a></li>
+	
+	<li><a class="link" href="/xbeeparser/">XBeeParser</a></li>
+	
+	<li><a class="link" href="/ski/">Ski</a></li>
+	
+	<li><a class="link" href="/spasm/">Spasm</a></li>
+	
+	<li><a class="link" href="/ascii/">ASCII</a></li>
 	
 </ul>
 

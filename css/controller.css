@@ -3,6 +3,7 @@ p  {font-family:Abel,sans-serif;font-size:16px;}
 h2 {color:black;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
 h3 {color:#B01C17;font-family:Abel,sans-serif;font-size:22px;}
 h4 {color:#B01C17;font-family:Abel,sans-serif;font-size:18px;}
+pre {color:#8C275D;background-color:#aaaaaa;padding:8px;}
 hr {border-color:#B01C17;}
 th {color:white;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;padding: 10px;background-color: #B01C17;border: 1px solid black;}
 td {color:black;font-family:Abel,sans-serif;font-size:16px;vertical-align: middle;padding: 10px;background-color: rgb(207, 207, 207);border: 1px solid black;}

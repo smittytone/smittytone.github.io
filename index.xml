@@ -72,6 +72,16 @@ How To Use Controller Controller’s iPhone app provides a means to add devices 
     </item>
     
     <item>
+      <title>Hex</title>
+      <link>https://smittytone.github.io/hex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.github.io/hex/</guid>
+      <description>About Hex This script reads in a file and outputs it as a hex string formatted for use in, for example, Electric Imp Squirrel applications.
+For example, say you have the file sample.png which you wish to serve from an agent. As the agent has no file system, you can’t simply upload the image file. Instead, you store the image as a string which the agent returns upon request and includes the header:</description>
+    </item>
+    
+    <item>
       <title>MNU</title>
       <link>https://smittytone.github.io/mnu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -112,11 +122,23 @@ Troubleshooting If it appears that either Previewer or Thumbnailer are not worki
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://smittytone.github.io/ski/</guid>
-      <description>About Ski Some Python 3 silliness.
+      <description>About Ski Some Python 3 silliness: arcade action circa 1980 courtesy of ncurses.
 Press [Space] to play&amp;hellip;
 Back to the Top
 Release Notes  1.0.0 30 March 2019  Initial release.    Back to the Top
-Source Code You can view Ski’s source code at GitHub.</description>
+Source Code You can view Ski’s source code at GitHub.
+Back to the Top</description>
+    </item>
+    
+    <item>
+      <title>Spasm</title>
+      <link>https://smittytone.github.io/spasm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.github.io/spasm/</guid>
+      <description>About Spasm spasm is an assembler/disassembler for the Motorola 6809 microprocessor written in Python 3.
+It was written to generate 6809 machine code for a separate processor emulation project. As such, it does not output files into a standard format, but in the form of JSON intended to be read by the emulator. The output file’s extension is .6809, but it is a text file containing a JSON object:
+{ &amp;quot;address&amp;quot; : &amp;lt;start_address_of_code&amp;gt;, &amp;quot;code&amp;quot; : &amp;lt;string_of_assembled_code_bytes&amp;gt; } A sample file, sample01.</description>
     </item>
     
     <item>
@@ -146,6 +168,28 @@ With Squinter and Electric Imp’s impCentral™ API you can:
       
       <guid>https://smittytone.github.io/valley/</guid>
       <description>How To Play The Valley The object of the game is to save the Valley from the forces of evil: find the legendary Helm of Evanna and this will be achieved. The Helm is hidden in one of Vounim’s Lairs, each on an island within a forest. To have a chance of finding the Helm, you will need to reach the experience level of a Warlord, which you do by travelling through the Valley, its swamps and forests, and the Dark Tower of Zaexon battling monsters.</description>
+    </item>
+    
+    <item>
+      <title>Unicoder</title>
+      <link>https://smittytone.github.io/unicoder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.github.io/unicoder/</guid>
+      <description>About Unicoder Unicoder is a utility for converting UTF-8 character codes, such as U+0024 ($) or U+20AC (€), into sequences of bytes presented as hexadecimal strings.
+Unicoder’s output is in the form of Squirrel string assignments that are ready to be cut and pasted into Squirrel code. For example:
+$ ./unicoder.py U+20AC U+24 U+0939 U+0025 U+10348 local unicodeString=&amp;quot;\xE2\x82\xAC&amp;quot;; local unicodeString=&amp;quot;\x24&amp;quot;; local unicodeString=&amp;quot;\xE0\xA4\xB9&amp;quot;; local unicodeString=&amp;quot;\x25&amp;quot;; local unicodeString=&amp;quot;\xF0\x90\x8D\x88&amp;quot;; As you can see from the example above, just call the script with one or more UTF-8 codes separated by spaces.</description>
+    </item>
+    
+    <item>
+      <title>XBeeParser</title>
+      <link>https://smittytone.github.io/xbeeparser/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.github.io/xbeeparser/</guid>
+      <description>About XBeeParser This is an XBee packet decoder written in Python 3.
+It is a work in progress. The current version decodes all the standard XBee packets, and provides further decoding of a limited (but growing) selection of Zigbee Device Object (ZDO) commands (eg. 16-bit network address request) and general (aka ‘global’) Zigbee Cluster Library commands (eg. Read Attribute).
+How To Use XBeeParser Run XBeeParser at the command line and provide a code XBee packet as a string of hexadecimal octets:</description>
     </item>
     
   </channel>

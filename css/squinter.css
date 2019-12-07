@@ -5,9 +5,10 @@ h2 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:33px;padding-bottom:10px
 h3 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:22px;}
 .h3under {margin-bottom:2rem;}
 h4 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:18px;}
+pre {color:#8C275D;background-color:#aaaaaa;padding:8px;}
 hr {border-color:#6E9B3D;}
-th {color:#6E9B3D;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;text-align:right;}
-td {color:black;font-family:Abel,sans-serif;font-size:16px;}
+th {color:white;font-family:Abel,sans-serif;font-size:16px;font-weight:bold;padding: 10px;background-color: #6E9B3D;border: 1px solid black;}
+td {color:black;font-family:Abel,sans-serif;font-size:16px;vertical-align: middle;padding: 10px;background-color: rgb(207, 207, 207);border: 1px solid black;}
 li {color:black;font-family:Abel,sans-serif;font-size:16px;}
 .rnli {list-style:disc;}
 a  {color:#6E9B3D;padding:2px;}
@@ -47,14 +48,13 @@ a  {color:#6E9B3D;padding:2px;}
 
 @media (prefers-color-scheme: dark) {
     body {color:white;background:#222222;}
-    code {color:#C2256E}
-    pre {color:#C2256E;background:rgb(156, 156, 156);}
     h1 {color:rgb(124, 189, 54);}
     h2 {color:rgb(124, 189, 54);}
     h3 {color:white;}
     h4 {color:white;}
     hr {border-color:rgb(124, 189, 54);}
-    td {color:white;}
+    th {border: 1px solid white;}
+    td {border: 1px solid white;}
     li {color:white;}
     a  {color:rgb(125, 202, 43);}
     kbd {background-color:rgb(124, 189, 54);}

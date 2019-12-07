@@ -82,13 +82,13 @@
 <p>The app stores the current list of devices across app restarts and relaunches.</p>
 <p>The list is synchronised with the Watch by sending a string of all the devices to appear on the Watch: device name, agent ID and UUID fields are separated by newlines; device records are separated by two newlines. The string is absolute: it contains all the devices to appear on the Watch from the point it is sent; the Watch app recreates its own list from the string.</p>
 <p>The app contains a file, <code>apps.json</code>, which lists the apps’ UUIDs and human-readable names as an array of objects within the <em>apps</em> object:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{ <span style="color:#f92672">&#34;apps&#34;</span>: [
-    { <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;&lt;UUID_1&gt;&#34;</span>,
-      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;APP_NAME_1&#34;</span> },
-    { <span style="color:#f92672">&#34;code&#34;</span>: <span style="color:#e6db74">&#34;&lt;UUID_2&gt;&#34;</span>,
-      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;&lt;APP_NAME_2&#34;</span> } ]
+<pre><code>{ &quot;apps&quot;: [
+    { &quot;code&quot;: &quot;&lt;UUID_1&gt;&quot;,
+      &quot;name&quot;: &quot;APP_NAME_1&quot; },
+    { &quot;code&quot;: &quot;&lt;UUID_2&gt;&quot;,
+      &quot;name&quot;: &quot;&lt;APP_NAME_2&quot; } ]
 }
-</code></pre></div><p>This file is read at launch and used to determine which icons to display based upon the UUID provided by the app’s Agent code. All local app data look-ups used this file’s contents. As such it provides a single place to update app details, though please note that the app icon’s filename should match the app’s name in lower case, for example:</p>
+</code></pre><p>This file is read at launch and used to determine which icons to display based upon the UUID provided by the app’s Agent code. All local app data look-ups used this file’s contents. As such it provides a single place to update app details, though please note that the app icon’s filename should match the app’s name in lower case, for example:</p>
 <table>
 <thead>
 <tr>
@@ -161,7 +161,7 @@
 </ul>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
-<h2 id="source-code">Source Code</h2>
+<h3 id="source-code">Source Code</h3>
 <p>You can view Controller’s source code <a class="link" href="https://github.com/smittytone/Controller">at GitHub</a>.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
