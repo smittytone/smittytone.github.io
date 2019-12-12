@@ -1,6 +1,6 @@
 body {color:black;background-color:#EEEEEE;}
 p  {font-family:Abel,sans-serif;font-size:16px;}
-h1 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;}
+h1 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:36px;padding-bottom:10px;padding-top:10px;text-align:center;}
 h2 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:33px;padding-bottom:10px;padding-top:10px;}
 h3 {color:#6E9B3D;font-family:Abel,sans-serif;font-size:22px;}
 .h3under {margin-bottom:2rem;}
