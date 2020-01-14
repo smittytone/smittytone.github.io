@@ -29,13 +29,13 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav mr-auto">
             
-            <li class="nav-item"><a class="nav-link" href="#using-mnu">Using MNU</a></li>
+            <li class="nav-item"><a class="nav-link" href="#how-to-use-mnu-">How to Use MNU</a></li>
             
-            <li class="nav-item"><a class="nav-link" href="#configuring-mnu">Configuring MNU</a></li>
+            <li class="nav-item"><a class="nav-link" href="#how-to-configure-mnu-">How To Configure MNU</a></li>
             
-            <li class="nav-item"><a class="nav-link" href="#release-notes">Release Notes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#release-notes-">Release Notes</a></li>
             
-            <li class="nav-item"><a class="nav-link" href="#source-code">Source Code</a></li>
+            <li class="nav-item"><a class="nav-link" href="#source-code-">Source Code</a></li>
             
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -50,7 +50,7 @@
                     <h2 class="text-center">MNU</h2>
                     <h3 class="text-center">A macOS menu bar utility</h3>
                     
-<h4 class="text-center">Latest Release: <a class="link" href="#release-notes">1.1.1</a></h4>
+<h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">1.2.0</a></h4>
 
 <p>&nbsp;</p>
                     <div class="dloadpanel">
@@ -60,7 +60,7 @@
         <tbody>
             <tr>
                 <th scope="col-3 col-lg-2" width="20%"><b>File</b>&nbsp;</th>
-                <td scope="col-9 col-lg-10" width="80%"><a class="link" id="url" href="../files/mnu/mnu_1_1_1.dmg">mnu_1_1_1.dmg</a></td>
+                <td scope="col-9 col-lg-10" width="80%"><a class="link" id="url" href="../files/mnu/mnu_1_2_0.dmg">mnu_1_2_0.dmg</a></td>
             </tr>
             <tr>
                 <th scope="row"><b>File Size</b>&nbsp;</th>
@@ -68,7 +68,7 @@
             </tr>
             <tr>
                 <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                <td id="sha256">e4ae377c5949d3f32991b65063fb7b6160ebda121a5accc1a09d08b80ac21817 </td>
+                <td id="sha256">fe400c1a94b540225ce686d50f031173e649e88b9cf2386f8c4d0acf800767a1 </td>
             </tr>
         <tbody>
     </table>
@@ -120,6 +120,10 @@
 <p>Items you have added can be deleted from the list, or they can be edited if you need to make a change: just click on the delete or edit buttons, respectively:</p>
 <p align="center"><img class="img-fluid" src="../images/mnu/edit_item.png"></p>
 <p>When MNU quits — you have restarted or shutdown your Mac, or you have clicked the quit icon at the bottom of the menu — it saves the current state of the menu so it’s ready for next time.</p>
+<h4 id="opening-applications-">Opening Applications</h4>
+<p>From version 1.2.0, MNU also allows you to name apps that can then be activated from the menu bar. Add a new item as outlined above, but this time simply enter the name of the application and tick the <strong>Check this box if you just want MNU to open the named application</strong> checkbox:</p>
+<p align="center"><img class="img-fluid" src="../images/mnu/add_new_item_3.png"></p>
+<p>Click <strong>Add</strong> and then <strong>Apply</strong>. When you select the application from MNU, it will be opened without first opening the macOS Terminal.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="how-to-backup-and-restore-your-menu-items-">How to Backup and Restore Your Menu Items</h3>
@@ -150,6 +154,11 @@
 <hr />
 <h3 id="release-notes-">Release Notes</h3>
 <ul>
+<li>1.2.0
+<ul>
+<li>Add app opening.</li>
+</ul>
+</li>
 <li>1.1.1
 <ul>
 <li>Add app restart installer scripts.</li>
