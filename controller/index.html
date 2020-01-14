@@ -52,13 +52,13 @@
 
 <p>&nbsp;</p>
                     
-                    <h3 id="about-controller">About Controller</h3>
+                    <h3 id="about-controller-">About Controller</h3>
 <p>Controller is an iOS and watchOS app combo that allows you to control Electric Imp Platform-based Internet of Things devices from your Apple Watch.</p>
-<h3 id="how-to-use-controller">How To Use Controller</h3>
+<h3 id="how-to-use-controller-">How To Use Controller</h3>
 <p>Controller’s iPhone app provides a means to add devices — enter the device’s agent ID and a name — and sync the list of devices to the Watch app, which will provide an appropriate UI for each type of device. As such it is currently limited to the device types that I use, but the design is modular, so others can create UIs and <em>WKInterfaceController</em> objects of their own to personalise the app for their use.</p>
 <p>Or simply take the code apart and use it as the foundation for a completely different UI — the choice is yours.</p>
-<h3 id="design">Design</h3>
-<h4 id="the-iphone-app">The iPhone App</h4>
+<h3 id="design-">Design</h3>
+<h4 id="the-iphone-app-">The iPhone App</h4>
 <p>The Watch app’s iPhone-based companion collates your imp-enabled devices and syncs them with the Watch. Tap ‘Edit’ to add a new device and then select it in order to give it a convenient name and to enter its agent ID. Tap ‘Get Device Data’ to check what app the device is running and whether it is supported by Controller. Click ‘Devices’ to go back when you’re done.</p>
 <div class="row">
     <div class="col-6" align="left">
@@ -104,14 +104,14 @@
 </tbody>
 </table>
 <p> <br />You should embed the same <code>apps.json</code> in both your iOS and Watch app bundles. A sample file is included in this repo.</p>
-<h4 id="the-watch-app">The Watch App</h4>
+<h4 id="the-watch-app-">The Watch App</h4>
 <p>The Watch app presents a list of available devices. Selecting any of these presents a standard UI customised for the application the device is running. The device-specific UI presents the name of the device; its application type; a series of controls relevant to the device; and finally a button which takes the user back to the device list (easier than tapping on the tiny title bar).</p>
 <p>The <em>WKInterfaceController</em> instance which manages the device-specific UI is designed to hide the device controls until it has received status information from the the device’s agent — see below. Once this information is received, the UI is unhidden and  is ready for use. The <em>WKInterfaceController</em> instance presents a flashing ‘traffic light’ icon to inform the user that this process is taking place.</p>
-<h4 id="squirrel">Squirrel</h4>
+<h4 id="squirrel-">Squirrel</h4>
 <p>The Electric Imp application component of the design makes use of the <a class="link" href="https://developer.electricimp.com/libraries/utilities/rocky">Rocky library</a> to serve standard application information at <code>/info</code>, and a device status (online or offline) information at <code>/status</code>. These and other application control endpoints can of course be modified as required — just update the appropriate section of the relevant <em>WKInterfaceController</em> instance.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
-<h2 id="release-notes">Release Notes</h2>
+<h2 id="release-notes-">Release Notes</h2>
 <ul>
 <li>1.2.0 <em>6 December 2019</em>
 <ul>
@@ -187,7 +187,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2014-20, Tony Smith<br />Site Last Updated: 4 January 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2014-20, Tony Smith<br />Site Last Updated: 14 January 2020</small></p>
 </div>
             
         </div>
