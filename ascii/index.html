@@ -48,7 +48,7 @@
                     <h2 class="text-center">ASCII</h2>
                     <h3 class="text-center">A tool to generate glyphs for 8x8 LED matrix displays</h3>
                     
-<h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">1.1.3</a></h4>
+<h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">1.2.0</a></h4>
 
 <p>&nbsp;</p>
                     <div class="dloadpanel">
@@ -58,15 +58,15 @@
         <tbody>
             <tr>
                 <th scope="col-3 col-lg-2" width="20%"><b>File</b>&nbsp;</th>
-                <td scope="col-9 col-lg-10" width="80%"><a class="link" id="url" href="../files/ascii/ascii_1_1_3.dmg">ascii_1_1_3.dmg</a></td>
+                <td scope="col-9 col-lg-10" width="80%"><a class="link" id="url" href="../files/ascii/ascii_1_2_0.dmg">ascii_1_2_0.dmg</a></td>
             </tr>
             <tr>
                 <th scope="row"><b>File Size</b>&nbsp;</th>
-                <td>796KB</td>
+                <td>1.1MB</td>
             </tr>
             <tr>
                 <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                <td id="sha256">048426ee8bc0e2cd1b53b84e941868dfe6477b8a5df06e7963bc2652a56389de </td>
+                <td id="sha256">49ed1dbb38819ad13961b17197bb900f043ffa3242507f48ba676d51c1bda5ce </td>
             </tr>
         <tbody>
     </table>
@@ -74,18 +74,36 @@
 <p>&nbsp;<br />&nbsp;</p>
                     <h3 id="about-ascii-">About ASCII</h3>
 <p>ASCII is a simple tool you can use to generate 8x8 character glyphs for maker projects using 8x8 LED matrix displays.</p>
-<p>Create a glyph pattern (black squares are equivalent to lit matrix segments) and then click <strong>Values</strong> to convert the pattern into column values that can be pasted into your microcontroller code. Existing values can be pasted into the <strong>values</strong> field — click <strong>Write</strong> to display the pattern they form.</p>
+<p>Create a glyph pattern (black squares are equivalent to lit matrix segments) and then click <strong>Grid to Values</strong> to convert the pattern into column values that can be pasted into your microcontroller code. Existing values can be pasted into the <strong>Grid Pixel Values</strong> field — click <strong>Values to Grid</strong> to display the pattern they form.</p>
+<p>In each case, select <strong>String</strong> or <strong>Array</strong> to choose the bytes values format:</p>
+<ul>
+<li>String — <code>&quot;\xAA\xBB\xCC\xDD\xEE\xFF\x00\x11&quot;</code></li>
+<li>Array — <code>[0xAA,0xBB,0xCC,0xDD,0xEE,0xFF,0x00,0x11]</code></li>
+</ul>
 <p align="center"><img class="img-fluid" src="../images/ascii/ascii_1.png" style="border: 1px solid #bbbbbb;" /></p>
-<p>Hit <strong>Fill</strong> to set all the pixels in the grid.</p>
-<p>Hit <strong>Clear</strong> to clear all the pixels in the grid.</p>
-<p>Hit <strong>Inverse</strong> to reverse the pattern on the grid: set pixels become unset (black to white) and vice versa.</p>
-<p>Hit <strong>Rotate</strong> to rotate the grid patten 90° clockwise.</p>
+<p>Hit <strong>Fill Grid</strong> to set all the pixels in the grid.</p>
+<p>Hit <strong>Clear Grid</strong> to clear all the pixels in the grid.</p>
+<p>Hit <strong>Invert Pixels</strong> to reverse the pattern on the grid: set pixels become unset (black to white) and vice versa.</p>
+<p>Hit <strong>Rotate Clockwise</strong> to rotate the grid patten by 90° clockwise.</p>
+<p>Hit <strong>Flip Horizontal</strong> to flip the grid pattern about the vertical axis.</p>
+<p>Hit <strong>Flip Vertical</strong> to flip the grid pattern about the horizontal axis.</p>
 <p>The round row and column buttons can be clicked to set the whole row or column, or shift-clicked to clear the whole row or column.</p>
+<p>You can click on a pixel to set it — keep the mouse button held down to ‘paint’ pixels continuously.</p>
 <p align="center"><img class="img-fluid" src="../images/ascii/ascii_2.png" style="border: 1px solid #bbbbbb;" /></p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="release-notes-">Release Notes</h3>
 <ul>
+<li>1.2.0
+<ul>
+<li>Re-orient grid co-ordinates.</li>
+<li>Support click-and-hold to ‘paint’ pixels.</li>
+<li>Add horizontal and vertical flipping.</li>
+<li>Add a choice to output or input byte values in string or array forms.</li>
+<li>Add <strong>Actions</strong> menu as an alternative to the buttons.</li>
+<li>Support macOS Dark Mode.</li>
+</ul>
+</li>
 <li>1.1.3
 <ul>
 <li>Bug fix: restore cut, paste and select all for the values field.</li>
@@ -134,7 +152,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2014-20, Tony Smith<br />Site Last Updated: 18 January 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2014-20, Tony Smith<br />Site Last Updated: 19 January 2020</small></p>
 </div>
             
         </div>

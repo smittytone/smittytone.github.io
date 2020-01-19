@@ -17,7 +17,7 @@
       
       <guid>https://smittytone.github.io/ascii/</guid>
       <description>About ASCII ASCII is a simple tool you can use to generate 8x8 character glyphs for maker projects using 8x8 LED matrix displays.
-Create a glyph pattern (black squares are equivalent to lit matrix segments) and then click Values to convert the pattern into column values that can be pasted into your microcontroller code. Existing values can be pasted into the values field — click Write to display the pattern they form.</description>
+Create a glyph pattern (black squares are equivalent to lit matrix segments) and then click Grid to Values to convert the pattern into column values that can be pasted into your microcontroller code. Existing values can be pasted into the Grid Pixel Values field — click Values to Grid to display the pattern they form.</description>
     </item>
     
     <item>
