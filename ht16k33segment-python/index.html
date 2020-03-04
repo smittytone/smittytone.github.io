@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="Description" content="Tony Smith's software library: Hex, a utility for converting files to hex strings" />
+    <meta name="Description" content="Tony Smith's software library: HT16K33Segment, a driver for HT16K33-based segment LEDs" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
     <link href="../images/favicons/196.png" rel="shortcut icon" />
     <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
-    <link href="../css/hex.css" rel="stylesheet" type="text/css" />
-    <title>Hex</title>
+    <link href="../css/ht16k33segment.css" rel="stylesheet" type="text/css" />
+    <title>HT16K33Segment</title>
 </head>
 
 <body>
@@ -18,9 +18,9 @@
 <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="navbar-header">
         <a class="navbar-brand" href="../index.html">
-            <img src="../images/hex/hexw.png" style="width:32px;height:32px;" class="navimgb align-top" />
-            <img src="../images/hex/hexw.png" style="width:32px;height:32px;" class="navimgw align-top" />
-            &nbsp;Hex
+            <img src="../images/ht16k33segment-python/segmentw.png" style="width:32px;height:32px;" class="navimgb align-top" />
+            <img src="../images/ht16k33segment-python/segmentw.png" style="width:32px;height:32px;" class="navimgw align-top" />
+            &nbsp;HT16K33Segment
         </a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,47 +45,22 @@
             <div class="row">
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
-                    <h2 class="text-center">Hex</h2>
-                    <h3 class="text-center">A utility for converting files to hex strings</h3>
+                    <h2 class="text-center">HT16K33Segment</h2>
+                    <h3 class="text-center">A driver for HT16K33-based segment LEDs</h3>
                     
-<h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">1.1.0</a></h4>
+<h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">1.0.0</a></h4>
 
 <p>&nbsp;</p>
                     
-                    <h3 id="about-hex-">About Hex</h3>
-<p>This script reads in a file and outputs it as a hex string formatted for use in, for example, Electric Imp Squirrel applications.</p>
-<p>For example, say you have the file <code>sample.png</code> which you wish to serve from an agent. As the agent has no file system, you can’t simply upload the image file. Instead, you store the image as a string which the agent returns upon request and includes the header:</p>
-<pre><code>{ &quot;Content-Type&quot;: &quot;image/png&quot; }
-</code></pre><p>You use <em>hex</em> to convert <code>sample.png</code> to the string which your agent will serve. At the command line enter:</p>
-<pre><code>$ hex.py sample.png
-</code></pre><p>and the following output will be generated:</p>
-<pre><code>Hex 1.1.1
-Getting file: sample.png
-\x89\x50\x4E\x47\x0D\x0A\x1A\x0A\x00\x00\x00\x0D\x49\x48\x44\x52\x00\x00\x00\x80\x00\x00
-\x00\x80\x08\x06\x00\x00\x00\xC3\x3E\x61\xCB\x00\x00\x00\x04\x67\x41\x4D\x41\x00\x00\xB1
-
-. . .
-
-\x35\x17\x00\x26\xDE\x21\x48\xD4\x6E\x05\x8A\xD5\x7E\xBD\xCD\xB4\x0E\x07\x2B\x18\xEA\x8A
-\xFE\x0F\x65\x2D\x5F\x51\xE4\x02\x3B\x28\x00\x00\x00\x00\x49\x45\x4E\x44\xAE\x42\x60\x82
-</code></pre><p>The above listing has been truncated, but in the real world all of the values can be selected, copied and pasted into a string.</p>
-<p>If you have multiples files to convert, just run <em>hex</em> without specifying a file name; it will convert all suitable files in the working directory.</p>
-<p>The script maintains a list of files extensions which it will ignore during processing. By default, these are <code>.pxm</code>, <code>.py</code>, <code>.txt</code>, <code>.text</code>, <code>.html</code>, <code>.md</code> and <code>.markdown</code>. You can add other extensions to the list by passing them as an argument to the <code>-a</code> / <code>--add</code> switch. Add a single file extension or an <strong>unspaced</strong> list of comma-separated extensions:</p>
-<pre><code>$ hex.py -a pdf
-$ hex.py -a pdf,rtf,csv
-</code></pre><p>You can use the <code>-r</code> / <code>--remove</code> switch to remove extensions you have added.</p>
-<p>The <code>-v</code> / <code>--verbose</code> switch to show more information during conversion.</p>
-<p><strong>Hint</strong> Using verbose mode makes it easier to identify the hex output from each of multiple files.</p>
+                    <h3 id="about-ht16k33segment-">About HT16K33Segment</h3>
+<p>This script provides a hardware driver for the <a class="link" href="http://www.adafruit.com/products/878">Adafruit 0.56-inch 4-digit, 7-segment LED display</a>, which is based on the Holtek HT16K33 controller. The LED communicates over any I²C bus.</p>
+<p>Two versions of the driver are available, one for <a class="link" href="https://circuitpython.readthedocs.io/en/latest/docs/index.html">CircuitPython</a> applications, the other for code written in <a class="link" href="http://docs.micropython.org/en/latest/index.html">MicroPython</a>.</p>
+<p>Please see the <a class="link" href="https://github.com/smittytone/HT16K33Segment-Python">source code repo</a> for details of the driver’s API.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="release-notes-">Release Notes</h3>
 <ul>
-<li>1.1.1 <em>09 April 2019</em>
-<ul>
-<li>Code styling, optimisation improvements.</li>
-</ul>
-</li>
-<li>1.1.0 <em>22 March 2019</em>
+<li>1.0.0 <em>04 March 2020</em>
 <ul>
 <li>Initial public release.</li>
 </ul>
@@ -94,7 +69,7 @@ $ hex.py -a pdf,rtf,csv
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="source-code-">Source Code</h3>
-<p>You can view Hex’s source code <a class="link" href="https://github.com/smittytone/Hex">at GitHub</a>.</p>
+<p>You can view HT16K33Segment’s source code <a class="link" href="https://github.com/smittytone/HT16K33Segment-Python">at GitHub</a>.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 
@@ -103,15 +78,15 @@ $ hex.py -a pdf,rtf,csv
 <h3>Related Software</h3>
 <ul>
 	
-	<li><a class="link" href="/unicoder/">Unicoder</a></li>
-	
-	<li><a class="link" href="/xbeeparser/">XBeeParser</a></li>
-	
-	<li><a class="link" href="/ht16k33segment-python/">HT16K33Segment</a></li>
+	<li><a class="link" href="/hex/">Hex</a></li>
 	
 	<li><a class="link" href="/ski/">Ski</a></li>
 	
 	<li><a class="link" href="/spasm/">Spasm</a></li>
+	
+	<li><a class="link" href="/unicoder/">Unicoder</a></li>
+	
+	<li><a class="link" href="/xbeeparser/">XBeeParser</a></li>
 	
 </ul>
 

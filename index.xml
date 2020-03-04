@@ -91,6 +91,19 @@ For example, say you have the file sample.png which you wish to serve from an ag
     </item>
     
     <item>
+      <title>HT16K33Segment</title>
+      <link>https://smittytone.github.io/ht16k33segment-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.github.io/ht16k33segment-python/</guid>
+      <description>About HT16K33Segment This script provides a hardware driver for the Adafruit 0.56-inch 4-digit, 7-segment LED display, which is based on the Holtek HT16K33 controller. The LED communicates over any I²C bus.
+Two versions of the driver are available, one for CircuitPython applications, the other for code written in MicroPython.
+Please see the source code repo for details of the driver’s API.
+Back to the Top
+Release Notes  1.0.0 04 March 2020  Initial public release.</description>
+    </item>
+    
+    <item>
       <title>MNU</title>
       <link>https://smittytone.github.io/mnu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
