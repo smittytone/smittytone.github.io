@@ -184,6 +184,19 @@ With Squinter and Electric Imp’s impCentral™ API you can:
     </item>
     
     <item>
+      <title>SSD1306</title>
+      <link>https://smittytone.github.io/ssd1306-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.github.io/ssd1306-python/</guid>
+      <description>About SSD1306 This script provides a hardware driver for the Adafruit 128x32 OLED and Adafruit 128x64 OLED displays, which are based on the Solomon SSD1306 controller. The LEDs communicate over any I²C bus.
+The driver supports CircuitPython applications.
+Please see the source code repo for details of the driver’s API.
+Back to the Top
+Release Notes  1.0.0 11 March 2020  Initial public release.    Back to the Top</description>
+    </item>
+    
+    <item>
       <title>The Valley</title>
       <link>https://smittytone.github.io/valley/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

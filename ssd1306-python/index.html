@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="Description" content="Tony Smith's software library: Ski, a very simple arcade game" />
+    <meta name="Description" content="Tony Smith's software library: SSD1306, a driver for SSD1306-based displays" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
     <link href="../images/favicons/196.png" rel="shortcut icon" />
     <link href="../images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
-    <link href="../css/ascii.css" rel="stylesheet" type="text/css" />
-    <title>Ski</title>
+    <link href="../css/ht16k33segment.css" rel="stylesheet" type="text/css" />
+    <title>SSD1306</title>
 </head>
 
 <body>
@@ -18,9 +18,9 @@
 <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="navbar-header">
         <a class="navbar-brand" href="../index.html">
-            <img src="../images/ski/skib.png" style="width:32px;height:32px;" class="navimgb align-top" />
-            <img src="../images/ski/skib.png" style="width:32px;height:32px;" class="navimgw align-top" />
-            &nbsp;Ski
+            <img src="../images/ssd1306-python/matrixw.png" style="width:32px;height:32px;" class="navimgb align-top" />
+            <img src="../images/ssd1306-python/matrixw.png" style="width:32px;height:32px;" class="navimgw align-top" />
+            &nbsp;SSD1306
         </a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav mr-auto">
             
-            <li class="nav-item"><a class="nav-link" href="#about-ski-">About Ski</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about-ssd1306-">About SSD1306</a></li>
             
             <li class="nav-item"><a class="nav-link" href="#release-notes-">Release Notes</a></li>
             
@@ -45,32 +45,31 @@
             <div class="row">
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
-                    <h2 class="text-center">Ski</h2>
-                    <h3 class="text-center">A very simple arcade game</h3>
+                    <h2 class="text-center">SSD1306</h2>
+                    <h3 class="text-center">A driver for SSD1306-based displays</h3>
                     
 <h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">1.0.0</a></h4>
 
 <p>&nbsp;</p>
                     
-                    <h3 id="about-ski-">About Ski</h3>
-<p>Some Python 3 silliness: arcade action circa 1980 courtesy of <code>ncurses</code>.</p>
-<p>Press <code>[Space]</code> to play&hellip;</p>
-<p align="center"><img class="img-fluid" src="../images/ski/ski-1.jpg" style="border: 1px solid #bbbbbb;" /></p>
-<p align="center"><img class="img-fluid" src="../images/ski/ski-2.jpg" style="border: 1px solid #bbbbbb;" /></p>
+                    <h3 id="about-ssd1306-">About SSD1306</h3>
+<p>This script provides a hardware driver for the <a class="link" href="https://www.adafruit.com/product/931">Adafruit 128x32 OLED</a> and <a class="link" href="https://www.adafruit.com/product/326">Adafruit 128x64 OLED</a> displays, which are based on the Solomon SSD1306 controller. The LEDs communicate over any I²C bus.</p>
+<p>The driver supports <a class="link" href="https://circuitpython.readthedocs.io/en/latest/docs/index.html">CircuitPython</a> applications.</p>
+<p>Please see the <a class="link" href="https://github.com/smittytone/SSD1306OLED-Python">source code repo</a> for details of the driver’s API.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="release-notes-">Release Notes</h3>
 <ul>
-<li>1.0.0 <em>30 March 2019</em>
+<li>1.0.0 <em>11 March 2020</em>
 <ul>
-<li>Initial release.</li>
+<li>Initial public release.</li>
 </ul>
 </li>
 </ul>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="source-code-">Source Code</h3>
-<p>You can view Ski’s source code <a class="link" href="https://github.com/smittytone/Ski">at GitHub</a>.</p>
+<p>You can view SSD1306’s source code <a class="link" href="https://github.com/smittytone/SSD1306OLED-Python">at GitHub</a>.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 
@@ -83,7 +82,7 @@
 	
 	<li><a class="link" href="/hex/">Hex</a></li>
 	
-	<li><a class="link" href="/ssd1306-python/">SSD1306</a></li>
+	<li><a class="link" href="/ski/">Ski</a></li>
 	
 	<li><a class="link" href="/spasm/">Spasm</a></li>
 	
