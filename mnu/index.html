@@ -50,7 +50,7 @@
                     <h2 class="text-center">MNU</h2>
                     <h3 class="text-center">A macOS menu bar utility</h3>
                     
-<h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">1.2.1</a></h4>
+<h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">1.2.2</a></h4>
 
                     <p>&nbsp;</p>
 <div class="dloadpanel">
@@ -60,7 +60,7 @@
         <tbody>
             <tr>
                 <th scope="col-3 col-lg-2" width="20%"><b>File</b>&nbsp;</th>
-                <td scope="col-9 col-lg-10" width="80%"><a class="link" id="url" href="../files/mnu/mnu_1_2_1.dmg">mnu_1_2_1.dmg</a></td>
+                <td scope="col-9 col-lg-10" width="80%"><a class="link" id="url" href="../files/mnu/mnu_1_2_2.dmg">mnu_1_2_2.dmg</a></td>
             </tr>
             <tr>
                 <th scope="row"><b>File Size</b>&nbsp;</th>
@@ -68,7 +68,7 @@
             </tr>
             <tr>
                 <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                <td id="sha256">3aa72b2eb7d64672403bcd859362a8d86add640d2f5fcf337d5f0ba659b12044 </td>
+                <td id="sha256">85925cef01d5e1f7320289ddd5b6173996df0bad15b9f13d7940ee5eef8a3e15 </td>
             </tr>
         <tbody>
     </table>
@@ -128,6 +128,13 @@
 <p>Click <strong>Add</strong> and then <strong>Apply</strong>. When you select the application from MNU, it will be opened without first opening the macOS Terminal.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
+<h4 id="running-scripts-outside-of-terminal-">Running Scripts Outside of Terminal</h4>
+<p>From version 1.2.2, MNU also allows you to add commands that can be run without of Terminal. Add a new item as outlined above, but this time simply enter the command and tick the <strong>Check this box if you just want MNU to open the named application</strong> checkbox:</p>
+<p align="center"><img class="img-fluid" src="../images/mnu/add_new_item_4.png"></p>
+<p>Click <strong>Add</strong> and then <strong>Apply</strong>. When you select the item from MNU, it will be executed without opening the macOS Terminal.</p>
+<p>It’s important to remember that, without a shell, commands run this way must be provided with a <strong>full path</strong> and must not use Shell variables, eg. <code>$HOME</code>. Items called directly will not undergo any substitution first. For example, the command <code>rsync -avz ~ /Volumes/server/home</code> will silently fail: <code>~</code> is not a valid path outside of a shell and <code>rsync</code> is not in the root directory. Instead use <code>/usr/bin/rsync -avz /Users/a_user /Volumes/server/home</code>.</p>
+<p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
+<hr />
 <h3 id="how-to-backup-and-restore-your-menu-items-">How to Backup and Restore Your Menu Items</h3>
 <p><strong>New in Version 1.1.0</strong> You can export a record of the items presented by MNU by clicking the gearwheel button <img class="img-fluid" width="20" src="../images/mnu/gear.png" /> then selecting the <strong>Backup MNU Items&hellip;</strong> option. This will present a dialog in which you choose the location of the record.</p>
 <p align="center"><img class="img-fluid" src="../images/mnu/configure_1b.png"></p>
@@ -156,6 +163,11 @@
 <hr />
 <h3 id="release-notes-">Release Notes</h3>
 <ul>
+<li>1.2.2
+<ul>
+<li>Add the ability to execute commands outside of a shell/Terminal.</li>
+</ul>
+</li>
 <li>1.2.1
 <ul>
 <li>Add copy, cut, paste, select all, undo and redo to the <strong>Add/Edit User Item</strong> text fields.</li>
@@ -224,7 +236,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 1 June 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 9 June 2020</small></p>
 </div>
             
         </div>
