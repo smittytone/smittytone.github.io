@@ -21,16 +21,6 @@ Create a glyph pattern (black squares are equivalent to lit matrix segments) and
     </item>
     
     <item>
-      <title>Bash Scripts</title>
-      <link>https://smittytone.github.io/bash-scripts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://smittytone.github.io/bash-scripts/</guid>
-      <description>In the case of scripts which operate as utilities, use the --help switch to learn how to make use of the tool. Scripts which are intended to be run once — for example, the Raspberry Pi setup scripts — are documented in their comments. Scripts run in other contexts, eg. in Xcode, are not yet documented.
-Click on the name of the script to go and view its source code.</description>
-    </item>
-    
-    <item>
       <title>BuildAPIAccess</title>
       <link>https://smittytone.github.io/buildapiaccess/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -148,6 +138,16 @@ $ pdfmaker --source &amp;lt;image source directory&amp;gt; \ --destination &amp;
 You can disable or re-enable Previewer and Thumbnailer in System Preferences &amp;gt; Extensions:
 For some background information on how Catalina delivers QuickLook previews, please see this blog post.
 Troubleshooting If it appears that either Previewer or Thumbnailer are not working after you have run the host app, please log out of your Mac and then log back in.</description>
+    </item>
+    
+    <item>
+      <title>Shell Scripts</title>
+      <link>https://smittytone.github.io/bash-scripts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.github.io/bash-scripts/</guid>
+      <description>In the case of scripts which operate as utilities, use the --help switch to learn how to make use of the tool. Scripts which are intended to be run once — for example, the Raspberry Pi setup scripts — are documented in their comments. Scripts run in other contexts, eg. in Xcode, are not yet documented.
+Click on the name of the script to go and view its source code.</description>
     </item>
     
     <item>

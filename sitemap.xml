@@ -7,10 +7,6 @@
   </url>
   
   <url>
-    <loc>https://smittytone.github.io/bash-scripts/</loc>
-  </url>
-  
-  <url>
     <loc>https://smittytone.github.io/buildapiaccess/</loc>
   </url>
   
@@ -52,6 +48,10 @@
   
   <url>
     <loc>https://smittytone.github.io/previewmarkdown/</loc>
+  </url>
+  
+  <url>
+    <loc>https://smittytone.github.io/bash-scripts/</loc>
   </url>
   
   <url>
