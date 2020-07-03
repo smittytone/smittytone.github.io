@@ -30,6 +30,8 @@ a:hover {color:white;background-color:#4E65AE;text-decoration:none}
                flex:0 0 72px;font-size:11px;border-radius:5px;margin-right:12px;padding:3px;text-transform:uppercase;text-align:center;}
 .change-badge-up {background-color:#6E9B3D;}
 .change-badge-new {background-color:#FF0000;}
+.logo-light {display:none;}
+.logo-dark {display:inline;}
 
 /* Alter CSS for various screen sizes */
 @media only screen and (max-width:991px) {
@@ -61,4 +63,6 @@ a:hover {color:white;background-color:#4E65AE;text-decoration:none}
     .iconlink:hover {background-color:#222222;}
     .roundicon:hover {background-color: white;box-shadow: 0 0 8px 8px white;}
     .squareicon:hover {background-color: white;box-shadow: 0 0 8px 8px white;}
+    .logo-light {display:inline;}
+    .logo-dark {display:none;}
 }
