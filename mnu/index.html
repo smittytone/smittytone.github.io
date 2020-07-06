@@ -14,7 +14,7 @@
 
 <body>
     <div class="container-fluid" id="ctop">
-        
+
 <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="navbar-header">
         <a class="navbar-brand" href="../index.html">
@@ -28,15 +28,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav mr-auto">
-            
+
             <li class="nav-item"><a class="nav-link" href="#how-to-use-mnu-">How to Use MNU</a></li>
-            
+
             <li class="nav-item"><a class="nav-link" href="#how-to-configure-mnu-">How To Configure MNU</a></li>
-            
+
             <li class="nav-item"><a class="nav-link" href="#release-notes-">Release Notes</a></li>
-            
+
             <li class="nav-item"><a class="nav-link" href="#source-code-">Source Code</a></li>
-            
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
@@ -49,7 +49,7 @@
                 <div class="col-10 col-lg-8">
                     <h2 class="text-center">MNU</h2>
                     <h3 class="text-center">A macOS menu bar utility</h3>
-                    
+
 <h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">1.2.2</a></h4>
 
                     <p>&nbsp;</p>
@@ -74,7 +74,7 @@
     </table>
 </div>
 <p>&nbsp;<br />&nbsp;</p>
-                    
+
                     <p>&nbsp;</p>
                     <h3 id="about-mnu-">About MNU</h3>
 <p>MNU is a macOS main menu bar utility which provides not only a number of handy controls for system settings you may change frequently, but also allows you to invoke shell scripts that you use often.</p>
@@ -129,10 +129,10 @@
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h4 id="running-scripts-outside-of-terminal-">Running Scripts Outside of Terminal</h4>
-<p>From version 1.2.2, MNU also allows you to add commands that can be run without of Terminal. Add a new item as outlined above, but this time simply enter the command and tick the <strong>Check this box if you just want MNU to open the named application</strong> checkbox:</p>
+<p>From version 1.2.2, MNU also allows you to add commands that can be run without of Terminal. Add a new item as outlined above, but this time simply enter the command and tick the <strong>Check this box to run the script without Terminal</strong> checkbox:</p>
 <p align="center"><img class="img-fluid" src="../images/mnu/add_new_item_4.png"></p>
 <p>Click <strong>Add</strong> and then <strong>Apply</strong>. When you select the item from MNU, it will be executed without opening the macOS Terminal.</p>
-<p>It’s important to remember that, without a shell, commands run this way must be provided with a <strong>full path</strong> and must not use Shell variables, eg. <code>$HOME</code>. Items called directly will not undergo any substitution first. For example, the command <code>rsync -avz ~ /Volumes/server/home</code> will silently fail: <code>~</code> is not a valid path outside of a shell and <code>rsync</code> is not in the root directory. Instead use <code>/usr/bin/rsync -avz /Users/a_user /Volumes/server/home</code>.</p>
+<p>It’s important to remember that, without a shell, commands run this way must be provided with a <strong>full path</strong> and must not use Shell variables, eg. <code>$HOME</code>. Items called directly will not undergo any substitution or quoting. For example, the command <code>rsync -avz ~ /Volumes/server/home</code> will silently fail: <code>~</code> is not a valid path outside of a shell and <code>rsync</code> is not in the root directory. Instead use <code>/usr/bin/rsync -avz /Users/a_user /Volumes/server/home</code>.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="how-to-backup-and-restore-your-menu-items-">How to Backup and Restore Your Menu Items</h3>
@@ -213,21 +213,21 @@
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 
-                    
+
 
 <h3>Related Software</h3>
 <ul>
-	
+
 	<li><a class="link" href="/ascii/">ASCII</a></li>
-	
+
 	<li><a class="link" href="/previewmarkdown/">PreviewMarkdown</a></li>
-	
+
 	<li><a class="link" href="/fontismo/">Fontismo</a></li>
-	
+
 	<li><a class="link" href="/hex/">Hex</a></li>
-	
+
 	<li><a class="link" href="/unicoder/">Unicoder</a></li>
-	
+
 </ul>
 
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
@@ -238,7 +238,7 @@
             <div class="col">
     <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 3 July 2020</small></p>
 </div>
-            
+
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
