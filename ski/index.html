@@ -98,7 +98,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 3 July 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 9 July 2020</small></p>
 </div>
             
         </div>
@@ -114,6 +114,24 @@
             $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
         }
     });
+
+    function switchLogo() {
+        count += 1;
+        if (count >= logoFonts.length) { count = 0; }
+        updateLogo(count);
+    }
+
+    function updateLogo(n) {
+        let newLogo = "images/gfx/logo_colour_" + logoFonts[n] + ".svg";
+        let imageTag = document.getElementById("primary");
+        imageTag.src = newLogo;
+    }
+
+    
+    
+    let logoFonts = ["countdown", "chromium", "stop", "data"];
+    let count = Math.floor(Math.random() * logoFonts.length);
+    updateLogo(count);
 </script>
 </body>
 </html>

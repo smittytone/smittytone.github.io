@@ -48,7 +48,7 @@
                     <h2 class="text-center">pdfmaker</h2>
                     <h3 class="text-center">A macOS command line tool</h3>
                     
-<h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">2.0.0</a></h4>
+<h4 class="text-center">Latest Release: <a class="link" href="#release-notes-">2.1.0</a></h4>
 
                     <p>&nbsp;</p>
 <div class="dloadpanel">
@@ -58,15 +58,15 @@
         <tbody>
             <tr>
                 <th scope="col-3 col-lg-2" width="20%"><b>File</b>&nbsp;</th>
-                <td scope="col-9 col-lg-10" width="80%"><a class="link" id="url" href="../files/pdfmaker/pdfmaker_2_0_0.dmg">pdfmaker_2_0_0.dmg</a></td>
+                <td scope="col-9 col-lg-10" width="80%"><a class="link" id="url" href="../files/pdfmaker/pdfmaker_2_1_0.dmg">pdfmaker_2_1_0.dmg</a></td>
             </tr>
             <tr>
                 <th scope="row"><b>File Size</b>&nbsp;</th>
-                <td>67KB</td>
+                <td>68KB</td>
             </tr>
             <tr>
                 <th scope="row"><b>SHA 256</b>&nbsp;</th>
-                <td id="sha256">7f2e5e439a74ca0d6043c61f90a2e1932ba6daa052c445935562c469b1f5d543 </td>
+                <td id="sha256">808400ec81dfbf3e952d8b7225a7167926292c46406540f2ac0c1ee43779cfb0 </td>
             </tr>
         <tbody>
     </table>
@@ -119,6 +119,12 @@
 <hr />
 <h3 id="release-notes-">Release Notes</h3>
 <ul>
+<li>2.1.0
+<ul>
+<li>Add <code>--version</code> switch.</li>
+<li>Better reporting of bad arguments.</li>
+</ul>
+</li>
 <li>2.0.0
 <ul>
 <li>Add PDF-to-images functionality.</li>
@@ -163,7 +169,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 3 July 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 9 July 2020</small></p>
 </div>
             
         </div>
@@ -179,6 +185,24 @@
             $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
         }
     });
+
+    function switchLogo() {
+        count += 1;
+        if (count >= logoFonts.length) { count = 0; }
+        updateLogo(count);
+    }
+
+    function updateLogo(n) {
+        let newLogo = "images/gfx/logo_colour_" + logoFonts[n] + ".svg";
+        let imageTag = document.getElementById("primary");
+        imageTag.src = newLogo;
+    }
+
+    
+    
+    let logoFonts = ["countdown", "chromium", "stop", "data"];
+    let count = Math.floor(Math.random() * logoFonts.length);
+    updateLogo(count);
 </script>
 </body>
 </html>

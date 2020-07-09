@@ -57,7 +57,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
                 <div class="col-10 col-lg-8">
                     <div style="padding: 30px 0 50px 0;">
-    <p align="center"><img class="img-fluid" src="images/gfx/logo_colour.svg" /></p>
+    <p align="center"><img id="primary" class="img-fluid" src="images/gfx/logo_colour_countdown.svg" /></p>
 </div>
 <p class="bio">I’m a Developer Educator with cloud communications platform <a href="https://www.twilio.com"><span style="font-family:Oswald;font-weight:500;">Twilio</span></a>, within its wireless and Internet of Things division. I spent the previous six years as the Senior Tech Writer and a Project Manager at IoT platform-as-a-service company <a href="https://developer.electricimp.com"><span style="font-family:Oswald;font-weight:500;">Electric Imp</span></a>.</p>
 <p class="bio">Before that, I was a technology journalist, 13 out of 25 years spent in senior roles on the website <a href="https://theregister.co.uk"><span style="font-family:Oswald;font-weight:500;">The Register</span></a>. At other times I contributed to a wide array of publications and news organisations, including <i>The Times</i>, <i>The Guardian</i>, <i>The Independent</i>, the BBC and CNN.</p>
@@ -113,7 +113,7 @@
                                     <h4 class="mt-0 mb-1"><a class="link" href="mnu/index.html">MNU</a></h4>
                                     <p class="bodypara"><a href="mnu/index.html">Latest Release: 1.2.2</a> <i>09 June 2020</i>
 
-&nbsp;<span class="change-badge change-badge-up">New Version</span><br />A menu bar utility that provides easy access to macOS features and scripts you use every day.</p>
+<br />A menu bar utility that provides easy access to macOS features and scripts you use every day.</p>
                                 </div>
                             </li>
                         
@@ -123,9 +123,9 @@
                                 <a class="iconlink" href="pdfmaker/index.html"><img class="mr-3 roundicon" src="images/pdfmaker/pdfm.png" width="64" height="64" alt="pdfmaker"></a>
                                 <div class="media-body">
                                     <h4 class="mt-0 mb-1"><a class="link" href="pdfmaker/index.html">pdfmaker</a></h4>
-                                    <p class="bodypara"><a href="pdfmaker/index.html">Latest Release: 2.0.0</a> <i>14 November 2019</i>
+                                    <p class="bodypara"><a href="pdfmaker/index.html">Latest Release: 2.1.0</a> <i>09 July 2020</i>
 
-<br />A command line tool that combines multiple JPEG images into a single PDF file, and extracts images from an existing PDF file.</p>
+&nbsp;<span class="change-badge change-badge-up">New Version</span><br />A command line tool that combines multiple JPEG images into a single PDF file, and extracts images from an existing PDF file.</p>
                                 </div>
                             </li>
                         
@@ -661,7 +661,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="iconlink" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 3 July 2020</small></p>
+    <p class="text-center"><a class="iconlink" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 9 July 2020</small></p>
 </div>
             <p class="text-center bodypara"><small><a class="link" href="privacy.html">Site Privacy Policy (GDPR)</a></small></p>
         </div>
@@ -677,6 +677,24 @@
             $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
         }
     });
+
+    function switchLogo() {
+        count += 1;
+        if (count >= logoFonts.length) { count = 0; }
+        updateLogo(count);
+    }
+
+    function updateLogo(n) {
+        let newLogo = "images/gfx/logo_colour_" + logoFonts[n] + ".svg";
+        let imageTag = document.getElementById("primary");
+        imageTag.src = newLogo;
+    }
+
+    
+    
+    let logoFonts = ["countdown", "chromium", "stop", "data"];
+    let count = Math.floor(Math.random() * logoFonts.length);
+    updateLogo(count);
 </script>
 </body>
 </html>
