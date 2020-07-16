@@ -53,15 +53,15 @@
                     
                     
                     <p>&nbsp;</p>
-                    <h3 id="about-xbeeparser-">About XBeeParser</h3>
+                    <h3 id="about-xbeeparser">About XBeeParser</h3>
 <p>This is an XBee packet decoder written in Python 3.</p>
 <p>It is a work in progress. The current version decodes all the standard XBee packets, and provides further decoding of a limited (but growing) selection of Zigbee Device Object (ZDO) commands (eg. 16-bit network address request) and general (aka ‘global’) Zigbee Cluster Library commands (eg. Read Attribute).</p>
-<h3 id="how-to-use-xbeeparser-">How To Use XBeeParser</h3>
+<h3 id="how-to-use-xbeeparser">How To Use XBeeParser</h3>
 <p>Run XBeeParser at the command line and provide a code XBee packet as a string of hexadecimal octets:</p>
 <pre><code>$ python xbp.py 7e0020950013a20040522baa7d84027d840013a20040522baa2000fffe0101c105101e1b
 </code></pre><p>The XBee packet string need not be a single string; you can also include spaces:</p>
 <pre><code>$ python xbp.py 7e 00 20 95 00 13 a2 00 40 52 2b aa 7d 84 02 7d 84 00 13 a2 00 40 52 2b aa 20 00 ff fe 01 01 c1 05 10 1e 1b
-</code></pre><h4 id="make-xbeeparser-global-">Make XBeeParser Global</h4>
+</code></pre><h4 id="make-xbeeparser-global">Make XBeeParser Global</h4>
 <p>To simplify usage of XBeeParser, run the following commands:</p>
 <ol>
 <li><code>mv xbp.py /usr/local/bin/xbp</code></li>
@@ -69,9 +69,9 @@
 </ol>
 <p>Then you run XBeeParser from any location in your filesystem:</p>
 <pre><code>$ xbp 7e 00 05 88 05 45 45 00 e8
-</code></pre><h4 id="escaping-">Escaping</h4>
+</code></pre><h4 id="escaping">Escaping</h4>
 <p>By default, XBeeParser assumes packets have been escaped, but this can be disabled with the <code>-e</code> or <code>--escape</code> switch. Follow this with <code>false</code> to disable escaping (or <code>true</code> to be explicit about enabling escaping.</p>
-<h4 id="options-">Options</h4>
+<h4 id="options">Options</h4>
 <p>XBeeParser has the following options:</p>
 <table>
 <thead>
@@ -111,8 +111,8 @@
 </table>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
-<h3 id="examples-">Examples</h3>
-<h4 id="using-options-">Using Options</h4>
+<h3 id="examples">Examples</h3>
+<h4 id="using-options">Using Options</h4>
 <pre><code>$ python xbp.py -d true -e false 7e0020950013a20040522baa7d84027d840013a20040522baa2000fffe0101c105101e1b
 </code></pre><p>This generates the following output:</p>
 <pre><code>Extra debugging information will be printed during decoding
@@ -133,7 +133,7 @@ Source event                  : Pushbutton
 Digi Profile ID               : C105
 Manufacturer ID               : 101E
 Checksum                      : 1B
-</code></pre><h4 id="zigbee-">Zigbee</h4>
+</code></pre><h4 id="zigbee">Zigbee</h4>
 <pre><code>$ python xbp.py 7E 002D 91 0013A200 40522BAA 06FC 00 00 8038 0000 01 01 00 00F8FF07 1D00 0000 10 54 5E 69 5B 4B 48 44 48 55 55 57 46 51 41 44 4B 6E
 </code></pre><p>This generates the following output:</p>
 <pre><code>XBee frame found
@@ -153,7 +153,7 @@ Frame data                    : 010000F8FF071D00000010545E695B4B4844485555574651
 Checksum                      : 6E
 </code></pre><p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
-<h3 id="release-notes-">Release Notes</h3>
+<h3 id="release-notes">Release Notes</h3>
 <ul>
 <li>1.0.4 <em>9 January 2019</em>
 <ul>
@@ -223,7 +223,7 @@ Checksum                      : 6E
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 15 July 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 16 July 2020</small></p>
 </div>
             
         </div>

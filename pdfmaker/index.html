@@ -74,7 +74,7 @@
 <p>&nbsp;<br />&nbsp;</p>
                     
                     <p>&nbsp;</p>
-                    <h3 id="how-to-use-pdfmaker-">How to Use pdfmaker</h3>
+                    <h3 id="how-to-use-pdfmaker">How to Use pdfmaker</h3>
 <p><em>pdfmaker</em> is a macOS command line tool which allows you to combine JPEG image files into a single PDF file and to extract a series of images from an existing PDF file.</p>
 <p>In Terminal, run:</p>
 <pre><code>$ pdfmaker --source &lt;image source directory&gt; \
@@ -94,14 +94,14 @@
            --resolution &lt;output dpi value&gt;
 </code></pre><p>You can use <code>-b</code>, and <code>-r</code> as shorthand for the <code>--break</code> and <code>--resolution</code> switches. The <code>-c</code> switch may also be used to compress the output images.</p>
 <p><em>pdfmaker</em> does not delete the source file.</p>
-<h3 id="image-compression-">Image Compression</h3>
+<h3 id="image-compression">Image Compression</h3>
 <p>The compression option will compress images before adding them to the PDF. This allows you to reduce the size of the final PDF, as required. Provide an amount in the range 0.0 to 1.0, where 0.0 is maximum compression (lowest quality) and 1.0 is no compression (highest quality).</p>
 <p><strong>Note</strong> Building a PDF from JPEG files means that you are already using compressed images. If those JPEGs are highly compressed, applying a low compression amount to <em>pdfmaker</em> will not increase image quality but will make your PDF file larger.</p>
-<h3 id="image-resolution-">Image Resolution</h3>
+<h3 id="image-resolution">Image Resolution</h3>
 <p>The default output resolution is 72dpi (dots per inch). PDFs store page dimensions as points, rather than pixels, enabling device-independent resolution. <em>pdfmaker</em> determines image pixel dimensions based on the output resolution and the PDF point dimensions. To get correctly sized images out of a PDF, you need to specify the resolution of the images used to source the PDF. You do this be specifying an appropriate output resolution.</p>
 <p>For example, a PDF contains a page sourced from a 2600 x 1600 pixel, 300dpi image. Output at 72dpi, this will result in an image of 620 x 400 (2600 * 72 / 300). To get the correct pixel size back, add <code>-r 300</code> to the command line. This will yield a 2600 x 1600, 300dpi output image.</p>
 <p>If you don’t know the source image dpi resolution, experiment with <code>-r</code> values until you get output of the size you require.</p>
-<h3 id="examples-">Examples</h3>
+<h3 id="examples">Examples</h3>
 <pre><code>$ pdfmaker --source ~/Documents/'Project X'/Images \
            --destination ~/Documents/PDFs/'Project X.pdf'
 </code></pre><p>This will merge all of the images files in <code>~/Documents/Project X/Images</code> into a file called <code>Project X.pdf</code> which will be located in <code>~/Documents/PDFs</code>.</p>
@@ -117,7 +117,7 @@
 </code></pre><p>This converts <code>Project X.pdf</code> to a series of images that will be written to the desktop (the default destination). This images will be highly compressed and output at a resolution of 200dpi.</p>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
-<h3 id="release-notes-">Release Notes</h3>
+<h3 id="release-notes">Release Notes</h3>
 <ul>
 <li>2.1.0
 <ul>
@@ -169,7 +169,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 15 July 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 16 July 2020</small></p>
 </div>
             
         </div>

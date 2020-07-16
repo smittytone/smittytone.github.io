@@ -53,7 +53,7 @@
                     
                     
                     <p>&nbsp;</p>
-                    <h3 id="about-spasm-">About Spasm</h3>
+                    <h3 id="about-spasm">About Spasm</h3>
 <p><em>spasm</em> is an assembler/disassembler for the <a href="https://en.wikipedia.org/wiki/Motorola_6809" class="link">Motorola 6809 microprocessor</a> written in Python 3.</p>
 <p>It was written to generate 6809 machine code for a separate processor emulation project. As such, it does not output files into a standard format, but in the form of JSON intended to be read by the emulator. The output file’s extension is <code>.6809</code>, but it is a text file containing a JSON object:</p>
 <pre><code>{ &quot;address&quot; : &lt;start_address_of_code&gt;,
@@ -90,19 +90,19 @@
 @exit       CLRA
 @store      RMB @entlen
             RTS                  ; return
-</code></pre><h3 id="assembler-conventions-">Assembler Conventions</h3>
-<h4 id="literals-">Literals</h4>
+</code></pre><h3 id="assembler-conventions">Assembler Conventions</h3>
+<h4 id="literals">Literals</h4>
 <p>Various literal types are supported. Literals are assumed to be decimal, but you can change this by using the following prefixes:</p>
 <ul>
 <li><code>%</code> — a binary value, eg. <code>%10001111</code> (equals <code>0x8F</code>, 143).</li>
 <li><code>'</code> — an 8-bit Ascii value, eg. <code>'A</code> (equals <code>0x41</code>, 65).</li>
 <li><code>$</code> — a hexadecimal value, eg, <code>$FF00</code> (equals 65280).<br /><strong>Note</strong> <em>spasm</em> can also read hexadecimal values prefixed with <code>0x</code> for modern users, but <code>$</code> is the classic Motorola prefix.</li>
 </ul>
-<h4 id="labels-">Labels</h4>
+<h4 id="labels">Labels</h4>
 <p>As the above example shows, <em>spasm</em> supports the use of labels to represent values and memory locations (eg. for jumps and branches). All labels <strong>must</strong> be prefixed with <code>@</code>.</p>
-<h4 id="comments-">Comments</h4>
+<h4 id="comments">Comments</h4>
 <p>Comments can be entered by prefixing them with a <code>;</code> or <code>*</code> (for DREAM fans). At this time, multi-line comment indicators have not yet been implemented.</p>
-<h4 id="directives-">Directives</h4>
+<h4 id="directives">Directives</h4>
 <p><em>spasm</em>  makes use of the following assembler directives (aka pseudo-ops):</p>
 <ul>
 <li><code>EQU</code> — assign a value to a label, eg. <code>@label EQU 255</code>.</li>
@@ -128,14 +128,14 @@
 </li>
 <li><code>ORG</code> — continue assembly at the supplied address, eg. <code>@label ORG $3FFF ; continue assembly at address 16383</code>.</li>
 </ul>
-<h4 id="endianism-">Endianism</h4>
+<h4 id="endianism">Endianism</h4>
 <p>Motorola microprocessors are big endian, ie. the most-significant byte is written at the lowest  memory address and the least-significant byte is written at the highest address.</p>
 <p>For example: store the 16-bit value <code>0x1A2B</code> from the address <code>0xFF00</code>:</p>
 <pre><code>0xFF00    0x1A
 0xFF01    0x2B
-</code></pre><h3 id="sample-code-">Sample Code</h3>
+</code></pre><h3 id="sample-code">Sample Code</h3>
 <p>There are sample 6809 assembler programs and assembled <code>.6809</code> files in the <a href="/samples">samples</a> folder.</p>
-<h3 id="disassembly-">Disassembly</h3>
+<h3 id="disassembly">Disassembly</h3>
 <p><em>spasm</em> will disassemble <code>.6809</code> files, using the start address included in the file. It can also disassemble <code>.rom</code> files. Since these do not include address information, you can use the <code>-s</code> switch to set the effective address of the first byte in the <code>.rom</code> file. Because you may not wish to disassemble the entire file, you can use the <code>-b</code> switch to set the address from which disassembly will begin, and <code>-n</code> to set the number of bytes you want to disassemble.</p>
 <p>For example, if you have a 16KB ROM that is expected to be placed at <code>0x8000</code> in the 6809 memory map, you set the start address (with <code>-s</code>) to <code>0x8000</code>. However, you only want to disassemble from <code>0x9000</code>, so you use <code>-b</code> to set the base address to <code>0x9000</code>. You only want to disassemble the 128 bytes at <code>0x9000</code>, so you use <code>-n 128</code>:</p>
 <pre><code>./spasm.py my_rom.rom -s 0x8000 -b 0x9000 -n 128
@@ -204,7 +204,7 @@
 0x907D    JSR    8C59     BD8C59
 </code></pre><p>The <code>-b</code> and <code>-n</code> switches can be used when you are disassembling <code>.6809</code> files, but the code’s start address will always be taken from the file, not an address set with <code>-s</code>.</p>
 <p>See below for a full list of <em>spasm</em> switches.</p>
-<h3 id="command-line-">Command Line</h3>
+<h3 id="command-line">Command Line</h3>
 <p><em>spasm</em> is a command line tool. It supports the following switches:</p>
 <table>
 <thead>
@@ -264,7 +264,7 @@
 </table>
 <p class="linktext" align="right"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
-<h3 id="release-notes-">Release Notes</h3>
+<h3 id="release-notes">Release Notes</h3>
 <ul>
 <li>1.2.0 <em>29 May 2019</em>
 <ul>
@@ -334,7 +334,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 15 July 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="../images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="../images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 16 July 2020</small></p>
 </div>
             
         </div>
