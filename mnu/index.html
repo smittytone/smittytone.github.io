@@ -78,7 +78,7 @@
                     <p>&nbsp;</p>
                     <h3 id="about-mnu">About MNU</h3>
 <p>MNU is a macOS main menu bar utility which provides not only a number of handy controls for system settings you may change frequently, but also allows you to invoke shell scripts that you use often.</p>
-<p><img class="img-fluid centre" src="/images/mnu/mnu.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/mnu.png" alt="MNU appears in the macOS menu bar" /></p>
 <p>MNU comes pre-configured with these useful items:</p>
 <ul>
 <li>A switch to enable or disable macOS’s Dark Mode (Mojave and up)</li>
@@ -95,57 +95,57 @@
 <p>The first time you run MNU, it will ask you whether you want it to start automatically the next time you log into your Mac. We recommend that you click Yes, but you can always start MNU manually by double-clicking on its icon. If you click No and subsequently change your mind, you can tell MNU to start automatically by <a href="#mnu-preferences">setting the appropriate preference</a>.</p>
 <p>If you click Yes when you see the start automatically request or when you first use one of MNU’s items, macOS will request permission to grant MNU the right to access System Events. Please OK this request. macOS will also also you to grant MNU permission to access Terminal. Again, please OK this request.</p>
 <p><strong>Important</strong> MNU will not fully function without these permissions:</p>
-<p><img class="img-fluid centre" src="/images/mnu/request.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/request.png" alt="MNU requires System Events permissions" /></p>
 <p>You can always check the permissions granted to MNU by opening <strong>System Preferences &gt; Security &amp; Privacy &gt; Privacy &gt; Automation</strong>:</p>
-<p><img class="img-fluid centre" src="/images/mnu/privacy.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/privacy.png alt="Control MNU permissions in System Preferences, Security & Privacy" /></p>
 <p><strong>Note</strong> MNU’s installer will restart a new version of MNU if it is already installed and currently running.</p>
 <p class="linktext" style="text-align: right;"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="how-to-configure-mnu">How To Configure MNU</h3>
 <p>To configure MNU, click on the gearwheel icon in the last item on the menu:</p>
-<p><img class="img-fluid centre" src="/images/mnu/controls.png"><br />&nbsp;<br /><i>MNU’s controls (left to right): Quit, Configure and Help</i></p>
+<p class="text-center"><img class="img-fluid" src="/images/mnu/controls.png" alt="The MNU control strip" /><br />&nbsp;<br /><i>MNU’s controls (left to right): Quit, Configure and Help</i></p>
 <p>This pops up the <strong>Configure MNU</strong> window: make sure the <strong>Menu Items</strong> tab is showing:</p>
-<p><img class="img-fluid centre" src="/images/mnu/configure_1a.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/configure_1a.png" alt="The Menu Items tab is where you choose what item MNU shows" /></p>
 <p>The <strong>Menu Items</strong> tab lists the menu items currently set up for MNU in the order in which they appear in MNU. You can reorder the items just by grabbing one item and dragging it to the location you prefer. When you’re done, click <strong>Apply</strong> to update MNU, or close the window to ignore any changes you have made.</p>
 <p>All of the menu items feature a button which allow you to hide any such items that you don’t need. The button is green is its item is shown in the menu, or red if it is not. Just click to hide any shown item. If you later decide you’d like to see a hidden item after all, just click the button (now coloured red) to bring its item back to MNU.</p>
-<p><strong>Hint</strong> <kbd>option</kbd>-click MNU’s menu bar icon <img class="img-fluid" width="20" src="/images/mnu/micon.png" /> to temporarily view the complete menu, including hidden items.</p>
+<p><strong>Hint</strong> <kbd>option</kbd>-click MNU’s menu bar icon <img class="img-fluid" width="20" src="/images/mnu/micon.png" alt="The MNU menu bar icon" /> to temporarily view the complete menu, including hidden items.</p>
 <p>The other buttons, which are disabled for pre-installed items, allow you to edit or delete items you have added yourself:</p>
-<p><img class="img-fluid centre" src="/images/mnu/add_controls.png"><br />&nbsp;<br /><i>MNU’s item controls (left to right): Show/hide, Edit and Delete</i></p>
+<p class="text-center"><img class="img-fluid" src="/images/mnu/add_controls.png" alt="The menu item controls: show/hide, edit, delete" /><br />&nbsp;<br /><i>MNU’s item controls (left to right): Show/hide, Edit and Delete</i></p>
 <p class="linktext" style="text-align: right;"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="how-to-add-and-edit-your-own-menu-items">How to Add and Edit Your Own Menu Items</h3>
 <p>Initially, MNU contains only the built-in items, but you can add further ones by clicking <strong>+</strong> in the <strong>Configure MNU</strong> window. This presents a sheet in which you can enter a Terminal command that can then be invoked from MNU’s main menu. The command can be a simple request to change directory (for example, <code>cd $HOME</code>), or can be a complex command line sequence that invokes a script or command and passes in fixed arguments (such as, <code>~/scripts/myimageresizescript.py -size 640 480</code>):</p>
-<p><img class="img-fluid centre" src="/images/mnu/add_new_item.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/add_new_item.png" alt="Add a new MNU item" /></p>
 <p>You will also need to give the command a name by which it will be listed in the MNU menu. This should not match the name of an existing item. Lastly, click on on the circular Menu icon to change the image which will appear alongside the item in the menu:</p>
-<p><img class="img-fluid centre" src="/images/mnu/add_new_item_2.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/add_new_item_2.png" alt="Select the MNU item icon from the popup palette" /></p>
 <p>Click on a new icon to select it, then click off the popup panel to hide it. When you are done, click <strong>Add</strong>, or <strong>Cancel</strong> to discard your changes.</p>
 <p>The new item will now be listed in the <strong>Configure MNU</strong> window’s <strong>Menu Items</strong> tab, but it won’t be added to MNU until you click <strong>Apply</strong>; closing the window will cause the new item to be discarded.</p>
 <p>Items you have added can be deleted from the list, or they can be edited if you need to make a change: just click on the delete or edit buttons, respectively:</p>
-<p><img class="img-fluid centre" src="/images/mnu/edit_item.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/edit_item.png" alt="Edit a MNU item" /></p>
 <p>When MNU quits — you have restarted or shutdown your Mac, or you have clicked the quit icon at the bottom of the menu — it saves the current state of the menu so it’s ready for next time.</p>
 <h4 id="opening-applications">Opening Applications</h4>
 <p>From version 1.2.0, MNU also allows you to name apps that can then be activated from the menu bar. Add a new item as outlined above, but this time simply enter the name of the application and tick the <strong>Check this box if you just want MNU to open the named application</strong> checkbox:</p>
-<p><img class="img-fluid centre" src="/images/mnu/add_new_item_3.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/add_new_item_3.png" alt="MNU can be used to open macOS apps" /></p>
 <p>Click <strong>Add</strong> and then <strong>Apply</strong>. When you select the application from MNU, it will be opened without first opening the macOS Terminal.</p>
 <p class="linktext" style="text-align: right;"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h4 id="running-scripts-outside-of-terminal">Running Scripts Outside of Terminal</h4>
 <p>From version 1.2.2, MNU also allows you to add commands that can be run without of Terminal. Add a new item as outlined above, but this time simply enter the command and tick the <strong>Check this box to run the script without Terminal</strong> checkbox:</p>
-<p><img class="img-fluid centre" src="/images/mnu/add_new_item_4.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/add_new_item_4.png" alt="CLI commands can be executed directly, outside of Terminal" /></p>
 <p>Click <strong>Add</strong> and then <strong>Apply</strong>. When you select the item from MNU, it will be executed without opening the macOS Terminal.</p>
 <p>It’s important to remember that, without a shell, commands run this way must be provided with a <strong>full path</strong> and must not use Shell variables, eg. <code>$HOME</code>. Items called directly will not undergo any substitution or quoting. For example, the command <code>rsync -avz ~ /Volumes/server/home</code> will silently fail: <code>~</code> is not a valid path outside of a shell and <code>rsync</code> is not in the root directory. Instead use <code>/usr/bin/rsync -avz /Users/a_user /Volumes/server/home</code>.</p>
 <p class="linktext" style="text-align: right;"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="how-to-backup-and-restore-your-menu-items">How to Backup and Restore Your Menu Items</h3>
 <p><strong>New in Version 1.1.0</strong> You can export a record of the items presented by MNU by clicking the gearwheel button <img class="img-fluid" width="20" src="/images/mnu/gear.png" /> then selecting the <strong>Backup MNU Items.</strong> option. This will present a dialog in which you choose the location of the record.</p>
-<p><img class="img-fluid centre" src="/images/mnu/configure_1b.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/configure_1b.png" alt="You can save a backup of your MNU items" /></p>
 <p>Loading in a saved list of items is just a matter of clicking the gearwheel button, selecting the <strong>Import Items.</strong> option and locating the record file when prompted. This action will replace all of the items listed in the <strong>Menu Items</strong> tab, but the menu itself will not be updated (and the new items saved for next time) until you click <strong>Apply</strong>. If you just close the <strong>Configure MNU</strong> window, the imported items will be ignored (though the backup list can be imported again at another time).</p>
 <p>You might use this feature for backup purposes, or to synchronise menu items across multiple Macs. Because menu items can be set to trigger scripts that may download and run software on your Mac, only import menu item files you trust.</p>
 <p class="linktext" style="text-align: right;"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="mnu-preferences">MNU Preferences</h3>
 <p>The second tab in the <strong>Configure MNU</strong> window shows MNU’s preferences:</p>
-<p><img class="img-fluid centre" src="/images/mnu/configure_2.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/configure_2.png" alt="Set your MNU preferences" /></p>
 <p>Currently there is just three:</p>
 <ul>
 <li>The option to <a class="link" href="#launch">start MNU automatically when you log into your Mac</a>.</li>
@@ -153,12 +153,12 @@
 <li>The option to <a class="link" href="#show-images">show item images in MNU’s menu</a>.</li>
 </ul>
 <p id="launch">The first of these will initially be set only if you asked MNU to start automatically when MNU gave you this choice on its first run. Checking or un-checking this preference will, respectively, cause MNU to be added to or removed from System Preferences’ <b>Users & Groups > Login Items</b> readout:</p>
-<p><img class="img-fluid centre" src="/images/mnu/login_items.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/login_items.png" alt="Set MNU to run when you log into your Mac" /></p>
 <p>We recommend you enable this option so that MNU is always present in your mac’s menu bar when you need it.</p>
 <p id="new-tab">Running Terminal commands in a new tab will always ensure MNU doesn’t affect any Terminal tabs you already have open and in which you may be already running a command. If this option is not checked, MNU will always run commands in Terminal’s first tab, whether it is already running a command or not.</p>
 <p id="show-images">MNU presents images to help you identify menu items quickly, including a generic icon for items you have added yourself. If you don’t want MNU to include these images, un-check this option.</p>
 <p>The <strong>Configure MNU</strong> window’s last tab provides some information about MNU:</p>
-<p><img class="img-fluid centre" src="/images/mnu/configure_3.png"></p>
+<p><img class="img-fluid centre" src="/images/mnu/configure_3.png" alt="Get MNU version information and submit feedback" /></p>
 <p>Please click the <strong>Send Feedback</strong> button to report any problems you encounter with MNU, or to make suggestions for future functionality. We can’t respond to every feedback message we receive, but we will make a note of all bugs reported and any comments that you have to make about the app.</p>
 <p class="linktext" style="text-align: right;"><a class="link" href="#ctop">Back to the Top</a></p>
 <hr />
@@ -186,7 +186,7 @@
 </li>
 <li>1.1.0
 <ul>
-<li>Add an extra controls button, <img class="img-fluid" width="16" src="/images/mnu/gear.png" />, to the Configure window:
+<li>Add an extra controls button, <img class="img-fluid" width="16" src="/images/mnu/gear.png" alt="MNU settings icon" />, to the Configure window:
 <ul>
 <li>Export a JSON representation of the current menu item lits for backup and/or sync across Macs.</li>
 <li>Import JSON backups.</li>
@@ -244,8 +244,8 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/scripts/retina.min.js"></script>
-<script type="text/javascript" src="/scripts/logo.min.js"></script>
+<script src="/scripts/retina.min.js"></script>
+<script src="/scripts/logo.min.js"></script>
 <script>
     $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
