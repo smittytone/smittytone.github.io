@@ -116,6 +116,7 @@
 <h3 id="how-to-add-and-edit-your-own-menu-items">How to Add and Edit Your Own Menu Items</h3>
 <p>Initially, MNU contains only the built-in items, but you can add further ones by clicking <strong>+</strong> in the <strong>Configure MNU</strong> window. This presents a sheet in which you can enter a Terminal command that can then be invoked from MNU’s main menu. The command can be a simple request to change directory (for example, <code>cd $HOME</code>), or can be a complex command line sequence that invokes a script or command and passes in fixed arguments (such as, <code>~/scripts/myimageresizescript.py -size 640 480</code>):</p>
 <p><img class="img-fluid centre" src="/images/mnu/add_new_item.png" alt="Add a new MNU item" /></p>
+<p><strong>Note</strong> At this time, commands that contain double-quotes are not run correctly. For example, <code>cd &quot;$HOME&quot;</code>, will not work. Single quoting does work: <code>cd '$HOME'</code>. We are working to resolve this issue.</p>
 <p>You will also need to give the command a name by which it will be listed in the MNU menu. This should not match the name of an existing item. Lastly, click on on the circular Menu icon to change the image which will appear alongside the item in the menu:</p>
 <p><img class="img-fluid centre" src="/images/mnu/add_new_item_2.png" alt="Select the MNU item icon from the popup palette" /></p>
 <p>Click on a new icon to select it, then click off the popup panel to hide it. When you are done, click <strong>Add</strong>, or <strong>Cancel</strong> to discard your changes.</p>
@@ -237,7 +238,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="/images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="/images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 21 July 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="/images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="/images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 23 July 2020</small></p>
 </div>
             
         </div>
