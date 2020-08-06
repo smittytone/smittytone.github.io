@@ -11,7 +11,7 @@ li {color:black;font-family:Abel,sans-serif;font-size:16px;}
 a  {color:#0076BA;padding:2px;}
 .link:hover {color:white;background-color:#0076BA;text-decoration:none;padding:2px;border-radius:5px;}
 .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
-.container-fluid {max-width:84%;}
+.container {max-width:84%;overflow-x: hidden;}
 .frame {border:4px solid #0076BA;}
 .linktext {font-size:12px;}
 .dloadpanel {background-color:#DDDDDD;padding:10px 10px 10px 10px;border:2px solid #222222;}
@@ -28,12 +28,12 @@ a  {color:#0076BA;padding:2px;}
 .navbar-custom .nav-item:hover .nav-link {color:white;}
 .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
 
-@media only screen and (max-width: 1026px) {
-    .container-fluid {padding:0px;max-width:90%;}
+@media only screen and (min-width: 781px) and (max-width: 1026px) {
+    .container {padding:0;max-width:90%;margin:0;}
 }
 
 @media only screen and (max-width: 780px) {
-    .container-fluid {padding:0px;max-width:100%;}
+    .container {padding:0;max-width:100%;margin:0;}
 }
 
 @media (prefers-color-scheme: dark) {
