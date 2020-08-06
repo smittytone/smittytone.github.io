@@ -9,7 +9,7 @@ a:hover {color:white;background-color:#4E65AE;text-decoration:none}
 .bio {font-size:17px;text-align:justify;}
 .bio a:hover {color:white;background-color:#4E65AE;text-decoration:none;padding:2px;border-radius:5px;}
 .bodypara a:hover {color:white;background-color:#4E65AE;text-decoration:none;padding:2px;border-radius:5px;}
-.container-fluid {max-width:84%;}
+.container {max-width:84%;overflow-x: hidden;}
 .frame {border:4px solid #4E65AE;}
 .linktext {font-size:13px;}
 .link:hover {color:white;background-color:#4E65AE;text-decoration:none;padding:2px;border-radius:5px;}
@@ -39,12 +39,12 @@ a:hover {color:white;background-color:#4E65AE;text-decoration:none}
     .gsmall {display:none;}
 }
 
-@media only screen and (max-width: 1026px) {
-    .container-fluid {padding:0px;max-width:90%;}
+@media only screen and (min-width: 781px) and (max-width: 1026px) {
+    .container {padding:0;max-width:90%;margin:0;}
 }
 
 @media only screen and (max-width: 780px) {
-    .container-fluid {padding:0px;max-width:100%;}
+    .container {padding:0;max-width:100%;margin:0;}
 }
 
 /* Alter CSS for macOS/iOS Dark Mode */
