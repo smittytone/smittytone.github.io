@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Privacy Policy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Abel|Oswald"   rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Abel|Oswald"  rel="stylesheet" />
     <link href="images/favicons/196.png" rel="shortcut icon" />
     <link href="images/favicons/apple-touch-icon.png" rel="apple-touch-icon" />
     <style>
@@ -17,13 +17,17 @@
         a  {color:#4E65AE;}
         a:hover {color:white;background-color:#4E65AE;text-decoration:none;padding:2px;border-radius:5px;}
         .center {margin-left:auto;margin-right:auto;margin-bottom:auto;margin-top:auto;}
-        .container {padding:10px;overflow-x: hidden;}
+        .container {max-width:80%;overflow-x: hidden;}
         .coloimg {content:url("images/rassilonblack.png");}
 
-        @media only screen and (max-width: 780px) {
-            .container {padding:0;margin:0;
+        @media only screen and (min-width: 781px) and (max-width: 1026px) {
+            .container {padding:0;max-width:90%;margin:0;}
         }
-}
+
+        @media only screen and (max-width: 780px) {
+            .container {padding:0;max-width:100%;margin:0;}
+        }
+
         @media (prefers-color-scheme: dark) {
             body {color:white;background:#222222;}
             p  {color:white;}
