@@ -31,11 +31,7 @@ li {color:black;font-family:Abel,sans-serif;font-size:16px;}
 .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
 .centre {display: block;margin-left: auto;margin-right: auto;}
 
-@media only screen and (min-width: 781px) and (max-width: 1026px) {
-    .container {padding:0;max-width:90%;margin:0;}
-}
-
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1026px) {
     .container {padding:0;max-width:100%;margin:0;}
 }
 
@@ -60,5 +56,4 @@ li {color:black;font-family:Abel,sans-serif;font-size:16px;}
     .navcol {color:black;background-color:rgb(121, 153, 121);}
     .navimgb {display:inline-block;}
     .navimgw {display:none;}
-    .navbar-toggler-icon {background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
 }

@@ -39,11 +39,7 @@ a  {color:#6E9B3D;padding:2px;}
 .flex-items-start {align-items:flex-start !important}
 .centre {display: block;margin-left: auto;margin-right: auto;}
 
-@media only screen and (min-width: 781px) and (max-width: 1026px) {
-    .container {padding:0;max-width:90%;margin:0;}
-}
-
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1026px) {
     .container {padding:0;max-width:100%;margin:0;}
 }
 
