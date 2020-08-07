@@ -14,7 +14,7 @@ li {color:black;font-family:Abel,sans-serif;font-size:16px;}
 a  {color:#6E9B3D;padding:2px;}
 .link:hover {color:#EEEEEE;background-color:#6E9B3D;text-decoration:none;padding:2px;border-radius:5px;}
 .colo:hover {background-color:#EEEEEE;padding:0px;border-radius:0px;}
-.container {max-width:84%;overflow-x: hidden;}
+.container {max-width:80%;overflow-x: hidden;}
 .frame {border:4px solid #6E9B3D;}
 .linktext {font-size:12px;}
 .dloadpanel {background-color:#DDDDDD;padding:10px 10px 10px 10px;border:2px solid #222222;}
@@ -45,26 +45,26 @@ a  {color:#6E9B3D;padding:2px;}
 
 @media (prefers-color-scheme: dark) {
     body {color:white;background:#222222;}
-    h1 {color:rgb(124, 189, 54);}
-    h2 {color:rgb(124, 189, 54);}
+    h1 {color:#6E9B3D;}
+    h2 {color:#6E9B3D;}
     h3 {color:white;}
     h4 {color:white;}
-    hr {border-color:rgb(124, 189, 54);}
+    hr {border-color:#6E9B3D;}
     th {border: 1px solid white;}
     td {border: 1px solid white;}
     li {color:white;}
-    a  {color:rgb(125, 202, 43);}
+    a  {color:#6E9B3D;}
     kbd {background-color:rgb(124, 189, 54);}
-    .link:hover {color:black;background-color:rgb(124, 189, 54);}
+    .link:hover {color:black;background-color:#6E9B3D;}
     .colo:hover {background-color:#222222;}
     .linktext {color:rgb(124, 189, 54);}
     .dloadpanel {background-color:#222222;border:2px solid #6E9B3D;}
     .navcol {background-color:#6E9B3D;}
-    .frame {border:4px solid rgb(124, 189, 54);}
+    .frame {border:4px solid #6E9B3D;}
     .imgw {display:inline-block;}
     .imgb {display:none;}
     .navimgb {display:inline-block;}
     .navimgw {display:none;}
-    .navbar-custom {background-color:rgb(124, 189, 54);}
+    .navbar-custom {background-color:#6E9B3D;}
     .change-badge {color:white;}
 }
