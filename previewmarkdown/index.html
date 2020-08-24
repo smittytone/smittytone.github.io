@@ -3,6 +3,7 @@
 <head>
     <meta name="Description" content="Tony Smith's software library: PreviewMarkdown, a tool to generate Markdown file QuickLook previews for macOS Catalina" />
     <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="max-age=3600" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
@@ -136,7 +137,7 @@
                 <div class="col-1 col-lg-2">&nbsp;</div>
             </div>
             <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="/images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="/images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 14 August 2020</small></p>
+    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="/images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="/images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 24 August 2020</small></p>
 </div>
             
         </div>
@@ -145,14 +146,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="/scripts/retina.min.js"></script>
 <script src="/scripts/logo.min.js"></script>
-<script>
-    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){window.location.hash = hash;});
-        }
-    });
-</script>
+<script src="/scripts/scroller.min.js"></script>
 </body>
 </html>
