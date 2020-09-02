@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>smittytone&#39;s Software Library on smittytone’s software library</title>
+    <title>smittytone&#39;s Software Library on smittytone’s software stack</title>
     <link>https://smittytone.net/</link>
-    <description>Recent content in smittytone&#39;s Software Library on smittytone’s software library</description>
+    <description>Recent content in smittytone&#39;s Software Library on smittytone’s software stack</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -103,6 +103,18 @@ Two versions of the driver are available, one for CircuitPython applications, th
 Please see the source code repo for details of the driver’s API.
 Back to the Top
 Release Notes  1.0.0 04 March 2020  Initial public release.</description>
+    </item>
+    
+    <item>
+      <title>Logo Typefaces</title>
+      <link>https://smittytone.net/fonts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.net/fonts/</guid>
+      <description>This site’s logo is an homage to some of the great typefaces of the increasingly distant past, ie. the 1960s, 1970s and 1980s.
+For some background about why these typefaces in particular, please see this blog post.
+There are currently nine typefaces used, selected at random and re-selected every 20 seconds. They are:
+Baby Teeth Designed by Milton Glaser in the early 60s after seeing a hand painted sign in Mexico City.</description>
     </item>
     
     <item>
