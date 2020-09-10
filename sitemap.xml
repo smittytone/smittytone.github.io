@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://smittytone.net/articles/fonts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://smittytone.net/articles/</loc>
+  </url>
+  
+  <url>
+    <loc>https://smittytone.net/articles/</loc>
+  </url>
+  
+  <url>
     <loc>https://smittytone.net/ascii/</loc>
   </url>
   
@@ -19,7 +31,7 @@
   </url>
   
   <url>
-    <loc>https://smittytone.net/ei_apps/</loc>
+    <loc>https://smittytone.net/data-ei-apps/</loc>
   </url>
   
   <url>
@@ -39,10 +51,6 @@
   </url>
   
   <url>
-    <loc>https://smittytone.net/fonts/</loc>
-  </url>
-  
-  <url>
     <loc>https://smittytone.net/mnu/</loc>
   </url>
   
@@ -52,6 +60,10 @@
   
   <url>
     <loc>https://smittytone.net/previewmarkdown/</loc>
+  </url>
+  
+  <url>
+    <loc>https://smittytone.net/privacy/</loc>
   </url>
   
   <url>

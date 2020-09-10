@@ -11,6 +11,27 @@
     
     
     <item>
+      <title>About Our Typefaces</title>
+      <link>https://smittytone.net/articles/fonts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.net/articles/fonts/</guid>
+      <description>The smittytone’s Software Stack logo is an homage to some of the great typefaces of that increasingly distant past: the 1960s, 70s and 80s.
+If you’d like some background about why these typefaces in particular were selected, please take a look at this blog post.
+There are currently nine typefaces used, selected at random and re-selected every 20 seconds. They are:
+Baby Teeth Designed by Milton Glaser in the early 60s, apparently after seeing a similar design on a hand-painted sign in Mexico City.</description>
+    </item>
+    
+    <item>
+      <title>Articles</title>
+      <link>https://smittytone.net/articles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.net/articles/</guid>
+      <description>This page is home to a series of essays and longer guides that are technology related, but not focused on the software that is the primary role of this site</description>
+    </item>
+    
+    <item>
       <title>ASCII</title>
       <link>https://smittytone.net/ascii/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -54,10 +75,10 @@ How To Use Controller Controller’s iPhone app provides a means to add devices 
     
     <item>
       <title>eiapps</title>
-      <link>https://smittytone.net/ei_apps/</link>
+      <link>https://smittytone.net/data-ei-apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://smittytone.net/ei_apps/</guid>
+      <guid>https://smittytone.net/data-ei-apps/</guid>
       <description></description>
     </item>
     
@@ -106,18 +127,6 @@ Release Notes  1.0.0 04 March 2020  Initial public release.</description>
     </item>
     
     <item>
-      <title>Logo Typefaces</title>
-      <link>https://smittytone.net/fonts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://smittytone.net/fonts/</guid>
-      <description>This site’s logo is an homage to some of the great typefaces of the increasingly distant past, ie. the 1960s, 1970s and 1980s.
-For some background about why these typefaces in particular, please see this blog post.
-There are currently nine typefaces used, selected at random and re-selected every 20 seconds. They are:
-Baby Teeth Designed by Milton Glaser in the early 60s after seeing a hand painted sign in Mexico City.</description>
-    </item>
-    
-    <item>
       <title>MNU</title>
       <link>https://smittytone.net/mnu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -150,6 +159,16 @@ $ pdfmaker --source &amp;lt;image source directory&amp;gt; \ --destination &amp;
 You can disable or re-enable Previewer and Thumbnailer in System Preferences &amp;gt; Extensions:
 For some background information on how Catalina delivers QuickLook previews, please see this blog post.
 Troubleshooting If it appears that either Previewer or Thumbnailer are not working after you have run the host app, please log out of your Mac and then log back in.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://smittytone.net/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://smittytone.net/privacy/</guid>
+      <description>Black Pyramid Software applications — including, but not limited to, Fontismo, PreviewMarkdown, Squinter, FightingFantasy and The Valley — do not collect, store or transmit any user data whatsoever.
+Squinter requires that you enter Electric Imp Account credentials in order to access the Electric Imp impCloud™, but does not store this information itself. If, as a user, you wish to store your Electric Imp Account credentials in your computer’s system-wide keychain, Squinter enables this.</description>
     </item>
     
     <item>

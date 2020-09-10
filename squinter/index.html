@@ -1,5 +1,10 @@
+
+
 <!doctype html>
 <html lang="en">
+
+    
+
 <head>
     <meta name="Description" content="Tony Smith's software library: Squinter, a development tool to manage app and library files for Electric Imp projects" />
     <meta charset="utf-8" />
@@ -16,11 +21,13 @@
 <body>
     <div class="container" id="ctop">
         
+    
+
 <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="navbar-header">
         <a class="navbar-brand" href="/index.html">
-            <img src="/images/squinter/sqw.png"  style="width:32px;height:32px;" class="navimgb align-top" alt="Squinter logo" />
-            <img src="/images/squinter/sqw.png" style="width:32px;height:32px;" class="navimgw align-top" alt="Squinter logo" />
+            <img src="/images/squinter/sqw.png"  width="32" height="32" class="stn-menu-img-dark align-top" alt="Squinter logo" />
+            <img src="/images/squinter/sqw.png" width="32" height="32" class="stn-menu-img-light align-top" alt="Squinter logo" />
             &nbsp;Squinter
         </a>
     </div>
@@ -46,25 +53,31 @@
         </ul>
     </div>
 </nav>
+
         <div class="frame">
             <div class="row">
-                <div class="col-1 col-lg-2">&nbsp;</div>
+                <div class="col-1 col-lg-2"></div>
                 <div class="col-10 col-lg-8">
-                    <h2 class="text-center">Squinter</h2>
-                    <h3 class="text-center">A development tool to manage app and library files for Electric Imp projects</h3>
                     
-<h4 class="text-center">Latest Release: <a class="link" href="releases.html">2.3.133</a></h4>
+    <h2 class="text-center">Squinter</h2>
+    <h3 class="text-center">A development tool to manage app and library files for Electric Imp projects</h3>
+    
 
-                    <p>&nbsp;</p>
-<div class="dloadpanel">
-    <h2 style="text-align:center;">Download And Install Squinter</h2>
-    <p style="text-align:center;">Please verify the integrity of the download with the SHA-256 checksum.</p>
+
+<h4 class="text-center">Latest Release: <a class="stn-link" href="releases.html">2.3.133</a></h4>
+
+    
+
+<p>&nbsp;</p>
+<div class="stn-dload-panel">
+    <h2 class="text-center">Download And Install Squinter</h2>
+    <p class="text-center">Please verify the integrity of the download with the SHA-256 checksum.</p>
     <div class="table-responsive-xl">
     <table class="table table-borderless table-sm">
         <tbody>
             <tr>
                 <th scope="row" style="width:20%;text-align:right;"><b>File&nbsp;Name</b>&nbsp;</th>
-                <td class="w-70"><a class="link" id="url" href="/files/squinter/squinter_2_3_133.dmg">squinter_2_3_133.dmg</a></td>
+                <td class="w-70"><a class="stn-link" id="url" href="/files/squinter/squinter_2_3_133.dmg">squinter_2_3_133.dmg</a></td>
             </tr>
             <tr>
                 <th scope="row" style="text-align:right"><b>File&nbsp;Size</b>&nbsp;</th>
@@ -79,9 +92,9 @@
     </div>
 </div>
 <p>&nbsp;<br />&nbsp;</p>
-                    
-                    <p>&nbsp;</p>
-                    <h1 id="about-squinter">About Squinter</h1>
+    
+    <p>&nbsp;</p>
+    <h1 id="about-squinter">About Squinter</h1>
 <p>Squinter is a utility to help you work on Electric Imp software development projects using your own editor and code files you keep in a local folder — which may also be synchronized with a cloud service like Dropbox or a version control system like GitHub.</p>
 <p><img class="img-fluid centre" src="/images/squinter/squinter.png" width="700" style="border: 1px solid #DDDDDD" alt="The main Squinter window" /></p>
 <p>With Squinter and Electric Imp’s impCentral™ API you can:</p>
@@ -103,26 +116,26 @@
 <h1 id="how-to-use-squinter">How To Use Squinter</h1>
 <h3 id="contents">Contents</h3>
 <ul>
-<li><a class="link" href="#electric-imp-accounts">Electric Imp Accounts</a></li>
-<li><a class="link" href="#working-with-source-code-files">Working With Source Code Files</a></li>
-<li><a class="link" href="#working-with-projects-and-products">Working With Projects and Products</a></li>
-<li><a class="link" href="#working-with-device-groups">Working With Device Groups</a></li>
-<li><a class="link" href="#working-with-devices">Working With Devices</a></li>
-<li><a class="link" href="#incorporating-libraries-and-files-in-your-code">Incorporating Libraries And Files In Your Code</a></li>
-<li><a class="link" href="#deploying-code">Deploying Code</a></li>
-<li><a class="link" href="#debugging-code">Debugging Code</a></li>
-<li><a class="link" href="#configuring-squinter">Configuring Squinter</a></li>
-<li><a class="link" href="#updating-squinter">Updating Squinter</a></li>
+<li><a class="stn-link" href="#electric-imp-accounts">Electric Imp Accounts</a></li>
+<li><a class="stn-link" href="#working-with-source-code-files">Working With Source Code Files</a></li>
+<li><a class="stn-link" href="#working-with-projects-and-products">Working With Projects and Products</a></li>
+<li><a class="stn-link" href="#working-with-device-groups">Working With Device Groups</a></li>
+<li><a class="stn-link" href="#working-with-devices">Working With Devices</a></li>
+<li><a class="stn-link" href="#incorporating-libraries-and-files-in-your-code">Incorporating Libraries And Files In Your Code</a></li>
+<li><a class="stn-link" href="#deploying-code">Deploying Code</a></li>
+<li><a class="stn-link" href="#debugging-code">Debugging Code</a></li>
+<li><a class="stn-link" href="#configuring-squinter">Configuring Squinter</a></li>
+<li><a class="stn-link" href="#updating-squinter">Updating Squinter</a></li>
 </ul>
 <h3 id="electric-imp-accounts">Electric Imp Accounts</h3>
-<p>Squinter requires an Electric Imp account. Sign up is free at <a class="link" href="https://impcentral.electricimp.com">impcentral.electricimp.com</a>. Production functionality requires an Enterprise account, for which you must be an Electric Imp customer. Log in using the Account menu:</p>
+<p>Squinter requires an Electric Imp account. Sign up is free at <a class="stn-link" href="https://impcentral.electricimp.com">impcentral.electricimp.com</a>. Production functionality requires an Enterprise account, for which you must be an Electric Imp customer. Log in using the Account menu:</p>
 <p><img class="img-fluid centre"  src="/images/squinter/account.png" width="612" style="border: 1px solid #DDDDDD" alt="Log into your Electric Imp account" /></p>
 <p><strong>Note</strong> Hold down <kbd>Option</kbd> and then click the <strong>Account</strong> menu to sign temporarily into another account. This will not overwrite your stored credentials (unless you check the box on the login sheet), but will sign you out of your current, main account.</p>
 <p><strong>Note</strong> Squinter no longer supports accounts in the Azure impCloud, which is no longer provided by Electric Imp.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <h3 id="working-with-source-code-files">Working With Source Code Files</h3>
 <p>Squinter expects your source code to be held in text files, and will open source files in your default text editor. However, you may decide to give your code files the standard Squirrel <code>.nut</code> extension. To ensure that this doesn’t ‘fool’ the OS (which may cause Squinter to fail to open source code files correctly), select any <code>.nut</code>, hit <kbd>Command-I</kbd> and select your preferred text under under <strong>Open with:</strong>, and then click <strong>Change All…</strong>.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <h3 id="working-with-projects-and-products">Working With Projects and Products</h3>
 <p>Squinter works with ‘projects’, each of which is stored as a project file on disk. Each Project links to an impCentral ‘product’ and references the ‘device groups’ <em>(see below)</em> that that product contains. For each device group in the product, the project records which local files contain the source code that will be deployed to that device group. Project files are identified by the <code>.squirrelproj</code> file extension. Squinter lets you create new projects, either from scratch or by downloading products that already exist in the impCloud.</p>
 <p><img class="img-fluid centre" src="/images/squinter/new.png" width="612" style="border: 1px solid #DDDDDD" alt="Create a new project" /></p>
@@ -139,7 +152,7 @@
 <p>You can update a Project with the <strong>Projects &gt; Sync Project&hellip;</strong> option, which will tell you which Device Groups are present on the server but not recorded locally. You then have the option to download any of these device groups to your project, which will also download the most recent deployment made to each device group if any deployments have been made.</p>
 <p><img class="img-fluid centre" src="/images/squinter/sync.png" width="612" style="border: 1px solid #DDDDDD" alt="Sync local project and remote Product files" /></p>
 <p>The <strong>Sync Project&hellip;</strong> option will also check for ‘orphaned’ device groups — those which exist locally but not in the impCloud within the project’s source product (if it has one). Again, you can then choose to upload any or all of these device groups to the product. New device groups will be created in the impCloud and the groups’ local code will be uploaded if it has been compiled. If it has not been compiled, you can compile and upload the code later.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <h3 id="working-with-device-groups">Working With Device Groups</h3>
 <p>Squinter lists all of the device groups that belong to a given project. When you select a project, its device groups, if any, are listed in the <strong>Project’s Device Groups</strong> sub-menu in the <strong>Device Groups</strong> menu. Initially, the first device group, listed alphabetically, is selected when you open or select a project. Only the device groups that belong to the currently selected project are listed, so to view a device group from another project, just select or open that project.</p>
 <p><img class="img-fluid centre" src="/images/squinter/models.png" width="662" style="border: 1px solid #DDDDDD" alt="Create a new Device Group from the Device Groups menu" /></p>
@@ -155,9 +168,9 @@
 <p><img class="img-fluid centre" src="/images/squinter/env_vars_1.png" width="612" style="border: 1px solid #DDDDDD" alt="Define environment variables for the current Device Group" /></p>
 <p>Click on the <img class="img-fluid" src="/images/squinter/env_vars_plus.png" width="14" alt="The plus button" /> button to add a key-value pair. impCentral records user-defined variables as key-value pairs: the name of the variables and its value. Keys can by up to 100 characters in length and include only alphanumeric characters and underscores. Values can be strings or numbers (either floats or integers), and when you enter a value, Squinter indicates its type with an ‘s’ or an ‘n’ symbol, respectively:</p>
 <p><img class="img-fluid centre" src="/images/squinter/env_vars_2.png" width="612" style="border: 1px solid #DDDDDD" alt="Add extra environment variables as you need them" /></p>
-<p>Click <strong>Upload</strong> to send the variables to the impCloud, or <strong>Cancel</strong> to make no changes. impCentral imposes an approximately 16KB limit on the size your key-value pairs (including the keys’ names), so Squinter will warn you if you exceed this total. The sheet has a size readout which updates as you add and amend the device group’s variables. You can read more about how impCentral user-defined variables work in the <a href="https://developer.electricimp.com/tools/impcentral/environmentvariables#user-defined-environment-variables" class="link">Electric Imp Dev Center</a>.</p>
+<p>Click <strong>Upload</strong> to send the variables to the impCloud, or <strong>Cancel</strong> to make no changes. impCentral imposes an approximately 16KB limit on the size your key-value pairs (including the keys’ names), so Squinter will warn you if you exceed this total. The sheet has a size readout which updates as you add and amend the device group’s variables. You can read more about how impCentral user-defined variables work in the <a href="https://developer.electricimp.com/tools/impcentral/environmentvariables#user-defined-environment-variables" class="stn-link">Electric Imp Dev Center</a>.</p>
 <p>You can remove any of the listed variables by selecting one or more of them and then clicking the <img class="img-fluid" src="/images/squinter/env_vars_minus.png" width="14" alt="The minus button" /> button. You will be asked if you are sure that you want to remove the selected variable(s). If you click <strong>OK</strong>, you can still click the sheet’s <strong>Cancel</strong> button to undo the deletion, but this will also ignore any other changes you may have made.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <h3 id="working-with-devices">Working With Devices</h3>
 <p>Squinter keeps track of your development devices. It lists these in the <strong>Device Groups</strong> menu’s <strong>Project’s Device Groups</strong> sub-menu, alongside the device group each device is assigned to. Unassigned devices are listed in their own sub-menu under the <strong>Device</strong> menu. Specific devices can also be selected from the <strong>Current Device</strong> popup menu in Squinter’s main window.</p>
 <p><img class="img-fluid centre" src="/images/squinter/devices.png" width="520" style="border: 1px solid #DDDDDD" alt="List your unassigned devices" /></p>
@@ -173,7 +186,7 @@
 <p>This panel will update as you select devices and/or load or select different projects.</p>
 <p id="lookup">Squinter lists devices by their names, though their IDs and MAC addresses also appear in the Inspector (as shown above) or in the log when you hit <kbd>Cmd-I</kbd>. Sometimes, however, you may only have a device’s ID or MAC address, or its agent ID. In this case, select <b>Find a Device...</b> from the <b>Device</b> menu, of hit <kbd>Cmd-Shit-F</kbd>. This will call up a panel in which you can enter a device’s ID or MAC address, or an agent ID, and Squinter will locate which of your named devices matches the entered information. As you enter the ID or MAC, Squinter narrows down the list of possible devices. Select the device you want by clicking on its name in the presented list and then click the <b>Switch to Selected Device</b> button to select it as the current device:</p>
 <p><img class="img-fluid centre" src="/images/squinter/device_lookup.png" width="612" style="border: 1px solid #DDDDDD" alt="Find a specific device by its ID or MAC address, whole or partial" /></p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <h3 id="incorporating-libraries-and-files-in-your-code">Incorporating Libraries And Files In Your Code</h3>
 <p>Squinter lets you incorporate multiple files into the source code that is deployed to a given device group. Electric Imp applications comprise two files: one for device code, the other for cloud-based agent code. Squinter lets you embed into them links to other files, such as local libraries.</p>
 <p>For example, you might want to use the same library in multiple device groups — they all use the same sensor, say — even between device groups that belong to different projects. Sharing a single library file allows you to update that file without having to edit every listing of device or agent code that uses it. You just recompile each device group’s source code to incorporate the changes you’ve made to the single library file.</p>
@@ -183,7 +196,7 @@
 <pre><code>#import &quot;library_filepath\library_filename&quot;
 #include &quot;library_filepath\library_filename&quot;
 </code></pre><p>This is to distinguish these libraries from Electric Imp online libraries, which use the <code>#require</code> directive.</p>
-<p>The name of the library file is arbitrary, but <code>*.class.nut</code> and <code>*.library.nut</code> are the recommended forms. You may include a full Unix file path; if you only provide a filename, Squinter expects the file to reside in the same directory as the <code>*.squirrelproj</code> project file <em>(see <a class="link" href="#working-with-projects-and-products">Working with Projects and Products</a>, above)</em>. You can specify files that need to be reached by moving up through your folder hierarchy by including <code>..</code> to mean ‘go up one level’. For example:</p>
+<p>The name of the library file is arbitrary, but <code>*.class.nut</code> and <code>*.library.nut</code> are the recommended forms. You may include a full Unix file path; if you only provide a filename, Squinter expects the file to reside in the same directory as the <code>*.squirrelproj</code> project file <em>(see <a class="stn-link" href="#working-with-projects-and-products">Working with Projects and Products</a>, above)</em>. You can specify files that need to be reached by moving up through your folder hierarchy by including <code>..</code> to mean ‘go up one level’. For example:</p>
 <pre><code>#import &quot;///generic/bootmessage.nut&quot;
 </code></pre><p>This means go up three folders then down to the folder <code>generic</code> and thus to the file <code>bootmessage.nut</code>.</p>
 <p><img class="img-fluid centre" src="/images/squinter/files.png" width="624" style="border: 1px solid #DDDDDD" alt="The Device Groups menu lets you see which local files are included in your source code" /></p>
@@ -191,7 +204,7 @@
 <p>Squinter lets you store both library files and blocks of Squirrel or other data in <code>*.nut</code> and <code>*.txt</code> files. At compilation, all of these sources are inserted into a master copy of the source code, and it is this ‘compiled’ Squirrel which will be uploaded to the selected device group.</p>
 <p>Squinter is able to identify version information within your files and libraries. The primary way to make use of this is to include the statement <code>#version &quot;x.y.z&quot;</code> in your file. However, Squinter also supports Electric Imp style: it is able to detect <code>static version = &quot;x.y.z&quot;</code> and <code>const version = &quot;x.y.z&quot;</code> in library files.</p>
 <p>Identified version numbers are presented in the sub-menus under the <strong>Device Group</strong> menu. Squinter will let you know if a file included in a project has been updated since you last saved the project.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <h3 id="deploying-code">Deploying Code</h3>
 <p>Squinter allows you to upload compiled code direct to the selected device group: select the <strong>Upload</strong> option in the <strong>Device Groups</strong> menu. Alternatively, holding down the <kbd>Option</kbd> key makes this command <strong>Upload with Extra Information</strong>; when selected, it pops up a panel into which you can enter an optional commit message, an optional source URL and an optional set of one or more tags for the deployment. Click on the Upload button to include any extra information you add to the upload, or click <strong>Skip Extras</strong> to upload just the code.</p>
 <p><img class="img-fluid centre" src="/images/squinter/extra.png" width="612" style="border: 1px solid #DDDDDD" alt="Add extra information to your code deployments" /></p>
@@ -202,15 +215,15 @@
 <p>This will call up a list of all the commits/deployments made to the currently selected device group:</p>
 <p><img class="img-fluid centre" src="/images/squinter/commits.png" width="552" alt="Squinter will display the most recent commits made to a Device Group" /></p>
 <p>Having uploaded code, you can restart the currently selected device by selecting <strong>Restart</strong> from the <strong>Device</strong> menu, or restart all of the devices assigned to the current device group by selecting <strong>Restart</strong> from the <strong>Device Groups</strong> menu.</p>
-<p id="polite">Squinter supports <a href="https://developer.electricimp.com/resources/polite-squirrel-deployment" class="link">polite Squirrel deployment</a>: it allows you to set a device group’s minimum supported deployment, and to make conditional restarts of the devices assigned to the group. You will not be able to select a minimum deployment that is older than the current one; selecting a new minimum deployment will block all earlier deployments from being selected, whether they were available before you made the change or not.</p>
+<p id="polite">Squinter supports <a href="https://developer.electricimp.com/resources/polite-squirrel-deployment" class="stn-link">polite Squirrel deployment</a>: it allows you to set a device group’s minimum supported deployment, and to make conditional restarts of the devices assigned to the group. You will not be able to select a minimum deployment that is older than the current one; selecting a new minimum deployment will block all earlier deployments from being selected, whether they were available before you made the change or not.</p>
 <p>To conditionally restart a device group’s devices, hold down the <kbd>Option</kbd> key and select <strong>Conditional Restart Devices</strong> from the <strong>Device Groups</strong> menu.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <h3 id="debugging-code">Debugging Code</h3>
 <p>You can retrieve the most recent log entries for the selected device in one go (up to a maximum of 200), or you can stream logs from the device: entries will appear in Squinter’s main window in real time. You can currently only stream from up to five devices at a time. This is a limitation of the impCentral API.</p>
 <p><img class="img-fluid centre" src="/images/squinter/log.png" width="700" style="border: 1px solid #DDDDDD" alt="Live-stream log messages from a device and its agent" /></p>
 <p>When you upload code — using the <strong>Upload</strong> button or the <strong>Device Groups</strong> menu option — the Electric Imp impCloud will perform a syntax check. Any errors it spots will be reported in Squinter’s log window. Line numbers refer to the compiled code, so you can use two actions in the <strong>View Compiled Source</strong> sub-menu under <strong>Device Groups</strong> to list the current compiled code to help you track down the errors. These two options — one for device code, the other for agent code — will list the compiled source for the currently selected device group.</p>
 <p id="configuring">If the log window becomes too crowded, you can clear it using the <b>Clear</b> button in the toolbar, which is also home to a number of shortcuts to various functions provided by Squinter’s menus. You can also print the current contents of the log window if you have a printer.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <h3 id="configuring-squinter">Configuring Squinter</h3>
 <p>To take full advantage of Squinter’s features, you will need an Electric Imp account. With Squinter 2 you no longer require a Build API key. Instead you must sign into your account using your Electric Imp username and password before Squinter can access the impCloud on your behalf. When you first run Squinter 2, it will ask you for these credentials and give you the option to store them securely in your keychain to automate login in future. The <strong>Account</strong> menu provides a means to log into your account later if you choose not to do so at the start, or to subsequently sign out.</p>
 <p><img class="img-fluid centre" src="/images/squinter/prefs1.png" width="612" style="border: 1px solid #DDDDDD" alt="Squinter preferences page one" /></p>
@@ -220,54 +233,65 @@
 <p>Squinter’s toolbar is also customisable: select the appropriate option from the <strong>View</strong> menu to make changes to the initial, standard layout. You can also choose to hide the toolbar. Squinter supports full-screen mode: click on the green traffic light at the top left of the window.</p>
 <p><img class="img-fluid centre" src="/images/squinter/toolbar.png" width="710" style="border: 1px solid #DDDDDD" alt="The Squinter toolbar is fully customisable: choose the tools you want, in the order you want" /></p>
 <p>Squinter would not be possible without open source software contributions from a number of developers. They are listed in the <strong>Acknowledgements</strong> section of the Help menu, along with links to the source code Squinter uses.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <h3 id="updating-squinter">Updating Squinter</h3>
 <p>You can check for Squinter updates by using the appropriate command in the <strong>Squinter</strong> menu. You can also tell Squinter to check for updates on your behalf: just check the relevant box in the <strong>Preferences</strong> panel.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#how-to-use-squinter">Back to Contents</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#how-to-use-squinter">Back to Contents</a></p>
 <hr />
 <h3 id="troubleshooting">Troubleshooting</h3>
 <p>Crashes occurring when Squinter starts are typically the result of changes made to the app’s preferences during development. The first action to take is to delete the file <code>~/Library/Preferences/com.bps.Squinter.plist</code>. You may also need to remove the folder <code>~/Library/Caches/com.bps.Squinter</code>.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#ctop">Back to the Top</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="release-notes">Release Notes</h3>
-<p>The release notes section has now moved to <a class="link" href="releases.html">its own page</a>.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#ctop">Back to the Top</a></p>
+<p>The release notes section has now moved to <a class="stn-link" href="releases.html">its own page</a>.</p>
+<p class="stn-text-link"><a class="stn-link" href="#ctop">Back to the Top</a></p>
 <hr />
 <h3 id="source-code">Source Code</h3>
-<p>You can view Squinter’s source code <a class="link" href="https://github.com/smittytone/Squinter">at GitHub</a>.</p>
-<p class="linktext" style="text-align:right;"><a class="link" href="#ctop">Back to the Top</a></p>
+<p>You can view Squinter’s source code <a class="stn-link" href="https://github.com/smittytone/Squinter">at GitHub</a>.</p>
+<p class="stn-text-link"><a class="stn-link" href="#ctop">Back to the Top</a></p>
 <hr />
 
-                    
+    
+
+
 
 <h3>Related Software</h3>
 <ul>
 	
-	<li><a class="link" href="/ascii/">ASCII</a></li>
+	<li><a class="stn-link" href="/ascii/">ASCII</a></li>
 	
-	<li><a class="link" href="/buildapiaccess/">BuildAPIAccess</a></li>
+	<li><a class="stn-link" href="/buildapiaccess/">BuildAPIAccess</a></li>
 	
-	<li><a class="link" href="/oclock/">Cløck</a></li>
+	<li><a class="stn-link" href="/oclock/">Cløck</a></li>
 	
-	<li><a class="link" href="/controller/">Controller</a></li>
+	<li><a class="stn-link" href="/controller/">Controller</a></li>
 	
 </ul>
 
-<p class="linktext" style="text-align:right;"><a class="link" href="#ctop">Back to the Top</a></p>
+<p class="stn-text-link"><a class="stn-link" href="#ctop">Back to the Top</a></p>
 <hr />
+
                 </div>
-                <div class="col-1 col-lg-2">&nbsp;</div>
+                <div class="col-1 col-lg-2"></div>
             </div>
-            <div class="col">
-    <p class="text-center"><a class="colo" href="https://smittytone.github.io"><img class="imgw" src="/images/rassilon.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /><img class="imgb" src="/images/rassilonblack.png" style="width:32px;height:32px;" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 3 September 2020</small></p>
-</div>
             
+    
+
+<div class="col">
+    <p class="text-center"><a class="stn-icon-link" href="/index.html"><img class="stn-icon-dark stn-icon" src="/images/rassilon.png" alt="The Seal of Rassilon" /><img class="stn-icon-light stn-icon" src="/images/rassilonblack.png" alt="The Seal of Rassilon" /></a><br /><small>Site and software copyright &copy; 2020, Tony Smith<br />Site Last Updated: 10 September 2020</small></p>
+</div>
+    
+
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="/scripts/retina.min.js"></script>
 <script src="/scripts/logo.min.js"></script>
 <script src="/scripts/scroller.min.js"></script>
+<script src="/scripts/bronzeage.min.js"></script>
 </body>
 </html>
