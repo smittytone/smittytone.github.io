@@ -5,11 +5,7 @@
     <link>https://smittytone.net/</link>
     <description>Recent content in smittytone&#39;s Software Library on smittytone’s software stack</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://smittytone.net/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://smittytone.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Our Typefaces</title>
       <link>https://smittytone.net/articles/fonts/</link>
@@ -88,7 +84,7 @@ How To Use Controller Controller’s iPhone app provides a means to add devices 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://smittytone.net/fightingfantasy/</guid>
-      <description>About Fighting Fantasy Game Manager This is a Swift 4 port (for macOS) of a much older Objective-C version written circa 2003 following the 20th anniversary of the publication of Penguin Books&amp;rsquo; Fighting Fantasy gamebook series and the revival of the books by Icon Books. The concept of a program to help players with their games — setting up characters, handling combat, managing their backpack contents, testing for Luck, etc. — goes back to a mid- to late 1990s Real Basic classic Mac OS version which, in turn, was a redevelopment of an original implementation for the Dragon 32 micro written around 1985, while the gamebooks were still being published by Penguin&amp;rsquo;s Puffin imprint.</description>
+      <description>About Fighting Fantasy Game Manager This is a Swift 4 port (for macOS) of a much older Objective-C version written circa 2003 following the 20th anniversary of the publication of Penguin Books&#39; Fighting Fantasy gamebook series and the revival of the books by Icon Books. The concept of a program to help players with their games — setting up characters, handling combat, managing their backpack contents, testing for Luck, etc. — goes back to a mid- to late 1990s Real Basic classic Mac OS version which, in turn, was a redevelopment of an original implementation for the Dragon 32 micro written around 1985, while the gamebooks were still being published by Penguin&amp;rsquo;s Puffin imprint.</description>
     </item>
     
     <item>

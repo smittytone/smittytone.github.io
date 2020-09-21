@@ -5,11 +5,7 @@
     <link>https://smittytone.net/squinter/</link>
     <description>Recent content in Squinters on smittytone’s software stack</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://smittytone.net/squinter/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://smittytone.net/squinter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Squinter Release Notes</title>
       <link>https://smittytone.net/squinter/releases.html</link>
