@@ -1,0 +1,233 @@
+body {
+  color: black;
+  background-color: #EEEEEE;
+}
+
+p {
+  font-family: Abel, sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+    color: #4E65AE;
+    font-family: Abel, sans-serif;
+    font-size: 3.5rem;
+    padding-bottom: 10px;
+}
+
+h3 {
+  color: #4E65AE;
+  font-family: Abel, sans-serif;
+  font-size: 1.75rem;
+  padding-bottom: 10px;
+}
+
+h4 {
+  color: #white;
+  font-family: Abel, sans-serif;
+  font-size: 1.25rem;
+}
+
+hr {
+  border-color: #4E65AE;
+}
+
+a {
+  color: #6F727F;
+  padding: 2px;
+  white-space: nowrap;
+}
+
+a:hover {
+  color: white;
+  background-color: #4E65AE;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.stn-icon-link:hover {
+  background-color: #EEEEEE;
+}
+
+.stn-link:hover {
+  color: white;
+  background-color: #4E65AE;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.stn-text-link {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+
+.stn-square-icon {
+  width: 64px;
+  vertical-align: middle;
+  border-radius: 25%;
+  transition: box-shadow 0s;
+}
+
+.stn-square-icon:hover {
+  background-color: #6F727F;
+  box-shadow: 0 0 8px 8px #6F727F;
+}
+
+.stn-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: box-shadow 0s;
+}
+
+.stn-icon:hover {
+  background-color: #9CA0B1;
+  box-shadow: 0 0 4px 4px #9CA0B1;
+}
+
+.stn-icon-dark {
+  display: none;
+}
+
+.stn-icon-light {
+  display: inline-block;
+}
+
+.stn-menu-text {
+  display: none;
+}
+
+.stn-menu-icon {
+  display: block;
+}
+
+.stn-badge {
+  color: white;
+  background-color: #0366d6;
+  display: inline-block;
+  flex: 0 0 72px;
+  font-size: 11px;
+  border-radius: 5px;
+  margin-right: 12px;
+  padding: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.stn-badge-upgrade {
+  background-color: #6E9B3D;
+  text-transform: uppercase;
+}
+
+.stn-badge-new {
+  background-color: #BB0808;
+  text-transform: uppercase;
+}
+
+/* Bootstrap overrides */
+.container {
+  max-width: 80%;
+  overflow-x: hidden;
+}
+
+.frame {
+  border: 4px solid #4E65AE;
+  border-radius: 0px 0px 16px 16px;
+}
+
+.navbar {
+  border-radius: 16px 16px 0px 0px;
+}
+
+.nav-item, .navbar-brand {
+  font-family: Abel, sans-serif;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* Alter CSS for various screen sizes */
+@media only screen and (max-width: 991px) {
+  .stn-menu-text {
+    display: inline;
+  }
+
+  .stn-menu-icon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1071px) {
+  .container {
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+/* Support dark themes */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background: #222222;
+  }
+
+  p {
+    color: white;
+  }
+
+  h3 {
+    color: white;
+  }
+
+  hr {
+    border-color: white;
+  }
+
+  a {
+    color: #9CA0B1;
+  }
+
+  .stn-bio-para a:hover {
+    color: white;
+  }
+
+  .stn-item-para a:hover {
+    color: white;
+  }
+
+  .stn-text-link {
+    color: white;
+  }
+
+  .stn-icon-link:hover {
+    background-color: #222222;
+  }
+
+  .stn-round-icon:hover {
+    background-color: white;
+    box-shadow: 0 0 8px 8px white;
+  }
+
+  .stn-square-icon:hover {
+    background-color: white;
+    box-shadow: 0 0 8px 8px white;
+  }
+
+  .stn-icon:hover {
+    background-color: #4E65AE;
+    box-shadow: 0 0 4px 4px #4E65AE;
+  }
+
+  .stn-icon-dark {
+    display: inline-block;
+  }
+
+  .stn-icon-light {
+    display: none;
+  }
+}
